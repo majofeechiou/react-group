@@ -9,31 +9,53 @@
 import React from 'react';
 import RadioBase from './RadioBase';
 
-var RadioGroup = React.createClass({
-	getInitialState() {
-		return {
+export default class RadioGroup extends React.Component {
+	constructor(props) {
+		super(props);
+		this.handleChange = this.handleChange.bind(this);
+		this.state = {
 			disabled: false,
 			checked: null,
-			r: 'a'
-		}
-	},
+			outputresult: props.outputresult || {}
+		};
+	}
+
 	handleChange(e) {
-		this.setState({
-			r: e.target.value
-		})
-	},
+		let _scope = this;
+		(this.props.inputoption).filter(function(json){
+			let _str_selectkey = _scope.props.selectkey[0];
+
+			if( json[_str_selectkey]===e.target.value ){
+				console.log( 'json :: ', json );
+				_scope.setState({
+					r: e.target.value,
+					outputresult: json 
+				});
+				return false;
+			}
+
+			// let _json_output = {};
+			// _json_output[_str_selectkey] = null;
+			// _scope.setState({
+			// 	r: e.target.value,
+			// 	outputresult: _json_output 
+			// });
+		});
+	}
 	toggle() {
 		this.setState({
 			disabled: !this.state.disabled
 		});
-	},
+	}
 	render() {
 		return <div style={{margin: 20}}>
+		{JSON.stringify(this.state.outputresult)}<br />
+		{JSON.stringify(this.props.selectkey[0])}<br />
 			<div>
 				<p>
 					<label>
 						<RadioBase value="a"
-							checked = {this.state.r === 'a'}
+							checked = {this.state.outputresult[this.props.selectkey[0]] === 'a'}
 							onChange={this.handleChange}
 							disabled={this.state.disabled}/>
 					&nbsp; rc-radio
@@ -41,7 +63,7 @@ var RadioGroup = React.createClass({
 					&nbsp;&nbsp;
 					<label>
 						<RadioBase value="b"
-							checked = {this.state.r === 'b'}
+							checked = {this.state.outputresult[this.props.selectkey[0]] === 'b'}
 							onChange={this.handleChange}
 							disabled={this.state.disabled}/>
 					&nbsp; rc-radio
@@ -69,7 +91,15 @@ var RadioGroup = React.createClass({
 
 		</div>;
 	}
-});
+}
 
-module.exports = RadioGroup;
-
+	RadioGroup.propTypes = {
+        inputoption: React.PropTypes.array,
+        selectkey: React.PropTypes.array,
+        outputresult: React.PropTypes.object
+    },
+    RadioGroup.defaultProps = {
+    	inputoption: [],
+    	selectkey: [],
+    	outputresult: {}
+    };
