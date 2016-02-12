@@ -22,7 +22,7 @@ export default class RadioGroup extends React.Component {
 
 	handleChange(e) {
 		let _scope = this;
-		(this.props.inputoption).filter(function(json){
+		(this.props.inputoption).find(function(json){
 			let _str_selectkey = _scope.props.selectkey[0];
 
 			if( json[_str_selectkey]===e.target.value ){
@@ -48,58 +48,92 @@ export default class RadioGroup extends React.Component {
 		});
 	}
 	render() {
-		return <div style={{margin: 20}}>
+		return <div>
 		{JSON.stringify(this.state.outputresult)}<br />
 		{JSON.stringify(this.props.selectkey[0])}<br />
-			<div>
-				<p>
-					<label>
-						<RadioBase value="a"
-							checked = {this.state.outputresult[this.props.selectkey[0]] === 'a'}
-							onChange={this.handleChange}
-							disabled={this.state.disabled}/>
-					&nbsp; rc-radio
-					</label>
-					&nbsp;&nbsp;
-					<label>
-						<RadioBase value="b"
-							checked = {this.state.outputresult[this.props.selectkey[0]] === 'b'}
-							onChange={this.handleChange}
-							disabled={this.state.disabled}/>
-					&nbsp; rc-radio
-					</label>
-					&nbsp;&nbsp;
-				</p>
-				<p>
-					<label>
-						<input type='radio' name="radio"
-							defaultChecked={true}
-							disabled={this.state.disabled}/>
-					&nbsp; native
-					</label>
-					&nbsp;&nbsp;
-					<label>
-						<input type='radio' name="radio"
-							disabled={this.state.disabled}/>
-					&nbsp; native
-					</label>
-					&nbsp;&nbsp;
-				</p>
-			</div>
+			<ul>
+				{this.props.inputoption.map((json_item)=>{
+					return (
+						<li>
+							<label>
+								<RadioBase value={json_item[this.props.selectkey[0]]}
+									checked = {this.state.outputresult[this.props.selectkey[0]] === json_item[this.props.selectkey[0]]}
+									onChange={this.handleChange}
+									disabled={this.state.disabled}/>
+								{json_item[this.props.showkey[0]]}
+							</label>
+						</li> 
+					);
+				})}
+			</ul>
 
 			<button onClick={this.toggle}>toggle disabled</button>
 
 		</div>;
 	}
+	// render2() {
+	// 	return <div style={{margin: 20}}>
+	// 	{JSON.stringify(this.state.outputresult)}<br />
+	// 	{JSON.stringify(this.props.selectkey[0])}<br />
+	// 		<div>
+	// 			<p>
+	// 				<label>
+	// 					<RadioBase value="a"
+	// 						checked = {this.state.outputresult[this.props.selectkey[0]] === 'a'}
+	// 						onChange={this.handleChange}
+	// 						disabled={this.state.disabled}/>
+	// 				&nbsp; rc-radio
+	// 				</label>
+	// 				&nbsp;&nbsp;
+	// 				<label>
+	// 					<RadioBase value="b"
+	// 						checked = {this.state.outputresult[this.props.selectkey[0]] === 'b'}
+	// 						onChange={this.handleChange}
+	// 						disabled={this.state.disabled}/>
+	// 				&nbsp; rc-radio
+	// 				</label>
+	// 				&nbsp;&nbsp;
+	// 				<label>
+	// 					<RadioBase value="c"
+	// 						checked = {this.state.outputresult[this.props.selectkey[0]] === 'c'}
+	// 						onChange={this.handleChange}
+	// 						disabled={this.state.disabled}/>
+	// 				&nbsp; rc-radio
+	// 				</label>
+	// 				&nbsp;&nbsp;
+	// 			</p>
+	// 			<p>
+	// 				<label>
+	// 					<input type='radio' name="radio"
+	// 						defaultChecked={true}
+	// 						disabled={this.state.disabled}/>
+	// 				&nbsp; native
+	// 				</label>
+	// 				&nbsp;&nbsp;
+	// 				<label>
+	// 					<input type='radio' name="radio"
+	// 						disabled={this.state.disabled}/>
+	// 				&nbsp; native
+	// 				</label>
+	// 				&nbsp;&nbsp;
+	// 			</p>
+	// 		</div>
+
+	// 		<button onClick={this.toggle}>toggle disabled</button>
+
+	// 	</div>;
+	// }
 }
 
-	RadioGroup.propTypes = {
-        inputoption: React.PropTypes.array,
-        selectkey: React.PropTypes.array,
-        outputresult: React.PropTypes.object
-    },
-    RadioGroup.defaultProps = {
-    	inputoption: [],
-    	selectkey: [],
-    	outputresult: {}
-    };
+RadioGroup.propTypes = {
+    inputoption: React.PropTypes.array,
+    selectkey: React.PropTypes.array,
+    showkey: React.PropTypes.array,
+    outputresult: React.PropTypes.object
+},
+RadioGroup.defaultProps = {
+	inputoption: [],
+	selectkey: [],
+	showkey: [],
+	outputresult: {}
+};

@@ -29,13 +29,16 @@ let _sary_options = [{
 
 let _ary_selectkey = ['uuid'];
 let _json_checked = {
-	uuid: 'b'
+	uuid: 'ooxx-002'
 };
+
+let _ary_showkey = ['text'];
 
 ReactDOM.render(
 	<RadioGroup 
 		inputoption={_sary_options}
 		selectkey={_ary_selectkey}
-		outputresult={_json_checked} />, 
+		outputresult={_json_checked}
+		showkey={_ary_showkey} />, 
 	document.getElementById("content")
 );

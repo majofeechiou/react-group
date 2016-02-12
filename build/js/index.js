@@ -93,13 +93,16 @@
 
 	var _ary_selectkey = ['uuid'];
 	var _json_checked = {
-		uuid: 'b'
+		uuid: 'ooxx-002'
 	};
+
+	var _ary_showkey = ['text'];
 
 	_reactDom2.default.render(_react2.default.createElement(_RadioGroup2.default, {
 		inputoption: _sary_options,
 		selectkey: _ary_selectkey,
-		outputresult: _json_checked }), document.getElementById("content"));
+		outputresult: _json_checked,
+		showkey: _ary_showkey }), document.getElementById("content"));
 
 /***/ },
 /* 2 */
@@ -19810,7 +19813,7 @@
 			key: 'handleChange',
 			value: function handleChange(e) {
 				var _scope = this;
-				this.props.inputoption.filter(function (json) {
+				this.props.inputoption.find(function (json) {
 					var _str_selectkey = _scope.props.selectkey[0];
 
 					if (json[_str_selectkey] === e.target.value) {
@@ -19840,61 +19843,33 @@
 		}, {
 			key: 'render',
 			value: function render() {
+				var _this2 = this;
+
 				return _react2.default.createElement(
 					'div',
-					{ style: { margin: 20 } },
+					null,
 					JSON.stringify(this.state.outputresult),
 					_react2.default.createElement('br', null),
 					JSON.stringify(this.props.selectkey[0]),
 					_react2.default.createElement('br', null),
 					_react2.default.createElement(
-						'div',
+						'ul',
 						null,
-						_react2.default.createElement(
-							'p',
-							null,
-							_react2.default.createElement(
-								'label',
+						this.props.inputoption.map(function (json_item) {
+							return _react2.default.createElement(
+								'li',
 								null,
-								_react2.default.createElement(_RadioBase2.default, { value: 'a',
-									checked: this.state.outputresult[this.props.selectkey[0]] === 'a',
-									onChange: this.handleChange,
-									disabled: this.state.disabled }),
-								'  rc-radio'
-							),
-							'  ',
-							_react2.default.createElement(
-								'label',
-								null,
-								_react2.default.createElement(_RadioBase2.default, { value: 'b',
-									checked: this.state.outputresult[this.props.selectkey[0]] === 'b',
-									onChange: this.handleChange,
-									disabled: this.state.disabled }),
-								'  rc-radio'
-							),
-							'  '
-						),
-						_react2.default.createElement(
-							'p',
-							null,
-							_react2.default.createElement(
-								'label',
-								null,
-								_react2.default.createElement('input', { type: 'radio', name: 'radio',
-									defaultChecked: true,
-									disabled: this.state.disabled }),
-								'  native'
-							),
-							'  ',
-							_react2.default.createElement(
-								'label',
-								null,
-								_react2.default.createElement('input', { type: 'radio', name: 'radio',
-									disabled: this.state.disabled }),
-								'  native'
-							),
-							'  '
-						)
+								_react2.default.createElement(
+									'label',
+									null,
+									_react2.default.createElement(_RadioBase2.default, { value: json_item[_this2.props.selectkey[0]],
+										checked: _this2.state.outputresult[_this2.props.selectkey[0]] === json_item[_this2.props.selectkey[0]],
+										onChange: _this2.handleChange,
+										disabled: _this2.state.disabled }),
+									json_item[_this2.props.showkey[0]]
+								)
+							);
+						})
 					),
 					_react2.default.createElement(
 						'button',
@@ -19903,6 +19878,59 @@
 					)
 				);
 			}
+			// render2() {
+			// 	return <div style={{margin: 20}}>
+			// 	{JSON.stringify(this.state.outputresult)}<br />
+			// 	{JSON.stringify(this.props.selectkey[0])}<br />
+			// 		<div>
+			// 			<p>
+			// 				<label>
+			// 					<RadioBase value="a"
+			// 						checked = {this.state.outputresult[this.props.selectkey[0]] === 'a'}
+			// 						onChange={this.handleChange}
+			// 						disabled={this.state.disabled}/>
+			// 				&nbsp; rc-radio
+			// 				</label>
+			// 				&nbsp;&nbsp;
+			// 				<label>
+			// 					<RadioBase value="b"
+			// 						checked = {this.state.outputresult[this.props.selectkey[0]] === 'b'}
+			// 						onChange={this.handleChange}
+			// 						disabled={this.state.disabled}/>
+			// 				&nbsp; rc-radio
+			// 				</label>
+			// 				&nbsp;&nbsp;
+			// 				<label>
+			// 					<RadioBase value="c"
+			// 						checked = {this.state.outputresult[this.props.selectkey[0]] === 'c'}
+			// 						onChange={this.handleChange}
+			// 						disabled={this.state.disabled}/>
+			// 				&nbsp; rc-radio
+			// 				</label>
+			// 				&nbsp;&nbsp;
+			// 			</p>
+			// 			<p>
+			// 				<label>
+			// 					<input type='radio' name="radio"
+			// 						defaultChecked={true}
+			// 						disabled={this.state.disabled}/>
+			// 				&nbsp; native
+			// 				</label>
+			// 				&nbsp;&nbsp;
+			// 				<label>
+			// 					<input type='radio' name="radio"
+			// 						disabled={this.state.disabled}/>
+			// 				&nbsp; native
+			// 				</label>
+			// 				&nbsp;&nbsp;
+			// 			</p>
+			// 		</div>
+
+			// 		<button onClick={this.toggle}>toggle disabled</button>
+
+			// 	</div>;
+			// }
+
 		}]);
 
 		return RadioGroup;
@@ -19913,10 +19941,12 @@
 	RadioGroup.propTypes = {
 		inputoption: _react2.default.PropTypes.array,
 		selectkey: _react2.default.PropTypes.array,
+		showkey: _react2.default.PropTypes.array,
 		outputresult: _react2.default.PropTypes.object
 	}, RadioGroup.defaultProps = {
 		inputoption: [],
 		selectkey: [],
+		showkey: [],
 		outputresult: {}
 	};
 
