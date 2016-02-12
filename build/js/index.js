@@ -99,6 +99,7 @@
 	var _ary_showkey = ['text'];
 
 	_reactDom2.default.render(_react2.default.createElement(_RadioGroup2.default, {
+		name: 'name',
 		inputoption: _sary_options,
 		selectkey: _ary_selectkey,
 		outputresult: _json_checked,
@@ -19780,9 +19781,13 @@
 
 	var _react2 = _interopRequireDefault(_react);
 
-	var _RadioBase = __webpack_require__(161);
+	var _ItemBase = __webpack_require__(161);
 
-	var _RadioBase2 = _interopRequireDefault(_RadioBase);
+	var _ItemBase2 = _interopRequireDefault(_ItemBase);
+
+	var _classnames = __webpack_require__(162);
+
+	var _classnames2 = _interopRequireDefault(_classnames);
 
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
@@ -19792,15 +19797,24 @@
 
 	function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
 
+	// const prefixCls = props.prefixCls;
+	// className={`${prefixCls}-input`}
+	// const className = ClassNames({
+	// 	[props.className]: !!props.className
+	// });
+
 	var RadioGroup = function (_React$Component) {
 		_inherits(RadioGroup, _React$Component);
 
 		function RadioGroup(props) {
 			_classCallCheck(this, RadioGroup);
 
+			console.log('props :: ', props);
+
 			var _this = _possibleConstructorReturn(this, Object.getPrototypeOf(RadioGroup).call(this, props));
 
 			_this.handleChange = _this.handleChange.bind(_this);
+			_this.toggleDisabled = _this.toggleDisabled.bind(_this);
 			_this.state = {
 				disabled: false,
 				checked: null,
@@ -19817,7 +19831,6 @@
 					var _str_selectkey = _scope.props.selectkey[0];
 
 					if (json[_str_selectkey] === e.target.value) {
-						console.log('json :: ', json);
 						_scope.setState({
 							r: e.target.value,
 							outputresult: json
@@ -19834,8 +19847,8 @@
 				});
 			}
 		}, {
-			key: 'toggle',
-			value: function toggle() {
+			key: 'toggleDisabled',
+			value: function toggleDisabled() {
 				this.setState({
 					disabled: !this.state.disabled
 				});
@@ -19845,6 +19858,7 @@
 			value: function render() {
 				var _this2 = this;
 
+				var CPT_CLASSNAME = 'pkg-checked';
 				return _react2.default.createElement(
 					'div',
 					null,
@@ -19854,18 +19868,21 @@
 					_react2.default.createElement('br', null),
 					_react2.default.createElement(
 						'ul',
-						null,
+						{ className: CPT_CLASSNAME },
 						this.props.inputoption.map(function (json_item) {
 							return _react2.default.createElement(
 								'li',
-								null,
+								{ key: _this2.props.name + '-' + json_item[_this2.props.selectkey[0]] + '-' + Math.floor(Math.random() * 1000),
+									className: _this2.state.outputresult[_this2.props.selectkey[0]] === json_item[_this2.props.selectkey[0]] ? 'pkg-checked-option_checked' : 'pkg-checked-option' },
 								_react2.default.createElement(
 									'label',
 									null,
-									_react2.default.createElement(_RadioBase2.default, { value: json_item[_this2.props.selectkey[0]],
+									_react2.default.createElement(_ItemBase2.default, { value: json_item[_this2.props.selectkey[0]],
 										checked: _this2.state.outputresult[_this2.props.selectkey[0]] === json_item[_this2.props.selectkey[0]],
 										onChange: _this2.handleChange,
-										disabled: _this2.state.disabled }),
+										disabled: _this2.state.disabled,
+										type: _this2.props.type === 'checkbox' ? 'checkbox' : 'radio',
+										name: _this2.props.name }),
 									json_item[_this2.props.showkey[0]]
 								)
 							);
@@ -19873,64 +19890,11 @@
 					),
 					_react2.default.createElement(
 						'button',
-						{ onClick: this.toggle },
+						{ onClick: this.toggleDisabled },
 						'toggle disabled'
 					)
 				);
 			}
-			// render2() {
-			// 	return <div style={{margin: 20}}>
-			// 	{JSON.stringify(this.state.outputresult)}<br />
-			// 	{JSON.stringify(this.props.selectkey[0])}<br />
-			// 		<div>
-			// 			<p>
-			// 				<label>
-			// 					<RadioBase value="a"
-			// 						checked = {this.state.outputresult[this.props.selectkey[0]] === 'a'}
-			// 						onChange={this.handleChange}
-			// 						disabled={this.state.disabled}/>
-			// 				&nbsp; rc-radio
-			// 				</label>
-			// 				&nbsp;&nbsp;
-			// 				<label>
-			// 					<RadioBase value="b"
-			// 						checked = {this.state.outputresult[this.props.selectkey[0]] === 'b'}
-			// 						onChange={this.handleChange}
-			// 						disabled={this.state.disabled}/>
-			// 				&nbsp; rc-radio
-			// 				</label>
-			// 				&nbsp;&nbsp;
-			// 				<label>
-			// 					<RadioBase value="c"
-			// 						checked = {this.state.outputresult[this.props.selectkey[0]] === 'c'}
-			// 						onChange={this.handleChange}
-			// 						disabled={this.state.disabled}/>
-			// 				&nbsp; rc-radio
-			// 				</label>
-			// 				&nbsp;&nbsp;
-			// 			</p>
-			// 			<p>
-			// 				<label>
-			// 					<input type='radio' name="radio"
-			// 						defaultChecked={true}
-			// 						disabled={this.state.disabled}/>
-			// 				&nbsp; native
-			// 				</label>
-			// 				&nbsp;&nbsp;
-			// 				<label>
-			// 					<input type='radio' name="radio"
-			// 						disabled={this.state.disabled}/>
-			// 				&nbsp; native
-			// 				</label>
-			// 				&nbsp;&nbsp;
-			// 			</p>
-			// 		</div>
-
-			// 		<button onClick={this.toggle}>toggle disabled</button>
-
-			// 	</div>;
-			// }
-
 		}]);
 
 		return RadioGroup;
@@ -19939,11 +19903,15 @@
 	exports.default = RadioGroup;
 
 	RadioGroup.propTypes = {
+		type: _react2.default.PropTypes.string,
+		classname: _react2.default.PropTypes.string,
 		inputoption: _react2.default.PropTypes.array,
 		selectkey: _react2.default.PropTypes.array,
 		showkey: _react2.default.PropTypes.array,
 		outputresult: _react2.default.PropTypes.object
 	}, RadioGroup.defaultProps = {
+		type: 'radio',
+		classname: '',
 		inputoption: [],
 		selectkey: [],
 		showkey: [],
@@ -19952,39 +19920,6 @@
 
 /***/ },
 /* 161 */
-/***/ function(module, exports, __webpack_require__) {
-
-	'use strict';
-
-	var _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; };
-
-	var _react = __webpack_require__(2);
-
-	var _react2 = _interopRequireDefault(_react);
-
-	var _ItemBase = __webpack_require__(162);
-
-	var _ItemBase2 = _interopRequireDefault(_ItemBase);
-
-	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-
-	var RadioBase = _react2.default.createClass({
-		displayName: 'RadioBase',
-		getDefaultProps: function getDefaultProps() {
-			return {
-				prefixCls: 'pkg-radio',
-				type: 'radio'
-			};
-		},
-		render: function render() {
-			return _react2.default.createElement(_ItemBase2.default, _extends({}, this.props, { ref: 'checkbox' }));
-		}
-	});
-
-	module.exports = RadioBase;
-
-/***/ },
-/* 162 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -20001,13 +19936,7 @@
 
 	var _react2 = _interopRequireDefault(_react);
 
-	var _classnames2 = __webpack_require__(163);
-
-	var _classnames3 = _interopRequireDefault(_classnames2);
-
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-
-	function _defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
 
 	function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
 
@@ -20057,23 +19986,17 @@
 		}, {
 			key: 'render',
 			value: function render() {
-				var _classnames;
-
 				var props = this.props;
-				var prefixCls = props.prefixCls;
 				var checked = this.state.checked;
 				if (typeof checked === 'boolean') {
 					checked = checked ? 1 : 0;
 				}
-				var className = (0, _classnames3.default)((_classnames = {}, _defineProperty(_classnames, props.className, !!props.className), _defineProperty(_classnames, prefixCls, 1), _defineProperty(_classnames, prefixCls + '-checked', checked), _defineProperty(_classnames, prefixCls + '-checked-' + checked, !!checked), _defineProperty(_classnames, prefixCls + '-disabled', props.disabled), _classnames));
 				return _react2.default.createElement(
 					'span',
-					{ className: className,
-						style: props.style },
-					_react2.default.createElement('span', { className: prefixCls + '-inner' }),
+					null,
+					_react2.default.createElement('span', null),
 					_react2.default.createElement('input', _extends({}, props, {
 						defaultChecked: !!props.defaultChecked,
-						className: prefixCls + '-input',
 						checked: !!checked,
 						onChange: this.handleChange
 					})),
@@ -20090,26 +20013,20 @@
 	exports.default = ItemBase;
 
 	ItemBase.propTypes = {
-		prefixCls: _react2.default.PropTypes.string,
 		style: _react2.default.PropTypes.object,
-		type: _react2.default.PropTypes.string,
-		className: _react2.default.PropTypes.string,
 		defaultChecked: _react2.default.PropTypes.oneOfType([_react2.default.PropTypes.number, _react2.default.PropTypes.bool]),
 		checked: _react2.default.PropTypes.oneOfType([_react2.default.PropTypes.number, _react2.default.PropTypes.bool]),
 		onChange: _react2.default.PropTypes.func
 	};
 
 	ItemBase.defaultProps = {
-		prefixCls: 'rc-checkbox', // 這東西的使用方法可再想想
 		style: {},
-		type: 'checkbox',
-		className: '',
 		defaultChecked: 0,
 		onChange: function onChange() {}
 	};
 
 /***/ },
-/* 163 */
+/* 162 */
 /***/ function(module, exports, __webpack_require__) {
 
 	var __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;'use strict';
@@ -20155,7 +20072,7 @@
 
 		if (typeof module !== 'undefined' && module.exports) {
 			module.exports = classNames;
-		} else if ("function" === 'function' && _typeof(__webpack_require__(164)) === 'object' && __webpack_require__(164)) {
+		} else if ("function" === 'function' && _typeof(__webpack_require__(163)) === 'object' && __webpack_require__(163)) {
 			// register as 'classnames', consistent with npm package name
 			!(__WEBPACK_AMD_DEFINE_ARRAY__ = [], __WEBPACK_AMD_DEFINE_RESULT__ = function () {
 				return classNames;
@@ -20166,7 +20083,7 @@
 	})();
 
 /***/ },
-/* 164 */
+/* 163 */
 /***/ function(module, exports) {
 
 	/* WEBPACK VAR INJECTION */(function(__webpack_amd_options__) {module.exports = __webpack_amd_options__;

@@ -2,7 +2,7 @@
 
 import React from 'react';
 import ReactDOM from 'react-dom';
-import RadioGroup from './RadioGroup';
+import RadioGroup from './js/RadioGroup';
 
 let _sary_options = [{
 	uuid: 'a',
@@ -36,6 +36,7 @@ let _ary_showkey = ['text'];
 
 ReactDOM.render(
 	<RadioGroup 
+		name="name"
 		inputoption={_sary_options}
 		selectkey={_ary_selectkey}
 		outputresult={_json_checked}
