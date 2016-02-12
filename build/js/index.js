@@ -46,7 +46,10 @@
 
 	'use strict';
 
-	module.exports = __webpack_require__(1);
+	// module.exports = require('./base');
+
+	__webpack_require__(1);
+	__webpack_require__(166);
 
 /***/ },
 /* 1 */
@@ -65,6 +68,10 @@
 	var _RadioGroup = __webpack_require__(160);
 
 	var _RadioGroup2 = _interopRequireDefault(_RadioGroup);
+
+	var _Setting = __webpack_require__(164);
+
+	var _Setting2 = _interopRequireDefault(_Setting);
 
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
@@ -100,6 +107,8 @@
 
 	_reactDom2.default.render(_react2.default.createElement(_RadioGroup2.default, {
 		name: 'name',
+		liststyle: _Setting2.default.LIST_STYLE_CIRCLE,
+		listposition: _Setting2.default.LIST_POSITION_INNER,
 		inputoption: _sary_options,
 		selectkey: _ary_selectkey,
 		outputresult: _json_checked,
@@ -19789,7 +19798,17 @@
 
 	var _classnames2 = _interopRequireDefault(_classnames);
 
+	var _Setting = __webpack_require__(164);
+
+	var _Setting2 = _interopRequireDefault(_Setting);
+
+	var _CheckedUI = __webpack_require__(165);
+
+	var _CheckedUI2 = _interopRequireDefault(_CheckedUI);
+
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+	function _defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
 
 	function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
 
@@ -19797,19 +19816,11 @@
 
 	function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
 
-	// const prefixCls = props.prefixCls;
-	// className={`${prefixCls}-input`}
-	// const className = ClassNames({
-	// 	[props.className]: !!props.className
-	// });
-
 	var RadioGroup = function (_React$Component) {
 		_inherits(RadioGroup, _React$Component);
 
 		function RadioGroup(props) {
 			_classCallCheck(this, RadioGroup);
-
-			console.log('props :: ', props);
 
 			var _this = _possibleConstructorReturn(this, Object.getPrototypeOf(RadioGroup).call(this, props));
 
@@ -19858,7 +19869,14 @@
 			value: function render() {
 				var _this2 = this;
 
-				var CPT_CLASSNAME = 'pkg-checked';
+				var _str_classname_all = (0, _classnames2.default)(_defineProperty({
+					'pkg-checked': true,
+					'pkg-checked_disabled': this.state.disabled === _Setting2.default.DISABLED_TRUE,
+					'pkg-list': true
+				}, _CheckedUI2.default.getListStyle(this.props.liststyle), true));
+				var _str_classname_label = (0, _classnames2.default)({
+					'pkg-list-option': this.props.listposition === _Setting2.default.LIST_POSITION_INNER
+				});
 				return _react2.default.createElement(
 					'div',
 					null,
@@ -19867,16 +19885,23 @@
 					JSON.stringify(this.props.selectkey[0]),
 					_react2.default.createElement('br', null),
 					_react2.default.createElement(
-						'ul',
-						{ className: CPT_CLASSNAME },
+						'div',
+						{ className: _str_classname_all },
 						this.props.inputoption.map(function (json_item) {
+
+							var _str_classname_li = (0, _classnames2.default)({
+								'pkg-list-option': _this2.props.listposition === _Setting2.default.LIST_POSITION_OUTER,
+								'pkg-checked-option': true,
+								'pkg-checked-option_checked': _this2.state.outputresult[_this2.props.selectkey[0]] === json_item[_this2.props.selectkey[0]]
+							});
+
 							return _react2.default.createElement(
-								'li',
+								'span',
 								{ key: _this2.props.name + '-' + json_item[_this2.props.selectkey[0]] + '-' + Math.floor(Math.random() * 1000),
-									className: _this2.state.outputresult[_this2.props.selectkey[0]] === json_item[_this2.props.selectkey[0]] ? 'pkg-checked-option_checked' : 'pkg-checked-option' },
+									className: _str_classname_li },
 								_react2.default.createElement(
 									'label',
-									null,
+									{ className: _str_classname_label },
 									_react2.default.createElement(_ItemBase2.default, { value: json_item[_this2.props.selectkey[0]],
 										checked: _this2.state.outputresult[_this2.props.selectkey[0]] === json_item[_this2.props.selectkey[0]],
 										onChange: _this2.handleChange,
@@ -19908,14 +19933,18 @@
 		inputoption: _react2.default.PropTypes.array,
 		selectkey: _react2.default.PropTypes.array,
 		showkey: _react2.default.PropTypes.array,
-		outputresult: _react2.default.PropTypes.object
+		outputresult: _react2.default.PropTypes.object,
+		liststyle: _react2.default.PropTypes.string,
+		listposition: _react2.default.PropTypes.string
 	}, RadioGroup.defaultProps = {
 		type: 'radio',
 		classname: '',
 		inputoption: [],
 		selectkey: [],
 		showkey: [],
-		outputresult: {}
+		outputresult: {},
+		liststyle: '',
+		listposition: _Setting2.default.LIST_POSITION_INNER
 	};
 
 /***/ },
@@ -20089,6 +20118,194 @@
 	/* WEBPACK VAR INJECTION */(function(__webpack_amd_options__) {module.exports = __webpack_amd_options__;
 
 	/* WEBPACK VAR INJECTION */}.call(exports, {}))
+
+/***/ },
+/* 164 */
+/***/ function(module, exports) {
+
+	'use strict';
+
+	/*
+		有哪些排版：
+		BLOCK - block
+		IN_BLOCK - inline-block
+	*/
+	/*
+		padding:
+		tiny - 0.2em
+		small - 0.5em
+		little - 0.8em
+		base - 1em
+		middle - 1.2em
+		big - 1.5em
+		large - 2em
+	*/
+	/*
+		有哪些類型：
+		原版 - clean
+		方框 - rectangle
+		按鈕 - button
+		膠囊 - capsule
+		圓形 - circle
+	*/
+	/*
+		轉變動畫：
+		rotate-旋轉
+		rotate-翻轉
+		rotate-3d上下翻轉
+		rotate-3d左右翻轉
+		opacity
+		scale-心臟跳動
+		filter-模糊
+		translateY-雨滴落下
+	*/
+	/*
+		ICON位置或不顯示：
+		上 - top
+		下 - bottom
+		左 - left
+		右 - right
+		不要 - none
+	*/
+	/*
+		ICON類型：
+		實的愛心
+		純勾勾
+		方框
+		方框中有勾勾
+		純叉叉
+		方根中有叉叉
+		純橫線
+		方框中有橫線
+	*/
+	/*
+		ICON類型（已選-若沒寫的話，將和未選是一樣的）：
+	*/
+	/*
+		清單位置：
+		左外 - outer
+		左內 - inner
+	*/
+	/*
+		清單類型：
+		實心圓 - disc
+		空心圓 - circle
+		阿拉伯數字 - decimal
+		方形 - square
+		帶有0的阿拉伯數字 - decimal-leading-zero
+		小寫的羅馬文字 - lower-roman
+		大寫的羅馬文字 - upper-roman
+		小寫的希臘文 - lower-greek
+		小寫的拉丁字母 - lower-latin
+		大寫的拉丁字母 - upper-latin
+	*/
+	/*
+		能不能作用（disabled）：
+		能作用 - false
+		不能作用 - true
+	*/
+
+	Object.defineProperty(exports, "__esModule", {
+		value: true
+	});
+
+	function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+	var Setting = function Setting() {
+		_classCallCheck(this, Setting);
+	};
+
+	Setting.LIST_POSITION_OUTER = 'outer';
+	Setting.LIST_POSITION_INNER = 'inner';
+	Setting.LIST_STYLE_DISC = 'disc';
+	Setting.LIST_STYLE_CIRCLE = 'circle';
+	Setting.LIST_STYLE_DECIMAL = 'decimal';
+	Setting.LIST_STYLE_SQUARE = 'square';
+	Setting.LIST_STYLE_DECIMAL_LEADING_ZERO = 'decimal-leading-zero';
+	Setting.LIST_STYLE_LOWER_ROMAN = 'lower-roman';
+	Setting.LIST_STYLE_UPPER_ROMAN = 'upper-roman';
+	Setting.LIST_STYLE_LOWER_GREEK = 'lower-greek';
+	Setting.LIST_STYLE_LOWER_LATIN = 'lower-latin';
+	Setting.LIST_STYLE_UPPER_LATIN = 'upper-latin';
+	Setting.DISABLED_TRUE = true;
+	Setting.DISABLED_FALSE = false;
+	exports.default = Setting;
+
+/***/ },
+/* 165 */
+/***/ function(module, exports, __webpack_require__) {
+
+	'use strict';
+
+	var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+
+	Object.defineProperty(exports, "__esModule", {
+		value: true
+	});
+
+	var _Setting = __webpack_require__(164);
+
+	var _Setting2 = _interopRequireDefault(_Setting);
+
+	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+	function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+	var CheckedUI = function () {
+		function CheckedUI() {
+			_classCallCheck(this, CheckedUI);
+		}
+
+		_createClass(CheckedUI, null, [{
+			key: 'getListStyle',
+			value: function getListStyle(str_style) {
+				var _str_return = '';
+				switch (str_style) {
+					case _Setting2.default.LIST_STYLE_DISC:
+						_str_return = 'pkg-list_style-disc';
+						break;
+					case _Setting2.default.LIST_STYLE_CIRCLE:
+						_str_return = 'pkg-list_style-circle';
+						break;
+					case _Setting2.default.LIST_STYLE_DECIMAL:
+						_str_return = 'pkg-list_style-decimal';
+						break;
+					case _Setting2.default.LIST_STYLE_SQUARE:
+						_str_return = 'pkg-list_style-square';
+						break;
+					case _Setting2.default.LIST_STYLE_DECIMAL_LEADING_ZERO:
+						_str_return = 'pkg-list_style-decimallz';
+						break;
+					case _Setting2.default.LIST_STYLE_LOWER_ROMAN:
+						_str_return = 'pkg-list_style-lroman';
+						break;
+					case _Setting2.default.LIST_STYLE_UPPER_ROMAN:
+						_str_return = 'pkg-list_style-uroman';
+						break;
+					case _Setting2.default.LIST_STYLE_LOWER_GREEK:
+						_str_return = 'pkg-list_style-lgreek';
+						break;
+					case _Setting2.default.LIST_STYLE_LOWER_LATIN:
+						_str_return = 'pkg-list_style-llatin';
+						break;
+					case _Setting2.default.LIST_STYLE_UPPER_LATIN:
+						_str_return = 'pkg-list_style-ulatin';
+						break;
+				}
+				return _str_return;
+			}
+		}]);
+
+		return CheckedUI;
+	}();
+
+	exports.default = CheckedUI;
+
+/***/ },
+/* 166 */
+/***/ function(module, exports) {
+
+	// removed by extract-text-webpack-plugin
 
 /***/ }
 /******/ ]);

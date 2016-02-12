@@ -9,16 +9,12 @@
 import React from 'react';
 import ItemBase from './ItemBase';
 import ClassNames from 'classnames';
-
-// const prefixCls = props.prefixCls;
-// className={`${prefixCls}-input`}
-// const className = ClassNames({
-// 	[props.className]: !!props.className
-// });
+import Setting from './Setting';
+import CheckedUI from './CheckedUI';
 
 export default class RadioGroup extends React.Component {
+
 	constructor(props) {
-		console.log( 'props :: ', props );
 		super(props);
 		this.handleChange = this.handleChange.bind(this);
 		this.toggleDisabled = this.toggleDisabled.bind(this);
@@ -56,16 +52,31 @@ export default class RadioGroup extends React.Component {
 		});
 	}
 	render() {
-		const CPT_CLASSNAME = 'pkg-checked';
+		let _str_classname_all = ClassNames({
+			'pkg-checked': true,
+			'pkg-checked_disabled': (this.state.disabled===Setting.DISABLED_TRUE),
+			'pkg-list': true,
+			[CheckedUI.getListStyle( this.props.liststyle )]: true
+		});
+		let _str_classname_label = ClassNames({
+			'pkg-list-option': (this.props.listposition===Setting.LIST_POSITION_INNER)
+		});
 		return <div>
 			{JSON.stringify(this.state.outputresult)}<br />
 			{JSON.stringify(this.props.selectkey[0])}<br />
-			<ul className={CPT_CLASSNAME}>
+			<div className={_str_classname_all}>
 				{this.props.inputoption.map((json_item)=>{
+
+					let _str_classname_li = ClassNames({
+						'pkg-list-option': (this.props.listposition===Setting.LIST_POSITION_OUTER),
+						'pkg-checked-option': true,
+						'pkg-checked-option_checked': (this.state.outputresult[this.props.selectkey[0]] === json_item[this.props.selectkey[0]])
+					});
+
 					return (
-						<li key={this.props.name+'-'+json_item[this.props.selectkey[0]]+'-'+Math.floor(Math.random()*1000)}
-							className={(this.state.outputresult[this.props.selectkey[0]] === json_item[this.props.selectkey[0]])? 'pkg-checked-option_checked' : 'pkg-checked-option'}>
-							<label>
+						<span key={this.props.name+'-'+json_item[this.props.selectkey[0]]+'-'+Math.floor(Math.random()*1000)}
+							className={_str_classname_li}>
+							<label className={_str_classname_label}>
 								<ItemBase value={json_item[this.props.selectkey[0]]}
 									checked={this.state.outputresult[this.props.selectkey[0]] === json_item[this.props.selectkey[0]]}
 									onChange={this.handleChange}
@@ -74,10 +85,10 @@ export default class RadioGroup extends React.Component {
 									name={this.props.name} />
 								{json_item[this.props.showkey[0]]}
 							</label>
-						</li> 
+						</span> 
 					);
 				})}
-			</ul>
+			</div>
 
 			<button onClick={this.toggleDisabled}>toggle disabled</button>
 
@@ -91,7 +102,9 @@ RadioGroup.propTypes = {
     inputoption: React.PropTypes.array,
     selectkey: React.PropTypes.array,
     showkey: React.PropTypes.array,
-    outputresult: React.PropTypes.object
+    outputresult: React.PropTypes.object,
+    liststyle: React.PropTypes.string,
+    listposition: React.PropTypes.string
 },
 RadioGroup.defaultProps = {
 	type: 'radio',
@@ -99,5 +112,7 @@ RadioGroup.defaultProps = {
 	inputoption: [],
 	selectkey: [],
 	showkey: [],
-	outputresult: {}
+	outputresult: {},
+    liststyle: '',
+    listposition: Setting.LIST_POSITION_INNER
 };

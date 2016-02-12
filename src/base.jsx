@@ -3,6 +3,7 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import RadioGroup from './js/RadioGroup';
+import Setting from './js/Setting';
 
 let _sary_options = [{
 	uuid: 'a',
@@ -37,6 +38,8 @@ let _ary_showkey = ['text'];
 ReactDOM.render(
 	<RadioGroup 
 		name="name"
+		liststyle={Setting.LIST_STYLE_CIRCLE}
+		listposition={Setting.LIST_POSITION_INNER}
 		inputoption={_sary_options}
 		selectkey={_ary_selectkey}
 		outputresult={_json_checked}
