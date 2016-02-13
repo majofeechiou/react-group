@@ -32,6 +32,21 @@ export default class CheckedUI {
 		return _str_return ;
 	};
 
+	static getIconPosition( str_position ){
+		let _str_return = '';
+		// str_position = str_position || Setting.ICON_POSTION_LEFT ;
+		switch (str_position){
+			case Setting.ICON_POSTION_TOP:
+			case Setting.ICON_POSTION_BOTTOM:
+			case Setting.ICON_POSTION_LEFT:
+			case Setting.ICON_POSTION_RIGHT:
+			case Setting.ICON_POSTION_NONE:
+				_str_return = 'pkg-checked_iconposition-'+str_position;
+				break;
+		}
+		return _str_return;
+	};
+
 	static getListStyle( str_style ){
 		let _str_return = '';
 		switch (str_style){

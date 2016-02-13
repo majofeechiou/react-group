@@ -39,14 +39,20 @@ export default class ItemBase extends React.Component {
 		if (typeof checked === 'boolean') {
 			checked = checked ? 1 : 0;
 		}
+		let _str_classname_all = 'pkg-item',
+			_str_classname_input = 'pkg-item-input';
 		return (
-			<span>
-				<span></span>
-				<input {...props}
+			<span className={_str_classname_all}>
+				<input type={this.props.type}
+					name={this.props.name}
+					value={this.props.value}
+					disabled={this.props.disabled}
+					className={_str_classname_input}
 					defaultChecked={!!props.defaultChecked}
 					checked={!!checked}
 					onChange={this.handleChange}
 				/>
+				{this.props.item[this.props.showkey[0]]}
 				--{JSON.stringify(!!checked)}--
 			</span>
 		);
@@ -54,6 +60,8 @@ export default class ItemBase extends React.Component {
 }
 
 ItemBase.propTypes = {
+	item: React.PropTypes.object,
+	showkey: React.PropTypes.array,
 	style: React.PropTypes.object,
 	defaultChecked: React.PropTypes.oneOfType([React.PropTypes.number, React.PropTypes.bool]),
 	checked: React.PropTypes.oneOfType([React.PropTypes.number, React.PropTypes.bool]),
@@ -61,7 +69,8 @@ ItemBase.propTypes = {
 };
 
 ItemBase.defaultProps = {
-	style: {},
+	item: {},
+	showkey: [],
 	defaultChecked: 0,
 	onChange: () => {
 	},

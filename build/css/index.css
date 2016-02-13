@@ -1,155 +1,135 @@
-.pkg-checked {
-	border: 1px solid #f00;
-	
+.pkg-checked, .pkg-checked * {
+	box-sizing: border-box;
+
 }
 
 .pkg-checked .pkg-checked-option {
 	border: 1px solid #f0f;
-	
+
 }
 
-.pkg-checked.pkg-checked_disabled .pkg-list-option {
+.pkg-checked .pkg-item .pkg-item-input {
+	display: none;
+
+}
+
+.pkg-checked.pkg-checked_disabled {
 	opacity: 0.6;
-	
+
 }
 
 .pkg-checked.pkg-checked_display-block {
 	position: relative;
 	display: block;
-	
+
 }
 
 .pkg-checked.pkg-checked_display-block .pkg-checked-option {
 	float: left;
-	
+
 }
 
 .pkg-checked.pkg-checked_display-block .pkg-checked-option {
 	display: block;
-	
+
 }
 
 .pkg-checked.pkg-checked_display-block:after {
+	display: block;
 	content: '';
 	width: 100%;
 	clear: both;
-	
+
 }
 
 .pkg-checked.pkg-checked_display-inline-block {
 	position: relative;
 	display: inline-block;
-	
+
 }
 
 .pkg-checked.pkg-checked_display-inline-block .pkg-checked-option {
 	display: inline-block;
-	
+
 }
 
-.pkg-checked.pkg-list_style-disc .pkg-list-option {}
-
-.pkg-checked.pkg-list_style-disc .pkg-list-option:before {
-	content: counter(cpt_list_count, disc) ". ";
-	
-}
-
-.pkg-checked.pkg-list_style-circle .pkg-list-option {}
-
-.pkg-checked.pkg-list_style-circle .pkg-list-option:before {
-	content: counter(cpt_list_count, circle) ". ";
-	
-}
-
-.pkg-checked.pkg-list_style-decimal .pkg-list-option {}
-
-.pkg-checked.pkg-list_style-decimal .pkg-list-option:before {
-	content: counter(cpt_list_count, decimal) ". ";
-	
-}
-
-.pkg-checked.pkg-list_style-square .pkg-list-option {}
-
-.pkg-checked.pkg-list_style-square .pkg-list-option:before {
-	content: counter(cpt_list_count, square) ". ";
-	
-}
-
-.pkg-checked.pkg-list_style-decimal-leading-zero .pkg-list-option {}
-
-.pkg-checked.pkg-list_style-decimal-leading-zero .pkg-list-option:before {
-	content: counter(cpt_list_count, decimal-leading-zero) ". ";
-	
-}
-
-.pkg-checked.pkg-list_style-lower-roman .pkg-list-option {}
-
-.pkg-checked.pkg-list_style-lower-roman .pkg-list-option:before {
-	content: counter(cpt_list_count, lower-roman) ". ";
-	
-}
-
-.pkg-checked.pkg-list_style-upper-roman .pkg-list-option {}
-
-.pkg-checked.pkg-list_style-upper-roman .pkg-list-option:before {
-	content: counter(cpt_list_count, upper-roman) ". ";
-	
-}
-
-.pkg-checked.pkg-list_style-lower-greek .pkg-list-option {}
-
-.pkg-checked.pkg-list_style-lower-greek .pkg-list-option:before {
-	content: counter(cpt_list_count, lower-greek) ". ";
-	
-}
-
-.pkg-checked.pkg-list_style-lower-latin .pkg-list-option {}
-
-.pkg-checked.pkg-list_style-lower-latin .pkg-list-option:before {
-	content: counter(cpt_list_count, lower-latin) ". ";
-	
-}
-
-.pkg-checked.pkg-list_style-upper-latin .pkg-list-option {}
-
-.pkg-checked.pkg-list_style-upper-latin .pkg-list-option:before {
-	content: counter(cpt_list_count, upper-latin) ". ";
-	
-}
-
-.pkg-checked.pkg-checked_padding-tiny .pkg-checked-option {
+.pkg-checked.pkg-checked_padding-tiny .pkg-checked-icon:before, .pkg-checked.pkg-checked_padding-tiny .pkg-checked-icon:after, .pkg-checked.pkg-checked_padding-tiny .pkg-checked-icon > * {
 	padding: 0.2em;
-	
+
 }
 
-.pkg-checked.pkg-checked_padding-small .pkg-checked-option {
+.pkg-checked.pkg-checked_padding-small .pkg-checked-icon:before, .pkg-checked.pkg-checked_padding-small .pkg-checked-icon:after, .pkg-checked.pkg-checked_padding-small .pkg-checked-icon > * {
 	padding: 0.5em;
-	
+
 }
 
-.pkg-checked.pkg-checked_padding-little .pkg-checked-option {
+.pkg-checked.pkg-checked_padding-little .pkg-checked-icon:before, .pkg-checked.pkg-checked_padding-little .pkg-checked-icon:after, .pkg-checked.pkg-checked_padding-little .pkg-checked-icon > * {
 	padding: 0.8em;
-	
+
 }
 
-.pkg-checked.pkg-checked_padding-base .pkg-checked-option {
+.pkg-checked.pkg-checked_padding-base .pkg-checked-icon:before, .pkg-checked.pkg-checked_padding-base .pkg-checked-icon:after, .pkg-checked.pkg-checked_padding-base .pkg-checked-icon > * {
 	padding: 1em;
-	
+
 }
 
-.pkg-checked.pkg-checked_padding-middle .pkg-checked-option {
+.pkg-checked.pkg-checked_padding-middle .pkg-checked-icon:before, .pkg-checked.pkg-checked_padding-middle .pkg-checked-icon:after, .pkg-checked.pkg-checked_padding-middle .pkg-checked-icon > * {
 	padding: 1.2em;
-	
+
 }
 
-.pkg-checked.pkg-checked_padding-big .pkg-checked-option {
+.pkg-checked.pkg-checked_padding-big .pkg-checked-icon:before, .pkg-checked.pkg-checked_padding-big .pkg-checked-icon:after, .pkg-checked.pkg-checked_padding-big .pkg-checked-icon > * {
 	padding: 1.5em;
-	
+
 }
 
-.pkg-checked.pkg-checked_padding-large .pkg-checked-option {
+.pkg-checked.pkg-checked_padding-large .pkg-checked-icon:before, .pkg-checked.pkg-checked_padding-large .pkg-checked-icon:after, .pkg-checked.pkg-checked_padding-large .pkg-checked-icon > * {
 	padding: 2em;
-	
+
+}
+
+.pkg-checked.pkg-checked_iconposition-left .pkg-checked-icon, .pkg-checked.pkg-checked_iconposition-top .pkg-checked-icon {}
+
+.pkg-checked.pkg-checked_iconposition-left .pkg-checked-icon:before, .pkg-checked.pkg-checked_iconposition-top .pkg-checked-icon:before {
+	content: 'O-';
+
+}
+
+.pkg-checked.pkg-checked_iconposition-right .pkg-checked-icon, .pkg-checked.pkg-checked_iconposition-bottom .pkg-checked-icon {}
+
+.pkg-checked.pkg-checked_iconposition-right .pkg-checked-icon:after, .pkg-checked.pkg-checked_iconposition-bottom .pkg-checked-icon:after {
+	content: 'O-';
+
+}
+
+.pkg-checked.pkg-checked_iconposition-left .pkg-checked-icon:before, .pkg-checked.pkg-checked_iconposition-left .pkg-checked-icon > * {
+	border: 1px solid #f00;
+	display: inline-block;
+	vertical-align: middle;
+
+}
+
+.pkg-checked.pkg-checked_iconposition-right .pkg-checked-icon:after, .pkg-checked.pkg-checked_iconposition-right .pkg-checked-icon > * {
+	border: 1px solid #f00;
+	display: inline-block;
+	vertical-align: middle;
+
+}
+
+.pkg-checked.pkg-checked_iconposition-top .pkg-checked-icon {}
+
+.pkg-checked.pkg-checked_iconposition-top .pkg-checked-icon:before {
+	display: block;
+	text-align: center;
+
+}
+
+.pkg-checked.pkg-checked_iconposition-bottom .pkg-checked-icon {}
+
+.pkg-checked.pkg-checked_iconposition-bottom .pkg-checked-icon:after {
+	display: block;
+	text-align: center;
+
 }
 
 .pkg-list {
@@ -161,5 +141,89 @@
 
 .pkg-list .pkg-list-option:before {
 	counter-increment: cpt_list_count;
-	
+
+}
+
+.pkg-list.pkg-list_style-disc .pkg-list-option {}
+
+.pkg-list.pkg-list_style-disc .pkg-list-option:before {
+	content: counter(cpt_list_count, disc) ". ";
+
+}
+
+.pkg-list.pkg-list_style-circle .pkg-list-option {}
+
+.pkg-list.pkg-list_style-circle .pkg-list-option:before {
+	content: counter(cpt_list_count, circle) ". ";
+
+}
+
+.pkg-list.pkg-list_style-decimal .pkg-list-option {}
+
+.pkg-list.pkg-list_style-decimal .pkg-list-option:before {
+	content: counter(cpt_list_count, decimal) ". ";
+
+}
+
+.pkg-list.pkg-list_style-square .pkg-list-option {}
+
+.pkg-list.pkg-list_style-square .pkg-list-option:before {
+	content: counter(cpt_list_count, square) ". ";
+
+}
+
+.pkg-list.pkg-list_style-decimal-leading-zero .pkg-list-option {}
+
+.pkg-list.pkg-list_style-decimal-leading-zero .pkg-list-option:before {
+	content: counter(cpt_list_count, decimal-leading-zero) ". ";
+
+}
+
+.pkg-list.pkg-list_style-lower-roman .pkg-list-option {}
+
+.pkg-list.pkg-list_style-lower-roman .pkg-list-option:before {
+	content: counter(cpt_list_count, lower-roman) ". ";
+
+}
+
+.pkg-list.pkg-list_style-upper-roman .pkg-list-option {}
+
+.pkg-list.pkg-list_style-upper-roman .pkg-list-option:before {
+	content: counter(cpt_list_count, upper-roman) ". ";
+
+}
+
+.pkg-list.pkg-list_style-lower-greek .pkg-list-option {}
+
+.pkg-list.pkg-list_style-lower-greek .pkg-list-option:before {
+	content: counter(cpt_list_count, lower-greek) ". ";
+
+}
+
+.pkg-list.pkg-list_style-lower-latin .pkg-list-option {}
+
+.pkg-list.pkg-list_style-lower-latin .pkg-list-option:before {
+	content: counter(cpt_list_count, lower-latin) ". ";
+
+}
+
+.pkg-list.pkg-list_style-upper-latin .pkg-list-option {}
+
+.pkg-list.pkg-list_style-upper-latin .pkg-list-option:before {
+	content: counter(cpt_list_count, upper-latin) ". ";
+
+}
+
+.pkg-item {
+	line-height: 100%;
+}
+
+.pkg-item, .pkg-item * {
+	box-sizing: border-box;
+
+}
+
+.pkg-item .pkg-item-input {
+	margin-left: 0.5em;
+
 }

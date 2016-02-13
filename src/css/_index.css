@@ -14,6 +14,7 @@
 		display: $name;
 		@if $name == block {
 			&:after{
+				display: block;
 				content: '';
 				width: 100%;
 				clear: both;
@@ -29,16 +30,155 @@
 }
 
 .pkg-checked {
-	border: 1px solid #f00;
+	&, * {
+		box-sizing: border-box;
+	}
 
 	&.pkg-checked_disabled {
-		.pkg-list-option {
-			opacity: 0.6;
-		}
+		opacity: 0.6;
 	}
 
 	@mixin checkedDisplay block ;
 	@mixin checkedDisplay inline-block ;
+
+	&.pkg-checked_padding-tiny {
+		.pkg-checked-icon {
+			&:before,
+			&:after,
+			> * {
+				padding: 0.2em;
+			}
+		}
+	}
+	&.pkg-checked_padding-small {
+		.pkg-checked-icon {
+			&:before,
+			&:after,
+			> * {
+				padding: 0.5em;
+			}
+		}
+	}
+	&.pkg-checked_padding-little {
+		.pkg-checked-icon {
+			&:before,
+			&:after,
+			> * {
+				padding: 0.8em;
+			}
+		}
+	}
+	&.pkg-checked_padding-base {
+		.pkg-checked-icon {
+			&:before,
+			&:after,
+			> * {
+				padding: 1em;
+			}
+		}
+	}
+	&.pkg-checked_padding-middle {
+		.pkg-checked-icon {
+			&:before,
+			&:after,
+			> * {
+				padding: 1.2em;
+			}
+		}
+	}
+	&.pkg-checked_padding-big {
+		.pkg-checked-icon {
+			&:before,
+			&:after,
+			> * {
+				padding:1.5em;
+			}
+		}
+	}
+	&.pkg-checked_padding-large {
+		.pkg-checked-icon {
+			&:before,
+			&:after,
+			> * {
+				padding: 2em;
+			}
+		}
+	}
+
+	&.pkg-checked_iconposition-left,
+	&.pkg-checked_iconposition-top {
+
+		.pkg-checked-icon {
+			&:before {
+				content: 'O-';
+			}
+		}
+	}
+
+	&.pkg-checked_iconposition-right,
+	&.pkg-checked_iconposition-bottom {
+
+		.pkg-checked-icon {
+			&:after {
+				content: 'O-';
+			}
+		}
+	}
+
+	&.pkg-checked_iconposition-left {
+		.pkg-checked-icon {
+			&:before,
+			> * {
+				border: 1px solid #f00;
+				display: inline-block;
+				vertical-align: middle;
+			}
+		}
+	}
+
+	&.pkg-checked_iconposition-right {
+		.pkg-checked-icon {
+			&:after,
+			> * {
+				border: 1px solid #f00;
+				display: inline-block;
+				vertical-align: middle;
+			}
+		}
+	}
+
+	&.pkg-checked_iconposition-top {
+		.pkg-checked-icon {
+			&:before {
+				display: block;
+				text-align: center;
+			}
+		}
+	}
+
+	&.pkg-checked_iconposition-bottom {
+		.pkg-checked-icon {
+			&:after {
+				display: block;
+				text-align: center;
+			}
+		}
+	}	
+
+	.pkg-checked-option {
+		border: 1px solid #f0f;
+	}
+
+	.pkg-item {
+		.pkg-item-input {
+			display: none;
+		}
+	}
+
+}
+
+.pkg-list {
+	counter-reset: cpt_list_count;
 
 	@mixin listStyle disc ;
 	@mixin listStyle circle ;
@@ -51,55 +191,20 @@
 	@mixin listStyle lower-latin ;
 	@mixin listStyle upper-latin ;
 
-	&.pkg-checked_padding-tiny {
-		.pkg-checked-option {
-			padding: 0.2em;
-		}
-	}
-	&.pkg-checked_padding-small {
-		.pkg-checked-option {
-			padding: 0.5em;
-		}
-	}
-	&.pkg-checked_padding-little {
-		.pkg-checked-option {
-			padding: 0.8em;
-		}
-	}
-	&.pkg-checked_padding-base {
-		.pkg-checked-option {
-			padding: 1em;
-		}
-	}
-	&.pkg-checked_padding-middle {
-		.pkg-checked-option {
-			padding: 1.2em;
-		}
-	}
-	&.pkg-checked_padding-big {
-		.pkg-checked-option {
-			padding: 1.5em;
-		}
-	}
-	&.pkg-checked_padding-large {
-		.pkg-checked-option {
-			padding: 2em;
-		}
-	}
-
-	.pkg-checked-option {
-		border: 1px solid #f0f;
-	}
-	
-}
-
-.pkg-list {
-	counter-reset: cpt_list_count;
-
 	.pkg-list-option {
 		&:before {
 			counter-increment: cpt_list_count;
 		}
 	}
 
+}
+
+.pkg-item {
+	&, * {
+		box-sizing: border-box;
+	}
+	line-height: 100%;
+	.pkg-item-input {
+		margin-left: 0.5em;
+	}
 }

@@ -111,13 +111,25 @@
 		inputoption: _sary_options,
 		outputresult: _json_checked,
 		showkey: _ary_showkey,
-		display: _Setting2.default.DISPLAY_BLOCK,
+		display: _Setting2.default.DISPLAY_INBLOCK,
 		padding: _Setting2.default.PADDING_LITTLE,
-		liststyle: _Setting2.default.LIST_STYLE_CIRCLE,
-		listposition: _Setting2.default.LIST_POSITION_INNER }), document.getElementById("content"));
+		liststyle: _Setting2.default.LIST_STYLE_UPPER_LATIN }), document.getElementById("content"));
 
+	_reactDom2.default.render(_react2.default.createElement(_RadioGroup2.default, {
+		name: 'name',
+		selectkey: _ary_selectkey,
+		inputoption: _sary_options,
+		outputresult: _json_checked,
+		showkey: _ary_showkey,
+		display: _Setting2.default.DISPLAY_INBLOCK,
+		padding: _Setting2.default.PADDING_LITTLE,
+		liststyle: _Setting2.default.LIST_STYLE_LOWER_LATIN }), document.getElementById("content2"));
+
+	// iconposition={Setting.ICON_POSTION_TOP}
 	// display={Setting.DISPLAY_BLOCK}
 	// padding={Setting.PADDING_BASE}
+	// liststyle={Setting.LIST_STYLE_CIRCLE}
+	// listposition={Setting.LIST_POSITION_INNER}
 
 /***/ },
 /* 2 */
@@ -19875,52 +19887,41 @@
 				var _ClassNames,
 				    _this2 = this;
 
-				var _str_classname_all = (0, _classnames2.default)((_ClassNames = {
-					'pkg-checked': true,
-					'pkg-checked_disabled': this.state.disabled === _Setting2.default.DISABLED_TRUE,
-					'pkg-list': true
-				}, _defineProperty(_ClassNames, _CheckedUI2.default.getDisabled(this.props.display), true), _defineProperty(_ClassNames, _CheckedUI2.default.getPadding(this.props.padding), true), _defineProperty(_ClassNames, _CheckedUI2.default.getListStyle(this.props.liststyle), true), _ClassNames));
-				var _str_classname_label = (0, _classnames2.default)({
-					'pkg-list-option': this.props.listposition === _Setting2.default.LIST_POSITION_INNER
+				var _str_classname_all = (0, _classnames2.default)((_ClassNames = {}, _defineProperty(_ClassNames, this.props.classname, !!this.props.classname), _defineProperty(_ClassNames, 'pkg-checked', true), _defineProperty(_ClassNames, 'pkg-checked_disabled', this.state.disabled === _Setting2.default.DISABLED_TRUE), _defineProperty(_ClassNames, 'pkg-list', true), _defineProperty(_ClassNames, _CheckedUI2.default.getDisabled(this.props.display), true), _defineProperty(_ClassNames, _CheckedUI2.default.getPadding(this.props.padding), true), _defineProperty(_ClassNames, _CheckedUI2.default.getListStyle(this.props.liststyle), true), _defineProperty(_ClassNames, _CheckedUI2.default.getIconPosition(this.props.iconposition), true), _ClassNames));
+				var _str_classname_inner = (0, _classnames2.default)({
+					'pkg-list-option': this.props.listposition === _Setting2.default.LIST_POSITION_INNER,
+					'pkg-checked-icon': this.props.listposition !== _Setting2.default.LIST_POSITION_INNER
 				});
 				return _react2.default.createElement(
 					'div',
 					null,
 					_react2.default.createElement(
-						'span',
-						null,
-						'123-'
-					),
-					_react2.default.createElement(
-						'span',
-						null,
-						'456-'
-					),
-					_react2.default.createElement(
 						'div',
 						{ className: _str_classname_all },
 						this.props.inputoption.map(function (json_item) {
 
-							var _str_classname_li = (0, _classnames2.default)({
+							var _str_classname_outer = (0, _classnames2.default)({
 								'pkg-checked-option': true,
 								'pkg-list-option': _this2.props.listposition === _Setting2.default.LIST_POSITION_OUTER,
+								'pkg-checked-icon': _this2.props.listposition !== _Setting2.default.LIST_POSITION_OUTER,
 								'pkg-checked-option_checked': _this2.state.outputresult[_this2.props.selectkey[0]] === json_item[_this2.props.selectkey[0]]
 							});
 
 							return _react2.default.createElement(
-								'span',
+								'label',
 								{ key: _this2.props.name + '-' + json_item[_this2.props.selectkey[0]] + '-' + Math.floor(Math.random() * 1000),
-									className: _str_classname_li },
+									className: _str_classname_outer },
 								_react2.default.createElement(
-									'label',
-									{ className: _str_classname_label },
+									'span',
+									{ className: _str_classname_inner },
 									_react2.default.createElement(_ItemBase2.default, { value: json_item[_this2.props.selectkey[0]],
 										checked: _this2.state.outputresult[_this2.props.selectkey[0]] === json_item[_this2.props.selectkey[0]],
 										onChange: _this2.handleChange,
 										disabled: _this2.state.disabled,
 										type: _this2.props.type === 'checkbox' ? 'checkbox' : 'radio',
-										name: _this2.props.name }),
-									json_item[_this2.props.showkey[0]]
+										name: _this2.props.name,
+										showkey: _this2.props.showkey,
+										item: json_item })
 								)
 							);
 						})
@@ -19948,7 +19949,8 @@
 		outputresult: _react2.default.PropTypes.object,
 		display: _react2.default.PropTypes.string,
 		liststyle: _react2.default.PropTypes.string,
-		listposition: _react2.default.PropTypes.string
+		listposition: _react2.default.PropTypes.string,
+		iconposition: _react2.default.PropTypes.string
 	}, RadioGroup.defaultProps = {
 		type: 'radio',
 		classname: '',
@@ -19958,7 +19960,8 @@
 		outputresult: {},
 		display: _Setting2.default.DISPLAY_INBLOCK,
 		liststyle: '',
-		listposition: _Setting2.default.LIST_POSITION_INNER
+		listposition: _Setting2.default.LIST_POSITION_INNER,
+		iconposition: _Setting2.default.ICON_POSTION_LEFT
 	};
 
 /***/ },
@@ -19966,8 +19969,6 @@
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
-
-	var _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; };
 
 	var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
 
@@ -20034,15 +20035,21 @@
 				if (typeof checked === 'boolean') {
 					checked = checked ? 1 : 0;
 				}
+				var _str_classname_all = 'pkg-item',
+				    _str_classname_input = 'pkg-item-input';
 				return _react2.default.createElement(
 					'span',
-					null,
-					_react2.default.createElement('span', null),
-					_react2.default.createElement('input', _extends({}, props, {
+					{ className: _str_classname_all },
+					_react2.default.createElement('input', { type: this.props.type,
+						name: this.props.name,
+						value: this.props.value,
+						disabled: this.props.disabled,
+						className: _str_classname_input,
 						defaultChecked: !!props.defaultChecked,
 						checked: !!checked,
 						onChange: this.handleChange
-					})),
+					}),
+					this.props.item[this.props.showkey[0]],
 					'--',
 					JSON.stringify(!!checked),
 					'--'
@@ -20056,6 +20063,8 @@
 	exports.default = ItemBase;
 
 	ItemBase.propTypes = {
+		item: _react2.default.PropTypes.object,
+		showkey: _react2.default.PropTypes.array,
 		style: _react2.default.PropTypes.object,
 		defaultChecked: _react2.default.PropTypes.oneOfType([_react2.default.PropTypes.number, _react2.default.PropTypes.bool]),
 		checked: _react2.default.PropTypes.oneOfType([_react2.default.PropTypes.number, _react2.default.PropTypes.bool]),
@@ -20063,7 +20072,8 @@
 	};
 
 	ItemBase.defaultProps = {
-		style: {},
+		item: {},
+		showkey: [],
 		defaultChecked: 0,
 		onChange: function onChange() {}
 	};
@@ -20238,6 +20248,11 @@
 	Setting.PADDING_MIDDLE = 'middle';
 	Setting.PADDING_BIG = 'big';
 	Setting.PADDING_LARGE = 'large';
+	Setting.ICON_POSTION_TOP = 'top';
+	Setting.ICON_POSTION_BOTTOM = 'bottom';
+	Setting.ICON_POSTION_LEFT = 'left';
+	Setting.ICON_POSTION_RIGHT = 'right';
+	Setting.ICON_POSTION_NONE = 'none';
 	Setting.LIST_POSITION_OUTER = 'outer';
 	Setting.LIST_POSITION_INNER = 'inner';
 	Setting.LIST_STYLE_DISC = 'disc';
@@ -20306,6 +20321,22 @@
 					case _Setting2.default.PADDING_BIG:
 					case _Setting2.default.PADDING_LARGE:
 						_str_return = 'pkg-checked_padding-' + str_padding;
+						break;
+				}
+				return _str_return;
+			}
+		}, {
+			key: 'getIconPosition',
+			value: function getIconPosition(str_position) {
+				var _str_return = '';
+				// str_position = str_position || Setting.ICON_POSTION_LEFT ;
+				switch (str_position) {
+					case _Setting2.default.ICON_POSTION_TOP:
+					case _Setting2.default.ICON_POSTION_BOTTOM:
+					case _Setting2.default.ICON_POSTION_LEFT:
+					case _Setting2.default.ICON_POSTION_RIGHT:
+					case _Setting2.default.ICON_POSTION_NONE:
+						_str_return = 'pkg-checked_iconposition-' + str_position;
 						break;
 				}
 				return _str_return;

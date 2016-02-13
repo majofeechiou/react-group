@@ -5,16 +5,16 @@
 		BLOCK - block
 		INBLOCK - inline-block
 	*/
-/*
-	padding:
-	tiny - 0.2em
-	small - 0.5em
-	little - 0.8em
-	base - 1em
-	middle - 1.2em
-	big - 1.5em
-	large - 2em
-*/
+	/*
+		padding:
+		tiny - 0.2em
+		small - 0.5em
+		little - 0.8em
+		base - 1em
+		middle - 1.2em
+		big - 1.5em
+		large - 2em
+	*/
 /*
 	有哪些類型：
 	原版 - clean
@@ -34,14 +34,14 @@
 	filter-模糊
 	translateY-雨滴落下
 */
-/*
-	ICON位置或不顯示：
-	上 - top
-	下 - bottom
-	左 - left
-	右 - right
-	不要 - none
-*/
+	/*
+		ICON位置或不顯示：
+		上 - top
+		下 - bottom
+		左 - left
+		右 - right
+		不要 - none
+	*/
 /*
 	ICON類型：
 	實的愛心
@@ -95,6 +95,13 @@ export default class Setting {
 	static PADDING_BIG = 'big'; // 1.5em
 	static PADDING_LARGE = 'large'; // 2em
 
+	// ICON位置或不顯示：
+	static ICON_POSTION_TOP = 'top';
+	static ICON_POSTION_BOTTOM = 'bottom';
+	static ICON_POSTION_LEFT = 'left';
+	static ICON_POSTION_RIGHT = 'right';
+	static ICON_POSTION_NONE = 'none'; // 確保真的不會有icon的出現
+
 	// 清單位置
 	static LIST_POSITION_OUTER = 'outer'; // 左外
 	static LIST_POSITION_INNER = 'inner'; // 左內
@@ -114,5 +121,5 @@ export default class Setting {
 	// 能不能作用（disabled）
 	static DISABLED_TRUE = true;
 	static DISABLED_FALSE = false;
-	
+
 }
