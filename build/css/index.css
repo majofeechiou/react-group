@@ -1,86 +1,165 @@
-/* @define-mixin listStyle $cname $sname {
-	&.pkg-list_style-$cname{
-		.pkg-list-option {
-			&:before {
-				content: counter(cpt_list_count, $sname) ". ";
-			}
-		}
-	}
-} */
+.pkg-checked {
+	border: 1px solid #f00;
+	
+}
 
-/*
-@mixin listStyle search;
-*/
+.pkg-checked .pkg-checked-option {
+	border: 1px solid #f0f;
+	
+}
+
+.pkg-checked.pkg-checked_disabled .pkg-list-option {
+	opacity: 0.6;
+	
+}
+
+.pkg-checked.pkg-checked_display-block {
+	position: relative;
+	display: block;
+	
+}
+
+.pkg-checked.pkg-checked_display-block .pkg-checked-option {
+	float: left;
+	
+}
+
+.pkg-checked.pkg-checked_display-block .pkg-checked-option {
+	display: block;
+	
+}
+
+.pkg-checked.pkg-checked_display-block:after {
+	content: '';
+	width: 100%;
+	clear: both;
+	
+}
+
+.pkg-checked.pkg-checked_display-inline-block {
+	position: relative;
+	display: inline-block;
+	
+}
+
+.pkg-checked.pkg-checked_display-inline-block .pkg-checked-option {
+	display: inline-block;
+	
+}
+
+.pkg-checked.pkg-list_style-disc .pkg-list-option {}
+
+.pkg-checked.pkg-list_style-disc .pkg-list-option:before {
+	content: counter(cpt_list_count, disc) ". ";
+	
+}
+
+.pkg-checked.pkg-list_style-circle .pkg-list-option {}
+
+.pkg-checked.pkg-list_style-circle .pkg-list-option:before {
+	content: counter(cpt_list_count, circle) ". ";
+	
+}
+
+.pkg-checked.pkg-list_style-decimal .pkg-list-option {}
+
+.pkg-checked.pkg-list_style-decimal .pkg-list-option:before {
+	content: counter(cpt_list_count, decimal) ". ";
+	
+}
+
+.pkg-checked.pkg-list_style-square .pkg-list-option {}
+
+.pkg-checked.pkg-list_style-square .pkg-list-option:before {
+	content: counter(cpt_list_count, square) ". ";
+	
+}
+
+.pkg-checked.pkg-list_style-decimal-leading-zero .pkg-list-option {}
+
+.pkg-checked.pkg-list_style-decimal-leading-zero .pkg-list-option:before {
+	content: counter(cpt_list_count, decimal-leading-zero) ". ";
+	
+}
+
+.pkg-checked.pkg-list_style-lower-roman .pkg-list-option {}
+
+.pkg-checked.pkg-list_style-lower-roman .pkg-list-option:before {
+	content: counter(cpt_list_count, lower-roman) ". ";
+	
+}
+
+.pkg-checked.pkg-list_style-upper-roman .pkg-list-option {}
+
+.pkg-checked.pkg-list_style-upper-roman .pkg-list-option:before {
+	content: counter(cpt_list_count, upper-roman) ". ";
+	
+}
+
+.pkg-checked.pkg-list_style-lower-greek .pkg-list-option {}
+
+.pkg-checked.pkg-list_style-lower-greek .pkg-list-option:before {
+	content: counter(cpt_list_count, lower-greek) ". ";
+	
+}
+
+.pkg-checked.pkg-list_style-lower-latin .pkg-list-option {}
+
+.pkg-checked.pkg-list_style-lower-latin .pkg-list-option:before {
+	content: counter(cpt_list_count, lower-latin) ". ";
+	
+}
+
+.pkg-checked.pkg-list_style-upper-latin .pkg-list-option {}
+
+.pkg-checked.pkg-list_style-upper-latin .pkg-list-option:before {
+	content: counter(cpt_list_count, upper-latin) ". ";
+	
+}
+
+.pkg-checked.pkg-checked_padding-tiny .pkg-checked-option {
+	padding: 0.2em;
+	
+}
+
+.pkg-checked.pkg-checked_padding-small .pkg-checked-option {
+	padding: 0.5em;
+	
+}
+
+.pkg-checked.pkg-checked_padding-little .pkg-checked-option {
+	padding: 0.8em;
+	
+}
+
+.pkg-checked.pkg-checked_padding-base .pkg-checked-option {
+	padding: 1em;
+	
+}
+
+.pkg-checked.pkg-checked_padding-middle .pkg-checked-option {
+	padding: 1.2em;
+	
+}
+
+.pkg-checked.pkg-checked_padding-big .pkg-checked-option {
+	padding: 1.5em;
+	
+}
+
+.pkg-checked.pkg-checked_padding-large .pkg-checked-option {
+	padding: 2em;
+	
+}
 
 .pkg-list {
 	counter-reset: cpt_list_count;
 
 }
 
-/*&.pkg-list_style-circle{
-		.pkg-list-option {
-			&:before {
-				content: counter(cpt_list_count, circle) ". ";
-			}
-		}
-	}*/
-
 .pkg-list .pkg-list-option {}
-
-/* @mixin listStyle circle circle ; */
 
 .pkg-list .pkg-list-option:before {
 	counter-increment: cpt_list_count;
-
+	
 }
-
-.pkg-list.pkg-checked_disabled .pkg-list-option {
-	opacity: 0.6;
-
-}
-
-.pkg-list.pkg-list_style-disc .pkg-list-option {}
-
-.pkg-list.pkg-list_style-disc .pkg-list-option:before {
-	content: counter(cpt_list_count, disc) ". ";
-
-}
-
-.pkg-list.pkg-list_style-decimal .pkg-list-option {}
-
-.pkg-list.pkg-list_style-decimal .pkg-list-option:before {
-	content: counter(cpt_list_count, decimal) ". ";
-
-}
-
-.pkg-checked {
-	border: 1px solid #f00;
-}
-
-.pkg-checked .pkg-checked-option {
-	border: 1px solid #f0f;
-
-}
-
-
-/*
-	_str_return = 'pkg-list_style-square';
-	break;
-case Setting.LIST_STYLE_DECIMAL_LEADING_ZERO:
-	_str_return = 'pkg-list_style-decimallz';
-	break;
-case Setting.LIST_STYLE_LOWER_ROMAN:
-	_str_return = 'pkg-list_style-lroman';
-	break;
-case Setting.LIST_STYLE_UPPER_ROMAN:
-	_str_return = 'pkg-list_style-uroman';
-	break;
-case Setting.LIST_STYLE_LOWER_GREEK:
-	_str_return = 'pkg-list_style-lgreek';
-	break;
-case Setting.LIST_STYLE_LOWER_LATIN:
-	_str_return = 'pkg-list_style-llatin';
-	break;
-case Setting.LIST_STYLE_UPPER_LATIN:
-	_str_return = 'pkg-list_style-ulatin';
-*/

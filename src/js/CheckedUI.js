@@ -3,38 +3,49 @@ import Setting from './Setting';
 
 export default class CheckedUI {
 
+	static getDisabled( str_display ){
+		let _str_return = '';
+		str_display = str_display || Setting.DISPLAY_INBLOCK ;
+		switch ( str_display ){
+			case Setting.DISPLAY_INBLOCK:
+			case Setting.DISPLAY_BLOCK:
+				_str_return = 'pkg-checked_display-'+str_display;
+				break;
+		}
+		return _str_return ;
+	};
+
+	static getPadding( str_padding ){
+		let _str_return = '';
+		str_padding = str_padding || Setting.DISPLAY_INBLOCK ;
+		switch ( str_padding ){
+			case Setting.PADDING_TINY:
+			case Setting.PADDING_SMALL:
+			case Setting.PADDING_LITTLE:
+			case Setting.PADDING_BASE:
+			case Setting.PADDING_MIDDLE:
+			case Setting.PADDING_BIG:
+			case Setting.PADDING_LARGE:
+				_str_return = 'pkg-checked_padding-'+str_padding;
+				break;
+		}
+		return _str_return ;
+	};
+
 	static getListStyle( str_style ){
 		let _str_return = '';
 		switch (str_style){
 			case Setting.LIST_STYLE_DISC:
-				_str_return = 'pkg-list_style-disc';
-				break;
 			case Setting.LIST_STYLE_CIRCLE:
-				_str_return = 'pkg-list_style-circle';
-				break;
 			case Setting.LIST_STYLE_DECIMAL:
-				_str_return = 'pkg-list_style-decimal';
-				break;
 			case Setting.LIST_STYLE_SQUARE:
-				_str_return = 'pkg-list_style-square';
-				break;
 			case Setting.LIST_STYLE_DECIMAL_LEADING_ZERO:
-				_str_return = 'pkg-list_style-decimallz';
-				break;
 			case Setting.LIST_STYLE_LOWER_ROMAN:
-				_str_return = 'pkg-list_style-lroman';
-				break;
 			case Setting.LIST_STYLE_UPPER_ROMAN:
-				_str_return = 'pkg-list_style-uroman';
-				break;
 			case Setting.LIST_STYLE_LOWER_GREEK:
-				_str_return = 'pkg-list_style-lgreek';
-				break;
 			case Setting.LIST_STYLE_LOWER_LATIN:
-				_str_return = 'pkg-list_style-llatin';
-				break;
 			case Setting.LIST_STYLE_UPPER_LATIN:
-				_str_return = 'pkg-list_style-ulatin';
+				_str_return = 'pkg-list_style-'+str_style;
 				break;
 		}
 		return _str_return;

@@ -1,10 +1,10 @@
 'use strict';
 
-/*
-	有哪些排版：
-	BLOCK - block
-	IN_BLOCK - inline-block
-*/
+	/*
+		有哪些排版：
+		BLOCK - block
+		INBLOCK - inline-block
+	*/
 /*
 	padding:
 	tiny - 0.2em
@@ -81,6 +81,20 @@
 		*/
 
 export default class Setting {
+
+	// display排版方式
+	static DISPLAY_BLOCK = 'block' ;
+	static DISPLAY_INBLOCK = 'inline-block' ;
+
+	// padding的大小
+	static PADDING_TINY = 'tiny'; // 0.2em
+	static PADDING_SMALL = 'small'; // 0.5em
+	static PADDING_LITTLE = 'little'; // 0.8em
+	static PADDING_BASE = 'base'; // 1em
+	static PADDING_MIDDLE = 'middle'; // 1.2em
+	static PADDING_BIG = 'big'; // 1.5em
+	static PADDING_LARGE = 'large'; // 2em
+
 	// 清單位置
 	static LIST_POSITION_OUTER = 'outer'; // 左外
 	static LIST_POSITION_INNER = 'inner'; // 左內
@@ -100,4 +114,5 @@ export default class Setting {
 	// 能不能作用（disabled）
 	static DISABLED_TRUE = true;
 	static DISABLED_FALSE = false;
+	
 }

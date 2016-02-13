@@ -1,48 +1,100 @@
-/* @define-mixin listStyle $cname $sname {
-	&.pkg-list_style-$cname{
+@define-mixin listStyle $name {
+	&.pkg-list_style-$name{
 		.pkg-list-option {
 			&:before {
-				content: counter(cpt_list_count, $sname) ". ";
+				content: counter(cpt_list_count, $name) ". ";
 			}
 		}
 	}
-} */
+}
 
-/*
-@mixin listStyle search;
-*/
+@define-mixin checkedDisplay $name {
+	&.pkg-checked_display-$name{
+		position: relative;
+		display: $name;
+		@if $name == block {
+			&:after{
+				content: '';
+				width: 100%;
+				clear: both;
+			}
+			.pkg-checked-option {
+				float: left;
+			}
+		}
+		.pkg-checked-option {
+			display: $name;
+		}
+	}
+}
 
-.pkg-list {
-	counter-reset: cpt_list_count;
+.pkg-checked {
+	border: 1px solid #f00;
+
 	&.pkg-checked_disabled {
 		.pkg-list-option {
 			opacity: 0.6;
 		}
 	}
 
-	/* @mixin listStyle circle circle ; */
+	@mixin checkedDisplay block ;
+	@mixin checkedDisplay inline-block ;
 
-	&.pkg-list_style-disc{
-		.pkg-list-option {
-			&:before {
-				content: counter(cpt_list_count, disc) ". ";
-			}
+	@mixin listStyle disc ;
+	@mixin listStyle circle ;
+	@mixin listStyle decimal ;
+	@mixin listStyle square ;
+	@mixin listStyle decimal-leading-zero ;
+	@mixin listStyle lower-roman ;
+	@mixin listStyle upper-roman ;
+	@mixin listStyle lower-greek ;
+	@mixin listStyle lower-latin ;
+	@mixin listStyle upper-latin ;
+
+	&.pkg-checked_padding-tiny {
+		.pkg-checked-option {
+			padding: 0.2em;
 		}
 	}
-	/*&.pkg-list_style-circle{
-		.pkg-list-option {
-			&:before {
-				content: counter(cpt_list_count, circle) ". ";
-			}
-		}
-	}*/
-	&.pkg-list_style-decimal{
-		.pkg-list-option {
-			&:before {
-				content: counter(cpt_list_count, decimal) ". ";
-			}
+	&.pkg-checked_padding-small {
+		.pkg-checked-option {
+			padding: 0.5em;
 		}
 	}
+	&.pkg-checked_padding-little {
+		.pkg-checked-option {
+			padding: 0.8em;
+		}
+	}
+	&.pkg-checked_padding-base {
+		.pkg-checked-option {
+			padding: 1em;
+		}
+	}
+	&.pkg-checked_padding-middle {
+		.pkg-checked-option {
+			padding: 1.2em;
+		}
+	}
+	&.pkg-checked_padding-big {
+		.pkg-checked-option {
+			padding: 1.5em;
+		}
+	}
+	&.pkg-checked_padding-large {
+		.pkg-checked-option {
+			padding: 2em;
+		}
+	}
+
+	.pkg-checked-option {
+		border: 1px solid #f0f;
+	}
+	
+}
+
+.pkg-list {
+	counter-reset: cpt_list_count;
 
 	.pkg-list-option {
 		&:before {
@@ -51,33 +103,3 @@
 	}
 
 }
-
-.pkg-checked {
-	border: 1px solid #f00;
-	.pkg-checked-option {
-		border: 1px solid #f0f;
-	}
-}
-
-
-/*
-	_str_return = 'pkg-list_style-square';
-	break;
-case Setting.LIST_STYLE_DECIMAL_LEADING_ZERO:
-	_str_return = 'pkg-list_style-decimallz';
-	break;
-case Setting.LIST_STYLE_LOWER_ROMAN:
-	_str_return = 'pkg-list_style-lroman';
-	break;
-case Setting.LIST_STYLE_UPPER_ROMAN:
-	_str_return = 'pkg-list_style-uroman';
-	break;
-case Setting.LIST_STYLE_LOWER_GREEK:
-	_str_return = 'pkg-list_style-lgreek';
-	break;
-case Setting.LIST_STYLE_LOWER_LATIN:
-	_str_return = 'pkg-list_style-llatin';
-	break;
-case Setting.LIST_STYLE_UPPER_LATIN:
-	_str_return = 'pkg-list_style-ulatin';
-*/

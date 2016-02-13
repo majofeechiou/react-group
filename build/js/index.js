@@ -107,12 +107,17 @@
 
 	_reactDom2.default.render(_react2.default.createElement(_RadioGroup2.default, {
 		name: 'name',
-		liststyle: _Setting2.default.LIST_STYLE_CIRCLE,
-		listposition: _Setting2.default.LIST_POSITION_INNER,
-		inputoption: _sary_options,
 		selectkey: _ary_selectkey,
+		inputoption: _sary_options,
 		outputresult: _json_checked,
-		showkey: _ary_showkey }), document.getElementById("content"));
+		showkey: _ary_showkey,
+		display: _Setting2.default.DISPLAY_BLOCK,
+		padding: _Setting2.default.PADDING_LITTLE,
+		liststyle: _Setting2.default.LIST_STYLE_CIRCLE,
+		listposition: _Setting2.default.LIST_POSITION_INNER }), document.getElementById("content"));
+
+	// display={Setting.DISPLAY_BLOCK}
+	// padding={Setting.PADDING_BASE}
 
 /***/ },
 /* 2 */
@@ -19867,31 +19872,38 @@
 		}, {
 			key: 'render',
 			value: function render() {
-				var _this2 = this;
+				var _ClassNames,
+				    _this2 = this;
 
-				var _str_classname_all = (0, _classnames2.default)(_defineProperty({
+				var _str_classname_all = (0, _classnames2.default)((_ClassNames = {
 					'pkg-checked': true,
 					'pkg-checked_disabled': this.state.disabled === _Setting2.default.DISABLED_TRUE,
 					'pkg-list': true
-				}, _CheckedUI2.default.getListStyle(this.props.liststyle), true));
+				}, _defineProperty(_ClassNames, _CheckedUI2.default.getDisabled(this.props.display), true), _defineProperty(_ClassNames, _CheckedUI2.default.getPadding(this.props.padding), true), _defineProperty(_ClassNames, _CheckedUI2.default.getListStyle(this.props.liststyle), true), _ClassNames));
 				var _str_classname_label = (0, _classnames2.default)({
 					'pkg-list-option': this.props.listposition === _Setting2.default.LIST_POSITION_INNER
 				});
 				return _react2.default.createElement(
 					'div',
 					null,
-					JSON.stringify(this.state.outputresult),
-					_react2.default.createElement('br', null),
-					JSON.stringify(this.props.selectkey[0]),
-					_react2.default.createElement('br', null),
+					_react2.default.createElement(
+						'span',
+						null,
+						'123-'
+					),
+					_react2.default.createElement(
+						'span',
+						null,
+						'456-'
+					),
 					_react2.default.createElement(
 						'div',
 						{ className: _str_classname_all },
 						this.props.inputoption.map(function (json_item) {
 
 							var _str_classname_li = (0, _classnames2.default)({
-								'pkg-list-option': _this2.props.listposition === _Setting2.default.LIST_POSITION_OUTER,
 								'pkg-checked-option': true,
+								'pkg-list-option': _this2.props.listposition === _Setting2.default.LIST_POSITION_OUTER,
 								'pkg-checked-option_checked': _this2.state.outputresult[_this2.props.selectkey[0]] === json_item[_this2.props.selectkey[0]]
 							});
 
@@ -19934,6 +19946,7 @@
 		selectkey: _react2.default.PropTypes.array,
 		showkey: _react2.default.PropTypes.array,
 		outputresult: _react2.default.PropTypes.object,
+		display: _react2.default.PropTypes.string,
 		liststyle: _react2.default.PropTypes.string,
 		listposition: _react2.default.PropTypes.string
 	}, RadioGroup.defaultProps = {
@@ -19943,6 +19956,7 @@
 		selectkey: [],
 		showkey: [],
 		outputresult: {},
+		display: _Setting2.default.DISPLAY_INBLOCK,
 		liststyle: '',
 		listposition: _Setting2.default.LIST_POSITION_INNER
 	};
@@ -20128,7 +20142,7 @@
 	/*
 		有哪些排版：
 		BLOCK - block
-		IN_BLOCK - inline-block
+		INBLOCK - inline-block
 	*/
 	/*
 		padding:
@@ -20215,6 +20229,15 @@
 		_classCallCheck(this, Setting);
 	};
 
+	Setting.DISPLAY_BLOCK = 'block';
+	Setting.DISPLAY_INBLOCK = 'inline-block';
+	Setting.PADDING_TINY = 'tiny';
+	Setting.PADDING_SMALL = 'small';
+	Setting.PADDING_LITTLE = 'little';
+	Setting.PADDING_BASE = 'base';
+	Setting.PADDING_MIDDLE = 'middle';
+	Setting.PADDING_BIG = 'big';
+	Setting.PADDING_LARGE = 'large';
 	Setting.LIST_POSITION_OUTER = 'outer';
 	Setting.LIST_POSITION_INNER = 'inner';
 	Setting.LIST_STYLE_DISC = 'disc';
@@ -20257,39 +20280,52 @@
 		}
 
 		_createClass(CheckedUI, null, [{
+			key: 'getDisabled',
+			value: function getDisabled(str_display) {
+				var _str_return = '';
+				str_display = str_display || _Setting2.default.DISPLAY_INBLOCK;
+				switch (str_display) {
+					case _Setting2.default.DISPLAY_INBLOCK:
+					case _Setting2.default.DISPLAY_BLOCK:
+						_str_return = 'pkg-checked_display-' + str_display;
+						break;
+				}
+				return _str_return;
+			}
+		}, {
+			key: 'getPadding',
+			value: function getPadding(str_padding) {
+				var _str_return = '';
+				str_padding = str_padding || _Setting2.default.DISPLAY_INBLOCK;
+				switch (str_padding) {
+					case _Setting2.default.PADDING_TINY:
+					case _Setting2.default.PADDING_SMALL:
+					case _Setting2.default.PADDING_LITTLE:
+					case _Setting2.default.PADDING_BASE:
+					case _Setting2.default.PADDING_MIDDLE:
+					case _Setting2.default.PADDING_BIG:
+					case _Setting2.default.PADDING_LARGE:
+						_str_return = 'pkg-checked_padding-' + str_padding;
+						break;
+				}
+				return _str_return;
+			}
+		}, {
 			key: 'getListStyle',
 			value: function getListStyle(str_style) {
 				var _str_return = '';
 				switch (str_style) {
 					case _Setting2.default.LIST_STYLE_DISC:
-						_str_return = 'pkg-list_style-disc';
-						break;
 					case _Setting2.default.LIST_STYLE_CIRCLE:
-						_str_return = 'pkg-list_style-circle';
-						break;
 					case _Setting2.default.LIST_STYLE_DECIMAL:
-						_str_return = 'pkg-list_style-decimal';
-						break;
 					case _Setting2.default.LIST_STYLE_SQUARE:
-						_str_return = 'pkg-list_style-square';
-						break;
 					case _Setting2.default.LIST_STYLE_DECIMAL_LEADING_ZERO:
-						_str_return = 'pkg-list_style-decimallz';
-						break;
 					case _Setting2.default.LIST_STYLE_LOWER_ROMAN:
-						_str_return = 'pkg-list_style-lroman';
-						break;
 					case _Setting2.default.LIST_STYLE_UPPER_ROMAN:
-						_str_return = 'pkg-list_style-uroman';
-						break;
 					case _Setting2.default.LIST_STYLE_LOWER_GREEK:
-						_str_return = 'pkg-list_style-lgreek';
-						break;
 					case _Setting2.default.LIST_STYLE_LOWER_LATIN:
-						_str_return = 'pkg-list_style-llatin';
-						break;
 					case _Setting2.default.LIST_STYLE_UPPER_LATIN:
-						_str_return = 'pkg-list_style-ulatin';
+						_str_return = 'pkg-list_style-' + str_style;
 						break;
 				}
 				return _str_return;

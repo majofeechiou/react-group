@@ -56,20 +56,22 @@ export default class RadioGroup extends React.Component {
 			'pkg-checked': true,
 			'pkg-checked_disabled': (this.state.disabled===Setting.DISABLED_TRUE),
 			'pkg-list': true,
+			[CheckedUI.getDisabled( this.props.display )]: true,
+			[CheckedUI.getPadding( this.props.padding )]: true,
 			[CheckedUI.getListStyle( this.props.liststyle )]: true
 		});
 		let _str_classname_label = ClassNames({
 			'pkg-list-option': (this.props.listposition===Setting.LIST_POSITION_INNER)
 		});
 		return <div>
-			{JSON.stringify(this.state.outputresult)}<br />
-			{JSON.stringify(this.props.selectkey[0])}<br />
+		<span>123-</span>
+		<span>456-</span>
 			<div className={_str_classname_all}>
 				{this.props.inputoption.map((json_item)=>{
 
 					let _str_classname_li = ClassNames({
-						'pkg-list-option': (this.props.listposition===Setting.LIST_POSITION_OUTER),
 						'pkg-checked-option': true,
+						'pkg-list-option': (this.props.listposition===Setting.LIST_POSITION_OUTER),
 						'pkg-checked-option_checked': (this.state.outputresult[this.props.selectkey[0]] === json_item[this.props.selectkey[0]])
 					});
 
@@ -103,6 +105,7 @@ RadioGroup.propTypes = {
     selectkey: React.PropTypes.array,
     showkey: React.PropTypes.array,
     outputresult: React.PropTypes.object,
+    display: React.PropTypes.string,
     liststyle: React.PropTypes.string,
     listposition: React.PropTypes.string
 },
@@ -113,6 +116,7 @@ RadioGroup.defaultProps = {
 	selectkey: [],
 	showkey: [],
 	outputresult: {},
+	display: Setting.DISPLAY_INBLOCK,
     liststyle: '',
     listposition: Setting.LIST_POSITION_INNER
 };

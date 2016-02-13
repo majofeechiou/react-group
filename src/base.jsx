@@ -38,11 +38,16 @@ let _ary_showkey = ['text'];
 ReactDOM.render(
 	<RadioGroup 
 		name="name"
-		liststyle={Setting.LIST_STYLE_CIRCLE}
-		listposition={Setting.LIST_POSITION_INNER}
-		inputoption={_sary_options}
 		selectkey={_ary_selectkey}
+		inputoption={_sary_options}
 		outputresult={_json_checked}
-		showkey={_ary_showkey} />, 
+		showkey={_ary_showkey}
+		display={Setting.DISPLAY_BLOCK}
+		padding={Setting.PADDING_LITTLE}
+		liststyle={Setting.LIST_STYLE_CIRCLE}
+		listposition={Setting.LIST_POSITION_INNER} />, 
 	document.getElementById("content")
 );
+
+// display={Setting.DISPLAY_BLOCK}
+// padding={Setting.PADDING_BASE}
