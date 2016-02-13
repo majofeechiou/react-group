@@ -26,6 +26,7 @@ export default class CheckedUI {
 			case Setting.PADDING_MIDDLE:
 			case Setting.PADDING_BIG:
 			case Setting.PADDING_LARGE:
+			case Setting.PADDING_HUGE:
 				_str_return = 'pkg-checked_padding-'+str_padding;
 				break;
 		}

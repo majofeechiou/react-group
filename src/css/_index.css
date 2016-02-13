@@ -29,6 +29,33 @@
 	}
 }
 
+@define-mixin checkedPadding $name {
+	&.pkg-checked_padding-$name{
+		
+		.pkg-checked-icon {
+			&:before,
+			&:after,
+			> * {
+				@if $name == tiny {
+					padding: 0.2em;
+				}@else if $name == small {
+					padding: 0.5em;
+				}@else if $name == little {
+					padding: 0.8em;
+				}@else if $name == base {
+					padding: 1em;
+				}@else if $name == middle {
+					padding: 1.2em;
+				}@else if $name == big {
+					padding: 1.5em;
+				}@else if $name == large {
+					padding: 2em;
+				}
+			}
+		}
+	}
+}
+
 .pkg-checked {
 	&, * {
 		box-sizing: border-box;
@@ -41,69 +68,13 @@
 	@mixin checkedDisplay block ;
 	@mixin checkedDisplay inline-block ;
 
-	&.pkg-checked_padding-tiny {
-		.pkg-checked-icon {
-			&:before,
-			&:after,
-			> * {
-				padding: 0.2em;
-			}
-		}
-	}
-	&.pkg-checked_padding-small {
-		.pkg-checked-icon {
-			&:before,
-			&:after,
-			> * {
-				padding: 0.5em;
-			}
-		}
-	}
-	&.pkg-checked_padding-little {
-		.pkg-checked-icon {
-			&:before,
-			&:after,
-			> * {
-				padding: 0.8em;
-			}
-		}
-	}
-	&.pkg-checked_padding-base {
-		.pkg-checked-icon {
-			&:before,
-			&:after,
-			> * {
-				padding: 1em;
-			}
-		}
-	}
-	&.pkg-checked_padding-middle {
-		.pkg-checked-icon {
-			&:before,
-			&:after,
-			> * {
-				padding: 1.2em;
-			}
-		}
-	}
-	&.pkg-checked_padding-big {
-		.pkg-checked-icon {
-			&:before,
-			&:after,
-			> * {
-				padding:1.5em;
-			}
-		}
-	}
-	&.pkg-checked_padding-large {
-		.pkg-checked-icon {
-			&:before,
-			&:after,
-			> * {
-				padding: 2em;
-			}
-		}
-	}
+	@mixin checkedPadding tiny ;
+	@mixin checkedPadding small ;
+	@mixin checkedPadding little ;
+	@mixin checkedPadding base ;
+	@mixin checkedPadding middle ;
+	@mixin checkedPadding big ;
+	@mixin checkedPadding large ;
 
 	&.pkg-checked_iconposition-left,
 	&.pkg-checked_iconposition-top {

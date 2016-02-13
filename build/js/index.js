@@ -112,7 +112,7 @@
 		outputresult: _json_checked,
 		showkey: _ary_showkey,
 		display: _Setting2.default.DISPLAY_INBLOCK,
-		padding: _Setting2.default.PADDING_LITTLE,
+		padding: _Setting2.default.PADDING_TINY,
 		liststyle: _Setting2.default.LIST_STYLE_UPPER_LATIN }), document.getElementById("content"));
 
 	_reactDom2.default.render(_react2.default.createElement(_RadioGroup2.default, {
@@ -122,7 +122,7 @@
 		outputresult: _json_checked,
 		showkey: _ary_showkey,
 		display: _Setting2.default.DISPLAY_INBLOCK,
-		padding: _Setting2.default.PADDING_LITTLE,
+		padding: _Setting2.default.PADDING_BASE,
 		liststyle: _Setting2.default.LIST_STYLE_LOWER_LATIN }), document.getElementById("content2"));
 
 	// iconposition={Setting.ICON_POSTION_TOP}
@@ -20163,6 +20163,17 @@
 		middle - 1.2em
 		big - 1.5em
 		large - 2em
+		huge - 2.5em
+	*/
+	/*
+		spacing:
+		tiny - 0.2em
+		small - 0.5em
+		little - 0.8em
+		base - 1em
+		middle - 1.2em
+		big - 1.5em
+		large - 2em
 	*/
 	/*
 		有哪些類型：
@@ -20248,6 +20259,7 @@
 	Setting.PADDING_MIDDLE = 'middle';
 	Setting.PADDING_BIG = 'big';
 	Setting.PADDING_LARGE = 'large';
+	Setting.PADDING_HUGE = 'huge';
 	Setting.ICON_POSTION_TOP = 'top';
 	Setting.ICON_POSTION_BOTTOM = 'bottom';
 	Setting.ICON_POSTION_LEFT = 'left';
@@ -20320,6 +20332,7 @@
 					case _Setting2.default.PADDING_MIDDLE:
 					case _Setting2.default.PADDING_BIG:
 					case _Setting2.default.PADDING_LARGE:
+					case _Setting2.default.PADDING_HUGE:
 						_str_return = 'pkg-checked_padding-' + str_padding;
 						break;
 				}

@@ -43,7 +43,7 @@ ReactDOM.render(
 		outputresult={_json_checked}
 		showkey={_ary_showkey}
 		display={Setting.DISPLAY_INBLOCK}
-		padding={Setting.PADDING_LITTLE}
+		padding={Setting.PADDING_TINY}
 		liststyle={Setting.LIST_STYLE_UPPER_LATIN} />, 
 	document.getElementById("content")
 );
@@ -56,7 +56,7 @@ ReactDOM.render(
 		outputresult={_json_checked}
 		showkey={_ary_showkey}
 		display={Setting.DISPLAY_INBLOCK}
-		padding={Setting.PADDING_LITTLE}
+		padding={Setting.PADDING_BASE}
 		liststyle={Setting.LIST_STYLE_LOWER_LATIN} />, 
 	document.getElementById("content2")
 );

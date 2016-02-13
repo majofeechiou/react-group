@@ -14,7 +14,18 @@
 		middle - 1.2em
 		big - 1.5em
 		large - 2em
+		huge - 2.5em
 	*/
+/*
+	spacing:
+	tiny - 0.2em
+	small - 0.5em
+	little - 0.8em
+	base - 1em
+	middle - 1.2em
+	big - 1.5em
+	large - 2em
+*/
 /*
 	有哪些類型：
 	原版 - clean
@@ -94,6 +105,7 @@ export default class Setting {
 	static PADDING_MIDDLE = 'middle'; // 1.2em
 	static PADDING_BIG = 'big'; // 1.5em
 	static PADDING_LARGE = 'large'; // 2em
+	static PADDING_HUGE = 'huge'; // 2.5em
 
 	// ICON位置或不顯示：
 	static ICON_POSTION_TOP = 'top';

@@ -56,35 +56,210 @@
 .pkg-checked.pkg-checked_padding-tiny .pkg-checked-icon:before, .pkg-checked.pkg-checked_padding-tiny .pkg-checked-icon:after, .pkg-checked.pkg-checked_padding-tiny .pkg-checked-icon > * {
 	padding: 0.2em;
 
+	@else if tiny == little {
+		padding: 0.8em;
+
+	}
+
+	@else if tiny == base {
+		padding: 1em;
+
+	}
+
+	@else if tiny == middle {
+		padding: 1.2em;
+
+	}
+
+	@else if tiny == big {
+		padding: 1.5em;
+
+	}
+
+	@else if tiny == large {
+		padding: 2em;
+
+	}
+
 }
 
 .pkg-checked.pkg-checked_padding-small .pkg-checked-icon:before, .pkg-checked.pkg-checked_padding-small .pkg-checked-icon:after, .pkg-checked.pkg-checked_padding-small .pkg-checked-icon > * {
 	padding: 0.5em;
 
+	@else if small == little {
+		padding: 0.8em;
+
+	}
+
+	@else if small == base {
+		padding: 1em;
+
+	}
+
+	@else if small == middle {
+		padding: 1.2em;
+
+	}
+
+	@else if small == big {
+		padding: 1.5em;
+
+	}
+
+	@else if small == large {
+		padding: 2em;
+
+	}
+
 }
 
 .pkg-checked.pkg-checked_padding-little .pkg-checked-icon:before, .pkg-checked.pkg-checked_padding-little .pkg-checked-icon:after, .pkg-checked.pkg-checked_padding-little .pkg-checked-icon > * {
-	padding: 0.8em;
+	padding: 0.5em;
+
+	@else if little == little {
+		padding: 0.8em;
+
+	}
+
+	@else if little == base {
+		padding: 1em;
+
+	}
+
+	@else if little == middle {
+		padding: 1.2em;
+
+	}
+
+	@else if little == big {
+		padding: 1.5em;
+
+	}
+
+	@else if little == large {
+		padding: 2em;
+
+	}
 
 }
 
 .pkg-checked.pkg-checked_padding-base .pkg-checked-icon:before, .pkg-checked.pkg-checked_padding-base .pkg-checked-icon:after, .pkg-checked.pkg-checked_padding-base .pkg-checked-icon > * {
-	padding: 1em;
+	padding: 0.5em;
+
+	@else if base == little {
+		padding: 0.8em;
+
+	}
+
+	@else if base == base {
+		padding: 1em;
+
+	}
+
+	@else if base == middle {
+		padding: 1.2em;
+
+	}
+
+	@else if base == big {
+		padding: 1.5em;
+
+	}
+
+	@else if base == large {
+		padding: 2em;
+
+	}
 
 }
 
 .pkg-checked.pkg-checked_padding-middle .pkg-checked-icon:before, .pkg-checked.pkg-checked_padding-middle .pkg-checked-icon:after, .pkg-checked.pkg-checked_padding-middle .pkg-checked-icon > * {
-	padding: 1.2em;
+	padding: 0.5em;
+
+	@else if middle == little {
+		padding: 0.8em;
+
+	}
+
+	@else if middle == base {
+		padding: 1em;
+
+	}
+
+	@else if middle == middle {
+		padding: 1.2em;
+
+	}
+
+	@else if middle == big {
+		padding: 1.5em;
+
+	}
+
+	@else if middle == large {
+		padding: 2em;
+
+	}
 
 }
 
 .pkg-checked.pkg-checked_padding-big .pkg-checked-icon:before, .pkg-checked.pkg-checked_padding-big .pkg-checked-icon:after, .pkg-checked.pkg-checked_padding-big .pkg-checked-icon > * {
-	padding: 1.5em;
+	padding: 0.5em;
+
+	@else if big == little {
+		padding: 0.8em;
+
+	}
+
+	@else if big == base {
+		padding: 1em;
+
+	}
+
+	@else if big == middle {
+		padding: 1.2em;
+
+	}
+
+	@else if big == big {
+		padding: 1.5em;
+
+	}
+
+	@else if big == large {
+		padding: 2em;
+
+	}
 
 }
 
 .pkg-checked.pkg-checked_padding-large .pkg-checked-icon:before, .pkg-checked.pkg-checked_padding-large .pkg-checked-icon:after, .pkg-checked.pkg-checked_padding-large .pkg-checked-icon > * {
-	padding: 2em;
+	padding: 0.5em;
+
+	@else if large == little {
+		padding: 0.8em;
+
+	}
+
+	@else if large == base {
+		padding: 1em;
+
+	}
+
+	@else if large == middle {
+		padding: 1.2em;
+
+	}
+
+	@else if large == big {
+		padding: 1.5em;
+
+	}
+
+	@else if large == large {
+		padding: 2em;
+
+	}
 
 }
 
