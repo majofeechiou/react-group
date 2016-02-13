@@ -44,7 +44,9 @@ ReactDOM.render(
 		showkey={_ary_showkey}
 		display={Setting.DISPLAY_INBLOCK}
 		padding={Setting.PADDING_TINY}
-		liststyle={Setting.LIST_STYLE_UPPER_LATIN} />, 
+		liststyle={Setting.LIST_STYLE_UPPER_LATIN}
+		listposition={Setting.LIST_POSITION_OUTER}
+		iconshow={[Setting.ICON_SHOW_EMPTY_HEART, Setting.ICON_SHOW_HEART]} />, 
 	document.getElementById("content")
 );
 
@@ -57,10 +59,13 @@ ReactDOM.render(
 		showkey={_ary_showkey}
 		display={Setting.DISPLAY_INBLOCK}
 		padding={Setting.PADDING_BASE}
-		liststyle={Setting.LIST_STYLE_LOWER_LATIN} />, 
+		liststyle={Setting.LIST_STYLE_LOWER_LATIN}
+		listposition={Setting.LIST_POSITION_INNER}
+		iconshow={[Setting.ICON_SHOW_EMPTY_HEART, Setting.ICON_SHOW_HEART]} />, 
 	document.getElementById("content2")
 );
 
+// iconshow={[Setting.ICON_SHOW_EMPTY_HEART, Setting.ICON_SHOW_HEART]}
 // iconposition={Setting.ICON_POSTION_TOP}
 // display={Setting.DISPLAY_BLOCK}
 // padding={Setting.PADDING_BASE}

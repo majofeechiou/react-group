@@ -60,7 +60,8 @@ export default class RadioGroup extends React.Component {
 			[CheckedUI.getDisabled( this.props.display )]: true,
 			[CheckedUI.getPadding( this.props.padding )]: true,
 			[CheckedUI.getListStyle( this.props.liststyle )]: true,
-			[CheckedUI.getIconPosition( this.props.iconposition )]: true
+			[CheckedUI.getIconPosition( this.props.iconposition )]: true,
+			[CheckedUI.getIconShow( this.props.iconshow )]: true
 		});
 		let _str_classname_inner = ClassNames({
 			'pkg-list-option': (this.props.listposition===Setting.LIST_POSITION_INNER),
@@ -111,7 +112,8 @@ RadioGroup.propTypes = {
     display: React.PropTypes.string,
     liststyle: React.PropTypes.string,
     listposition: React.PropTypes.string,
-    iconposition: React.PropTypes.string
+    iconposition: React.PropTypes.string,
+    iconshow: React.PropTypes.array
 },
 RadioGroup.defaultProps = {
 	type: 'radio',
@@ -123,5 +125,6 @@ RadioGroup.defaultProps = {
 	display: Setting.DISPLAY_INBLOCK,
     liststyle: '',
     listposition: Setting.LIST_POSITION_INNER,
-    iconposition: Setting.ICON_POSTION_LEFT
+    iconposition: Setting.ICON_POSTION_LEFT,
+    iconshow: []
 };

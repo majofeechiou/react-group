@@ -48,6 +48,37 @@ export default class CheckedUI {
 		return _str_return;
 	};
 
+	static getIconShowCN( str_icon, num_index ){
+		let _str_return = '';
+		let _str_cname = ( num_index===1 )? 'pkg-checked_iconchecked-' : 'pkg-checked_iconshow-' ;
+		switch (str_icon){
+			case Setting.ICON_SHOW_HEART:
+			case Setting.ICON_SHOW_EMPTY_HEART:
+			case Setting.ICON_SHOW_CHECKED:
+			case Setting.ICON_SHOW_SQUARE_CHECKED:
+			case Setting.ICON_SHOW_SQUARE:
+			case Setting.ICON_SHOW_CLOSE:
+			case Setting.ICON_SHOW_LINE:
+				_str_return = _str_cname+str_icon.replace('-','');
+				break;
+		}
+		return _str_return;
+	}
+
+	static getIconShow( ary_icon ){
+		let _scope = this ;
+		let _str_return = '';
+
+		if( ary_icon.length>0 ){
+			let _ary_return = [] ;
+			ary_icon.map(function (str, num_index) {
+				_ary_return.push( _scope.getIconShowCN(str, num_index) );
+			});
+			_str_return = _ary_return.join( ' ' );
+		}
+		return _str_return;
+	};
+
 	static getListStyle( str_style ){
 		let _str_return = '';
 		switch (str_style){

@@ -1,0 +1,15 @@
+@font-face {
+	font-family: "MajoCpt";
+	src: url("../font/majo-cpt.eot");
+	src: url("../font/majo-cpt.eot#iefix") format("embedded-opentype"),
+	url("../font/majo-cpt.woff") format("woff"),
+	url("../font/majo-cpt.ttf") format("truetype"),
+	url("../font/majo-cpt.svg") format("svg");
+	font-weight: normal;
+	font-style: normal;
+}
+
+@define-extend fontMajoCpt {
+	font-family: MajoCpt;
+	font-style: normal;
+}

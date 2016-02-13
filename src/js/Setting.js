@@ -114,6 +114,15 @@ export default class Setting {
 	static ICON_POSTION_RIGHT = 'right';
 	static ICON_POSTION_NONE = 'none'; // 確保真的不會有icon的出現
 
+	// ICON類型：
+	static ICON_SHOW_HEART = 'heart'; // 實的愛心
+	static ICON_SHOW_EMPTY_HEART = 'empty-heart'; // 空的愛心
+	static ICON_SHOW_CHECKED = 'checked'; // 純勾勾
+	static ICON_SHOW_SQUARE_CHECKED = 'square-checked'; // 方框中有勾勾
+	static ICON_SHOW_SQUARE = 'square'; // 純方框
+	static ICON_SHOW_CLOSE = 'close'; // 純叉叉
+	static ICON_SHOW_LINE = 'line'; // 純橫線
+
 	// 清單位置
 	static LIST_POSITION_OUTER = 'outer'; // 左外
 	static LIST_POSITION_INNER = 'inner'; // 左內

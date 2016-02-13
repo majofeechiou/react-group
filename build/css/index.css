@@ -1,3 +1,21 @@
+@font-face {
+	font-family: "MajoCpt";
+	src: url(../font/majo-cpt.eot);
+	src: url(../font/majo-cpt.eot#iefix) format("embedded-opentype"),
+	url(data:application/font-woff;base64,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) format("woff"),
+	url(../font/majo-cpt.ttf) format("truetype"),
+	url(data:image/svg+xml;base64,bW9kdWxlLmV4cG9ydHMgPSBfX3dlYnBhY2tfcHVibGljX3BhdGhfXyArICJmb250L21ham8tY3B0LnN2ZyI7) format("svg");
+	font-weight: normal;
+	font-style: normal;
+
+}
+
+.pkg-checked.pkg-checked_iconposition-left .pkg-checked-icon:before, .pkg-checked.pkg-checked_iconposition-top .pkg-checked-icon:before, .pkg-checked.pkg-checked_iconposition-right .pkg-checked-icon:after, .pkg-checked.pkg-checked_iconposition-bottom .pkg-checked-icon:after {
+	font-family: MajoCpt;
+	font-style: normal;
+
+}
+
 .pkg-checked, .pkg-checked * {
 	box-sizing: border-box;
 
@@ -56,236 +74,91 @@
 .pkg-checked.pkg-checked_padding-tiny .pkg-checked-icon:before, .pkg-checked.pkg-checked_padding-tiny .pkg-checked-icon:after, .pkg-checked.pkg-checked_padding-tiny .pkg-checked-icon > * {
 	padding: 0.2em;
 
-	@else if tiny == little {
-		padding: 0.8em;
+}
 
-	}
-
-	@else if tiny == base {
-		padding: 1em;
-
-	}
-
-	@else if tiny == middle {
-		padding: 1.2em;
-
-	}
-
-	@else if tiny == big {
-		padding: 1.5em;
-
-	}
-
-	@else if tiny == large {
-		padding: 2em;
-
-	}
+.pkg-checked.pkg-checked_padding-tiny.pkg-checked_iconposition-left .pkg-checked-icon > * {
+	border: 1px solid #f09;
+	padding-left: 0.1em;
 
 }
 
 .pkg-checked.pkg-checked_padding-small .pkg-checked-icon:before, .pkg-checked.pkg-checked_padding-small .pkg-checked-icon:after, .pkg-checked.pkg-checked_padding-small .pkg-checked-icon > * {
 	padding: 0.5em;
 
-	@else if small == little {
-		padding: 0.8em;
+}
 
-	}
-
-	@else if small == base {
-		padding: 1em;
-
-	}
-
-	@else if small == middle {
-		padding: 1.2em;
-
-	}
-
-	@else if small == big {
-		padding: 1.5em;
-
-	}
-
-	@else if small == large {
-		padding: 2em;
-
-	}
+.pkg-checked.pkg-checked_padding-small.pkg-checked_iconposition-left .pkg-checked-icon > * {
+	border: 1px solid #f09;
+	padding-left: 0.25em;
 
 }
 
 .pkg-checked.pkg-checked_padding-little .pkg-checked-icon:before, .pkg-checked.pkg-checked_padding-little .pkg-checked-icon:after, .pkg-checked.pkg-checked_padding-little .pkg-checked-icon > * {
-	padding: 0.5em;
+	padding: 0.8em;
 
-	@else if little == little {
-		padding: 0.8em;
+}
 
-	}
-
-	@else if little == base {
-		padding: 1em;
-
-	}
-
-	@else if little == middle {
-		padding: 1.2em;
-
-	}
-
-	@else if little == big {
-		padding: 1.5em;
-
-	}
-
-	@else if little == large {
-		padding: 2em;
-
-	}
+.pkg-checked.pkg-checked_padding-little.pkg-checked_iconposition-left .pkg-checked-icon > * {
+	border: 1px solid #f09;
+	padding-left: 0.4em;
 
 }
 
 .pkg-checked.pkg-checked_padding-base .pkg-checked-icon:before, .pkg-checked.pkg-checked_padding-base .pkg-checked-icon:after, .pkg-checked.pkg-checked_padding-base .pkg-checked-icon > * {
-	padding: 0.5em;
+	padding: 1em;
 
-	@else if base == little {
-		padding: 0.8em;
+}
 
-	}
-
-	@else if base == base {
-		padding: 1em;
-
-	}
-
-	@else if base == middle {
-		padding: 1.2em;
-
-	}
-
-	@else if base == big {
-		padding: 1.5em;
-
-	}
-
-	@else if base == large {
-		padding: 2em;
-
-	}
+.pkg-checked.pkg-checked_padding-base.pkg-checked_iconposition-left .pkg-checked-icon > * {
+	border: 1px solid #f09;
+	padding-left: 0.5em;
 
 }
 
 .pkg-checked.pkg-checked_padding-middle .pkg-checked-icon:before, .pkg-checked.pkg-checked_padding-middle .pkg-checked-icon:after, .pkg-checked.pkg-checked_padding-middle .pkg-checked-icon > * {
-	padding: 0.5em;
+	padding: 1.2em;
 
-	@else if middle == little {
-		padding: 0.8em;
+}
 
-	}
-
-	@else if middle == base {
-		padding: 1em;
-
-	}
-
-	@else if middle == middle {
-		padding: 1.2em;
-
-	}
-
-	@else if middle == big {
-		padding: 1.5em;
-
-	}
-
-	@else if middle == large {
-		padding: 2em;
-
-	}
+.pkg-checked.pkg-checked_padding-middle.pkg-checked_iconposition-left .pkg-checked-icon > * {
+	border: 1px solid #f09;
+	padding-left: 0.6em;
 
 }
 
 .pkg-checked.pkg-checked_padding-big .pkg-checked-icon:before, .pkg-checked.pkg-checked_padding-big .pkg-checked-icon:after, .pkg-checked.pkg-checked_padding-big .pkg-checked-icon > * {
-	padding: 0.5em;
+	padding: 1.5em;
 
-	@else if big == little {
-		padding: 0.8em;
+}
 
-	}
-
-	@else if big == base {
-		padding: 1em;
-
-	}
-
-	@else if big == middle {
-		padding: 1.2em;
-
-	}
-
-	@else if big == big {
-		padding: 1.5em;
-
-	}
-
-	@else if big == large {
-		padding: 2em;
-
-	}
+.pkg-checked.pkg-checked_padding-big.pkg-checked_iconposition-left .pkg-checked-icon > * {
+	border: 1px solid #f09;
+	padding-left: 0.75em;
 
 }
 
 .pkg-checked.pkg-checked_padding-large .pkg-checked-icon:before, .pkg-checked.pkg-checked_padding-large .pkg-checked-icon:after, .pkg-checked.pkg-checked_padding-large .pkg-checked-icon > * {
-	padding: 0.5em;
+	padding: 2em;
 
-	@else if large == little {
-		padding: 0.8em;
+}
 
-	}
-
-	@else if large == base {
-		padding: 1em;
-
-	}
-
-	@else if large == middle {
-		padding: 1.2em;
-
-	}
-
-	@else if large == big {
-		padding: 1.5em;
-
-	}
-
-	@else if large == large {
-		padding: 2em;
-
-	}
+.pkg-checked.pkg-checked_padding-large.pkg-checked_iconposition-left .pkg-checked-icon > * {
+	border: 1px solid #f09;
+	padding-left: 1em;
 
 }
 
 .pkg-checked.pkg-checked_iconposition-left .pkg-checked-icon, .pkg-checked.pkg-checked_iconposition-top .pkg-checked-icon {}
 
-.pkg-checked.pkg-checked_iconposition-left .pkg-checked-icon:before, .pkg-checked.pkg-checked_iconposition-top .pkg-checked-icon:before {
-	content: 'O-';
-
-}
-
 .pkg-checked.pkg-checked_iconposition-right .pkg-checked-icon, .pkg-checked.pkg-checked_iconposition-bottom .pkg-checked-icon {}
 
-.pkg-checked.pkg-checked_iconposition-right .pkg-checked-icon:after, .pkg-checked.pkg-checked_iconposition-bottom .pkg-checked-icon:after {
-	content: 'O-';
-
-}
-
 .pkg-checked.pkg-checked_iconposition-left .pkg-checked-icon:before, .pkg-checked.pkg-checked_iconposition-left .pkg-checked-icon > * {
-	border: 1px solid #f00;
 	display: inline-block;
 	vertical-align: middle;
 
 }
 
 .pkg-checked.pkg-checked_iconposition-right .pkg-checked-icon:after, .pkg-checked.pkg-checked_iconposition-right .pkg-checked-icon > * {
-	border: 1px solid #f00;
 	display: inline-block;
 	vertical-align: middle;
 
@@ -304,6 +177,246 @@
 .pkg-checked.pkg-checked_iconposition-bottom .pkg-checked-icon:after {
 	display: block;
 	text-align: center;
+
+}
+
+.pkg-checked.pkg-checked_iconshow-heart {}
+
+.pkg-checked.pkg-checked_iconshow-heart.pkg-checked_iconposition-left .pkg-checked-icon, .pkg-checked.pkg-checked_iconshow-heart.pkg-checked_iconposition-top .pkg-checked-icon {}
+
+.pkg-checked.pkg-checked_iconshow-heart.pkg-checked_iconposition-left .pkg-checked-icon:before, .pkg-checked.pkg-checked_iconshow-heart.pkg-checked_iconposition-top .pkg-checked-icon:before {
+	content: "\E010";
+
+}
+
+.pkg-checked.pkg-checked_iconshow-heart.pkg-checked_iconposition-right.pkg-checked-icon, .pkg-checked.pkg-checked_iconshow-heart.pkg-checked_iconposition-right .pkg-checked-icon, .pkg-checked.pkg-checked_iconshow-heart.pkg-checked_iconposition-bottom.pkg-checked-icon, .pkg-checked.pkg-checked_iconshow-heart.pkg-checked_iconposition-bottom .pkg-checked-icon {}
+
+.pkg-checked.pkg-checked_iconshow-heart.pkg-checked_iconposition-right.pkg-checked-icon:after, .pkg-checked.pkg-checked_iconshow-heart.pkg-checked_iconposition-right .pkg-checked-icon:after, .pkg-checked.pkg-checked_iconshow-heart.pkg-checked_iconposition-bottom.pkg-checked-icon:after, .pkg-checked.pkg-checked_iconshow-heart.pkg-checked_iconposition-bottom .pkg-checked-icon:after {
+	content: "\E010";
+
+}
+
+.pkg-checked.pkg-checked_iconchecked-heart {}
+
+.pkg-checked.pkg-checked_iconchecked-heart.pkg-checked_iconposition-left .pkg-checked-option, .pkg-checked.pkg-checked_iconchecked-heart.pkg-checked_iconposition-top .pkg-checked-option {}
+
+.pkg-checked.pkg-checked_iconchecked-heart.pkg-checked_iconposition-left .pkg-checked-option.pkg-checked-option_checked.pkg-checked-icon, .pkg-checked.pkg-checked_iconchecked-heart.pkg-checked_iconposition-left .pkg-checked-option.pkg-checked-option_checked .pkg-checked-icon, .pkg-checked.pkg-checked_iconchecked-heart.pkg-checked_iconposition-top .pkg-checked-option.pkg-checked-option_checked.pkg-checked-icon, .pkg-checked.pkg-checked_iconchecked-heart.pkg-checked_iconposition-top .pkg-checked-option.pkg-checked-option_checked .pkg-checked-icon {}
+
+.pkg-checked.pkg-checked_iconchecked-heart.pkg-checked_iconposition-left .pkg-checked-option.pkg-checked-option_checked.pkg-checked-icon:before, .pkg-checked.pkg-checked_iconchecked-heart.pkg-checked_iconposition-left .pkg-checked-option.pkg-checked-option_checked .pkg-checked-icon:before, .pkg-checked.pkg-checked_iconchecked-heart.pkg-checked_iconposition-top .pkg-checked-option.pkg-checked-option_checked.pkg-checked-icon:before, .pkg-checked.pkg-checked_iconchecked-heart.pkg-checked_iconposition-top .pkg-checked-option.pkg-checked-option_checked .pkg-checked-icon:before {
+	content: "\E010";
+
+}
+
+.pkg-checked.pkg-checked_iconchecked-heart.pkg-checked_iconposition-right .pkg-checked-option, .pkg-checked.pkg-checked_iconchecked-heart.pkg-checked_iconposition-bottom .pkg-checked-option {}
+
+.pkg-checked.pkg-checked_iconchecked-heart.pkg-checked_iconposition-right .pkg-checked-option.pkg-checked-option_checked .pkg-checked-icon, .pkg-checked.pkg-checked_iconchecked-heart.pkg-checked_iconposition-bottom .pkg-checked-option.pkg-checked-option_checked .pkg-checked-icon {}
+
+.pkg-checked.pkg-checked_iconchecked-heart.pkg-checked_iconposition-right .pkg-checked-option.pkg-checked-option_checked .pkg-checked-icon:after, .pkg-checked.pkg-checked_iconchecked-heart.pkg-checked_iconposition-bottom .pkg-checked-option.pkg-checked-option_checked .pkg-checked-icon:after {
+	content: "\E010";
+
+}
+
+.pkg-checked.pkg-checked_iconshow-emptyheart {}
+
+.pkg-checked.pkg-checked_iconshow-emptyheart.pkg-checked_iconposition-left .pkg-checked-icon, .pkg-checked.pkg-checked_iconshow-emptyheart.pkg-checked_iconposition-top .pkg-checked-icon {}
+
+.pkg-checked.pkg-checked_iconshow-emptyheart.pkg-checked_iconposition-left .pkg-checked-icon:before, .pkg-checked.pkg-checked_iconshow-emptyheart.pkg-checked_iconposition-top .pkg-checked-icon:before {
+	content: "\E014";
+
+}
+
+.pkg-checked.pkg-checked_iconshow-emptyheart.pkg-checked_iconposition-right.pkg-checked-icon, .pkg-checked.pkg-checked_iconshow-emptyheart.pkg-checked_iconposition-right .pkg-checked-icon, .pkg-checked.pkg-checked_iconshow-emptyheart.pkg-checked_iconposition-bottom.pkg-checked-icon, .pkg-checked.pkg-checked_iconshow-emptyheart.pkg-checked_iconposition-bottom .pkg-checked-icon {}
+
+.pkg-checked.pkg-checked_iconshow-emptyheart.pkg-checked_iconposition-right.pkg-checked-icon:after, .pkg-checked.pkg-checked_iconshow-emptyheart.pkg-checked_iconposition-right .pkg-checked-icon:after, .pkg-checked.pkg-checked_iconshow-emptyheart.pkg-checked_iconposition-bottom.pkg-checked-icon:after, .pkg-checked.pkg-checked_iconshow-emptyheart.pkg-checked_iconposition-bottom .pkg-checked-icon:after {
+	content: "\E014";
+
+}
+
+.pkg-checked.pkg-checked_iconchecked-emptyheart {}
+
+.pkg-checked.pkg-checked_iconchecked-emptyheart.pkg-checked_iconposition-left .pkg-checked-option, .pkg-checked.pkg-checked_iconchecked-emptyheart.pkg-checked_iconposition-top .pkg-checked-option {}
+
+.pkg-checked.pkg-checked_iconchecked-emptyheart.pkg-checked_iconposition-left .pkg-checked-option.pkg-checked-option_checked.pkg-checked-icon, .pkg-checked.pkg-checked_iconchecked-emptyheart.pkg-checked_iconposition-left .pkg-checked-option.pkg-checked-option_checked .pkg-checked-icon, .pkg-checked.pkg-checked_iconchecked-emptyheart.pkg-checked_iconposition-top .pkg-checked-option.pkg-checked-option_checked.pkg-checked-icon, .pkg-checked.pkg-checked_iconchecked-emptyheart.pkg-checked_iconposition-top .pkg-checked-option.pkg-checked-option_checked .pkg-checked-icon {}
+
+.pkg-checked.pkg-checked_iconchecked-emptyheart.pkg-checked_iconposition-left .pkg-checked-option.pkg-checked-option_checked.pkg-checked-icon:before, .pkg-checked.pkg-checked_iconchecked-emptyheart.pkg-checked_iconposition-left .pkg-checked-option.pkg-checked-option_checked .pkg-checked-icon:before, .pkg-checked.pkg-checked_iconchecked-emptyheart.pkg-checked_iconposition-top .pkg-checked-option.pkg-checked-option_checked.pkg-checked-icon:before, .pkg-checked.pkg-checked_iconchecked-emptyheart.pkg-checked_iconposition-top .pkg-checked-option.pkg-checked-option_checked .pkg-checked-icon:before {
+	content: "\E014";
+
+}
+
+.pkg-checked.pkg-checked_iconchecked-emptyheart.pkg-checked_iconposition-right .pkg-checked-option, .pkg-checked.pkg-checked_iconchecked-emptyheart.pkg-checked_iconposition-bottom .pkg-checked-option {}
+
+.pkg-checked.pkg-checked_iconchecked-emptyheart.pkg-checked_iconposition-right .pkg-checked-option.pkg-checked-option_checked .pkg-checked-icon, .pkg-checked.pkg-checked_iconchecked-emptyheart.pkg-checked_iconposition-bottom .pkg-checked-option.pkg-checked-option_checked .pkg-checked-icon {}
+
+.pkg-checked.pkg-checked_iconchecked-emptyheart.pkg-checked_iconposition-right .pkg-checked-option.pkg-checked-option_checked .pkg-checked-icon:after, .pkg-checked.pkg-checked_iconchecked-emptyheart.pkg-checked_iconposition-bottom .pkg-checked-option.pkg-checked-option_checked .pkg-checked-icon:after {
+	content: "\E014";
+
+}
+
+.pkg-checked.pkg-checked_iconshow-checked {}
+
+.pkg-checked.pkg-checked_iconshow-checked.pkg-checked_iconposition-left .pkg-checked-icon, .pkg-checked.pkg-checked_iconshow-checked.pkg-checked_iconposition-top .pkg-checked-icon {}
+
+.pkg-checked.pkg-checked_iconshow-checked.pkg-checked_iconposition-left .pkg-checked-icon:before, .pkg-checked.pkg-checked_iconshow-checked.pkg-checked_iconposition-top .pkg-checked-icon:before {
+	content: "\E007";
+
+}
+
+.pkg-checked.pkg-checked_iconshow-checked.pkg-checked_iconposition-right.pkg-checked-icon, .pkg-checked.pkg-checked_iconshow-checked.pkg-checked_iconposition-right .pkg-checked-icon, .pkg-checked.pkg-checked_iconshow-checked.pkg-checked_iconposition-bottom.pkg-checked-icon, .pkg-checked.pkg-checked_iconshow-checked.pkg-checked_iconposition-bottom .pkg-checked-icon {}
+
+.pkg-checked.pkg-checked_iconshow-checked.pkg-checked_iconposition-right.pkg-checked-icon:after, .pkg-checked.pkg-checked_iconshow-checked.pkg-checked_iconposition-right .pkg-checked-icon:after, .pkg-checked.pkg-checked_iconshow-checked.pkg-checked_iconposition-bottom.pkg-checked-icon:after, .pkg-checked.pkg-checked_iconshow-checked.pkg-checked_iconposition-bottom .pkg-checked-icon:after {
+	content: "\E007";
+
+}
+
+.pkg-checked.pkg-checked_iconchecked-checked {}
+
+.pkg-checked.pkg-checked_iconchecked-checked.pkg-checked_iconposition-left .pkg-checked-option, .pkg-checked.pkg-checked_iconchecked-checked.pkg-checked_iconposition-top .pkg-checked-option {}
+
+.pkg-checked.pkg-checked_iconchecked-checked.pkg-checked_iconposition-left .pkg-checked-option.pkg-checked-option_checked.pkg-checked-icon, .pkg-checked.pkg-checked_iconchecked-checked.pkg-checked_iconposition-left .pkg-checked-option.pkg-checked-option_checked .pkg-checked-icon, .pkg-checked.pkg-checked_iconchecked-checked.pkg-checked_iconposition-top .pkg-checked-option.pkg-checked-option_checked.pkg-checked-icon, .pkg-checked.pkg-checked_iconchecked-checked.pkg-checked_iconposition-top .pkg-checked-option.pkg-checked-option_checked .pkg-checked-icon {}
+
+.pkg-checked.pkg-checked_iconchecked-checked.pkg-checked_iconposition-left .pkg-checked-option.pkg-checked-option_checked.pkg-checked-icon:before, .pkg-checked.pkg-checked_iconchecked-checked.pkg-checked_iconposition-left .pkg-checked-option.pkg-checked-option_checked .pkg-checked-icon:before, .pkg-checked.pkg-checked_iconchecked-checked.pkg-checked_iconposition-top .pkg-checked-option.pkg-checked-option_checked.pkg-checked-icon:before, .pkg-checked.pkg-checked_iconchecked-checked.pkg-checked_iconposition-top .pkg-checked-option.pkg-checked-option_checked .pkg-checked-icon:before {
+	content: "\E007";
+
+}
+
+.pkg-checked.pkg-checked_iconchecked-checked.pkg-checked_iconposition-right .pkg-checked-option, .pkg-checked.pkg-checked_iconchecked-checked.pkg-checked_iconposition-bottom .pkg-checked-option {}
+
+.pkg-checked.pkg-checked_iconchecked-checked.pkg-checked_iconposition-right .pkg-checked-option.pkg-checked-option_checked .pkg-checked-icon, .pkg-checked.pkg-checked_iconchecked-checked.pkg-checked_iconposition-bottom .pkg-checked-option.pkg-checked-option_checked .pkg-checked-icon {}
+
+.pkg-checked.pkg-checked_iconchecked-checked.pkg-checked_iconposition-right .pkg-checked-option.pkg-checked-option_checked .pkg-checked-icon:after, .pkg-checked.pkg-checked_iconchecked-checked.pkg-checked_iconposition-bottom .pkg-checked-option.pkg-checked-option_checked .pkg-checked-icon:after {
+	content: "\E007";
+
+}
+
+.pkg-checked.pkg-checked_iconshow-square-checked {}
+
+.pkg-checked.pkg-checked_iconshow-square-checked.pkg-checked_iconposition-left .pkg-checked-icon, .pkg-checked.pkg-checked_iconshow-square-checked.pkg-checked_iconposition-top .pkg-checked-icon {}
+
+.pkg-checked.pkg-checked_iconshow-square-checked.pkg-checked_iconposition-left .pkg-checked-icon:before, .pkg-checked.pkg-checked_iconshow-square-checked.pkg-checked_iconposition-top .pkg-checked-icon:before {}
+
+.pkg-checked.pkg-checked_iconshow-square-checked.pkg-checked_iconposition-right.pkg-checked-icon, .pkg-checked.pkg-checked_iconshow-square-checked.pkg-checked_iconposition-right .pkg-checked-icon, .pkg-checked.pkg-checked_iconshow-square-checked.pkg-checked_iconposition-bottom.pkg-checked-icon, .pkg-checked.pkg-checked_iconshow-square-checked.pkg-checked_iconposition-bottom .pkg-checked-icon {}
+
+.pkg-checked.pkg-checked_iconshow-square-checked.pkg-checked_iconposition-right.pkg-checked-icon:after, .pkg-checked.pkg-checked_iconshow-square-checked.pkg-checked_iconposition-right .pkg-checked-icon:after, .pkg-checked.pkg-checked_iconshow-square-checked.pkg-checked_iconposition-bottom.pkg-checked-icon:after, .pkg-checked.pkg-checked_iconshow-square-checked.pkg-checked_iconposition-bottom .pkg-checked-icon:after {}
+
+.pkg-checked.pkg-checked_iconchecked-square-checked {}
+
+.pkg-checked.pkg-checked_iconchecked-square-checked.pkg-checked_iconposition-left .pkg-checked-option, .pkg-checked.pkg-checked_iconchecked-square-checked.pkg-checked_iconposition-top .pkg-checked-option {}
+
+.pkg-checked.pkg-checked_iconchecked-square-checked.pkg-checked_iconposition-left .pkg-checked-option.pkg-checked-option_checked.pkg-checked-icon, .pkg-checked.pkg-checked_iconchecked-square-checked.pkg-checked_iconposition-left .pkg-checked-option.pkg-checked-option_checked .pkg-checked-icon, .pkg-checked.pkg-checked_iconchecked-square-checked.pkg-checked_iconposition-top .pkg-checked-option.pkg-checked-option_checked.pkg-checked-icon, .pkg-checked.pkg-checked_iconchecked-square-checked.pkg-checked_iconposition-top .pkg-checked-option.pkg-checked-option_checked .pkg-checked-icon {}
+
+.pkg-checked.pkg-checked_iconchecked-square-checked.pkg-checked_iconposition-left .pkg-checked-option.pkg-checked-option_checked.pkg-checked-icon:before, .pkg-checked.pkg-checked_iconchecked-square-checked.pkg-checked_iconposition-left .pkg-checked-option.pkg-checked-option_checked .pkg-checked-icon:before, .pkg-checked.pkg-checked_iconchecked-square-checked.pkg-checked_iconposition-top .pkg-checked-option.pkg-checked-option_checked.pkg-checked-icon:before, .pkg-checked.pkg-checked_iconchecked-square-checked.pkg-checked_iconposition-top .pkg-checked-option.pkg-checked-option_checked .pkg-checked-icon:before {}
+
+.pkg-checked.pkg-checked_iconchecked-square-checked.pkg-checked_iconposition-right .pkg-checked-option, .pkg-checked.pkg-checked_iconchecked-square-checked.pkg-checked_iconposition-bottom .pkg-checked-option {}
+
+.pkg-checked.pkg-checked_iconchecked-square-checked.pkg-checked_iconposition-right .pkg-checked-option.pkg-checked-option_checked .pkg-checked-icon, .pkg-checked.pkg-checked_iconchecked-square-checked.pkg-checked_iconposition-bottom .pkg-checked-option.pkg-checked-option_checked .pkg-checked-icon {}
+
+.pkg-checked.pkg-checked_iconchecked-square-checked.pkg-checked_iconposition-right .pkg-checked-option.pkg-checked-option_checked .pkg-checked-icon:after, .pkg-checked.pkg-checked_iconchecked-square-checked.pkg-checked_iconposition-bottom .pkg-checked-option.pkg-checked-option_checked .pkg-checked-icon:after {}
+
+.pkg-checked.pkg-checked_iconshow-square {}
+
+.pkg-checked.pkg-checked_iconshow-square.pkg-checked_iconposition-left .pkg-checked-icon, .pkg-checked.pkg-checked_iconshow-square.pkg-checked_iconposition-top .pkg-checked-icon {}
+
+.pkg-checked.pkg-checked_iconshow-square.pkg-checked_iconposition-left .pkg-checked-icon:before, .pkg-checked.pkg-checked_iconshow-square.pkg-checked_iconposition-top .pkg-checked-icon:before {
+	content: "\E017";
+
+}
+
+.pkg-checked.pkg-checked_iconshow-square.pkg-checked_iconposition-right.pkg-checked-icon, .pkg-checked.pkg-checked_iconshow-square.pkg-checked_iconposition-right .pkg-checked-icon, .pkg-checked.pkg-checked_iconshow-square.pkg-checked_iconposition-bottom.pkg-checked-icon, .pkg-checked.pkg-checked_iconshow-square.pkg-checked_iconposition-bottom .pkg-checked-icon {}
+
+.pkg-checked.pkg-checked_iconshow-square.pkg-checked_iconposition-right.pkg-checked-icon:after, .pkg-checked.pkg-checked_iconshow-square.pkg-checked_iconposition-right .pkg-checked-icon:after, .pkg-checked.pkg-checked_iconshow-square.pkg-checked_iconposition-bottom.pkg-checked-icon:after, .pkg-checked.pkg-checked_iconshow-square.pkg-checked_iconposition-bottom .pkg-checked-icon:after {
+	content: "\E017";
+
+}
+
+.pkg-checked.pkg-checked_iconchecked-square {}
+
+.pkg-checked.pkg-checked_iconchecked-square.pkg-checked_iconposition-left .pkg-checked-option, .pkg-checked.pkg-checked_iconchecked-square.pkg-checked_iconposition-top .pkg-checked-option {}
+
+.pkg-checked.pkg-checked_iconchecked-square.pkg-checked_iconposition-left .pkg-checked-option.pkg-checked-option_checked.pkg-checked-icon, .pkg-checked.pkg-checked_iconchecked-square.pkg-checked_iconposition-left .pkg-checked-option.pkg-checked-option_checked .pkg-checked-icon, .pkg-checked.pkg-checked_iconchecked-square.pkg-checked_iconposition-top .pkg-checked-option.pkg-checked-option_checked.pkg-checked-icon, .pkg-checked.pkg-checked_iconchecked-square.pkg-checked_iconposition-top .pkg-checked-option.pkg-checked-option_checked .pkg-checked-icon {}
+
+.pkg-checked.pkg-checked_iconchecked-square.pkg-checked_iconposition-left .pkg-checked-option.pkg-checked-option_checked.pkg-checked-icon:before, .pkg-checked.pkg-checked_iconchecked-square.pkg-checked_iconposition-left .pkg-checked-option.pkg-checked-option_checked .pkg-checked-icon:before, .pkg-checked.pkg-checked_iconchecked-square.pkg-checked_iconposition-top .pkg-checked-option.pkg-checked-option_checked.pkg-checked-icon:before, .pkg-checked.pkg-checked_iconchecked-square.pkg-checked_iconposition-top .pkg-checked-option.pkg-checked-option_checked .pkg-checked-icon:before {
+	content: "\E017";
+
+}
+
+.pkg-checked.pkg-checked_iconchecked-square.pkg-checked_iconposition-right .pkg-checked-option, .pkg-checked.pkg-checked_iconchecked-square.pkg-checked_iconposition-bottom .pkg-checked-option {}
+
+.pkg-checked.pkg-checked_iconchecked-square.pkg-checked_iconposition-right .pkg-checked-option.pkg-checked-option_checked .pkg-checked-icon, .pkg-checked.pkg-checked_iconchecked-square.pkg-checked_iconposition-bottom .pkg-checked-option.pkg-checked-option_checked .pkg-checked-icon {}
+
+.pkg-checked.pkg-checked_iconchecked-square.pkg-checked_iconposition-right .pkg-checked-option.pkg-checked-option_checked .pkg-checked-icon:after, .pkg-checked.pkg-checked_iconchecked-square.pkg-checked_iconposition-bottom .pkg-checked-option.pkg-checked-option_checked .pkg-checked-icon:after {
+	content: "\E017";
+
+}
+
+.pkg-checked.pkg-checked_iconshow-close {}
+
+.pkg-checked.pkg-checked_iconshow-close.pkg-checked_iconposition-left .pkg-checked-icon, .pkg-checked.pkg-checked_iconshow-close.pkg-checked_iconposition-top .pkg-checked-icon {}
+
+.pkg-checked.pkg-checked_iconshow-close.pkg-checked_iconposition-left .pkg-checked-icon:before, .pkg-checked.pkg-checked_iconshow-close.pkg-checked_iconposition-top .pkg-checked-icon:before {
+	content: "\E00F";
+
+}
+
+.pkg-checked.pkg-checked_iconshow-close.pkg-checked_iconposition-right.pkg-checked-icon, .pkg-checked.pkg-checked_iconshow-close.pkg-checked_iconposition-right .pkg-checked-icon, .pkg-checked.pkg-checked_iconshow-close.pkg-checked_iconposition-bottom.pkg-checked-icon, .pkg-checked.pkg-checked_iconshow-close.pkg-checked_iconposition-bottom .pkg-checked-icon {}
+
+.pkg-checked.pkg-checked_iconshow-close.pkg-checked_iconposition-right.pkg-checked-icon:after, .pkg-checked.pkg-checked_iconshow-close.pkg-checked_iconposition-right .pkg-checked-icon:after, .pkg-checked.pkg-checked_iconshow-close.pkg-checked_iconposition-bottom.pkg-checked-icon:after, .pkg-checked.pkg-checked_iconshow-close.pkg-checked_iconposition-bottom .pkg-checked-icon:after {
+	content: "\E00F";
+
+}
+
+.pkg-checked.pkg-checked_iconchecked-close {}
+
+.pkg-checked.pkg-checked_iconchecked-close.pkg-checked_iconposition-left .pkg-checked-option, .pkg-checked.pkg-checked_iconchecked-close.pkg-checked_iconposition-top .pkg-checked-option {}
+
+.pkg-checked.pkg-checked_iconchecked-close.pkg-checked_iconposition-left .pkg-checked-option.pkg-checked-option_checked.pkg-checked-icon, .pkg-checked.pkg-checked_iconchecked-close.pkg-checked_iconposition-left .pkg-checked-option.pkg-checked-option_checked .pkg-checked-icon, .pkg-checked.pkg-checked_iconchecked-close.pkg-checked_iconposition-top .pkg-checked-option.pkg-checked-option_checked.pkg-checked-icon, .pkg-checked.pkg-checked_iconchecked-close.pkg-checked_iconposition-top .pkg-checked-option.pkg-checked-option_checked .pkg-checked-icon {}
+
+.pkg-checked.pkg-checked_iconchecked-close.pkg-checked_iconposition-left .pkg-checked-option.pkg-checked-option_checked.pkg-checked-icon:before, .pkg-checked.pkg-checked_iconchecked-close.pkg-checked_iconposition-left .pkg-checked-option.pkg-checked-option_checked .pkg-checked-icon:before, .pkg-checked.pkg-checked_iconchecked-close.pkg-checked_iconposition-top .pkg-checked-option.pkg-checked-option_checked.pkg-checked-icon:before, .pkg-checked.pkg-checked_iconchecked-close.pkg-checked_iconposition-top .pkg-checked-option.pkg-checked-option_checked .pkg-checked-icon:before {
+	content: "\E00F";
+
+}
+
+.pkg-checked.pkg-checked_iconchecked-close.pkg-checked_iconposition-right .pkg-checked-option, .pkg-checked.pkg-checked_iconchecked-close.pkg-checked_iconposition-bottom .pkg-checked-option {}
+
+.pkg-checked.pkg-checked_iconchecked-close.pkg-checked_iconposition-right .pkg-checked-option.pkg-checked-option_checked .pkg-checked-icon, .pkg-checked.pkg-checked_iconchecked-close.pkg-checked_iconposition-bottom .pkg-checked-option.pkg-checked-option_checked .pkg-checked-icon {}
+
+.pkg-checked.pkg-checked_iconchecked-close.pkg-checked_iconposition-right .pkg-checked-option.pkg-checked-option_checked .pkg-checked-icon:after, .pkg-checked.pkg-checked_iconchecked-close.pkg-checked_iconposition-bottom .pkg-checked-option.pkg-checked-option_checked .pkg-checked-icon:after {
+	content: "\E00F";
+
+}
+
+.pkg-checked.pkg-checked_iconshow-line {}
+
+.pkg-checked.pkg-checked_iconshow-line.pkg-checked_iconposition-left .pkg-checked-icon, .pkg-checked.pkg-checked_iconshow-line.pkg-checked_iconposition-top .pkg-checked-icon {}
+
+.pkg-checked.pkg-checked_iconshow-line.pkg-checked_iconposition-left .pkg-checked-icon:before, .pkg-checked.pkg-checked_iconshow-line.pkg-checked_iconposition-top .pkg-checked-icon:before {
+	content: "\E004";
+
+}
+
+.pkg-checked.pkg-checked_iconshow-line.pkg-checked_iconposition-right.pkg-checked-icon, .pkg-checked.pkg-checked_iconshow-line.pkg-checked_iconposition-right .pkg-checked-icon, .pkg-checked.pkg-checked_iconshow-line.pkg-checked_iconposition-bottom.pkg-checked-icon, .pkg-checked.pkg-checked_iconshow-line.pkg-checked_iconposition-bottom .pkg-checked-icon {}
+
+.pkg-checked.pkg-checked_iconshow-line.pkg-checked_iconposition-right.pkg-checked-icon:after, .pkg-checked.pkg-checked_iconshow-line.pkg-checked_iconposition-right .pkg-checked-icon:after, .pkg-checked.pkg-checked_iconshow-line.pkg-checked_iconposition-bottom.pkg-checked-icon:after, .pkg-checked.pkg-checked_iconshow-line.pkg-checked_iconposition-bottom .pkg-checked-icon:after {
+	content: "\E004";
+
+}
+
+.pkg-checked.pkg-checked_iconchecked-line {}
+
+.pkg-checked.pkg-checked_iconchecked-line.pkg-checked_iconposition-left .pkg-checked-option, .pkg-checked.pkg-checked_iconchecked-line.pkg-checked_iconposition-top .pkg-checked-option {}
+
+.pkg-checked.pkg-checked_iconchecked-line.pkg-checked_iconposition-left .pkg-checked-option.pkg-checked-option_checked.pkg-checked-icon, .pkg-checked.pkg-checked_iconchecked-line.pkg-checked_iconposition-left .pkg-checked-option.pkg-checked-option_checked .pkg-checked-icon, .pkg-checked.pkg-checked_iconchecked-line.pkg-checked_iconposition-top .pkg-checked-option.pkg-checked-option_checked.pkg-checked-icon, .pkg-checked.pkg-checked_iconchecked-line.pkg-checked_iconposition-top .pkg-checked-option.pkg-checked-option_checked .pkg-checked-icon {}
+
+.pkg-checked.pkg-checked_iconchecked-line.pkg-checked_iconposition-left .pkg-checked-option.pkg-checked-option_checked.pkg-checked-icon:before, .pkg-checked.pkg-checked_iconchecked-line.pkg-checked_iconposition-left .pkg-checked-option.pkg-checked-option_checked .pkg-checked-icon:before, .pkg-checked.pkg-checked_iconchecked-line.pkg-checked_iconposition-top .pkg-checked-option.pkg-checked-option_checked.pkg-checked-icon:before, .pkg-checked.pkg-checked_iconchecked-line.pkg-checked_iconposition-top .pkg-checked-option.pkg-checked-option_checked .pkg-checked-icon:before {
+	content: "\E004";
+
+}
+
+.pkg-checked.pkg-checked_iconchecked-line.pkg-checked_iconposition-right .pkg-checked-option, .pkg-checked.pkg-checked_iconchecked-line.pkg-checked_iconposition-bottom .pkg-checked-option {}
+
+.pkg-checked.pkg-checked_iconchecked-line.pkg-checked_iconposition-right .pkg-checked-option.pkg-checked-option_checked .pkg-checked-icon, .pkg-checked.pkg-checked_iconchecked-line.pkg-checked_iconposition-bottom .pkg-checked-option.pkg-checked-option_checked .pkg-checked-icon {}
+
+.pkg-checked.pkg-checked_iconchecked-line.pkg-checked_iconposition-right .pkg-checked-option.pkg-checked-option_checked .pkg-checked-icon:after, .pkg-checked.pkg-checked_iconchecked-line.pkg-checked_iconposition-bottom .pkg-checked-option.pkg-checked-option_checked .pkg-checked-icon:after {
+	content: "\E004";
 
 }
 

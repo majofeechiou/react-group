@@ -27,14 +27,38 @@ module.exports = {
 		{
 		    test: /\.css$/,
 		    loader: 'postcss-loader'
-		}]
+		},
+        {
+            test: /\.(jpe?g|png|gif|svg)$/, 
+            exclude: /(node_modules|bower_components)/,
+            loader: "url-loader",
+            query: {
+                limit: 10000, // 若大於10kb，就會轉為base64
+                name: 'images/[name].[ext]'  // 這邊的路徑會相對於使用url-loader的loader, 也就是scss的publicPath
+            }
+        },
+        {
+            test: /\.woff(2)?$/, 
+            loader: "url-loader",
+            query: {
+                limit: 10000,
+                name: 'font/[name].[ext]'
+            }
+        },
+        {
+            test: /\.(ttf|eot|svg)$/, 
+            loader: "file-loader",
+            query: {
+                name: 'font/[name].[ext]'
+            }
+        }]
 	},
 	resolve: {
 		extensions: ['', '.css', '.js', '.jsx']
 	},
 	postcss: function () {
 	    // return [ require('autoprefixer'), require('precss'), require('postcss-fontpath'), require("postcss-calc"), require("postcss-color") ];
-	    return [ require('autoprefixer')({browsers: ['> 1%', 'IE 7']}), require('precss') ];
+	    return [ require('autoprefixer')({browsers: ['> 1%', 'IE 7']}), require('precss'), require('postcss-fontpath'), require("postcss-calc") ];
 	},
 	plugins: [
 	    // new HtmlPack({ 

@@ -1,3 +1,6 @@
+@import 'font'; 
+
+
 @define-mixin listStyle $name {
 	&.pkg-list_style-$name{
 		.pkg-list-option {
@@ -31,6 +34,35 @@
 
 @define-mixin checkedPadding $name {
 	&.pkg-checked_padding-$name{
+
+		&.pkg-checked_iconposition-left {
+			.pkg-checked-icon {
+				> * {
+					border: 1px solid #f09;
+					@if $name == tiny {
+						padding-left: calc( 0.2em * 0.5 );
+					}
+					@if $name == small {
+						padding-left: calc( 0.5em * 0.5 );
+					}
+					@if $name == little {
+						padding-left: calc( 0.8em * 0.5 );
+					}
+					@if $name == base {
+						padding-left: calc( 1em * 0.5 );
+					}
+					@if $name == middle {
+						padding-left: calc( 1.2em * 0.5 );
+					}
+					@if $name == big {
+						padding-left: calc( 1.5em * 0.5 );
+					}
+					@if $name == large {
+						padding-left: calc( 2em * 0.5 );
+					}
+				}
+			}
+		}
 		
 		.pkg-checked-icon {
 			&:before,
@@ -38,18 +70,100 @@
 			> * {
 				@if $name == tiny {
 					padding: 0.2em;
-				}@else if $name == small {
+				}
+				@if $name == small {
 					padding: 0.5em;
-				}@else if $name == little {
+				}
+				@if $name == little {
 					padding: 0.8em;
-				}@else if $name == base {
+				}
+				@if $name == base {
 					padding: 1em;
-				}@else if $name == middle {
+				}
+				@if $name == middle {
 					padding: 1.2em;
-				}@else if $name == big {
+				}
+				@if $name == big {
 					padding: 1.5em;
-				}@else if $name == large {
+				}
+				@if $name == large {
 					padding: 2em;
+				}
+			}
+		}
+
+	}
+}
+
+@define-mixin iconShowContent $name {
+	@if $name == heart {
+		content: "\e010";
+	}
+	@if $name == emptyheart {
+		content: "\e014";
+	}
+	@if $name == checked {
+		content: "\e007";
+	}
+	@if $name == squarechecked {
+		content: "\e006";
+	}
+	@if $name == square {
+		content: "\e017";
+	}
+	@if $name == close {
+		content: "\e00f";
+	}
+	@if $name == line {
+		content: "\e004";
+	}
+}
+
+@define-mixin iconShow $name {
+	&.pkg-checked_iconshow-$name {
+		&.pkg-checked_iconposition-left,
+		&.pkg-checked_iconposition-top {
+			.pkg-checked-icon {
+				&:before {
+					@mixin iconShowContent $name ;
+				}
+			}
+		}
+
+		&.pkg-checked_iconposition-right,
+		&.pkg-checked_iconposition-bottom {
+			&.pkg-checked-icon,
+			.pkg-checked-icon {
+				&:after {
+					@mixin iconShowContent $name ;
+				}
+			}
+		}
+	}
+	&.pkg-checked_iconchecked-$name {
+		&.pkg-checked_iconposition-left,
+		&.pkg-checked_iconposition-top {
+			.pkg-checked-option {
+				&.pkg-checked-option_checked {
+					&.pkg-checked-icon,
+					.pkg-checked-icon {
+						&:before {
+							@mixin iconShowContent $name ;
+						}
+					}
+				}
+			}
+		}
+
+		&.pkg-checked_iconposition-right,
+		&.pkg-checked_iconposition-bottom {
+			.pkg-checked-option {
+				&.pkg-checked-option_checked {
+					.pkg-checked-icon {
+						&:after {
+							@mixin iconShowContent $name ;
+						}
+					}
 				}
 			}
 		}
@@ -81,7 +195,7 @@
 
 		.pkg-checked-icon {
 			&:before {
-				content: 'O-';
+				@extend fontMajoCpt;
 			}
 		}
 	}
@@ -91,7 +205,7 @@
 
 		.pkg-checked-icon {
 			&:after {
-				content: 'O-';
+				@extend fontMajoCpt;
 			}
 		}
 	}
@@ -100,7 +214,6 @@
 		.pkg-checked-icon {
 			&:before,
 			> * {
-				border: 1px solid #f00;
 				display: inline-block;
 				vertical-align: middle;
 			}
@@ -111,7 +224,6 @@
 		.pkg-checked-icon {
 			&:after,
 			> * {
-				border: 1px solid #f00;
 				display: inline-block;
 				vertical-align: middle;
 			}
@@ -134,7 +246,15 @@
 				text-align: center;
 			}
 		}
-	}	
+	}
+
+	@mixin iconShow heart ;
+	@mixin iconShow emptyheart ;
+	@mixin iconShow checked ;
+	@mixin iconShow square-checked ;
+	@mixin iconShow square ;
+	@mixin iconShow close ;
+	@mixin iconShow line ;
 
 	.pkg-checked-option {
 		border: 1px solid #f0f;
