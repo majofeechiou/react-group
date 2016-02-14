@@ -46,8 +46,9 @@ ReactDOM.render(
 		padding={Setting.PADDING_TINY}
 		liststyle={Setting.LIST_STYLE_UPPER_LATIN}
 		listposition={Setting.LIST_POSITION_OUTER}
-		iconshow={[Setting.ICON_SHOW_EMPTY_HEART, Setting.ICON_SHOW_HEART]} />, 
-	document.getElementById("content")
+		iconshow={[Setting.ICON_SHOW_EMPTY_HEART, Setting.ICON_SHOW_HEART]}
+		iconposition={Setting.ICON_POSTION_TOP} />, 
+	document.getElementById("content1")
 );
 
 ReactDOM.render(
@@ -61,8 +62,105 @@ ReactDOM.render(
 		padding={Setting.PADDING_BASE}
 		liststyle={Setting.LIST_STYLE_LOWER_LATIN}
 		listposition={Setting.LIST_POSITION_INNER}
-		iconshow={[Setting.ICON_SHOW_EMPTY_HEART, Setting.ICON_SHOW_HEART]} />, 
+		iconshow={[Setting.ICON_SHOW_EMPTY_HEART, Setting.ICON_SHOW_HEART]}
+		iconposition={Setting.ICON_POSTION_TOP} />, 
 	document.getElementById("content2")
+);
+
+ReactDOM.render(
+	<RadioGroup 
+		name="name"
+		selectkey={_ary_selectkey}
+		inputoption={_sary_options}
+		outputresult={_json_checked}
+		showkey={_ary_showkey}
+		display={Setting.DISPLAY_INBLOCK}
+		padding={Setting.PADDING_TINY}
+		liststyle={Setting.LIST_STYLE_UPPER_LATIN}
+		listposition={Setting.LIST_POSITION_OUTER}
+		iconshow={[Setting.ICON_SHOW_EMPTY_HEART, Setting.ICON_SHOW_HEART]}
+		iconposition={Setting.ICON_POSTION_BOTTOM} />, 
+	document.getElementById("content3")
+);
+
+ReactDOM.render(
+	<RadioGroup 
+		name="name"
+		selectkey={_ary_selectkey}
+		inputoption={_sary_options}
+		outputresult={_json_checked}
+		showkey={_ary_showkey}
+		display={Setting.DISPLAY_INBLOCK}
+		padding={Setting.PADDING_BASE}
+		liststyle={Setting.LIST_STYLE_LOWER_LATIN}
+		listposition={Setting.LIST_POSITION_INNER}
+		iconshow={[Setting.ICON_SHOW_EMPTY_HEART, Setting.ICON_SHOW_HEART]}
+		iconposition={Setting.ICON_POSTION_BOTTOM} />, 
+	document.getElementById("content4")
+);
+
+ReactDOM.render(
+	<RadioGroup 
+		name="name"
+		selectkey={_ary_selectkey}
+		inputoption={_sary_options}
+		outputresult={_json_checked}
+		showkey={_ary_showkey}
+		display={Setting.DISPLAY_INBLOCK}
+		padding={Setting.PADDING_TINY}
+		liststyle={Setting.LIST_STYLE_UPPER_LATIN}
+		listposition={Setting.LIST_POSITION_OUTER}
+		iconshow={[Setting.ICON_SHOW_EMPTY_HEART, Setting.ICON_SHOW_HEART]}
+		iconposition={Setting.ICON_POSTION_LEFT} />, 
+	document.getElementById("content5")
+);
+
+ReactDOM.render(
+	<RadioGroup 
+		name="name"
+		selectkey={_ary_selectkey}
+		inputoption={_sary_options}
+		outputresult={_json_checked}
+		showkey={_ary_showkey}
+		display={Setting.DISPLAY_INBLOCK}
+		padding={Setting.PADDING_BASE}
+		liststyle={Setting.LIST_STYLE_LOWER_LATIN}
+		listposition={Setting.LIST_POSITION_INNER}
+		iconshow={[Setting.ICON_SHOW_EMPTY_HEART, Setting.ICON_SHOW_HEART]}
+		iconposition={Setting.ICON_POSTION_LEFT} />, 
+	document.getElementById("content6")
+);
+
+ReactDOM.render(
+	<RadioGroup 
+		name="name"
+		selectkey={_ary_selectkey}
+		inputoption={_sary_options}
+		outputresult={_json_checked}
+		showkey={_ary_showkey}
+		display={Setting.DISPLAY_INBLOCK}
+		padding={Setting.PADDING_TINY}
+		liststyle={Setting.LIST_STYLE_UPPER_LATIN}
+		listposition={Setting.LIST_POSITION_OUTER}
+		iconshow={[Setting.ICON_SHOW_EMPTY_HEART, Setting.ICON_SHOW_HEART]}
+		iconposition={Setting.ICON_POSTION_RIGHT} />, 
+	document.getElementById("content7")
+);
+
+ReactDOM.render(
+	<RadioGroup 
+		name="name"
+		selectkey={_ary_selectkey}
+		inputoption={_sary_options}
+		outputresult={_json_checked}
+		showkey={_ary_showkey}
+		display={Setting.DISPLAY_INBLOCK}
+		padding={Setting.PADDING_BASE}
+		liststyle={Setting.LIST_STYLE_LOWER_LATIN}
+		listposition={Setting.LIST_POSITION_INNER}
+		iconshow={[Setting.ICON_SHOW_EMPTY_HEART, Setting.ICON_SHOW_HEART]}
+		iconposition={Setting.ICON_POSTION_RIGHT} />, 
+	document.getElementById("content8")
 );
 
 // iconshow={[Setting.ICON_SHOW_EMPTY_HEART, Setting.ICON_SHOW_HEART]}

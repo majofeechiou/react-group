@@ -115,7 +115,8 @@
 		padding: _Setting2.default.PADDING_TINY,
 		liststyle: _Setting2.default.LIST_STYLE_UPPER_LATIN,
 		listposition: _Setting2.default.LIST_POSITION_OUTER,
-		iconshow: [_Setting2.default.ICON_SHOW_EMPTY_HEART, _Setting2.default.ICON_SHOW_HEART] }), document.getElementById("content"));
+		iconshow: [_Setting2.default.ICON_SHOW_EMPTY_HEART, _Setting2.default.ICON_SHOW_HEART],
+		iconposition: _Setting2.default.ICON_POSTION_TOP }), document.getElementById("content1"));
 
 	_reactDom2.default.render(_react2.default.createElement(_RadioGroup2.default, {
 		name: 'name',
@@ -127,7 +128,86 @@
 		padding: _Setting2.default.PADDING_BASE,
 		liststyle: _Setting2.default.LIST_STYLE_LOWER_LATIN,
 		listposition: _Setting2.default.LIST_POSITION_INNER,
-		iconshow: [_Setting2.default.ICON_SHOW_EMPTY_HEART, _Setting2.default.ICON_SHOW_HEART] }), document.getElementById("content2"));
+		iconshow: [_Setting2.default.ICON_SHOW_EMPTY_HEART, _Setting2.default.ICON_SHOW_HEART],
+		iconposition: _Setting2.default.ICON_POSTION_TOP }), document.getElementById("content2"));
+
+	_reactDom2.default.render(_react2.default.createElement(_RadioGroup2.default, {
+		name: 'name',
+		selectkey: _ary_selectkey,
+		inputoption: _sary_options,
+		outputresult: _json_checked,
+		showkey: _ary_showkey,
+		display: _Setting2.default.DISPLAY_INBLOCK,
+		padding: _Setting2.default.PADDING_TINY,
+		liststyle: _Setting2.default.LIST_STYLE_UPPER_LATIN,
+		listposition: _Setting2.default.LIST_POSITION_OUTER,
+		iconshow: [_Setting2.default.ICON_SHOW_EMPTY_HEART, _Setting2.default.ICON_SHOW_HEART],
+		iconposition: _Setting2.default.ICON_POSTION_BOTTOM }), document.getElementById("content3"));
+
+	_reactDom2.default.render(_react2.default.createElement(_RadioGroup2.default, {
+		name: 'name',
+		selectkey: _ary_selectkey,
+		inputoption: _sary_options,
+		outputresult: _json_checked,
+		showkey: _ary_showkey,
+		display: _Setting2.default.DISPLAY_INBLOCK,
+		padding: _Setting2.default.PADDING_BASE,
+		liststyle: _Setting2.default.LIST_STYLE_LOWER_LATIN,
+		listposition: _Setting2.default.LIST_POSITION_INNER,
+		iconshow: [_Setting2.default.ICON_SHOW_EMPTY_HEART, _Setting2.default.ICON_SHOW_HEART],
+		iconposition: _Setting2.default.ICON_POSTION_BOTTOM }), document.getElementById("content4"));
+
+	_reactDom2.default.render(_react2.default.createElement(_RadioGroup2.default, {
+		name: 'name',
+		selectkey: _ary_selectkey,
+		inputoption: _sary_options,
+		outputresult: _json_checked,
+		showkey: _ary_showkey,
+		display: _Setting2.default.DISPLAY_INBLOCK,
+		padding: _Setting2.default.PADDING_TINY,
+		liststyle: _Setting2.default.LIST_STYLE_UPPER_LATIN,
+		listposition: _Setting2.default.LIST_POSITION_OUTER,
+		iconshow: [_Setting2.default.ICON_SHOW_EMPTY_HEART, _Setting2.default.ICON_SHOW_HEART],
+		iconposition: _Setting2.default.ICON_POSTION_LEFT }), document.getElementById("content5"));
+
+	_reactDom2.default.render(_react2.default.createElement(_RadioGroup2.default, {
+		name: 'name',
+		selectkey: _ary_selectkey,
+		inputoption: _sary_options,
+		outputresult: _json_checked,
+		showkey: _ary_showkey,
+		display: _Setting2.default.DISPLAY_INBLOCK,
+		padding: _Setting2.default.PADDING_BASE,
+		liststyle: _Setting2.default.LIST_STYLE_LOWER_LATIN,
+		listposition: _Setting2.default.LIST_POSITION_INNER,
+		iconshow: [_Setting2.default.ICON_SHOW_EMPTY_HEART, _Setting2.default.ICON_SHOW_HEART],
+		iconposition: _Setting2.default.ICON_POSTION_LEFT }), document.getElementById("content6"));
+
+	_reactDom2.default.render(_react2.default.createElement(_RadioGroup2.default, {
+		name: 'name',
+		selectkey: _ary_selectkey,
+		inputoption: _sary_options,
+		outputresult: _json_checked,
+		showkey: _ary_showkey,
+		display: _Setting2.default.DISPLAY_INBLOCK,
+		padding: _Setting2.default.PADDING_TINY,
+		liststyle: _Setting2.default.LIST_STYLE_UPPER_LATIN,
+		listposition: _Setting2.default.LIST_POSITION_OUTER,
+		iconshow: [_Setting2.default.ICON_SHOW_EMPTY_HEART, _Setting2.default.ICON_SHOW_HEART],
+		iconposition: _Setting2.default.ICON_POSTION_RIGHT }), document.getElementById("content7"));
+
+	_reactDom2.default.render(_react2.default.createElement(_RadioGroup2.default, {
+		name: 'name',
+		selectkey: _ary_selectkey,
+		inputoption: _sary_options,
+		outputresult: _json_checked,
+		showkey: _ary_showkey,
+		display: _Setting2.default.DISPLAY_INBLOCK,
+		padding: _Setting2.default.PADDING_BASE,
+		liststyle: _Setting2.default.LIST_STYLE_LOWER_LATIN,
+		listposition: _Setting2.default.LIST_POSITION_INNER,
+		iconshow: [_Setting2.default.ICON_SHOW_EMPTY_HEART, _Setting2.default.ICON_SHOW_HEART],
+		iconposition: _Setting2.default.ICON_POSTION_RIGHT }), document.getElementById("content8"));
 
 	// iconshow={[Setting.ICON_SHOW_EMPTY_HEART, Setting.ICON_SHOW_HEART]}
 	// iconposition={Setting.ICON_POSTION_TOP}

@@ -1,5 +1,29 @@
 @import 'font'; 
 
+$PADDING_TINY: tiny;
+$PADDING_SMALL: small;
+$PADDING_LITTLE: little;
+$PADDING_BASE: base; 
+$PADDING_MIDDLE: middle;
+$PADDING_BIG: big;
+$PADDING_LARGE: large; 
+$PADDING_HUGE: huge;
+
+$num_padding_tiny: 0.2em;
+$num_padding_small: 0.5em;
+$num_padding_little: 0.8em;
+$num_padding_base: 1em;
+$num_padding_midde: 1.2em;
+$num_padding_big: 1.5em;
+$num_padding_large: 2em;
+$num_padding_huge: 2.5em;
+
+$num_padding_spacing: 0.5em;
+
+@define-extend paddingSpacing {
+	padding-left: $num_padding_spacing;
+	padding-right: $num_padding_spacing;
+}
 
 @define-mixin listStyle $name {
 	&.pkg-list_style-$name{
@@ -37,57 +61,73 @@
 
 		&.pkg-checked_iconposition-left {
 			.pkg-checked-icon {
-				> * {
-					border: 1px solid #f09;
-					@if $name == tiny {
-						padding-left: calc( 0.2em * 0.5 );
-					}
-					@if $name == small {
-						padding-left: calc( 0.5em * 0.5 );
-					}
-					@if $name == little {
-						padding-left: calc( 0.8em * 0.5 );
-					}
-					@if $name == base {
-						padding-left: calc( 1em * 0.5 );
-					}
-					@if $name == middle {
-						padding-left: calc( 1.2em * 0.5 );
-					}
-					@if $name == big {
-						padding-left: calc( 1.5em * 0.5 );
-					}
-					@if $name == large {
-						padding-left: calc( 2em * 0.5 );
-					}
+				&:before {/* 整個item */
+					@extend paddingSpacing ;
 				}
 			}
 		}
-		
+
+		&.pkg-checked_iconposition-right {
+			.pkg-checked-icon {
+				&:after {/* 整個item */
+					@extend paddingSpacing ;
+				}
+			}
+		}
+
 		.pkg-checked-icon {
 			&:before,
 			&:after,
 			> * {
-				@if $name == tiny {
-					padding: 0.2em;
+				@if $name == $PADDING_TINY {
+					padding-top: $num_padding_tiny;
+					padding-bottom: $num_padding_tiny;
 				}
-				@if $name == small {
-					padding: 0.5em;
+				@if $name == $PADDING_SMALL {
+					padding-top: $num_padding_small;
+					padding-bottom: $num_padding_small;
 				}
-				@if $name == little {
-					padding: 0.8em;
+				@if $name == $PADDING_LITTLE {
+					padding-top: $num_padding_little;
+					padding-bottom: $num_padding_little;
 				}
-				@if $name == base {
-					padding: 1em;
+				@if $name == $PADDING_BASE {
+					padding-top: $num_padding_base;
+					padding-bottom: $num_padding_base;
 				}
-				@if $name == middle {
-					padding: 1.2em;
+				@if $name == $PADDING_MIDDLE {
+					padding-top: $num_padding_midde;
+					padding-bottom: $num_padding_midde;
 				}
-				@if $name == big {
-					padding: 1.5em;
+				@if $name == $PADDING_BIG {
+					padding-top: $num_padding_big;
+					padding-bottom: $num_padding_big;
 				}
-				@if $name == large {
-					padding: 2em;
+				@if $name == $PADDING_LARGE {
+					padding-top: $num_padding_large;
+					padding-bottom: $num_padding_large;
+				}
+				@if $name == $PADDING_HUGE {
+					padding-top: $num_padding_huge;
+					padding-bottom: $num_padding_huge;
+				}
+			}
+		}
+
+		.pkg-checked-icon {
+			> * {/* icon */
+				@extend paddingSpacing ;
+			}
+		}
+
+		&.pkg-checked_iconposition-left,
+		&.pkg-checked_iconposition-right {
+			.pkg-checked-option {
+				&.pkg-list-option {
+					&:before {/* , 按鈕在左或右，而且list項目在外面時 */
+						border: 1px solid #39f;
+						/* @extend paddingSpacing ; */
+					}
 				}
 			}
 		}
@@ -159,6 +199,7 @@
 		&.pkg-checked_iconposition-bottom {
 			.pkg-checked-option {
 				&.pkg-checked-option_checked {
+					&.pkg-checked-icon,
 					.pkg-checked-icon {
 						&:after {
 							@mixin iconShowContent $name ;
