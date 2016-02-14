@@ -16,12 +16,6 @@
 
 }
 
-.pkg-checked.pkg-checked_padding-tiny .pkg-checked-icon > *, .pkg-checked.pkg-checked_padding-tiny.pkg-checked_iconposition-left .pkg-checked-icon:before, .pkg-checked.pkg-checked_padding-tiny.pkg-checked_iconposition-right .pkg-checked-icon:after, .pkg-checked.pkg-checked_padding-small .pkg-checked-icon > *, .pkg-checked.pkg-checked_padding-small.pkg-checked_iconposition-left .pkg-checked-icon:before, .pkg-checked.pkg-checked_padding-small.pkg-checked_iconposition-right .pkg-checked-icon:after, .pkg-checked.pkg-checked_padding-little .pkg-checked-icon > *, .pkg-checked.pkg-checked_padding-little.pkg-checked_iconposition-left .pkg-checked-icon:before, .pkg-checked.pkg-checked_padding-little.pkg-checked_iconposition-right .pkg-checked-icon:after, .pkg-checked.pkg-checked_padding-base .pkg-checked-icon > *, .pkg-checked.pkg-checked_padding-base.pkg-checked_iconposition-left .pkg-checked-icon:before, .pkg-checked.pkg-checked_padding-base.pkg-checked_iconposition-right .pkg-checked-icon:after, .pkg-checked.pkg-checked_padding-middle .pkg-checked-icon > *, .pkg-checked.pkg-checked_padding-middle.pkg-checked_iconposition-left .pkg-checked-icon:before, .pkg-checked.pkg-checked_padding-middle.pkg-checked_iconposition-right .pkg-checked-icon:after, .pkg-checked.pkg-checked_padding-big .pkg-checked-icon > *, .pkg-checked.pkg-checked_padding-big.pkg-checked_iconposition-left .pkg-checked-icon:before, .pkg-checked.pkg-checked_padding-big.pkg-checked_iconposition-right .pkg-checked-icon:after, .pkg-checked.pkg-checked_padding-large .pkg-checked-icon > *, .pkg-checked.pkg-checked_padding-large.pkg-checked_iconposition-left .pkg-checked-icon:before, .pkg-checked.pkg-checked_padding-large.pkg-checked_iconposition-right .pkg-checked-icon:after {
-	padding-left: 0.5em;
-	padding-right: 0.5em;
-
-}
-
 .pkg-checked, .pkg-checked * {
 	box-sizing: border-box;
 
@@ -83,69 +77,9 @@
 
 }
 
-.pkg-checked.pkg-checked_padding-tiny .pkg-checked-icon > * {
-	/* icon */
-
-}
-
-.pkg-checked.pkg-checked_padding-tiny.pkg-checked_iconposition-left .pkg-checked-icon {}
-
-.pkg-checked.pkg-checked_padding-tiny.pkg-checked_iconposition-left .pkg-checked-icon:before {
-	/* 整個item */
-
-}
-
-.pkg-checked.pkg-checked_padding-tiny.pkg-checked_iconposition-right .pkg-checked-icon {}
-
-.pkg-checked.pkg-checked_padding-tiny.pkg-checked_iconposition-right .pkg-checked-icon:after {
-	/* 整個item */
-
-}
-
-.pkg-checked.pkg-checked_padding-tiny.pkg-checked_iconposition-left .pkg-checked-option, .pkg-checked.pkg-checked_padding-tiny.pkg-checked_iconposition-right .pkg-checked-option {}
-
-.pkg-checked.pkg-checked_padding-tiny.pkg-checked_iconposition-left .pkg-checked-option.pkg-list-option, .pkg-checked.pkg-checked_padding-tiny.pkg-checked_iconposition-right .pkg-checked-option.pkg-list-option {}
-
-.pkg-checked.pkg-checked_padding-tiny.pkg-checked_iconposition-left .pkg-checked-option.pkg-list-option:before, .pkg-checked.pkg-checked_padding-tiny.pkg-checked_iconposition-right .pkg-checked-option.pkg-list-option:before {
-	/* , 按鈕在左或右，而且list項目在外面時 */
-	border: 1px solid #39f;
-	/* @extend paddingSpacing ; */
-
-}
-
 .pkg-checked.pkg-checked_padding-small .pkg-checked-icon:before, .pkg-checked.pkg-checked_padding-small .pkg-checked-icon:after, .pkg-checked.pkg-checked_padding-small .pkg-checked-icon > * {
 	padding-top: 0.5em;
 	padding-bottom: 0.5em;
-
-}
-
-.pkg-checked.pkg-checked_padding-small .pkg-checked-icon > * {
-	/* icon */
-
-}
-
-.pkg-checked.pkg-checked_padding-small.pkg-checked_iconposition-left .pkg-checked-icon {}
-
-.pkg-checked.pkg-checked_padding-small.pkg-checked_iconposition-left .pkg-checked-icon:before {
-	/* 整個item */
-
-}
-
-.pkg-checked.pkg-checked_padding-small.pkg-checked_iconposition-right .pkg-checked-icon {}
-
-.pkg-checked.pkg-checked_padding-small.pkg-checked_iconposition-right .pkg-checked-icon:after {
-	/* 整個item */
-
-}
-
-.pkg-checked.pkg-checked_padding-small.pkg-checked_iconposition-left .pkg-checked-option, .pkg-checked.pkg-checked_padding-small.pkg-checked_iconposition-right .pkg-checked-option {}
-
-.pkg-checked.pkg-checked_padding-small.pkg-checked_iconposition-left .pkg-checked-option.pkg-list-option, .pkg-checked.pkg-checked_padding-small.pkg-checked_iconposition-right .pkg-checked-option.pkg-list-option {}
-
-.pkg-checked.pkg-checked_padding-small.pkg-checked_iconposition-left .pkg-checked-option.pkg-list-option:before, .pkg-checked.pkg-checked_padding-small.pkg-checked_iconposition-right .pkg-checked-option.pkg-list-option:before {
-	/* , 按鈕在左或右，而且list項目在外面時 */
-	border: 1px solid #39f;
-	/* @extend paddingSpacing ; */
 
 }
 
@@ -155,69 +89,9 @@
 
 }
 
-.pkg-checked.pkg-checked_padding-little .pkg-checked-icon > * {
-	/* icon */
-
-}
-
-.pkg-checked.pkg-checked_padding-little.pkg-checked_iconposition-left .pkg-checked-icon {}
-
-.pkg-checked.pkg-checked_padding-little.pkg-checked_iconposition-left .pkg-checked-icon:before {
-	/* 整個item */
-
-}
-
-.pkg-checked.pkg-checked_padding-little.pkg-checked_iconposition-right .pkg-checked-icon {}
-
-.pkg-checked.pkg-checked_padding-little.pkg-checked_iconposition-right .pkg-checked-icon:after {
-	/* 整個item */
-
-}
-
-.pkg-checked.pkg-checked_padding-little.pkg-checked_iconposition-left .pkg-checked-option, .pkg-checked.pkg-checked_padding-little.pkg-checked_iconposition-right .pkg-checked-option {}
-
-.pkg-checked.pkg-checked_padding-little.pkg-checked_iconposition-left .pkg-checked-option.pkg-list-option, .pkg-checked.pkg-checked_padding-little.pkg-checked_iconposition-right .pkg-checked-option.pkg-list-option {}
-
-.pkg-checked.pkg-checked_padding-little.pkg-checked_iconposition-left .pkg-checked-option.pkg-list-option:before, .pkg-checked.pkg-checked_padding-little.pkg-checked_iconposition-right .pkg-checked-option.pkg-list-option:before {
-	/* , 按鈕在左或右，而且list項目在外面時 */
-	border: 1px solid #39f;
-	/* @extend paddingSpacing ; */
-
-}
-
 .pkg-checked.pkg-checked_padding-base .pkg-checked-icon:before, .pkg-checked.pkg-checked_padding-base .pkg-checked-icon:after, .pkg-checked.pkg-checked_padding-base .pkg-checked-icon > * {
 	padding-top: 1em;
 	padding-bottom: 1em;
-
-}
-
-.pkg-checked.pkg-checked_padding-base .pkg-checked-icon > * {
-	/* icon */
-
-}
-
-.pkg-checked.pkg-checked_padding-base.pkg-checked_iconposition-left .pkg-checked-icon {}
-
-.pkg-checked.pkg-checked_padding-base.pkg-checked_iconposition-left .pkg-checked-icon:before {
-	/* 整個item */
-
-}
-
-.pkg-checked.pkg-checked_padding-base.pkg-checked_iconposition-right .pkg-checked-icon {}
-
-.pkg-checked.pkg-checked_padding-base.pkg-checked_iconposition-right .pkg-checked-icon:after {
-	/* 整個item */
-
-}
-
-.pkg-checked.pkg-checked_padding-base.pkg-checked_iconposition-left .pkg-checked-option, .pkg-checked.pkg-checked_padding-base.pkg-checked_iconposition-right .pkg-checked-option {}
-
-.pkg-checked.pkg-checked_padding-base.pkg-checked_iconposition-left .pkg-checked-option.pkg-list-option, .pkg-checked.pkg-checked_padding-base.pkg-checked_iconposition-right .pkg-checked-option.pkg-list-option {}
-
-.pkg-checked.pkg-checked_padding-base.pkg-checked_iconposition-left .pkg-checked-option.pkg-list-option:before, .pkg-checked.pkg-checked_padding-base.pkg-checked_iconposition-right .pkg-checked-option.pkg-list-option:before {
-	/* , 按鈕在左或右，而且list項目在外面時 */
-	border: 1px solid #39f;
-	/* @extend paddingSpacing ; */
 
 }
 
@@ -227,105 +101,15 @@
 
 }
 
-.pkg-checked.pkg-checked_padding-middle .pkg-checked-icon > * {
-	/* icon */
-
-}
-
-.pkg-checked.pkg-checked_padding-middle.pkg-checked_iconposition-left .pkg-checked-icon {}
-
-.pkg-checked.pkg-checked_padding-middle.pkg-checked_iconposition-left .pkg-checked-icon:before {
-	/* 整個item */
-
-}
-
-.pkg-checked.pkg-checked_padding-middle.pkg-checked_iconposition-right .pkg-checked-icon {}
-
-.pkg-checked.pkg-checked_padding-middle.pkg-checked_iconposition-right .pkg-checked-icon:after {
-	/* 整個item */
-
-}
-
-.pkg-checked.pkg-checked_padding-middle.pkg-checked_iconposition-left .pkg-checked-option, .pkg-checked.pkg-checked_padding-middle.pkg-checked_iconposition-right .pkg-checked-option {}
-
-.pkg-checked.pkg-checked_padding-middle.pkg-checked_iconposition-left .pkg-checked-option.pkg-list-option, .pkg-checked.pkg-checked_padding-middle.pkg-checked_iconposition-right .pkg-checked-option.pkg-list-option {}
-
-.pkg-checked.pkg-checked_padding-middle.pkg-checked_iconposition-left .pkg-checked-option.pkg-list-option:before, .pkg-checked.pkg-checked_padding-middle.pkg-checked_iconposition-right .pkg-checked-option.pkg-list-option:before {
-	/* , 按鈕在左或右，而且list項目在外面時 */
-	border: 1px solid #39f;
-	/* @extend paddingSpacing ; */
-
-}
-
 .pkg-checked.pkg-checked_padding-big .pkg-checked-icon:before, .pkg-checked.pkg-checked_padding-big .pkg-checked-icon:after, .pkg-checked.pkg-checked_padding-big .pkg-checked-icon > * {
 	padding-top: 1.5em;
 	padding-bottom: 1.5em;
 
 }
 
-.pkg-checked.pkg-checked_padding-big .pkg-checked-icon > * {
-	/* icon */
-
-}
-
-.pkg-checked.pkg-checked_padding-big.pkg-checked_iconposition-left .pkg-checked-icon {}
-
-.pkg-checked.pkg-checked_padding-big.pkg-checked_iconposition-left .pkg-checked-icon:before {
-	/* 整個item */
-
-}
-
-.pkg-checked.pkg-checked_padding-big.pkg-checked_iconposition-right .pkg-checked-icon {}
-
-.pkg-checked.pkg-checked_padding-big.pkg-checked_iconposition-right .pkg-checked-icon:after {
-	/* 整個item */
-
-}
-
-.pkg-checked.pkg-checked_padding-big.pkg-checked_iconposition-left .pkg-checked-option, .pkg-checked.pkg-checked_padding-big.pkg-checked_iconposition-right .pkg-checked-option {}
-
-.pkg-checked.pkg-checked_padding-big.pkg-checked_iconposition-left .pkg-checked-option.pkg-list-option, .pkg-checked.pkg-checked_padding-big.pkg-checked_iconposition-right .pkg-checked-option.pkg-list-option {}
-
-.pkg-checked.pkg-checked_padding-big.pkg-checked_iconposition-left .pkg-checked-option.pkg-list-option:before, .pkg-checked.pkg-checked_padding-big.pkg-checked_iconposition-right .pkg-checked-option.pkg-list-option:before {
-	/* , 按鈕在左或右，而且list項目在外面時 */
-	border: 1px solid #39f;
-	/* @extend paddingSpacing ; */
-
-}
-
 .pkg-checked.pkg-checked_padding-large .pkg-checked-icon:before, .pkg-checked.pkg-checked_padding-large .pkg-checked-icon:after, .pkg-checked.pkg-checked_padding-large .pkg-checked-icon > * {
 	padding-top: 2em;
 	padding-bottom: 2em;
-
-}
-
-.pkg-checked.pkg-checked_padding-large .pkg-checked-icon > * {
-	/* icon */
-
-}
-
-.pkg-checked.pkg-checked_padding-large.pkg-checked_iconposition-left .pkg-checked-icon {}
-
-.pkg-checked.pkg-checked_padding-large.pkg-checked_iconposition-left .pkg-checked-icon:before {
-	/* 整個item */
-
-}
-
-.pkg-checked.pkg-checked_padding-large.pkg-checked_iconposition-right .pkg-checked-icon {}
-
-.pkg-checked.pkg-checked_padding-large.pkg-checked_iconposition-right .pkg-checked-icon:after {
-	/* 整個item */
-
-}
-
-.pkg-checked.pkg-checked_padding-large.pkg-checked_iconposition-left .pkg-checked-option, .pkg-checked.pkg-checked_padding-large.pkg-checked_iconposition-right .pkg-checked-option {}
-
-.pkg-checked.pkg-checked_padding-large.pkg-checked_iconposition-left .pkg-checked-option.pkg-list-option, .pkg-checked.pkg-checked_padding-large.pkg-checked_iconposition-right .pkg-checked-option.pkg-list-option {}
-
-.pkg-checked.pkg-checked_padding-large.pkg-checked_iconposition-left .pkg-checked-option.pkg-list-option:before, .pkg-checked.pkg-checked_padding-large.pkg-checked_iconposition-right .pkg-checked-option.pkg-list-option:before {
-	/* , 按鈕在左或右，而且list項目在外面時 */
-	border: 1px solid #39f;
-	/* @extend paddingSpacing ; */
 
 }
 

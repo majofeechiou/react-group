@@ -89,6 +89,7 @@ export default class RadioGroup extends React.Component {
 									type={ (this.props.type==='checkbox')? 'checkbox' : 'radio' }
 									name={this.props.name}
 									showkey={this.props.showkey}
+									between={this.props.between}
 									item={json_item} />
 							</span>
 						</label> 
@@ -108,6 +109,7 @@ RadioGroup.propTypes = {
     inputoption: React.PropTypes.array,
     selectkey: React.PropTypes.array,
     showkey: React.PropTypes.array,
+    between: React.PropTypes.string,
     outputresult: React.PropTypes.object,
     display: React.PropTypes.string,
     liststyle: React.PropTypes.string,
@@ -121,6 +123,7 @@ RadioGroup.defaultProps = {
 	inputoption: [],
 	selectkey: [],
 	showkey: [],
+	between: '',
 	outputresult: {},
 	display: Setting.DISPLAY_INBLOCK,
     liststyle: '',

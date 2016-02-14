@@ -33,261 +33,261 @@ let _json_checked = {
 	uuid: 'ooxx-002'
 };
 
-let _ary_showkey = ['text','uuid'];
+let _ary_showkey = ['text'];
 
 ReactDOM.render(
 	<RadioGroup 
-		name="name1"
+		name="name"
 		selectkey={_ary_selectkey}
 		inputoption={_sary_options}
 		outputresult={_json_checked}
 		showkey={_ary_showkey}
-		between="~"
 		display={Setting.DISPLAY_INBLOCK}
 		padding={Setting.PADDING_TINY}
+		liststyle={Setting.LIST_STYLE_UPPER_LATIN}
 		listposition={Setting.LIST_POSITION_OUTER}
-		iconposition={Setting.ICON_POSTION_TOP}
-		iconshow={[Setting.ICON_SHOW_EMPTY_HEART, Setting.ICON_SHOW_HEART]} />, 
+		iconshow={[Setting.ICON_SHOW_EMPTY_HEART, Setting.ICON_SHOW_HEART]}
+		iconposition={Setting.ICON_POSTION_TOP} />, 
 	document.getElementById("content1")
 );
 
 ReactDOM.render(
 	<RadioGroup 
-		name="name2"
+		name="name"
 		selectkey={_ary_selectkey}
 		inputoption={_sary_options}
 		outputresult={_json_checked}
 		showkey={_ary_showkey}
-		between="~"
 		display={Setting.DISPLAY_INBLOCK}
 		padding={Setting.PADDING_BASE}
+		liststyle={Setting.LIST_STYLE_LOWER_LATIN}
 		listposition={Setting.LIST_POSITION_INNER}
-		iconposition={Setting.ICON_POSTION_TOP}
-		iconshow={[Setting.ICON_SHOW_EMPTY_HEART, Setting.ICON_SHOW_HEART]} />, 
+		iconshow={[Setting.ICON_SHOW_EMPTY_HEART, Setting.ICON_SHOW_HEART]}
+		iconposition={Setting.ICON_POSTION_TOP} />, 
 	document.getElementById("content2")
 );
 
 ReactDOM.render(
 	<RadioGroup 
-		name="name3"
+		name="name"
 		selectkey={_ary_selectkey}
 		inputoption={_sary_options}
 		outputresult={_json_checked}
 		showkey={_ary_showkey}
-		between="~"
 		display={Setting.DISPLAY_INBLOCK}
 		padding={Setting.PADDING_TINY}
+		liststyle={Setting.LIST_STYLE_UPPER_LATIN}
 		listposition={Setting.LIST_POSITION_OUTER}
-		iconposition={Setting.ICON_POSTION_BOTTOM}
-		iconshow={[Setting.ICON_SHOW_EMPTY_HEART, Setting.ICON_SHOW_HEART]} />, 
+		iconshow={[Setting.ICON_SHOW_EMPTY_HEART, Setting.ICON_SHOW_HEART]}
+		iconposition={Setting.ICON_POSTION_BOTTOM} />, 
 	document.getElementById("content3")
 );
 
 ReactDOM.render(
 	<RadioGroup 
-		name="name4"
+		name="name"
 		selectkey={_ary_selectkey}
 		inputoption={_sary_options}
 		outputresult={_json_checked}
 		showkey={_ary_showkey}
-		between="~"
 		display={Setting.DISPLAY_INBLOCK}
 		padding={Setting.PADDING_BASE}
+		liststyle={Setting.LIST_STYLE_LOWER_LATIN}
 		listposition={Setting.LIST_POSITION_INNER}
-		iconposition={Setting.ICON_POSTION_BOTTOM}
-		iconshow={[Setting.ICON_SHOW_EMPTY_HEART, Setting.ICON_SHOW_HEART]} />, 
+		iconshow={[Setting.ICON_SHOW_EMPTY_HEART, Setting.ICON_SHOW_HEART]}
+		iconposition={Setting.ICON_POSTION_BOTTOM} />, 
 	document.getElementById("content4")
 );
 
 ReactDOM.render(
 	<RadioGroup 
-		name="name5"
+		name="name"
 		selectkey={_ary_selectkey}
 		inputoption={_sary_options}
 		outputresult={_json_checked}
 		showkey={_ary_showkey}
-		between="~"
 		display={Setting.DISPLAY_INBLOCK}
 		padding={Setting.PADDING_TINY}
+		liststyle={Setting.LIST_STYLE_UPPER_LATIN}
 		listposition={Setting.LIST_POSITION_OUTER}
-		iconposition={Setting.ICON_POSTION_LEFT}
-		iconshow={[Setting.ICON_SHOW_EMPTY_HEART, Setting.ICON_SHOW_HEART]} />, 
+		iconshow={[Setting.ICON_SHOW_EMPTY_HEART, Setting.ICON_SHOW_HEART]}
+		iconposition={Setting.ICON_POSTION_LEFT} />, 
 	document.getElementById("content5")
 );
 
 ReactDOM.render(
 	<RadioGroup 
-		name="name6"
+		name="name"
 		selectkey={_ary_selectkey}
 		inputoption={_sary_options}
 		outputresult={_json_checked}
 		showkey={_ary_showkey}
-		between="~"
 		display={Setting.DISPLAY_INBLOCK}
 		padding={Setting.PADDING_BASE}
+		liststyle={Setting.LIST_STYLE_LOWER_LATIN}
 		listposition={Setting.LIST_POSITION_INNER}
-		iconposition={Setting.ICON_POSTION_LEFT}
-		iconshow={[Setting.ICON_SHOW_EMPTY_HEART, Setting.ICON_SHOW_HEART]} />, 
+		iconshow={[Setting.ICON_SHOW_EMPTY_HEART, Setting.ICON_SHOW_HEART]}
+		iconposition={Setting.ICON_POSTION_LEFT} />, 
 	document.getElementById("content6")
 );
 
 ReactDOM.render(
 	<RadioGroup 
-		name="name7"
+		name="name"
 		selectkey={_ary_selectkey}
 		inputoption={_sary_options}
 		outputresult={_json_checked}
 		showkey={_ary_showkey}
-		between="~"
 		display={Setting.DISPLAY_INBLOCK}
 		padding={Setting.PADDING_TINY}
+		liststyle={Setting.LIST_STYLE_UPPER_LATIN}
 		listposition={Setting.LIST_POSITION_OUTER}
-		iconposition={Setting.ICON_POSTION_RIGHT}
-		iconshow={[Setting.ICON_SHOW_EMPTY_HEART, Setting.ICON_SHOW_HEART]} />, 
+		iconshow={[Setting.ICON_SHOW_EMPTY_HEART, Setting.ICON_SHOW_HEART]}
+		iconposition={Setting.ICON_POSTION_RIGHT} />, 
 	document.getElementById("content7")
 );
 
 ReactDOM.render(
 	<RadioGroup 
-		name="name8"
+		name="name"
 		selectkey={_ary_selectkey}
 		inputoption={_sary_options}
 		outputresult={_json_checked}
 		showkey={_ary_showkey}
-		between="~"
 		display={Setting.DISPLAY_INBLOCK}
 		padding={Setting.PADDING_BASE}
+		liststyle={Setting.LIST_STYLE_LOWER_LATIN}
 		listposition={Setting.LIST_POSITION_INNER}
-		iconposition={Setting.ICON_POSTION_RIGHT}
-		iconshow={[Setting.ICON_SHOW_EMPTY_HEART, Setting.ICON_SHOW_HEART]} />, 
+		iconshow={[Setting.ICON_SHOW_EMPTY_HEART, Setting.ICON_SHOW_HEART]}
+		iconposition={Setting.ICON_POSTION_RIGHT} />, 
 	document.getElementById("content8")
 );
 
 ReactDOM.render(
 	<RadioGroup 
-		name="name_1"
+		name="name"
 		selectkey={_ary_selectkey}
 		inputoption={_sary_options}
 		outputresult={_json_checked}
 		showkey={_ary_showkey}
-		between="~"
 		display={Setting.DISPLAY_INBLOCK}
 		padding={Setting.PADDING_TINY}
+		liststyle={Setting.LIST_STYLE_UPPER_LATIN}
 		listposition={Setting.LIST_POSITION_OUTER}
-		iconposition={Setting.ICON_POSTION_TOP}
-		iconshow={[Setting.ICON_SHOW_EMPTY_HEART, Setting.ICON_SHOW_HEART]} />, 
+		iconshow={[Setting.ICON_SHOW_EMPTY_HEART, Setting.ICON_SHOW_HEART]}
+		iconposition={Setting.ICON_POSTION_TOP} />, 
 	document.getElementById("ct1")
 );
 
 ReactDOM.render(
 	<RadioGroup 
-		name="name_2"
+		name="name"
 		selectkey={_ary_selectkey}
 		inputoption={_sary_options}
 		outputresult={_json_checked}
 		showkey={_ary_showkey}
-		between="~"
 		display={Setting.DISPLAY_INBLOCK}
 		padding={Setting.PADDING_BASE}
+		liststyle={Setting.LIST_STYLE_LOWER_LATIN}
 		listposition={Setting.LIST_POSITION_INNER}
-		iconposition={Setting.ICON_POSTION_TOP}
-		iconshow={[Setting.ICON_SHOW_EMPTY_HEART, Setting.ICON_SHOW_HEART]} />, 
+		iconshow={[Setting.ICON_SHOW_EMPTY_HEART, Setting.ICON_SHOW_HEART]}
+		iconposition={Setting.ICON_POSTION_TOP} />, 
 	document.getElementById("ct2")
 );
 
 ReactDOM.render(
 	<RadioGroup 
-		name="name_3"
+		name="name"
 		selectkey={_ary_selectkey}
 		inputoption={_sary_options}
 		outputresult={_json_checked}
 		showkey={_ary_showkey}
-		between="~"
 		display={Setting.DISPLAY_INBLOCK}
 		padding={Setting.PADDING_TINY}
+		liststyle={Setting.LIST_STYLE_UPPER_LATIN}
 		listposition={Setting.LIST_POSITION_OUTER}
-		iconposition={Setting.ICON_POSTION_BOTTOM}
-		iconshow={[Setting.ICON_SHOW_EMPTY_HEART, Setting.ICON_SHOW_HEART]} />, 
+		iconshow={[Setting.ICON_SHOW_EMPTY_HEART, Setting.ICON_SHOW_HEART]}
+		iconposition={Setting.ICON_POSTION_BOTTOM} />, 
 	document.getElementById("ct3")
 );
 
 ReactDOM.render(
 	<RadioGroup 
-		name="name_4"
+		name="name"
 		selectkey={_ary_selectkey}
 		inputoption={_sary_options}
 		outputresult={_json_checked}
 		showkey={_ary_showkey}
-		between="~"
 		display={Setting.DISPLAY_INBLOCK}
 		padding={Setting.PADDING_BASE}
+		liststyle={Setting.LIST_STYLE_LOWER_LATIN}
 		listposition={Setting.LIST_POSITION_INNER}
-		iconposition={Setting.ICON_POSTION_BOTTOM}
-		iconshow={[Setting.ICON_SHOW_EMPTY_HEART, Setting.ICON_SHOW_HEART]} />, 
+		iconshow={[Setting.ICON_SHOW_EMPTY_HEART, Setting.ICON_SHOW_HEART]}
+		iconposition={Setting.ICON_POSTION_BOTTOM} />, 
 	document.getElementById("ct4")
 );
 
 ReactDOM.render(
 	<RadioGroup 
-		name="name_5"
+		name="name"
 		selectkey={_ary_selectkey}
 		inputoption={_sary_options}
 		outputresult={_json_checked}
 		showkey={_ary_showkey}
-		between="~"
 		display={Setting.DISPLAY_INBLOCK}
 		padding={Setting.PADDING_TINY}
+		liststyle={Setting.LIST_STYLE_UPPER_LATIN}
 		listposition={Setting.LIST_POSITION_OUTER}
-		iconposition={Setting.ICON_POSTION_LEFT}
-		iconshow={[Setting.ICON_SHOW_EMPTY_HEART, Setting.ICON_SHOW_HEART]} />, 
+		iconshow={[Setting.ICON_SHOW_EMPTY_HEART, Setting.ICON_SHOW_HEART]}
+		iconposition={Setting.ICON_POSTION_LEFT} />, 
 	document.getElementById("ct5")
 );
 
 ReactDOM.render(
 	<RadioGroup 
-		name="name_6"
+		name="name"
 		selectkey={_ary_selectkey}
 		inputoption={_sary_options}
 		outputresult={_json_checked}
 		showkey={_ary_showkey}
-		between="~"
 		display={Setting.DISPLAY_INBLOCK}
 		padding={Setting.PADDING_BASE}
+		liststyle={Setting.LIST_STYLE_LOWER_LATIN}
 		listposition={Setting.LIST_POSITION_INNER}
-		iconposition={Setting.ICON_POSTION_LEFT}
-		iconshow={[Setting.ICON_SHOW_EMPTY_HEART, Setting.ICON_SHOW_HEART]} />, 
+		iconshow={[Setting.ICON_SHOW_EMPTY_HEART, Setting.ICON_SHOW_HEART]}
+		iconposition={Setting.ICON_POSTION_LEFT} />, 
 	document.getElementById("ct6")
 );
 
 ReactDOM.render(
 	<RadioGroup 
-		name="name_7"
+		name="name"
 		selectkey={_ary_selectkey}
 		inputoption={_sary_options}
 		outputresult={_json_checked}
 		showkey={_ary_showkey}
-		between="~"
 		display={Setting.DISPLAY_INBLOCK}
 		padding={Setting.PADDING_TINY}
+		liststyle={Setting.LIST_STYLE_UPPER_LATIN}
 		listposition={Setting.LIST_POSITION_OUTER}
-		iconposition={Setting.ICON_POSTION_RIGHT}
-		iconshow={[Setting.ICON_SHOW_EMPTY_HEART, Setting.ICON_SHOW_HEART]} />, 
+		iconshow={[Setting.ICON_SHOW_EMPTY_HEART, Setting.ICON_SHOW_HEART]}
+		iconposition={Setting.ICON_POSTION_RIGHT} />, 
 	document.getElementById("ct7")
 );
 
 ReactDOM.render(
 	<RadioGroup 
-		name="name_8"
+		name="name"
 		selectkey={_ary_selectkey}
 		inputoption={_sary_options}
 		outputresult={_json_checked}
 		showkey={_ary_showkey}
-		between="~"
 		display={Setting.DISPLAY_INBLOCK}
 		padding={Setting.PADDING_BASE}
+		liststyle={Setting.LIST_STYLE_LOWER_LATIN}
 		listposition={Setting.LIST_POSITION_INNER}
-		iconposition={Setting.ICON_POSTION_RIGHT}
-		iconshow={[Setting.ICON_SHOW_EMPTY_HEART, Setting.ICON_SHOW_HEART]} />, 
+		iconshow={[Setting.ICON_SHOW_EMPTY_HEART, Setting.ICON_SHOW_HEART]}
+		iconposition={Setting.ICON_POSTION_RIGHT} />, 
 	document.getElementById("ct8")
 );
 

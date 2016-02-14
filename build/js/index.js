@@ -103,111 +103,215 @@
 		uuid: 'ooxx-002'
 	};
 
-	var _ary_showkey = ['text'];
+	var _ary_showkey = ['text', 'uuid'];
 
 	_reactDom2.default.render(_react2.default.createElement(_RadioGroup2.default, {
-		name: 'name',
+		name: 'name1',
 		selectkey: _ary_selectkey,
 		inputoption: _sary_options,
 		outputresult: _json_checked,
 		showkey: _ary_showkey,
+		between: '~',
 		display: _Setting2.default.DISPLAY_INBLOCK,
 		padding: _Setting2.default.PADDING_TINY,
-		liststyle: _Setting2.default.LIST_STYLE_UPPER_LATIN,
 		listposition: _Setting2.default.LIST_POSITION_OUTER,
-		iconshow: [_Setting2.default.ICON_SHOW_EMPTY_HEART, _Setting2.default.ICON_SHOW_HEART],
-		iconposition: _Setting2.default.ICON_POSTION_TOP }), document.getElementById("content1"));
+		iconposition: _Setting2.default.ICON_POSTION_TOP,
+		iconshow: [_Setting2.default.ICON_SHOW_EMPTY_HEART, _Setting2.default.ICON_SHOW_HEART] }), document.getElementById("content1"));
 
 	_reactDom2.default.render(_react2.default.createElement(_RadioGroup2.default, {
-		name: 'name',
+		name: 'name2',
 		selectkey: _ary_selectkey,
 		inputoption: _sary_options,
 		outputresult: _json_checked,
 		showkey: _ary_showkey,
+		between: '~',
 		display: _Setting2.default.DISPLAY_INBLOCK,
 		padding: _Setting2.default.PADDING_BASE,
-		liststyle: _Setting2.default.LIST_STYLE_LOWER_LATIN,
 		listposition: _Setting2.default.LIST_POSITION_INNER,
-		iconshow: [_Setting2.default.ICON_SHOW_EMPTY_HEART, _Setting2.default.ICON_SHOW_HEART],
-		iconposition: _Setting2.default.ICON_POSTION_TOP }), document.getElementById("content2"));
+		iconposition: _Setting2.default.ICON_POSTION_TOP,
+		iconshow: [_Setting2.default.ICON_SHOW_EMPTY_HEART, _Setting2.default.ICON_SHOW_HEART] }), document.getElementById("content2"));
 
 	_reactDom2.default.render(_react2.default.createElement(_RadioGroup2.default, {
-		name: 'name',
+		name: 'name3',
 		selectkey: _ary_selectkey,
 		inputoption: _sary_options,
 		outputresult: _json_checked,
 		showkey: _ary_showkey,
+		between: '~',
 		display: _Setting2.default.DISPLAY_INBLOCK,
 		padding: _Setting2.default.PADDING_TINY,
-		liststyle: _Setting2.default.LIST_STYLE_UPPER_LATIN,
 		listposition: _Setting2.default.LIST_POSITION_OUTER,
-		iconshow: [_Setting2.default.ICON_SHOW_EMPTY_HEART, _Setting2.default.ICON_SHOW_HEART],
-		iconposition: _Setting2.default.ICON_POSTION_BOTTOM }), document.getElementById("content3"));
+		iconposition: _Setting2.default.ICON_POSTION_BOTTOM,
+		iconshow: [_Setting2.default.ICON_SHOW_EMPTY_HEART, _Setting2.default.ICON_SHOW_HEART] }), document.getElementById("content3"));
 
 	_reactDom2.default.render(_react2.default.createElement(_RadioGroup2.default, {
-		name: 'name',
+		name: 'name4',
 		selectkey: _ary_selectkey,
 		inputoption: _sary_options,
 		outputresult: _json_checked,
 		showkey: _ary_showkey,
+		between: '~',
 		display: _Setting2.default.DISPLAY_INBLOCK,
 		padding: _Setting2.default.PADDING_BASE,
-		liststyle: _Setting2.default.LIST_STYLE_LOWER_LATIN,
 		listposition: _Setting2.default.LIST_POSITION_INNER,
-		iconshow: [_Setting2.default.ICON_SHOW_EMPTY_HEART, _Setting2.default.ICON_SHOW_HEART],
-		iconposition: _Setting2.default.ICON_POSTION_BOTTOM }), document.getElementById("content4"));
+		iconposition: _Setting2.default.ICON_POSTION_BOTTOM,
+		iconshow: [_Setting2.default.ICON_SHOW_EMPTY_HEART, _Setting2.default.ICON_SHOW_HEART] }), document.getElementById("content4"));
 
 	_reactDom2.default.render(_react2.default.createElement(_RadioGroup2.default, {
-		name: 'name',
+		name: 'name5',
 		selectkey: _ary_selectkey,
 		inputoption: _sary_options,
 		outputresult: _json_checked,
 		showkey: _ary_showkey,
+		between: '~',
 		display: _Setting2.default.DISPLAY_INBLOCK,
 		padding: _Setting2.default.PADDING_TINY,
-		liststyle: _Setting2.default.LIST_STYLE_UPPER_LATIN,
 		listposition: _Setting2.default.LIST_POSITION_OUTER,
-		iconshow: [_Setting2.default.ICON_SHOW_EMPTY_HEART, _Setting2.default.ICON_SHOW_HEART],
-		iconposition: _Setting2.default.ICON_POSTION_LEFT }), document.getElementById("content5"));
+		iconposition: _Setting2.default.ICON_POSTION_LEFT,
+		iconshow: [_Setting2.default.ICON_SHOW_EMPTY_HEART, _Setting2.default.ICON_SHOW_HEART] }), document.getElementById("content5"));
 
 	_reactDom2.default.render(_react2.default.createElement(_RadioGroup2.default, {
-		name: 'name',
+		name: 'name6',
 		selectkey: _ary_selectkey,
 		inputoption: _sary_options,
 		outputresult: _json_checked,
 		showkey: _ary_showkey,
+		between: '~',
 		display: _Setting2.default.DISPLAY_INBLOCK,
 		padding: _Setting2.default.PADDING_BASE,
-		liststyle: _Setting2.default.LIST_STYLE_LOWER_LATIN,
 		listposition: _Setting2.default.LIST_POSITION_INNER,
-		iconshow: [_Setting2.default.ICON_SHOW_EMPTY_HEART, _Setting2.default.ICON_SHOW_HEART],
-		iconposition: _Setting2.default.ICON_POSTION_LEFT }), document.getElementById("content6"));
+		iconposition: _Setting2.default.ICON_POSTION_LEFT,
+		iconshow: [_Setting2.default.ICON_SHOW_EMPTY_HEART, _Setting2.default.ICON_SHOW_HEART] }), document.getElementById("content6"));
 
 	_reactDom2.default.render(_react2.default.createElement(_RadioGroup2.default, {
-		name: 'name',
+		name: 'name7',
 		selectkey: _ary_selectkey,
 		inputoption: _sary_options,
 		outputresult: _json_checked,
 		showkey: _ary_showkey,
+		between: '~',
 		display: _Setting2.default.DISPLAY_INBLOCK,
 		padding: _Setting2.default.PADDING_TINY,
-		liststyle: _Setting2.default.LIST_STYLE_UPPER_LATIN,
 		listposition: _Setting2.default.LIST_POSITION_OUTER,
-		iconshow: [_Setting2.default.ICON_SHOW_EMPTY_HEART, _Setting2.default.ICON_SHOW_HEART],
-		iconposition: _Setting2.default.ICON_POSTION_RIGHT }), document.getElementById("content7"));
+		iconposition: _Setting2.default.ICON_POSTION_RIGHT,
+		iconshow: [_Setting2.default.ICON_SHOW_EMPTY_HEART, _Setting2.default.ICON_SHOW_HEART] }), document.getElementById("content7"));
 
 	_reactDom2.default.render(_react2.default.createElement(_RadioGroup2.default, {
-		name: 'name',
+		name: 'name8',
 		selectkey: _ary_selectkey,
 		inputoption: _sary_options,
 		outputresult: _json_checked,
 		showkey: _ary_showkey,
+		between: '~',
 		display: _Setting2.default.DISPLAY_INBLOCK,
 		padding: _Setting2.default.PADDING_BASE,
-		liststyle: _Setting2.default.LIST_STYLE_LOWER_LATIN,
 		listposition: _Setting2.default.LIST_POSITION_INNER,
-		iconshow: [_Setting2.default.ICON_SHOW_EMPTY_HEART, _Setting2.default.ICON_SHOW_HEART],
-		iconposition: _Setting2.default.ICON_POSTION_RIGHT }), document.getElementById("content8"));
+		iconposition: _Setting2.default.ICON_POSTION_RIGHT,
+		iconshow: [_Setting2.default.ICON_SHOW_EMPTY_HEART, _Setting2.default.ICON_SHOW_HEART] }), document.getElementById("content8"));
+
+	_reactDom2.default.render(_react2.default.createElement(_RadioGroup2.default, {
+		name: 'name_1',
+		selectkey: _ary_selectkey,
+		inputoption: _sary_options,
+		outputresult: _json_checked,
+		showkey: _ary_showkey,
+		between: '~',
+		display: _Setting2.default.DISPLAY_INBLOCK,
+		padding: _Setting2.default.PADDING_TINY,
+		listposition: _Setting2.default.LIST_POSITION_OUTER,
+		iconposition: _Setting2.default.ICON_POSTION_TOP,
+		iconshow: [_Setting2.default.ICON_SHOW_EMPTY_HEART, _Setting2.default.ICON_SHOW_HEART] }), document.getElementById("ct1"));
+
+	_reactDom2.default.render(_react2.default.createElement(_RadioGroup2.default, {
+		name: 'name_2',
+		selectkey: _ary_selectkey,
+		inputoption: _sary_options,
+		outputresult: _json_checked,
+		showkey: _ary_showkey,
+		between: '~',
+		display: _Setting2.default.DISPLAY_INBLOCK,
+		padding: _Setting2.default.PADDING_BASE,
+		listposition: _Setting2.default.LIST_POSITION_INNER,
+		iconposition: _Setting2.default.ICON_POSTION_TOP,
+		iconshow: [_Setting2.default.ICON_SHOW_EMPTY_HEART, _Setting2.default.ICON_SHOW_HEART] }), document.getElementById("ct2"));
+
+	_reactDom2.default.render(_react2.default.createElement(_RadioGroup2.default, {
+		name: 'name_3',
+		selectkey: _ary_selectkey,
+		inputoption: _sary_options,
+		outputresult: _json_checked,
+		showkey: _ary_showkey,
+		between: '~',
+		display: _Setting2.default.DISPLAY_INBLOCK,
+		padding: _Setting2.default.PADDING_TINY,
+		listposition: _Setting2.default.LIST_POSITION_OUTER,
+		iconposition: _Setting2.default.ICON_POSTION_BOTTOM,
+		iconshow: [_Setting2.default.ICON_SHOW_EMPTY_HEART, _Setting2.default.ICON_SHOW_HEART] }), document.getElementById("ct3"));
+
+	_reactDom2.default.render(_react2.default.createElement(_RadioGroup2.default, {
+		name: 'name_4',
+		selectkey: _ary_selectkey,
+		inputoption: _sary_options,
+		outputresult: _json_checked,
+		showkey: _ary_showkey,
+		between: '~',
+		display: _Setting2.default.DISPLAY_INBLOCK,
+		padding: _Setting2.default.PADDING_BASE,
+		listposition: _Setting2.default.LIST_POSITION_INNER,
+		iconposition: _Setting2.default.ICON_POSTION_BOTTOM,
+		iconshow: [_Setting2.default.ICON_SHOW_EMPTY_HEART, _Setting2.default.ICON_SHOW_HEART] }), document.getElementById("ct4"));
+
+	_reactDom2.default.render(_react2.default.createElement(_RadioGroup2.default, {
+		name: 'name_5',
+		selectkey: _ary_selectkey,
+		inputoption: _sary_options,
+		outputresult: _json_checked,
+		showkey: _ary_showkey,
+		between: '~',
+		display: _Setting2.default.DISPLAY_INBLOCK,
+		padding: _Setting2.default.PADDING_TINY,
+		listposition: _Setting2.default.LIST_POSITION_OUTER,
+		iconposition: _Setting2.default.ICON_POSTION_LEFT,
+		iconshow: [_Setting2.default.ICON_SHOW_EMPTY_HEART, _Setting2.default.ICON_SHOW_HEART] }), document.getElementById("ct5"));
+
+	_reactDom2.default.render(_react2.default.createElement(_RadioGroup2.default, {
+		name: 'name_6',
+		selectkey: _ary_selectkey,
+		inputoption: _sary_options,
+		outputresult: _json_checked,
+		showkey: _ary_showkey,
+		between: '~',
+		display: _Setting2.default.DISPLAY_INBLOCK,
+		padding: _Setting2.default.PADDING_BASE,
+		listposition: _Setting2.default.LIST_POSITION_INNER,
+		iconposition: _Setting2.default.ICON_POSTION_LEFT,
+		iconshow: [_Setting2.default.ICON_SHOW_EMPTY_HEART, _Setting2.default.ICON_SHOW_HEART] }), document.getElementById("ct6"));
+
+	_reactDom2.default.render(_react2.default.createElement(_RadioGroup2.default, {
+		name: 'name_7',
+		selectkey: _ary_selectkey,
+		inputoption: _sary_options,
+		outputresult: _json_checked,
+		showkey: _ary_showkey,
+		between: '~',
+		display: _Setting2.default.DISPLAY_INBLOCK,
+		padding: _Setting2.default.PADDING_TINY,
+		listposition: _Setting2.default.LIST_POSITION_OUTER,
+		iconposition: _Setting2.default.ICON_POSTION_RIGHT,
+		iconshow: [_Setting2.default.ICON_SHOW_EMPTY_HEART, _Setting2.default.ICON_SHOW_HEART] }), document.getElementById("ct7"));
+
+	_reactDom2.default.render(_react2.default.createElement(_RadioGroup2.default, {
+		name: 'name_8',
+		selectkey: _ary_selectkey,
+		inputoption: _sary_options,
+		outputresult: _json_checked,
+		showkey: _ary_showkey,
+		between: '~',
+		display: _Setting2.default.DISPLAY_INBLOCK,
+		padding: _Setting2.default.PADDING_BASE,
+		listposition: _Setting2.default.LIST_POSITION_INNER,
+		iconposition: _Setting2.default.ICON_POSTION_RIGHT,
+		iconshow: [_Setting2.default.ICON_SHOW_EMPTY_HEART, _Setting2.default.ICON_SHOW_HEART] }), document.getElementById("ct8"));
 
 	// iconshow={[Setting.ICON_SHOW_EMPTY_HEART, Setting.ICON_SHOW_HEART]}
 	// iconposition={Setting.ICON_POSTION_TOP}
@@ -20006,6 +20110,7 @@
 										type: _this2.props.type === 'checkbox' ? 'checkbox' : 'radio',
 										name: _this2.props.name,
 										showkey: _this2.props.showkey,
+										between: _this2.props.between,
 										item: json_item })
 								)
 							);
@@ -20031,6 +20136,7 @@
 		inputoption: _react2.default.PropTypes.array,
 		selectkey: _react2.default.PropTypes.array,
 		showkey: _react2.default.PropTypes.array,
+		between: _react2.default.PropTypes.string,
 		outputresult: _react2.default.PropTypes.object,
 		display: _react2.default.PropTypes.string,
 		liststyle: _react2.default.PropTypes.string,
@@ -20043,6 +20149,7 @@
 		inputoption: [],
 		selectkey: [],
 		showkey: [],
+		between: '',
 		outputresult: {},
 		display: _Setting2.default.DISPLAY_INBLOCK,
 		liststyle: '',
@@ -20115,6 +20222,17 @@
 				this.props.onChange(e, this.state.checked);
 			}
 		}, {
+			key: 'getShowText',
+			value: function getShowText() {
+				var _json_item = this.props.item,
+				    _ary_showkey = this.props.showkey,
+				    _ary_return = [];
+				for (var i = 0; i < _ary_showkey.length; i++) {
+					_ary_return.push(_json_item[_ary_showkey[i]]);
+				}
+				return _ary_return.join(this.props.between);
+			}
+		}, {
 			key: 'render',
 			value: function render() {
 				var props = this.props;
@@ -20136,22 +20254,20 @@
 						checked: !!checked,
 						onChange: this.handleChange
 					}),
-					this.props.item[this.props.showkey[0]],
-					'--',
-					JSON.stringify(!!checked),
-					'--'
+					this.getShowText()
 				);
 			}
 		}]);
 
 		return ItemBase;
 	}(_react2.default.Component);
+	// --{JSON.stringify(!!checked)}--
 
 	exports.default = ItemBase;
-
 	ItemBase.propTypes = {
 		item: _react2.default.PropTypes.object,
 		showkey: _react2.default.PropTypes.array,
+		between: _react2.default.PropTypes.string,
 		style: _react2.default.PropTypes.object,
 		defaultChecked: _react2.default.PropTypes.oneOfType([_react2.default.PropTypes.number, _react2.default.PropTypes.bool]),
 		checked: _react2.default.PropTypes.oneOfType([_react2.default.PropTypes.number, _react2.default.PropTypes.bool]),
@@ -20161,6 +20277,7 @@
 	ItemBase.defaultProps = {
 		item: {},
 		showkey: [],
+		between: '',
 		defaultChecked: 0,
 		onChange: function onChange() {}
 	};

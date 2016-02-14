@@ -1,0 +1,80 @@
+/* 備份 */
+
+@define-mixin checkedPadding $name {
+	&.pkg-checked_padding-$name{
+
+		&.pkg-checked_iconposition-left {
+			.pkg-checked-icon {
+				&:before {/* 整個item */
+					@extend paddingSpacing ;
+				}
+			}
+		}
+
+		&.pkg-checked_iconposition-right {
+			.pkg-checked-icon {
+				&:after {/* 整個item */
+					@extend paddingSpacing ;
+				}
+			}
+		}
+
+		.pkg-checked-icon {
+			&:before,
+			&:after,
+			> * {
+				@if $name == $PADDING_TINY {
+					padding-top: $num_padding_tiny;
+					padding-bottom: $num_padding_tiny;
+				}
+				@if $name == $PADDING_SMALL {
+					padding-top: $num_padding_small;
+					padding-bottom: $num_padding_small;
+				}
+				@if $name == $PADDING_LITTLE {
+					padding-top: $num_padding_little;
+					padding-bottom: $num_padding_little;
+				}
+				@if $name == $PADDING_BASE {
+					padding-top: $num_padding_base;
+					padding-bottom: $num_padding_base;
+				}
+				@if $name == $PADDING_MIDDLE {
+					padding-top: $num_padding_midde;
+					padding-bottom: $num_padding_midde;
+				}
+				@if $name == $PADDING_BIG {
+					padding-top: $num_padding_big;
+					padding-bottom: $num_padding_big;
+				}
+				@if $name == $PADDING_LARGE {
+					padding-top: $num_padding_large;
+					padding-bottom: $num_padding_large;
+				}
+				@if $name == $PADDING_HUGE {
+					padding-top: $num_padding_huge;
+					padding-bottom: $num_padding_huge;
+				}
+			}
+		}
+
+		.pkg-checked-icon {
+			> * {/* icon */
+				@extend paddingSpacing ;
+			}
+		}
+
+		&.pkg-checked_iconposition-left,
+		&.pkg-checked_iconposition-right {
+			.pkg-checked-option {
+				&.pkg-list-option {
+					&:before {/* , 按鈕在左或右，而且list項目在外面時 */
+						border: 1px solid #39f;
+						/* @extend paddingSpacing ; */
+					}
+				}
+			}
+		}
+
+	}
+}

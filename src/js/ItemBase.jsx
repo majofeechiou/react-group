@@ -33,6 +33,16 @@ export default class ItemBase extends React.Component {
 		this.props.onChange(e, this.state.checked);
 	}
 
+	getShowText(){
+		let _json_item = this.props.item,
+			_ary_showkey = this.props.showkey,
+			_ary_return = [];
+		for( let i=0; i<_ary_showkey.length; i++ ){
+			_ary_return.push( _json_item[_ary_showkey[i]] );
+		}
+		return _ary_return.join( this.props.between );
+	}
+
 	render() {
 		const props = this.props;
 		let checked = this.state.checked;
@@ -52,16 +62,18 @@ export default class ItemBase extends React.Component {
 					checked={!!checked}
 					onChange={this.handleChange}
 				/>
-				{this.props.item[this.props.showkey[0]]}
-				--{JSON.stringify(!!checked)}--
+				{this.getShowText()}
 			</span>
 		);
 	}
 }
+// --{JSON.stringify(!!checked)}--
+
 
 ItemBase.propTypes = {
 	item: React.PropTypes.object,
 	showkey: React.PropTypes.array,
+    between: React.PropTypes.string,
 	style: React.PropTypes.object,
 	defaultChecked: React.PropTypes.oneOfType([React.PropTypes.number, React.PropTypes.bool]),
 	checked: React.PropTypes.oneOfType([React.PropTypes.number, React.PropTypes.bool]),
@@ -71,6 +83,7 @@ ItemBase.propTypes = {
 ItemBase.defaultProps = {
 	item: {},
 	showkey: [],
+	between: '',
 	defaultChecked: 0,
 	onChange: () => {
 	},
