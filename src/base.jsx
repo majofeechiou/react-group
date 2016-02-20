@@ -35,9 +35,9 @@ let _json_checked = {
 
 let _ary_showkey = ['text','uuid'];
 
-function handleChange( bln_change, json_return, str_value ){
+function handleChange( bln_change, json_return ){
 	if( bln_change===true ){
-		_json_checked = json_return;
+		_json_checked = json_return.item;
 		render();
 	}
 }

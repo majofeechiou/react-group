@@ -18,27 +18,30 @@ export default class RadioGroup extends React.Component {
 		super(props);
 		this.handleChange = this.handleChange.bind(this);
 		this.toggleDisabled = this.toggleDisabled.bind(this);
+		let _str_format = 'string' ; 
+		if( typeof props.outputFormat === 'string' && (props.outputFormat).match(/^((string)|(json)|(array)|(sarry))$/i)!==null ){
+			_str_format = props.outputFormat ;
+		}
 		this.state = {
+			type: (_str_format==='array' || _str_format==='sarry')? 'checkbox' : 'radio' ,
+			format: _str_format,
 			disabled: false,
-			checked: null,
 			outputResult: props.outputResult || {}
 		};
 	}
 
-	// componentWillReceiveProps(json_next_rops) {
-	// // componentDidUpdate(json_next_rops) {
-	// 	console.log( 'json_next_rops :: ', json_next_rops );
-	// 	if ('checked' in json_next_rops) {
-	// 		this.setState({
-	// 			disabled: json_next_rops.disabled,
-	// 			checked: json_next_rops.checked,
-	// 			outputResult: json_next_rops.outputResult || {}
-	// 		});
-	// 	}
-	// }
+	componentWillReceiveProps(json_next_rops) {
+		if ('checked' in json_next_rops) {
+			this.setState({
+				disabled: json_next_rops.disabled,
+				outputResult: json_next_rops.outputResult || {}
+			});
+		}
+	}
 
 	handleChange(e) {
 		let _scope = this;
+		let _bln_changed = false;
 		(this.props.inputoption).find(function(json){
 			let _str_selectkey = _scope.props.selectkey[0];
 
@@ -49,19 +52,21 @@ export default class RadioGroup extends React.Component {
 				_scope.setState(_json_args);
 
 				if( _scope.props.onChange && (_scope.props.onChange instanceof Function===true) ){
-					_scope.props.onChange(true, json, e.target.value);
+					let _json_ouput = {
+						value: e.target.value,
+						item: json
+					};
+					_bln_changed = true;
+					_scope.props.onChange(_bln_changed, _json_ouput );
 				}
-
 				return false;
 			}
 
-			// let _json_output = {};
-			// _json_output[_str_selectkey] = null;
-			// _scope.setState({
-			// 	r: e.target.value,
-			// 	outputResult: _json_output 
-			// });
 		});
+
+		if( _bln_changed===false ){
+			_scope.props.onChange( _bln_changed, _json_ouput );
+		}
 	}
 	toggleDisabled() {
 		this.setState({
@@ -122,12 +127,13 @@ export default class RadioGroup extends React.Component {
 
 RadioGroup.propTypes = {
 	onChange: React.PropTypes.func,
-	type: React.PropTypes.string,
+	// type: React.PropTypes.string,
 	className: React.PropTypes.string,
     inputoption: React.PropTypes.array,
     selectkey: React.PropTypes.array,
     showKey: React.PropTypes.array,
     between: React.PropTypes.string,
+    outputFormat: React.PropTypes.string,
     outputResult: React.PropTypes.object,
     display: React.PropTypes.string,
     listStyle: React.PropTypes.string,
@@ -136,7 +142,7 @@ RadioGroup.propTypes = {
     iconShow: React.PropTypes.array
 },
 RadioGroup.defaultProps = {
-	type: 'radio',
+	// type: 'radio',
 	className: '',
 	inputoption: [],
 	selectkey: [],

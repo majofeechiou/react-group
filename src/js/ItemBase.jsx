@@ -16,7 +16,6 @@ export default class ItemBase extends React.Component {
 	}
 
 	componentWillReceiveProps(json_next_rops) {
-		console.log( '-----------componentWillReceiveProps' );
 		if ('checked' in json_next_rops) {
 			this.setState({
 				checked: json_next_rops.checked

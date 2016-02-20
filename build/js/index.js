@@ -49,7 +49,7 @@
 	// module.exports = require('./base');
 
 	__webpack_require__(1);
-	__webpack_require__(166);
+	__webpack_require__(162);
 
 /***/ },
 /* 1 */
@@ -69,7 +69,7 @@
 
 	var _RadioGroup2 = _interopRequireDefault(_RadioGroup);
 
-	var _Setting = __webpack_require__(164);
+	var _Setting = __webpack_require__(161);
 
 	var _Setting2 = _interopRequireDefault(_Setting);
 
@@ -105,9 +105,9 @@
 
 	var _ary_showkey = ['text', 'uuid'];
 
-	function handleChange(bln_change, json_return, str_value) {
+	function handleChange(bln_change, json_return) {
 		if (bln_change === true) {
-			_json_checked = json_return;
+			_json_checked = json_return.item;
 			render();
 		}
 	}
@@ -20053,19 +20053,19 @@
 
 	var _react2 = _interopRequireDefault(_react);
 
-	var _ItemBase = __webpack_require__(161);
+	var _ItemBase = __webpack_require__(170);
 
 	var _ItemBase2 = _interopRequireDefault(_ItemBase);
 
-	var _classnames = __webpack_require__(162);
+	var _classnames = __webpack_require__(171);
 
 	var _classnames2 = _interopRequireDefault(_classnames);
 
-	var _Setting = __webpack_require__(164);
+	var _Setting = __webpack_require__(161);
 
 	var _Setting2 = _interopRequireDefault(_Setting);
 
-	var _CheckedUI = __webpack_require__(165);
+	var _CheckedUI = __webpack_require__(173);
 
 	var _CheckedUI2 = _interopRequireDefault(_CheckedUI);
 
@@ -20089,30 +20089,34 @@
 
 			_this.handleChange = _this.handleChange.bind(_this);
 			_this.toggleDisabled = _this.toggleDisabled.bind(_this);
+			var _str_format = 'string';
+			if (typeof props.outputFormat === 'string' && props.outputFormat.match(/^((string)|(json)|(array)|(sarry))$/i) !== null) {
+				_str_format = props.outputFormat;
+			}
 			_this.state = {
+				type: _str_format === 'array' || _str_format === 'sarry' ? 'checkbox' : 'radio',
+				format: _str_format,
 				disabled: false,
-				checked: null,
 				outputResult: props.outputResult || {}
 			};
 			return _this;
 		}
 
-		// componentWillReceiveProps(json_next_rops) {
-		// // componentDidUpdate(json_next_rops) {
-		// 	console.log( 'json_next_rops :: ', json_next_rops );
-		// 	if ('checked' in json_next_rops) {
-		// 		this.setState({
-		// 			disabled: json_next_rops.disabled,
-		// 			checked: json_next_rops.checked,
-		// 			outputResult: json_next_rops.outputResult || {}
-		// 		});
-		// 	}
-		// }
-
 		_createClass(RadioGroup, [{
+			key: 'componentWillReceiveProps',
+			value: function componentWillReceiveProps(json_next_rops) {
+				if ('checked' in json_next_rops) {
+					this.setState({
+						disabled: json_next_rops.disabled,
+						outputResult: json_next_rops.outputResult || {}
+					});
+				}
+			}
+		}, {
 			key: 'handleChange',
 			value: function handleChange(e) {
 				var _scope = this;
+				var _bln_changed = false;
 				this.props.inputoption.find(function (json) {
 					var _str_selectkey = _scope.props.selectkey[0];
 
@@ -20123,19 +20127,20 @@
 						_scope.setState(_json_args);
 
 						if (_scope.props.onChange && _scope.props.onChange instanceof Function === true) {
-							_scope.props.onChange(true, json, e.target.value);
+							var _json_ouput2 = {
+								value: e.target.value,
+								item: json
+							};
+							_bln_changed = true;
+							_scope.props.onChange(_bln_changed, _json_ouput2);
 						}
-
 						return false;
 					}
-
-					// let _json_output = {};
-					// _json_output[_str_selectkey] = null;
-					// _scope.setState({
-					// 	r: e.target.value,
-					// 	outputResult: _json_output
-					// });
 				});
+
+				if (_bln_changed === false) {
+					_scope.props.onChange(_bln_changed, _json_ouput);
+				}
 			}
 		}, {
 			key: 'toggleDisabled',
@@ -20206,12 +20211,13 @@
 
 	RadioGroup.propTypes = {
 		onChange: _react2.default.PropTypes.func,
-		type: _react2.default.PropTypes.string,
+		// type: React.PropTypes.string,
 		className: _react2.default.PropTypes.string,
 		inputoption: _react2.default.PropTypes.array,
 		selectkey: _react2.default.PropTypes.array,
 		showKey: _react2.default.PropTypes.array,
 		between: _react2.default.PropTypes.string,
+		outputFormat: _react2.default.PropTypes.string,
 		outputResult: _react2.default.PropTypes.object,
 		display: _react2.default.PropTypes.string,
 		listStyle: _react2.default.PropTypes.string,
@@ -20219,7 +20225,7 @@
 		iconPosition: _react2.default.PropTypes.string,
 		iconShow: _react2.default.PropTypes.array
 	}, RadioGroup.defaultProps = {
-		type: 'radio',
+		// type: 'radio',
 		className: '',
 		inputoption: [],
 		selectkey: [],
@@ -20235,196 +20241,6 @@
 
 /***/ },
 /* 161 */
-/***/ function(module, exports, __webpack_require__) {
-
-	'use strict';
-
-	var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
-
-	Object.defineProperty(exports, "__esModule", {
-		value: true
-	});
-
-	var _react = __webpack_require__(2);
-
-	var _react2 = _interopRequireDefault(_react);
-
-	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-
-	function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
-
-	function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
-
-	function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
-
-	var ItemBase = function (_React$Component) {
-		_inherits(ItemBase, _React$Component);
-
-		function ItemBase(props) {
-			_classCallCheck(this, ItemBase);
-
-			var _this = _possibleConstructorReturn(this, Object.getPrototypeOf(ItemBase).call(this, props));
-
-			_this.handleChange = _this.handleChange.bind(_this);
-			var _bln_checked = false;
-			if ('checked' in props) {
-				_bln_checked = props.checked;
-			} else {
-				_bln_checked = props.defaultChecked;
-			}
-			_this.state = { checked: _bln_checked };
-			return _this;
-		}
-
-		_createClass(ItemBase, [{
-			key: 'componentWillReceiveProps',
-			value: function componentWillReceiveProps(json_next_rops) {
-				console.log('-----------componentWillReceiveProps');
-				if ('checked' in json_next_rops) {
-					this.setState({
-						checked: json_next_rops.checked
-					});
-				}
-			}
-		}, {
-			key: 'handleChange',
-			value: function handleChange(e) {
-				var checked = e.target.checked;
-				if (!('checked' in this.props)) {
-					this.setState({
-						checked: checked ? 1 : 0
-					});
-				}
-				this.props.onChange(e, this.state.checked);
-			}
-		}, {
-			key: 'getShowText',
-			value: function getShowText() {
-				var _json_item = this.props.item,
-				    _ary_showkey = this.props.showKey,
-				    _ary_return = [];
-				for (var i = 0; i < _ary_showkey.length; i++) {
-					_ary_return.push(_json_item[_ary_showkey[i]]);
-				}
-				return _ary_return.join(this.props.between);
-			}
-		}, {
-			key: 'render',
-			value: function render() {
-				var props = this.props;
-				var checked = this.state.checked;
-				if (typeof checked === 'boolean') {
-					checked = checked ? 1 : 0;
-				}
-				var _str_classname_all = 'pkg-item',
-				    _str_classname_input = 'pkg-item-input';
-				return _react2.default.createElement(
-					'span',
-					{ className: _str_classname_all },
-					_react2.default.createElement('input', { type: this.props.type,
-						name: this.props.name,
-						value: this.props.value,
-						disabled: this.props.disabled,
-						className: _str_classname_input,
-						defaultChecked: !!props.defaultChecked,
-						checked: !!checked,
-						onChange: this.handleChange
-					}),
-					this.getShowText()
-				);
-			}
-		}]);
-
-		return ItemBase;
-	}(_react2.default.Component);
-	// --{JSON.stringify(!!checked)}--
-
-	exports.default = ItemBase;
-	ItemBase.propTypes = {
-		item: _react2.default.PropTypes.object,
-		showKey: _react2.default.PropTypes.array,
-		between: _react2.default.PropTypes.string,
-		style: _react2.default.PropTypes.object,
-		defaultChecked: _react2.default.PropTypes.oneOfType([_react2.default.PropTypes.number, _react2.default.PropTypes.bool]),
-		checked: _react2.default.PropTypes.oneOfType([_react2.default.PropTypes.number, _react2.default.PropTypes.bool]),
-		onChange: _react2.default.PropTypes.func
-	};
-
-	ItemBase.defaultProps = {
-		item: {},
-		showKey: [],
-		between: '',
-		defaultChecked: 0,
-		onChange: function onChange() {}
-	};
-
-/***/ },
-/* 162 */
-/***/ function(module, exports, __webpack_require__) {
-
-	var __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;'use strict';
-
-	var _typeof = typeof Symbol === "function" && typeof Symbol.iterator === "symbol" ? function (obj) { return typeof obj; } : function (obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol ? "symbol" : typeof obj; };
-
-	/*!
-	  Copyright (c) 2016 Jed Watson.
-	  Licensed under the MIT License (MIT), see
-	  http://jedwatson.github.io/classnames
-	*/
-	/* global define */
-
-	(function () {
-		'use strict';
-
-		var hasOwn = {}.hasOwnProperty;
-
-		function classNames() {
-			var classes = [];
-
-			for (var i = 0; i < arguments.length; i++) {
-				var arg = arguments[i];
-				if (!arg) continue;
-
-				var argType = typeof arg === 'undefined' ? 'undefined' : _typeof(arg);
-
-				if (argType === 'string' || argType === 'number') {
-					classes.push(arg);
-				} else if (Array.isArray(arg)) {
-					classes.push(classNames.apply(null, arg));
-				} else if (argType === 'object') {
-					for (var key in arg) {
-						if (hasOwn.call(arg, key) && arg[key]) {
-							classes.push(key);
-						}
-					}
-				}
-			}
-
-			return classes.join(' ');
-		}
-
-		if (typeof module !== 'undefined' && module.exports) {
-			module.exports = classNames;
-		} else if ("function" === 'function' && _typeof(__webpack_require__(163)) === 'object' && __webpack_require__(163)) {
-			// register as 'classnames', consistent with npm package name
-			!(__WEBPACK_AMD_DEFINE_ARRAY__ = [], __WEBPACK_AMD_DEFINE_RESULT__ = function () {
-				return classNames;
-			}.apply(exports, __WEBPACK_AMD_DEFINE_ARRAY__), __WEBPACK_AMD_DEFINE_RESULT__ !== undefined && (module.exports = __WEBPACK_AMD_DEFINE_RESULT__));
-		} else {
-			window.classNames = classNames;
-		}
-	})();
-
-/***/ },
-/* 163 */
-/***/ function(module, exports) {
-
-	/* WEBPACK VAR INJECTION */(function(__webpack_amd_options__) {module.exports = __webpack_amd_options__;
-
-	/* WEBPACK VAR INJECTION */}.call(exports, {}))
-
-/***/ },
-/* 164 */
 /***/ function(module, exports) {
 
 	'use strict';
@@ -20569,7 +20385,20 @@
 	exports.default = Setting;
 
 /***/ },
-/* 165 */
+/* 162 */
+/***/ function(module, exports) {
+
+	// removed by extract-text-webpack-plugin
+
+/***/ },
+/* 163 */,
+/* 164 */,
+/* 165 */,
+/* 166 */,
+/* 167 */,
+/* 168 */,
+/* 169 */,
+/* 170 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -20580,7 +20409,196 @@
 		value: true
 	});
 
-	var _Setting = __webpack_require__(164);
+	var _react = __webpack_require__(2);
+
+	var _react2 = _interopRequireDefault(_react);
+
+	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+	function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+	function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
+
+	function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
+
+	var ItemBase = function (_React$Component) {
+		_inherits(ItemBase, _React$Component);
+
+		function ItemBase(props) {
+			_classCallCheck(this, ItemBase);
+
+			var _this = _possibleConstructorReturn(this, Object.getPrototypeOf(ItemBase).call(this, props));
+
+			_this.handleChange = _this.handleChange.bind(_this);
+			var _bln_checked = false;
+			if ('checked' in props) {
+				_bln_checked = props.checked;
+			} else {
+				_bln_checked = props.defaultChecked;
+			}
+			_this.state = { checked: _bln_checked };
+			return _this;
+		}
+
+		_createClass(ItemBase, [{
+			key: 'componentWillReceiveProps',
+			value: function componentWillReceiveProps(json_next_rops) {
+				if ('checked' in json_next_rops) {
+					this.setState({
+						checked: json_next_rops.checked
+					});
+				}
+			}
+		}, {
+			key: 'handleChange',
+			value: function handleChange(e) {
+				var checked = e.target.checked;
+				if (!('checked' in this.props)) {
+					this.setState({
+						checked: checked ? 1 : 0
+					});
+				}
+				this.props.onChange(e, this.state.checked);
+			}
+		}, {
+			key: 'getShowText',
+			value: function getShowText() {
+				var _json_item = this.props.item,
+				    _ary_showkey = this.props.showKey,
+				    _ary_return = [];
+				for (var i = 0; i < _ary_showkey.length; i++) {
+					_ary_return.push(_json_item[_ary_showkey[i]]);
+				}
+				return _ary_return.join(this.props.between);
+			}
+		}, {
+			key: 'render',
+			value: function render() {
+				var props = this.props;
+				var checked = this.state.checked;
+				if (typeof checked === 'boolean') {
+					checked = checked ? 1 : 0;
+				}
+				var _str_classname_all = 'pkg-item',
+				    _str_classname_input = 'pkg-item-input';
+				return _react2.default.createElement(
+					'span',
+					{ className: _str_classname_all },
+					_react2.default.createElement('input', { type: this.props.type,
+						name: this.props.name,
+						value: this.props.value,
+						disabled: this.props.disabled,
+						className: _str_classname_input,
+						defaultChecked: !!props.defaultChecked,
+						checked: !!checked,
+						onChange: this.handleChange
+					}),
+					this.getShowText()
+				);
+			}
+		}]);
+
+		return ItemBase;
+	}(_react2.default.Component);
+	// --{JSON.stringify(!!checked)}--
+
+	exports.default = ItemBase;
+	ItemBase.propTypes = {
+		item: _react2.default.PropTypes.object,
+		showKey: _react2.default.PropTypes.array,
+		between: _react2.default.PropTypes.string,
+		style: _react2.default.PropTypes.object,
+		defaultChecked: _react2.default.PropTypes.oneOfType([_react2.default.PropTypes.number, _react2.default.PropTypes.bool]),
+		checked: _react2.default.PropTypes.oneOfType([_react2.default.PropTypes.number, _react2.default.PropTypes.bool]),
+		onChange: _react2.default.PropTypes.func
+	};
+
+	ItemBase.defaultProps = {
+		item: {},
+		showKey: [],
+		between: '',
+		defaultChecked: 0,
+		onChange: function onChange() {}
+	};
+
+/***/ },
+/* 171 */
+/***/ function(module, exports, __webpack_require__) {
+
+	var __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;'use strict';
+
+	var _typeof = typeof Symbol === "function" && typeof Symbol.iterator === "symbol" ? function (obj) { return typeof obj; } : function (obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol ? "symbol" : typeof obj; };
+
+	/*!
+	  Copyright (c) 2016 Jed Watson.
+	  Licensed under the MIT License (MIT), see
+	  http://jedwatson.github.io/classnames
+	*/
+	/* global define */
+
+	(function () {
+		'use strict';
+
+		var hasOwn = {}.hasOwnProperty;
+
+		function classNames() {
+			var classes = [];
+
+			for (var i = 0; i < arguments.length; i++) {
+				var arg = arguments[i];
+				if (!arg) continue;
+
+				var argType = typeof arg === 'undefined' ? 'undefined' : _typeof(arg);
+
+				if (argType === 'string' || argType === 'number') {
+					classes.push(arg);
+				} else if (Array.isArray(arg)) {
+					classes.push(classNames.apply(null, arg));
+				} else if (argType === 'object') {
+					for (var key in arg) {
+						if (hasOwn.call(arg, key) && arg[key]) {
+							classes.push(key);
+						}
+					}
+				}
+			}
+
+			return classes.join(' ');
+		}
+
+		if (typeof module !== 'undefined' && module.exports) {
+			module.exports = classNames;
+		} else if ("function" === 'function' && _typeof(__webpack_require__(172)) === 'object' && __webpack_require__(172)) {
+			// register as 'classnames', consistent with npm package name
+			!(__WEBPACK_AMD_DEFINE_ARRAY__ = [], __WEBPACK_AMD_DEFINE_RESULT__ = function () {
+				return classNames;
+			}.apply(exports, __WEBPACK_AMD_DEFINE_ARRAY__), __WEBPACK_AMD_DEFINE_RESULT__ !== undefined && (module.exports = __WEBPACK_AMD_DEFINE_RESULT__));
+		} else {
+			window.classNames = classNames;
+		}
+	})();
+
+/***/ },
+/* 172 */
+/***/ function(module, exports) {
+
+	/* WEBPACK VAR INJECTION */(function(__webpack_amd_options__) {module.exports = __webpack_amd_options__;
+
+	/* WEBPACK VAR INJECTION */}.call(exports, {}))
+
+/***/ },
+/* 173 */
+/***/ function(module, exports, __webpack_require__) {
+
+	'use strict';
+
+	var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+
+	Object.defineProperty(exports, "__esModule", {
+		value: true
+	});
+
+	var _Setting = __webpack_require__(161);
 
 	var _Setting2 = _interopRequireDefault(_Setting);
 
@@ -20702,12 +20720,6 @@
 	}();
 
 	exports.default = CheckedUI;
-
-/***/ },
-/* 166 */
-/***/ function(module, exports) {
-
-	// removed by extract-text-webpack-plugin
 
 /***/ }
 /******/ ]);
