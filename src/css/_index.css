@@ -267,7 +267,7 @@ $num_padding_spacing: 0.5em;
 		border: 1px solid #f0f;
 	}
 
-	.pkg-item {
+	/*.pkg-item {
 		.pkg-item-input {
 			position: fixed;
 			left: -300px;
@@ -275,7 +275,7 @@ $num_padding_spacing: 0.5em;
 			top: -300px;
 			top: -105vh;
 		}
-	}
+	}*/
 
 }
 

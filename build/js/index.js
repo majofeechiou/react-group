@@ -49,7 +49,7 @@
 	// module.exports = require('./base');
 
 	__webpack_require__(1);
-	__webpack_require__(162);
+	__webpack_require__(166);
 
 /***/ },
 /* 1 */
@@ -69,7 +69,7 @@
 
 	var _RadioGroup2 = _interopRequireDefault(_RadioGroup);
 
-	var _Setting = __webpack_require__(161);
+	var _Setting = __webpack_require__(164);
 
 	var _Setting2 = _interopRequireDefault(_Setting);
 
@@ -99,26 +99,26 @@
 	}];
 
 	var _ary_selectkey = ['uuid'];
-	var _json_checked = {
-		uuid: 'ooxx-002'
-	};
+	var _data_checked = undefined;
 
 	var _ary_showkey = ['text', 'uuid'];
 
 	function handleChange(bln_change, json_return) {
-		if (bln_change === true) {
-			_json_checked = json_return.item;
-			render();
-		}
+		console.log('json_return.result ::　', json_return.result);
+		// if( bln_change===true ){
+		// _data_checked = json_return.result;
+		// render();
+		// }
 	}
 
 	function render() {
 		_reactDom2.default.render(_react2.default.createElement(_RadioGroup2.default, {
 			onChange: handleChange,
+			outputFormat: 'array',
 			name: 'name1',
 			selectkey: _ary_selectkey,
 			inputoption: _sary_options,
-			outputResult: _json_checked,
+			outputResult: _data_checked,
 			showKey: _ary_showkey,
 			between: '~',
 			display: _Setting2.default.DISPLAY_INBLOCK,
@@ -135,7 +135,7 @@
 	// 		name="name2"
 	// 		selectkey={_ary_selectkey}
 	// 		inputoption={_sary_options}
-	// 		outputResult={_json_checked}
+	// 		outputResult={_data_checked}
 	// 		showKey={_ary_showkey}
 	// 		between="~"
 	// 		display={Setting.DISPLAY_INBLOCK}
@@ -151,7 +151,7 @@
 	// 		name="name3"
 	// 		selectkey={_ary_selectkey}
 	// 		inputoption={_sary_options}
-	// 		outputResult={_json_checked}
+	// 		outputResult={_data_checked}
 	// 		showKey={_ary_showkey}
 	// 		between="~"
 	// 		display={Setting.DISPLAY_INBLOCK}
@@ -167,7 +167,7 @@
 	// 		name="name4"
 	// 		selectkey={_ary_selectkey}
 	// 		inputoption={_sary_options}
-	// 		outputResult={_json_checked}
+	// 		outputResult={_data_checked}
 	// 		showKey={_ary_showkey}
 	// 		between="~"
 	// 		display={Setting.DISPLAY_INBLOCK}
@@ -183,7 +183,7 @@
 	// 		name="name5"
 	// 		selectkey={_ary_selectkey}
 	// 		inputoption={_sary_options}
-	// 		outputResult={_json_checked}
+	// 		outputResult={_data_checked}
 	// 		showKey={_ary_showkey}
 	// 		between="~"
 	// 		display={Setting.DISPLAY_INBLOCK}
@@ -199,7 +199,7 @@
 	// 		name="name6"
 	// 		selectkey={_ary_selectkey}
 	// 		inputoption={_sary_options}
-	// 		outputResult={_json_checked}
+	// 		outputResult={_data_checked}
 	// 		showKey={_ary_showkey}
 	// 		between="~"
 	// 		display={Setting.DISPLAY_INBLOCK}
@@ -215,7 +215,7 @@
 	// 		name="name7"
 	// 		selectkey={_ary_selectkey}
 	// 		inputoption={_sary_options}
-	// 		outputResult={_json_checked}
+	// 		outputResult={_data_checked}
 	// 		showKey={_ary_showkey}
 	// 		between="~"
 	// 		display={Setting.DISPLAY_INBLOCK}
@@ -231,7 +231,7 @@
 	// 		name="name8"
 	// 		selectkey={_ary_selectkey}
 	// 		inputoption={_sary_options}
-	// 		outputResult={_json_checked}
+	// 		outputResult={_data_checked}
 	// 		showKey={_ary_showkey}
 	// 		between="~"
 	// 		display={Setting.DISPLAY_INBLOCK}
@@ -247,7 +247,7 @@
 	// 		name="name_1"
 	// 		selectkey={_ary_selectkey}
 	// 		inputoption={_sary_options}
-	// 		outputResult={_json_checked}
+	// 		outputResult={_data_checked}
 	// 		showKey={_ary_showkey}
 	// 		between="~"
 	// 		display={Setting.DISPLAY_INBLOCK}
@@ -263,7 +263,7 @@
 	// 		name="name_2"
 	// 		selectkey={_ary_selectkey}
 	// 		inputoption={_sary_options}
-	// 		outputResult={_json_checked}
+	// 		outputResult={_data_checked}
 	// 		showKey={_ary_showkey}
 	// 		between="~"
 	// 		display={Setting.DISPLAY_INBLOCK}
@@ -279,7 +279,7 @@
 	// 		name="name_3"
 	// 		selectkey={_ary_selectkey}
 	// 		inputoption={_sary_options}
-	// 		outputResult={_json_checked}
+	// 		outputResult={_data_checked}
 	// 		showKey={_ary_showkey}
 	// 		between="~"
 	// 		display={Setting.DISPLAY_INBLOCK}
@@ -295,7 +295,7 @@
 	// 		name="name_4"
 	// 		selectkey={_ary_selectkey}
 	// 		inputoption={_sary_options}
-	// 		outputResult={_json_checked}
+	// 		outputResult={_data_checked}
 	// 		showKey={_ary_showkey}
 	// 		between="~"
 	// 		display={Setting.DISPLAY_INBLOCK}
@@ -311,7 +311,7 @@
 	// 		name="name_5"
 	// 		selectkey={_ary_selectkey}
 	// 		inputoption={_sary_options}
-	// 		outputResult={_json_checked}
+	// 		outputResult={_data_checked}
 	// 		showKey={_ary_showkey}
 	// 		between="~"
 	// 		display={Setting.DISPLAY_INBLOCK}
@@ -327,7 +327,7 @@
 	// 		name="name_6"
 	// 		selectkey={_ary_selectkey}
 	// 		inputoption={_sary_options}
-	// 		outputResult={_json_checked}
+	// 		outputResult={_data_checked}
 	// 		showKey={_ary_showkey}
 	// 		between="~"
 	// 		display={Setting.DISPLAY_INBLOCK}
@@ -343,7 +343,7 @@
 	// 		name="name_7"
 	// 		selectkey={_ary_selectkey}
 	// 		inputoption={_sary_options}
-	// 		outputResult={_json_checked}
+	// 		outputResult={_data_checked}
 	// 		showKey={_ary_showkey}
 	// 		between="~"
 	// 		display={Setting.DISPLAY_INBLOCK}
@@ -359,7 +359,7 @@
 	// 		name="name_8"
 	// 		selectkey={_ary_selectkey}
 	// 		inputoption={_sary_options}
-	// 		outputResult={_json_checked}
+	// 		outputResult={_data_checked}
 	// 		showKey={_ary_showkey}
 	// 		between="~"
 	// 		display={Setting.DISPLAY_INBLOCK}
@@ -20053,21 +20053,25 @@
 
 	var _react2 = _interopRequireDefault(_react);
 
-	var _ItemBase = __webpack_require__(170);
+	var _ItemBase = __webpack_require__(161);
 
 	var _ItemBase2 = _interopRequireDefault(_ItemBase);
 
-	var _classnames = __webpack_require__(171);
+	var _classnames = __webpack_require__(162);
 
 	var _classnames2 = _interopRequireDefault(_classnames);
 
-	var _Setting = __webpack_require__(161);
+	var _Setting = __webpack_require__(164);
 
 	var _Setting2 = _interopRequireDefault(_Setting);
 
-	var _CheckedUI = __webpack_require__(173);
+	var _CheckedUI = __webpack_require__(165);
 
 	var _CheckedUI2 = _interopRequireDefault(_CheckedUI);
+
+	var _jsonExtend = __webpack_require__(174);
+
+	var _jsonExtend2 = _interopRequireDefault(_jsonExtend);
 
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
@@ -20093,61 +20097,127 @@
 			if (typeof props.outputFormat === 'string' && props.outputFormat.match(/^((string)|(json)|(array)|(sarry))$/i) !== null) {
 				_str_format = props.outputFormat;
 			}
+			var _data_result = _str_format === 'array' || _str_format === 'sarry' ? [] : _str_format === 'json' ? {} : '';
 			_this.state = {
-				type: _str_format === 'array' || _str_format === 'sarry' ? 'checkbox' : 'radio',
 				format: _str_format,
 				disabled: false,
-				outputResult: props.outputResult || {}
+				outputResult: _data_result
 			};
 			return _this;
 		}
 
 		_createClass(RadioGroup, [{
-			key: 'componentWillReceiveProps',
-			value: function componentWillReceiveProps(json_next_rops) {
-				if ('checked' in json_next_rops) {
-					this.setState({
-						disabled: json_next_rops.disabled,
-						outputResult: json_next_rops.outputResult || {}
-					});
-				}
+			key: 'mergeState',
+			value: function mergeState(json) {
+				var _json = JSON.parse(JSON.stringify(this.state));
+				this.setState((0, _jsonExtend2.default)(_json, json));
 			}
 		}, {
 			key: 'handleChange',
 			value: function handleChange(e) {
 				var _scope = this;
 				var _bln_changed = false;
+				var _str_value = e.target.value;
 				this.props.inputoption.find(function (json) {
 					var _str_selectkey = _scope.props.selectkey[0];
 
-					if (json[_str_selectkey] === e.target.value) {
-						var _json_args = {
-							outputResult: json
-						};
-						_scope.setState(_json_args);
+					if (json[_str_selectkey] === _str_value) {
+						var _json_args = {},
+						    _str_format = _scope.state.format;
+						console.log('e.target.checked :: ', e.target.checked);
+
+						if (_str_format === 'string') {
+							_json_args.outputResult = _str_value;
+						} else if (_str_format === 'json') {
+							_json_args.outputResult = json;
+						} else if (_str_format === 'array' || _str_format === 'sarray') {
+							var _data_old_result = _scope.state.outputResult instanceof Array ? JSON.parse(JSON.stringify(_scope.state.outputResult)) : [];
+							console.log('_data_old_result :: ', _data_old_result.length, _data_old_result instanceof Array, JSON.stringify(_data_old_result));
+							var _data_item = undefined;
+							if (_str_format === 'array') {
+								_data_item = _str_value;
+							} else {
+								_data_item = json;
+							}
+							if (!!e.target.checked) {
+								if (_data_old_result.length >= 1) {
+									_json_args.outputResult = _data_old_result.push(_data_item);
+								} else {
+									_json_args.outputResult = [_data_item];
+								}
+
+								// _json_args.outputResult = [_data_item];
+								console.log(_data_item, '----', _json_args.outputResult);
+							} else {
+								console.log('delete it !');
+							}
+							// _json_args.outputResult = _scope.state.outputResult
+						}
+
+						_scope.mergeState(_json_args);
 
 						if (_scope.props.onChange && _scope.props.onChange instanceof Function === true) {
-							var _json_ouput2 = {
-								value: e.target.value,
-								item: json
+							// setTimeout(function(){
+							var _json_ouput = {
+								value: _str_value,
+								item: json,
+								result: _json_args.outputResult
 							};
 							_bln_changed = true;
-							_scope.props.onChange(_bln_changed, _json_ouput2);
+							// _scope.props.onChange(_bln_changed, _json_ouput );
+							// },1);
 						}
 						return false;
 					}
 				});
 
 				if (_bln_changed === false) {
-					_scope.props.onChange(_bln_changed, _json_ouput);
+					_scope.props.onChange(_bln_changed, { value: _str_value });
 				}
 			}
 		}, {
 			key: 'toggleDisabled',
 			value: function toggleDisabled() {
-				this.setState({
+				this.mergeState({
 					disabled: !this.state.disabled
 				});
+			}
+		}, {
+			key: 'judegItemChecked',
+			value: function judegItemChecked(json_item) {
+				var _str_format = this.state.format,
+				    _str_selectkey = this.props.selectkey[0],
+				    _str_item_value = json_item[_str_selectkey];
+
+				if (_str_format === 'string') {
+					console.log(1);
+					return this.state.outputResult === _str_item_value;
+				} else if (_str_format === 'json') {
+					console.log(2);
+					return this.state.outputResult[_str_selectkey] === _str_item_value;
+				} else if (_str_format === 'array' || _str_format === 'sarray') {
+					var _data_result = this.state.outputResult;
+					var _bln_return = false;
+					if (_str_format === 'array') {
+						for (var i = 0; i < _data_result.length; i++) {
+							if (_data_result[i] === _str_item_value) {
+								console.log(3);
+								_bln_return = true;
+								break;
+							}
+						}
+						return _bln_return;
+					} else {
+						console.log(4);
+						for (var j = 0; j < _data_result.length; j++) {
+							if (_data_result[j][_str_selectkey] === _str_item_value) {
+								_bln_return = true;
+								break;
+							}
+						}
+						return _bln_return;
+					}
+				}
 			}
 		}, {
 			key: 'render',
@@ -20166,27 +20236,32 @@
 					_react2.default.createElement(
 						'div',
 						{ className: _str_classname_all },
+						JSON.stringify(this.props.outputResult),
+						' =',
+						JSON.stringify(this.state.outputResult),
+						' =',
+						JSON.stringify(this.state.format),
 						this.props.inputoption.map(function (json_item) {
 
 							var _str_classname_outer = (0, _classnames2.default)({
 								'pkg-checked-option': true,
 								'pkg-list-option': _this2.props.listPosition === _Setting2.default.LIST_POSITION_OUTER,
 								'pkg-checked-icon': _this2.props.listPosition !== _Setting2.default.LIST_POSITION_OUTER,
-								'pkg-checked-option_checked': _this2.state.outputResult[_this2.props.selectkey[0]] === json_item[_this2.props.selectkey[0]]
+								'pkg-checked-option_checked': _this2.judegItemChecked(json_item)
 							});
 
 							return _react2.default.createElement(
 								'label',
-								{ key: _this2.props.name + '-' + json_item[_this2.props.selectkey[0]] + Date.now() + '-' + Math.floor(Math.random() * 1000),
+								{ key: _this2.props.name + '-' + _this2.props.selectkey[0] + Date.now() + '-' + Math.floor(Math.random() * 1000),
 									className: _str_classname_outer },
 								_react2.default.createElement(
 									'span',
 									{ className: _str_classname_inner },
 									_react2.default.createElement(_ItemBase2.default, { value: json_item[_this2.props.selectkey[0]],
-										checked: _this2.state.outputResult[_this2.props.selectkey[0]] === json_item[_this2.props.selectkey[0]],
+										checked: _this2.judegItemChecked(json_item),
 										onChange: _this2.handleChange,
 										disabled: _this2.state.disabled,
-										type: _this2.props.type === 'checkbox' ? 'checkbox' : 'radio',
+										type: _this2.state.format === 'array' || _this2.state.format === 'sarry' ? 'checkbox' : 'radio',
 										name: _this2.props.name,
 										showKey: _this2.props.showKey,
 										between: _this2.props.between,
@@ -20218,7 +20293,7 @@
 		showKey: _react2.default.PropTypes.array,
 		between: _react2.default.PropTypes.string,
 		outputFormat: _react2.default.PropTypes.string,
-		outputResult: _react2.default.PropTypes.object,
+		// outputResult: React.PropTypes.object,
 		display: _react2.default.PropTypes.string,
 		listStyle: _react2.default.PropTypes.string,
 		listPosition: _react2.default.PropTypes.string,
@@ -20231,7 +20306,7 @@
 		selectkey: [],
 		showKey: [],
 		between: '',
-		outputResult: {},
+		// outputResult: {},
 		display: _Setting2.default.DISPLAY_INBLOCK,
 		listStyle: '',
 		listPosition: _Setting2.default.LIST_POSITION_INNER,
@@ -20241,6 +20316,195 @@
 
 /***/ },
 /* 161 */
+/***/ function(module, exports, __webpack_require__) {
+
+	'use strict';
+
+	var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+
+	Object.defineProperty(exports, "__esModule", {
+		value: true
+	});
+
+	var _react = __webpack_require__(2);
+
+	var _react2 = _interopRequireDefault(_react);
+
+	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+	function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+	function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
+
+	function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
+
+	var ItemBase = function (_React$Component) {
+		_inherits(ItemBase, _React$Component);
+
+		function ItemBase(props) {
+			_classCallCheck(this, ItemBase);
+
+			var _this = _possibleConstructorReturn(this, Object.getPrototypeOf(ItemBase).call(this, props));
+
+			_this.handleChange = _this.handleChange.bind(_this);
+			var _bln_checked = false;
+			if ('checked' in props) {
+				_bln_checked = props.checked;
+			} else {
+				_bln_checked = props.defaultChecked;
+			}
+			_this.state = { checked: _bln_checked };
+			return _this;
+		}
+
+		_createClass(ItemBase, [{
+			key: 'componentWillReceiveProps',
+			value: function componentWillReceiveProps(json_next_rops) {
+				if ('checked' in json_next_rops) {
+					this.setState({
+						checked: json_next_rops.checked
+					});
+				}
+			}
+		}, {
+			key: 'handleChange',
+			value: function handleChange(e) {
+				var checked = e.target.checked;
+				if (!('checked' in this.props)) {
+					this.setState({
+						checked: checked ? 1 : 0
+					});
+				}
+				this.props.onChange(e, this.state.checked);
+			}
+		}, {
+			key: 'getShowText',
+			value: function getShowText() {
+				var _json_item = this.props.item,
+				    _ary_showkey = this.props.showKey,
+				    _ary_return = [];
+				for (var i = 0; i < _ary_showkey.length; i++) {
+					_ary_return.push(_json_item[_ary_showkey[i]]);
+				}
+				return _ary_return.join(this.props.between);
+			}
+		}, {
+			key: 'render',
+			value: function render() {
+				var props = this.props;
+				var checked = this.state.checked;
+				if (typeof checked === 'boolean') {
+					checked = checked ? 1 : 0;
+				}
+				var _str_classname_all = 'pkg-item',
+				    _str_classname_input = 'pkg-item-input';
+				return _react2.default.createElement(
+					'span',
+					{ className: _str_classname_all },
+					_react2.default.createElement('input', { type: this.props.type,
+						name: this.props.name,
+						value: this.props.value,
+						disabled: this.props.disabled,
+						className: _str_classname_input,
+						defaultChecked: !!props.defaultChecked,
+						checked: !!checked,
+						onChange: this.handleChange
+					}),
+					this.getShowText()
+				);
+			}
+		}]);
+
+		return ItemBase;
+	}(_react2.default.Component);
+	// --{JSON.stringify(!!checked)}--
+
+	exports.default = ItemBase;
+	ItemBase.propTypes = {
+		item: _react2.default.PropTypes.object,
+		showKey: _react2.default.PropTypes.array,
+		between: _react2.default.PropTypes.string,
+		style: _react2.default.PropTypes.object,
+		defaultChecked: _react2.default.PropTypes.oneOfType([_react2.default.PropTypes.number, _react2.default.PropTypes.bool]),
+		checked: _react2.default.PropTypes.oneOfType([_react2.default.PropTypes.number, _react2.default.PropTypes.bool]),
+		onChange: _react2.default.PropTypes.func
+	};
+
+	ItemBase.defaultProps = {
+		item: {},
+		showKey: [],
+		between: '',
+		defaultChecked: 0,
+		onChange: function onChange() {}
+	};
+
+/***/ },
+/* 162 */
+/***/ function(module, exports, __webpack_require__) {
+
+	var __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;'use strict';
+
+	var _typeof = typeof Symbol === "function" && typeof Symbol.iterator === "symbol" ? function (obj) { return typeof obj; } : function (obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol ? "symbol" : typeof obj; };
+
+	/*!
+	  Copyright (c) 2016 Jed Watson.
+	  Licensed under the MIT License (MIT), see
+	  http://jedwatson.github.io/classnames
+	*/
+	/* global define */
+
+	(function () {
+		'use strict';
+
+		var hasOwn = {}.hasOwnProperty;
+
+		function classNames() {
+			var classes = [];
+
+			for (var i = 0; i < arguments.length; i++) {
+				var arg = arguments[i];
+				if (!arg) continue;
+
+				var argType = typeof arg === 'undefined' ? 'undefined' : _typeof(arg);
+
+				if (argType === 'string' || argType === 'number') {
+					classes.push(arg);
+				} else if (Array.isArray(arg)) {
+					classes.push(classNames.apply(null, arg));
+				} else if (argType === 'object') {
+					for (var key in arg) {
+						if (hasOwn.call(arg, key) && arg[key]) {
+							classes.push(key);
+						}
+					}
+				}
+			}
+
+			return classes.join(' ');
+		}
+
+		if (typeof module !== 'undefined' && module.exports) {
+			module.exports = classNames;
+		} else if ("function" === 'function' && _typeof(__webpack_require__(163)) === 'object' && __webpack_require__(163)) {
+			// register as 'classnames', consistent with npm package name
+			!(__WEBPACK_AMD_DEFINE_ARRAY__ = [], __WEBPACK_AMD_DEFINE_RESULT__ = function () {
+				return classNames;
+			}.apply(exports, __WEBPACK_AMD_DEFINE_ARRAY__), __WEBPACK_AMD_DEFINE_RESULT__ !== undefined && (module.exports = __WEBPACK_AMD_DEFINE_RESULT__));
+		} else {
+			window.classNames = classNames;
+		}
+	})();
+
+/***/ },
+/* 163 */
+/***/ function(module, exports) {
+
+	/* WEBPACK VAR INJECTION */(function(__webpack_amd_options__) {module.exports = __webpack_amd_options__;
+
+	/* WEBPACK VAR INJECTION */}.call(exports, {}))
+
+/***/ },
+/* 164 */
 /***/ function(module, exports) {
 
 	'use strict';
@@ -20385,20 +20649,7 @@
 	exports.default = Setting;
 
 /***/ },
-/* 162 */
-/***/ function(module, exports) {
-
-	// removed by extract-text-webpack-plugin
-
-/***/ },
-/* 163 */,
-/* 164 */,
-/* 165 */,
-/* 166 */,
-/* 167 */,
-/* 168 */,
-/* 169 */,
-/* 170 */
+/* 165 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -20409,196 +20660,7 @@
 		value: true
 	});
 
-	var _react = __webpack_require__(2);
-
-	var _react2 = _interopRequireDefault(_react);
-
-	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-
-	function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
-
-	function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
-
-	function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
-
-	var ItemBase = function (_React$Component) {
-		_inherits(ItemBase, _React$Component);
-
-		function ItemBase(props) {
-			_classCallCheck(this, ItemBase);
-
-			var _this = _possibleConstructorReturn(this, Object.getPrototypeOf(ItemBase).call(this, props));
-
-			_this.handleChange = _this.handleChange.bind(_this);
-			var _bln_checked = false;
-			if ('checked' in props) {
-				_bln_checked = props.checked;
-			} else {
-				_bln_checked = props.defaultChecked;
-			}
-			_this.state = { checked: _bln_checked };
-			return _this;
-		}
-
-		_createClass(ItemBase, [{
-			key: 'componentWillReceiveProps',
-			value: function componentWillReceiveProps(json_next_rops) {
-				if ('checked' in json_next_rops) {
-					this.setState({
-						checked: json_next_rops.checked
-					});
-				}
-			}
-		}, {
-			key: 'handleChange',
-			value: function handleChange(e) {
-				var checked = e.target.checked;
-				if (!('checked' in this.props)) {
-					this.setState({
-						checked: checked ? 1 : 0
-					});
-				}
-				this.props.onChange(e, this.state.checked);
-			}
-		}, {
-			key: 'getShowText',
-			value: function getShowText() {
-				var _json_item = this.props.item,
-				    _ary_showkey = this.props.showKey,
-				    _ary_return = [];
-				for (var i = 0; i < _ary_showkey.length; i++) {
-					_ary_return.push(_json_item[_ary_showkey[i]]);
-				}
-				return _ary_return.join(this.props.between);
-			}
-		}, {
-			key: 'render',
-			value: function render() {
-				var props = this.props;
-				var checked = this.state.checked;
-				if (typeof checked === 'boolean') {
-					checked = checked ? 1 : 0;
-				}
-				var _str_classname_all = 'pkg-item',
-				    _str_classname_input = 'pkg-item-input';
-				return _react2.default.createElement(
-					'span',
-					{ className: _str_classname_all },
-					_react2.default.createElement('input', { type: this.props.type,
-						name: this.props.name,
-						value: this.props.value,
-						disabled: this.props.disabled,
-						className: _str_classname_input,
-						defaultChecked: !!props.defaultChecked,
-						checked: !!checked,
-						onChange: this.handleChange
-					}),
-					this.getShowText()
-				);
-			}
-		}]);
-
-		return ItemBase;
-	}(_react2.default.Component);
-	// --{JSON.stringify(!!checked)}--
-
-	exports.default = ItemBase;
-	ItemBase.propTypes = {
-		item: _react2.default.PropTypes.object,
-		showKey: _react2.default.PropTypes.array,
-		between: _react2.default.PropTypes.string,
-		style: _react2.default.PropTypes.object,
-		defaultChecked: _react2.default.PropTypes.oneOfType([_react2.default.PropTypes.number, _react2.default.PropTypes.bool]),
-		checked: _react2.default.PropTypes.oneOfType([_react2.default.PropTypes.number, _react2.default.PropTypes.bool]),
-		onChange: _react2.default.PropTypes.func
-	};
-
-	ItemBase.defaultProps = {
-		item: {},
-		showKey: [],
-		between: '',
-		defaultChecked: 0,
-		onChange: function onChange() {}
-	};
-
-/***/ },
-/* 171 */
-/***/ function(module, exports, __webpack_require__) {
-
-	var __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;'use strict';
-
-	var _typeof = typeof Symbol === "function" && typeof Symbol.iterator === "symbol" ? function (obj) { return typeof obj; } : function (obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol ? "symbol" : typeof obj; };
-
-	/*!
-	  Copyright (c) 2016 Jed Watson.
-	  Licensed under the MIT License (MIT), see
-	  http://jedwatson.github.io/classnames
-	*/
-	/* global define */
-
-	(function () {
-		'use strict';
-
-		var hasOwn = {}.hasOwnProperty;
-
-		function classNames() {
-			var classes = [];
-
-			for (var i = 0; i < arguments.length; i++) {
-				var arg = arguments[i];
-				if (!arg) continue;
-
-				var argType = typeof arg === 'undefined' ? 'undefined' : _typeof(arg);
-
-				if (argType === 'string' || argType === 'number') {
-					classes.push(arg);
-				} else if (Array.isArray(arg)) {
-					classes.push(classNames.apply(null, arg));
-				} else if (argType === 'object') {
-					for (var key in arg) {
-						if (hasOwn.call(arg, key) && arg[key]) {
-							classes.push(key);
-						}
-					}
-				}
-			}
-
-			return classes.join(' ');
-		}
-
-		if (typeof module !== 'undefined' && module.exports) {
-			module.exports = classNames;
-		} else if ("function" === 'function' && _typeof(__webpack_require__(172)) === 'object' && __webpack_require__(172)) {
-			// register as 'classnames', consistent with npm package name
-			!(__WEBPACK_AMD_DEFINE_ARRAY__ = [], __WEBPACK_AMD_DEFINE_RESULT__ = function () {
-				return classNames;
-			}.apply(exports, __WEBPACK_AMD_DEFINE_ARRAY__), __WEBPACK_AMD_DEFINE_RESULT__ !== undefined && (module.exports = __WEBPACK_AMD_DEFINE_RESULT__));
-		} else {
-			window.classNames = classNames;
-		}
-	})();
-
-/***/ },
-/* 172 */
-/***/ function(module, exports) {
-
-	/* WEBPACK VAR INJECTION */(function(__webpack_amd_options__) {module.exports = __webpack_amd_options__;
-
-	/* WEBPACK VAR INJECTION */}.call(exports, {}))
-
-/***/ },
-/* 173 */
-/***/ function(module, exports, __webpack_require__) {
-
-	'use strict';
-
-	var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
-
-	Object.defineProperty(exports, "__esModule", {
-		value: true
-	});
-
-	var _Setting = __webpack_require__(161);
+	var _Setting = __webpack_require__(164);
 
 	var _Setting2 = _interopRequireDefault(_Setting);
 
@@ -20720,6 +20782,94 @@
 	}();
 
 	exports.default = CheckedUI;
+
+/***/ },
+/* 166 */
+/***/ function(module, exports) {
+
+	// removed by extract-text-webpack-plugin
+
+/***/ },
+/* 167 */,
+/* 168 */,
+/* 169 */,
+/* 170 */,
+/* 171 */,
+/* 172 */,
+/* 173 */,
+/* 174 */
+/***/ function(module, exports, __webpack_require__) {
+
+	'use strict';
+
+	(function (GLOBAL) {
+
+	    'use strict';
+
+	    if (!Array.isArray) {
+	        Array.isArray = function (arg) {
+	            return Object.prototype.toString.call(arg) === '[object Array]';
+	        };
+	    }
+
+	    function isPrimitive(val) {
+	        return val !== Object(val);
+	    }
+
+	    function copyValue(source) {
+	        if (isPrimitive(source)) {
+	            return source;
+	        }
+	        if (Array.isArray(source)) {
+	            return mergeArray(source.slice(0), source);
+	        }
+	        return mergeObject({}, source);
+	    }
+
+	    function mergeArray(target, source) {
+	        var i, len;
+	        for (i = 0, len = source.length; i < len; i += 1) {
+	            target[i] = copyValue(source[i]);
+	        }
+	        return target;
+	    }
+
+	    function mergeObject(target, source) {
+	        var prop;
+	        for (prop in source) {
+	            if (source.hasOwnProperty(prop)) {
+	                target[prop] = copyValue(source[prop]);
+	            }
+	        }
+	        return target;
+	    }
+
+	    function extend(target /*, obj1, obj2, ... objN */) {
+	        var i, len, source;
+	        if (!target || isPrimitive(target)) {
+	            return;
+	        }
+	        for (i = 1, len = arguments.length; i < len; i += 1) {
+	            source = arguments[i];
+	            if (!isPrimitive(source)) {
+	                if (Array.isArray(source)) {
+	                    mergeArray(target, source);
+	                } else {
+	                    mergeObject(target, source);
+	                }
+	            }
+	        }
+	        return target;
+	    }
+
+	    if (false) {
+
+	        GLOBAL.extend = extend;
+	    } else {
+
+	        module.exports = extend;
+	    }
+	})(undefined);
 
 /***/ }
 /******/ ]);

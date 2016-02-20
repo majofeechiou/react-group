@@ -16,6 +16,20 @@
 
 }
 
+.pkg-checked {
+
+	/*.pkg-item {
+		.pkg-item-input {
+			position: fixed;
+			left: -300px;
+			left: -105vw;
+			top: -300px;
+			top: -105vh;
+		}
+	}*/
+
+}
+
 .pkg-checked, .pkg-checked * {
 	box-sizing: border-box;
 
@@ -23,15 +37,6 @@
 
 .pkg-checked .pkg-checked-option {
 	border: 1px solid #f0f;
-
-}
-
-.pkg-checked .pkg-item .pkg-item-input {
-	position: fixed;
-	left: -300px;
-	left: -105vw;
-	top: -300px;
-	top: -105vh;
 
 }
 

@@ -29,27 +29,27 @@ let _sary_options = [{
 }];
 
 let _ary_selectkey = ['uuid'];
-let _json_checked = {
-	uuid: 'ooxx-002'
-};
+let _data_checked;
 
 let _ary_showkey = ['text','uuid'];
 
 function handleChange( bln_change, json_return ){
-	if( bln_change===true ){
-		_json_checked = json_return.item;
-		render();
-	}
+	console.log( 'json_return.result ::　', json_return.result );
+	// if( bln_change===true ){
+		// _data_checked = json_return.result;
+		// render();
+	// }
 }
 
 function render(){
 	ReactDOM.render(
 		<RadioGroup 
 			onChange={handleChange}
+			outputFormat="array"
 			name="name1"
 			selectkey={_ary_selectkey}
 			inputoption={_sary_options}
-			outputResult={_json_checked}
+			outputResult={_data_checked}
 			showKey={_ary_showkey}
 			between="~"
 			display={Setting.DISPLAY_INBLOCK}
@@ -68,7 +68,7 @@ render();
 // 		name="name2"
 // 		selectkey={_ary_selectkey}
 // 		inputoption={_sary_options}
-// 		outputResult={_json_checked}
+// 		outputResult={_data_checked}
 // 		showKey={_ary_showkey}
 // 		between="~"
 // 		display={Setting.DISPLAY_INBLOCK}
@@ -84,7 +84,7 @@ render();
 // 		name="name3"
 // 		selectkey={_ary_selectkey}
 // 		inputoption={_sary_options}
-// 		outputResult={_json_checked}
+// 		outputResult={_data_checked}
 // 		showKey={_ary_showkey}
 // 		between="~"
 // 		display={Setting.DISPLAY_INBLOCK}
@@ -100,7 +100,7 @@ render();
 // 		name="name4"
 // 		selectkey={_ary_selectkey}
 // 		inputoption={_sary_options}
-// 		outputResult={_json_checked}
+// 		outputResult={_data_checked}
 // 		showKey={_ary_showkey}
 // 		between="~"
 // 		display={Setting.DISPLAY_INBLOCK}
@@ -116,7 +116,7 @@ render();
 // 		name="name5"
 // 		selectkey={_ary_selectkey}
 // 		inputoption={_sary_options}
-// 		outputResult={_json_checked}
+// 		outputResult={_data_checked}
 // 		showKey={_ary_showkey}
 // 		between="~"
 // 		display={Setting.DISPLAY_INBLOCK}
@@ -132,7 +132,7 @@ render();
 // 		name="name6"
 // 		selectkey={_ary_selectkey}
 // 		inputoption={_sary_options}
-// 		outputResult={_json_checked}
+// 		outputResult={_data_checked}
 // 		showKey={_ary_showkey}
 // 		between="~"
 // 		display={Setting.DISPLAY_INBLOCK}
@@ -148,7 +148,7 @@ render();
 // 		name="name7"
 // 		selectkey={_ary_selectkey}
 // 		inputoption={_sary_options}
-// 		outputResult={_json_checked}
+// 		outputResult={_data_checked}
 // 		showKey={_ary_showkey}
 // 		between="~"
 // 		display={Setting.DISPLAY_INBLOCK}
@@ -164,7 +164,7 @@ render();
 // 		name="name8"
 // 		selectkey={_ary_selectkey}
 // 		inputoption={_sary_options}
-// 		outputResult={_json_checked}
+// 		outputResult={_data_checked}
 // 		showKey={_ary_showkey}
 // 		between="~"
 // 		display={Setting.DISPLAY_INBLOCK}
@@ -180,7 +180,7 @@ render();
 // 		name="name_1"
 // 		selectkey={_ary_selectkey}
 // 		inputoption={_sary_options}
-// 		outputResult={_json_checked}
+// 		outputResult={_data_checked}
 // 		showKey={_ary_showkey}
 // 		between="~"
 // 		display={Setting.DISPLAY_INBLOCK}
@@ -196,7 +196,7 @@ render();
 // 		name="name_2"
 // 		selectkey={_ary_selectkey}
 // 		inputoption={_sary_options}
-// 		outputResult={_json_checked}
+// 		outputResult={_data_checked}
 // 		showKey={_ary_showkey}
 // 		between="~"
 // 		display={Setting.DISPLAY_INBLOCK}
@@ -212,7 +212,7 @@ render();
 // 		name="name_3"
 // 		selectkey={_ary_selectkey}
 // 		inputoption={_sary_options}
-// 		outputResult={_json_checked}
+// 		outputResult={_data_checked}
 // 		showKey={_ary_showkey}
 // 		between="~"
 // 		display={Setting.DISPLAY_INBLOCK}
@@ -228,7 +228,7 @@ render();
 // 		name="name_4"
 // 		selectkey={_ary_selectkey}
 // 		inputoption={_sary_options}
-// 		outputResult={_json_checked}
+// 		outputResult={_data_checked}
 // 		showKey={_ary_showkey}
 // 		between="~"
 // 		display={Setting.DISPLAY_INBLOCK}
@@ -244,7 +244,7 @@ render();
 // 		name="name_5"
 // 		selectkey={_ary_selectkey}
 // 		inputoption={_sary_options}
-// 		outputResult={_json_checked}
+// 		outputResult={_data_checked}
 // 		showKey={_ary_showkey}
 // 		between="~"
 // 		display={Setting.DISPLAY_INBLOCK}
@@ -260,7 +260,7 @@ render();
 // 		name="name_6"
 // 		selectkey={_ary_selectkey}
 // 		inputoption={_sary_options}
-// 		outputResult={_json_checked}
+// 		outputResult={_data_checked}
 // 		showKey={_ary_showkey}
 // 		between="~"
 // 		display={Setting.DISPLAY_INBLOCK}
@@ -276,7 +276,7 @@ render();
 // 		name="name_7"
 // 		selectkey={_ary_selectkey}
 // 		inputoption={_sary_options}
-// 		outputResult={_json_checked}
+// 		outputResult={_data_checked}
 // 		showKey={_ary_showkey}
 // 		between="~"
 // 		display={Setting.DISPLAY_INBLOCK}
@@ -292,7 +292,7 @@ render();
 // 		name="name_8"
 // 		selectkey={_ary_selectkey}
 // 		inputoption={_sary_options}
-// 		outputResult={_json_checked}
+// 		outputResult={_data_checked}
 // 		showKey={_ary_showkey}
 // 		between="~"
 // 		display={Setting.DISPLAY_INBLOCK}

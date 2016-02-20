@@ -1,5 +1,6 @@
 'use strict'
 
+var path = require('path');
 var ExtractTextPlugin = require('extract-text-webpack-plugin');
 
 module.exports = {
@@ -54,7 +55,10 @@ module.exports = {
         }]
 	},
 	resolve: {
-		extensions: ['', '.css', '.js', '.jsx']
+		extensions: ['', '.css', '.js', '.jsx'],
+        alias: {
+            'json-extend': path.join(__dirname, 'node_modules/json-extend/index.js'),
+        }
 	},
 	postcss: function () {
 	    // return [ require('autoprefixer'), require('precss'), require('postcss-fontpath'), require("postcss-calc"), require("postcss-color") ];
