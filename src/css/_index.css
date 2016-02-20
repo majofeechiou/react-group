@@ -269,7 +269,11 @@ $num_padding_spacing: 0.5em;
 
 	.pkg-item {
 		.pkg-item-input {
-			display: none;
+			position: fixed;
+			left: -300px;
+			left: -105vw;
+			top: -300px;
+			top: -105vh;
 		}
 	}
 

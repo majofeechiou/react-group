@@ -15,10 +15,11 @@ export default class ItemBase extends React.Component {
 		this.state = {checked:_bln_checked};
 	}
 
-	componentWillReceiveProps(json_nextProps) {
-		if ('checked' in json_nextProps) {
+	componentWillReceiveProps(json_next_rops) {
+		console.log( '-----------componentWillReceiveProps' );
+		if ('checked' in json_next_rops) {
 			this.setState({
-				checked: json_nextProps.checked,
+				checked: json_next_rops.checked
 			});
 		}
 	}
@@ -35,7 +36,7 @@ export default class ItemBase extends React.Component {
 
 	getShowText(){
 		let _json_item = this.props.item,
-			_ary_showkey = this.props.showkey,
+			_ary_showkey = this.props.showKey,
 			_ary_return = [];
 		for( let i=0; i<_ary_showkey.length; i++ ){
 			_ary_return.push( _json_item[_ary_showkey[i]] );
@@ -72,7 +73,7 @@ export default class ItemBase extends React.Component {
 
 ItemBase.propTypes = {
 	item: React.PropTypes.object,
-	showkey: React.PropTypes.array,
+	showKey: React.PropTypes.array,
     between: React.PropTypes.string,
 	style: React.PropTypes.object,
 	defaultChecked: React.PropTypes.oneOfType([React.PropTypes.number, React.PropTypes.bool]),
@@ -82,7 +83,7 @@ ItemBase.propTypes = {
 
 ItemBase.defaultProps = {
 	item: {},
-	showkey: [],
+	showKey: [],
 	between: '',
 	defaultChecked: 0,
 	onChange: () => {
