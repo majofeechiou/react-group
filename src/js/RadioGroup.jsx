@@ -34,21 +34,25 @@ export default class RadioGroup extends React.Component {
 	}
 
 	mergeState(json){
-		let _json = JSON.parse(JSON.stringify(this.state));
-		this.setState( extend(_json, json) );
+		let _json_state = JSON.parse(JSON.stringify(this.state)),
+			_json_extend = extend(_json_state, json);
+		this.setState( _json_extend );
+	}
+
+	getMainSelectKey(){
+		return this.props.selectKey[0];
 	}
 
 	handleChange(e) {
 		let _scope = this;
 		let _bln_changed = false;
 		let _str_value = e.target.value;
+		let _str_selectkey = _scope.getMainSelectKey();
 		(this.props.inputoption).find(function(json){
-			let _str_selectkey = _scope.props.selectkey[0];
 
 			if( json[_str_selectkey]===_str_value ){
 				let _json_args = {},
 					_str_format = _scope.state.format ;
-				console.log( 'e.target.checked :: ', e.target.checked );
 
 				if( _str_format==='string' ){
 					_json_args.outputResult = _str_value ;	
@@ -56,7 +60,6 @@ export default class RadioGroup extends React.Component {
 					_json_args.outputResult = json ;	
 				}else if( _str_format==='array' || _str_format==='sarray' ){
 					let _data_old_result = ( _scope.state.outputResult instanceof Array )? JSON.parse(JSON.stringify(_scope.state.outputResult)) : [];
-					console.log( '_data_old_result :: ', _data_old_result.length, _data_old_result instanceof Array, JSON.stringify(_data_old_result) );
 					let _data_item;
 					if( _str_format==='array' ){
 						_data_item = _str_value ;
@@ -65,19 +68,28 @@ export default class RadioGroup extends React.Component {
 					}
 					if( !!e.target.checked ){
 						if( _data_old_result.length>=1 ){
-							_json_args.outputResult = _data_old_result.push( _data_item );
+							_json_args.outputResult = _data_old_result.concat( [_data_item] );
 						}else{
 							_json_args.outputResult = [ _data_item ];
 						}
-						
-						// _json_args.outputResult = [_data_item];
-						console.log( _data_item, '----', _json_args.outputResult );
 					}else{
-						console.log( 'delete it !' );
+						let _data_ary_output = [];
+						if( _str_format==='array' ){
+							_data_old_result.filter(function(str_value, num_index){
+								if( str_value!==_data_item ){
+									_data_ary_output.push(str_value);
+								}
+							});
+						}else{
+							_data_old_result.filter(function(json_value, num_index){
+								if( json_value[_str_selectkey]!==_data_item[_str_selectkey] ){
+									_data_ary_output.push(json_value);
+								}
+							});
+						}
+						_json_args.outputResult = _data_ary_output ;
 					}
-					// _json_args.outputResult = _scope.state.outputResult
 				}
-
 
 				_scope.mergeState(_json_args);
 
@@ -89,17 +101,17 @@ export default class RadioGroup extends React.Component {
 							result: _json_args.outputResult
 						};
 						_bln_changed = true;
-						// _scope.props.onChange(_bln_changed, _json_ouput );
+						_scope.props.onChange(_bln_changed, _json_ouput );
 					// },1);
 				}
-				return false;
+				// return false;
 			}
 
 		});
 
-		if( _bln_changed===false ){
-			_scope.props.onChange( _bln_changed, {value: _str_value} );
-		}
+		// if( _bln_changed===false ){
+		// 	_scope.props.onChange( _bln_changed, {value: _str_value} );
+		// }
 	}
 	toggleDisabled() {
 		this.mergeState({
@@ -108,14 +120,12 @@ export default class RadioGroup extends React.Component {
 	}
 	judegItemChecked(json_item){
 		let _str_format = this.state.format,
-			_str_selectkey = this.props.selectkey[0],
+			_str_selectkey = this.getMainSelectKey(),
 			_str_item_value = json_item[_str_selectkey] ;
 
 		if( _str_format==='string' ){
-			console.log(1);
 			return ( this.state.outputResult === _str_item_value );
 		}else if( _str_format==='json' ){
-			console.log(2);
 			return ( this.state.outputResult[_str_selectkey] === _str_item_value );
 		}else if( _str_format==='array' || _str_format==='sarray' ){
 			let _data_result = this.state.outputResult;
@@ -123,14 +133,12 @@ export default class RadioGroup extends React.Component {
 			if( _str_format==='array' ){
 				for( let i=0; i<_data_result.length; i++ ){
 					if(_data_result[i]===_str_item_value){
-						console.log(3);
 						_bln_return = true;
 						break;
 					}
 				}
 				return _bln_return;
 			}else{
-				console.log(4);
 				for( let j=0; j<_data_result.length; j++ ){
 					if(_data_result[j][_str_selectkey]===_str_item_value){
 						_bln_return = true;
@@ -157,12 +165,9 @@ export default class RadioGroup extends React.Component {
 			'pkg-list-option': (this.props.listPosition===Setting.LIST_POSITION_INNER),
 			'pkg-checked-icon': (this.props.listPosition!==Setting.LIST_POSITION_INNER)
 		});
+		let _str_selectkey = this.getMainSelectKey();
 		return <div>
 			<div className={_str_classname_all}>
-				{ JSON.stringify(this.props.outputResult) } = 
-				{ JSON.stringify(this.state.outputResult) } = 
-				{ JSON.stringify(this.state.format) }
-
 				{this.props.inputoption.map((json_item)=>{
 
 					let _str_classname_outer = ClassNames({
@@ -173,10 +178,10 @@ export default class RadioGroup extends React.Component {
 					});
 
 					return (
-						<label key={this.props.name+'-'+this.props.selectkey[0]+Date.now()+'-'+Math.floor(Math.random()*1000)}
+						<label key={this.props.name+'-'+_str_selectkey+'-'+json_item[_str_selectkey]+Date.now()+'-'+Math.floor(Math.random()*1000)}
 							className={_str_classname_outer}>
 							<span className={_str_classname_inner}>
-								<ItemBase value={json_item[this.props.selectkey[0]]}
+								<ItemBase value={json_item[_str_selectkey]}
 									checked={this.judegItemChecked(json_item)}
 									onChange={this.handleChange}
 									disabled={this.state.disabled}
@@ -202,7 +207,7 @@ RadioGroup.propTypes = {
 	// type: React.PropTypes.string,
 	className: React.PropTypes.string,
     inputoption: React.PropTypes.array,
-    selectkey: React.PropTypes.array,
+    selectKey: React.PropTypes.array,
     showKey: React.PropTypes.array,
     between: React.PropTypes.string,
     outputFormat: React.PropTypes.string,
@@ -217,7 +222,7 @@ RadioGroup.defaultProps = {
 	// type: 'radio',
 	className: '',
 	inputoption: [],
-	selectkey: [],
+	selectKey: [],
 	showKey: [],
 	between: '',
 	// outputResult: {},

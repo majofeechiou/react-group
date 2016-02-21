@@ -49,7 +49,7 @@
 	// module.exports = require('./base');
 
 	__webpack_require__(1);
-	__webpack_require__(166);
+	__webpack_require__(167);
 
 /***/ },
 /* 1 */
@@ -104,11 +104,10 @@
 	var _ary_showkey = ['text', 'uuid'];
 
 	function handleChange(bln_change, json_return) {
-		console.log('json_return.result ::　', json_return.result);
-		// if( bln_change===true ){
-		// _data_checked = json_return.result;
-		// render();
-		// }
+		if (bln_change === true) {
+			_data_checked = json_return.result;
+			render();
+		}
 	}
 
 	function render() {
@@ -116,7 +115,7 @@
 			onChange: handleChange,
 			outputFormat: 'array',
 			name: 'name1',
-			selectkey: _ary_selectkey,
+			selectKey: _ary_selectkey,
 			inputoption: _sary_options,
 			outputResult: _data_checked,
 			showKey: _ary_showkey,
@@ -133,7 +132,7 @@
 	// ReactDOM.render(
 	// 	<RadioGroup
 	// 		name="name2"
-	// 		selectkey={_ary_selectkey}
+	// 		selectKey={_ary_selectkey}
 	// 		inputoption={_sary_options}
 	// 		outputResult={_data_checked}
 	// 		showKey={_ary_showkey}
@@ -149,7 +148,7 @@
 	// ReactDOM.render(
 	// 	<RadioGroup
 	// 		name="name3"
-	// 		selectkey={_ary_selectkey}
+	// 		selectKey={_ary_selectkey}
 	// 		inputoption={_sary_options}
 	// 		outputResult={_data_checked}
 	// 		showKey={_ary_showkey}
@@ -165,7 +164,7 @@
 	// ReactDOM.render(
 	// 	<RadioGroup
 	// 		name="name4"
-	// 		selectkey={_ary_selectkey}
+	// 		selectKey={_ary_selectkey}
 	// 		inputoption={_sary_options}
 	// 		outputResult={_data_checked}
 	// 		showKey={_ary_showkey}
@@ -181,7 +180,7 @@
 	// ReactDOM.render(
 	// 	<RadioGroup
 	// 		name="name5"
-	// 		selectkey={_ary_selectkey}
+	// 		selectKey={_ary_selectkey}
 	// 		inputoption={_sary_options}
 	// 		outputResult={_data_checked}
 	// 		showKey={_ary_showkey}
@@ -197,7 +196,7 @@
 	// ReactDOM.render(
 	// 	<RadioGroup
 	// 		name="name6"
-	// 		selectkey={_ary_selectkey}
+	// 		selectKey={_ary_selectkey}
 	// 		inputoption={_sary_options}
 	// 		outputResult={_data_checked}
 	// 		showKey={_ary_showkey}
@@ -213,7 +212,7 @@
 	// ReactDOM.render(
 	// 	<RadioGroup
 	// 		name="name7"
-	// 		selectkey={_ary_selectkey}
+	// 		selectKey={_ary_selectkey}
 	// 		inputoption={_sary_options}
 	// 		outputResult={_data_checked}
 	// 		showKey={_ary_showkey}
@@ -229,7 +228,7 @@
 	// ReactDOM.render(
 	// 	<RadioGroup
 	// 		name="name8"
-	// 		selectkey={_ary_selectkey}
+	// 		selectKey={_ary_selectkey}
 	// 		inputoption={_sary_options}
 	// 		outputResult={_data_checked}
 	// 		showKey={_ary_showkey}
@@ -245,7 +244,7 @@
 	// ReactDOM.render(
 	// 	<RadioGroup
 	// 		name="name_1"
-	// 		selectkey={_ary_selectkey}
+	// 		selectKey={_ary_selectkey}
 	// 		inputoption={_sary_options}
 	// 		outputResult={_data_checked}
 	// 		showKey={_ary_showkey}
@@ -261,7 +260,7 @@
 	// ReactDOM.render(
 	// 	<RadioGroup
 	// 		name="name_2"
-	// 		selectkey={_ary_selectkey}
+	// 		selectKey={_ary_selectkey}
 	// 		inputoption={_sary_options}
 	// 		outputResult={_data_checked}
 	// 		showKey={_ary_showkey}
@@ -277,7 +276,7 @@
 	// ReactDOM.render(
 	// 	<RadioGroup
 	// 		name="name_3"
-	// 		selectkey={_ary_selectkey}
+	// 		selectKey={_ary_selectkey}
 	// 		inputoption={_sary_options}
 	// 		outputResult={_data_checked}
 	// 		showKey={_ary_showkey}
@@ -293,7 +292,7 @@
 	// ReactDOM.render(
 	// 	<RadioGroup
 	// 		name="name_4"
-	// 		selectkey={_ary_selectkey}
+	// 		selectKey={_ary_selectkey}
 	// 		inputoption={_sary_options}
 	// 		outputResult={_data_checked}
 	// 		showKey={_ary_showkey}
@@ -309,7 +308,7 @@
 	// ReactDOM.render(
 	// 	<RadioGroup
 	// 		name="name_5"
-	// 		selectkey={_ary_selectkey}
+	// 		selectKey={_ary_selectkey}
 	// 		inputoption={_sary_options}
 	// 		outputResult={_data_checked}
 	// 		showKey={_ary_showkey}
@@ -325,7 +324,7 @@
 	// ReactDOM.render(
 	// 	<RadioGroup
 	// 		name="name_6"
-	// 		selectkey={_ary_selectkey}
+	// 		selectKey={_ary_selectkey}
 	// 		inputoption={_sary_options}
 	// 		outputResult={_data_checked}
 	// 		showKey={_ary_showkey}
@@ -341,7 +340,7 @@
 	// ReactDOM.render(
 	// 	<RadioGroup
 	// 		name="name_7"
-	// 		selectkey={_ary_selectkey}
+	// 		selectKey={_ary_selectkey}
 	// 		inputoption={_sary_options}
 	// 		outputResult={_data_checked}
 	// 		showKey={_ary_showkey}
@@ -357,7 +356,7 @@
 	// ReactDOM.render(
 	// 	<RadioGroup
 	// 		name="name_8"
-	// 		selectkey={_ary_selectkey}
+	// 		selectKey={_ary_selectkey}
 	// 		inputoption={_sary_options}
 	// 		outputResult={_data_checked}
 	// 		showKey={_ary_showkey}
@@ -20069,7 +20068,7 @@
 
 	var _CheckedUI2 = _interopRequireDefault(_CheckedUI);
 
-	var _jsonExtend = __webpack_require__(174);
+	var _jsonExtend = __webpack_require__(166);
 
 	var _jsonExtend2 = _interopRequireDefault(_jsonExtend);
 
@@ -20109,8 +20108,14 @@
 		_createClass(RadioGroup, [{
 			key: 'mergeState',
 			value: function mergeState(json) {
-				var _json = JSON.parse(JSON.stringify(this.state));
-				this.setState((0, _jsonExtend2.default)(_json, json));
+				var _json_state = JSON.parse(JSON.stringify(this.state)),
+				    _json_extend = (0, _jsonExtend2.default)(_json_state, json);
+				this.setState(_json_extend);
+			}
+		}, {
+			key: 'getMainSelectKey',
+			value: function getMainSelectKey() {
+				return this.props.selectKey[0];
 			}
 		}, {
 			key: 'handleChange',
@@ -20118,40 +20123,52 @@
 				var _scope = this;
 				var _bln_changed = false;
 				var _str_value = e.target.value;
+				var _str_selectkey = _scope.getMainSelectKey();
 				this.props.inputoption.find(function (json) {
-					var _str_selectkey = _scope.props.selectkey[0];
 
 					if (json[_str_selectkey] === _str_value) {
 						var _json_args = {},
 						    _str_format = _scope.state.format;
-						console.log('e.target.checked :: ', e.target.checked);
 
 						if (_str_format === 'string') {
 							_json_args.outputResult = _str_value;
 						} else if (_str_format === 'json') {
 							_json_args.outputResult = json;
 						} else if (_str_format === 'array' || _str_format === 'sarray') {
-							var _data_old_result = _scope.state.outputResult instanceof Array ? JSON.parse(JSON.stringify(_scope.state.outputResult)) : [];
-							console.log('_data_old_result :: ', _data_old_result.length, _data_old_result instanceof Array, JSON.stringify(_data_old_result));
-							var _data_item = undefined;
-							if (_str_format === 'array') {
-								_data_item = _str_value;
-							} else {
-								_data_item = json;
-							}
-							if (!!e.target.checked) {
-								if (_data_old_result.length >= 1) {
-									_json_args.outputResult = _data_old_result.push(_data_item);
+							(function () {
+								var _data_old_result = _scope.state.outputResult instanceof Array ? JSON.parse(JSON.stringify(_scope.state.outputResult)) : [];
+								var _data_item = undefined;
+								if (_str_format === 'array') {
+									_data_item = _str_value;
 								} else {
-									_json_args.outputResult = [_data_item];
+									_data_item = json;
 								}
-
-								// _json_args.outputResult = [_data_item];
-								console.log(_data_item, '----', _json_args.outputResult);
-							} else {
-								console.log('delete it !');
-							}
-							// _json_args.outputResult = _scope.state.outputResult
+								if (!!e.target.checked) {
+									if (_data_old_result.length >= 1) {
+										_json_args.outputResult = _data_old_result.concat([_data_item]);
+									} else {
+										_json_args.outputResult = [_data_item];
+									}
+								} else {
+									(function () {
+										var _data_ary_output = [];
+										if (_str_format === 'array') {
+											_data_old_result.filter(function (str_value, num_index) {
+												if (str_value !== _data_item) {
+													_data_ary_output.push(str_value);
+												}
+											});
+										} else {
+											_data_old_result.filter(function (json_value, num_index) {
+												if (json_value[_str_selectkey] !== _data_item[_str_selectkey]) {
+													_data_ary_output.push(json_value);
+												}
+											});
+										}
+										_json_args.outputResult = _data_ary_output;
+									})();
+								}
+							})();
 						}
 
 						_scope.mergeState(_json_args);
@@ -20164,16 +20181,16 @@
 								result: _json_args.outputResult
 							};
 							_bln_changed = true;
-							// _scope.props.onChange(_bln_changed, _json_ouput );
+							_scope.props.onChange(_bln_changed, _json_ouput);
 							// },1);
 						}
-						return false;
+						// return false;
 					}
 				});
 
-				if (_bln_changed === false) {
-					_scope.props.onChange(_bln_changed, { value: _str_value });
-				}
+				// if( _bln_changed===false ){
+				// 	_scope.props.onChange( _bln_changed, {value: _str_value} );
+				// }
 			}
 		}, {
 			key: 'toggleDisabled',
@@ -20186,14 +20203,12 @@
 			key: 'judegItemChecked',
 			value: function judegItemChecked(json_item) {
 				var _str_format = this.state.format,
-				    _str_selectkey = this.props.selectkey[0],
+				    _str_selectkey = this.getMainSelectKey(),
 				    _str_item_value = json_item[_str_selectkey];
 
 				if (_str_format === 'string') {
-					console.log(1);
 					return this.state.outputResult === _str_item_value;
 				} else if (_str_format === 'json') {
-					console.log(2);
 					return this.state.outputResult[_str_selectkey] === _str_item_value;
 				} else if (_str_format === 'array' || _str_format === 'sarray') {
 					var _data_result = this.state.outputResult;
@@ -20201,14 +20216,12 @@
 					if (_str_format === 'array') {
 						for (var i = 0; i < _data_result.length; i++) {
 							if (_data_result[i] === _str_item_value) {
-								console.log(3);
 								_bln_return = true;
 								break;
 							}
 						}
 						return _bln_return;
 					} else {
-						console.log(4);
 						for (var j = 0; j < _data_result.length; j++) {
 							if (_data_result[j][_str_selectkey] === _str_item_value) {
 								_bln_return = true;
@@ -20230,17 +20243,13 @@
 					'pkg-list-option': this.props.listPosition === _Setting2.default.LIST_POSITION_INNER,
 					'pkg-checked-icon': this.props.listPosition !== _Setting2.default.LIST_POSITION_INNER
 				});
+				var _str_selectkey = this.getMainSelectKey();
 				return _react2.default.createElement(
 					'div',
 					null,
 					_react2.default.createElement(
 						'div',
 						{ className: _str_classname_all },
-						JSON.stringify(this.props.outputResult),
-						' =',
-						JSON.stringify(this.state.outputResult),
-						' =',
-						JSON.stringify(this.state.format),
 						this.props.inputoption.map(function (json_item) {
 
 							var _str_classname_outer = (0, _classnames2.default)({
@@ -20252,12 +20261,12 @@
 
 							return _react2.default.createElement(
 								'label',
-								{ key: _this2.props.name + '-' + _this2.props.selectkey[0] + Date.now() + '-' + Math.floor(Math.random() * 1000),
+								{ key: _this2.props.name + '-' + _str_selectkey + '-' + json_item[_str_selectkey] + Date.now() + '-' + Math.floor(Math.random() * 1000),
 									className: _str_classname_outer },
 								_react2.default.createElement(
 									'span',
 									{ className: _str_classname_inner },
-									_react2.default.createElement(_ItemBase2.default, { value: json_item[_this2.props.selectkey[0]],
+									_react2.default.createElement(_ItemBase2.default, { value: json_item[_str_selectkey],
 										checked: _this2.judegItemChecked(json_item),
 										onChange: _this2.handleChange,
 										disabled: _this2.state.disabled,
@@ -20289,7 +20298,7 @@
 		// type: React.PropTypes.string,
 		className: _react2.default.PropTypes.string,
 		inputoption: _react2.default.PropTypes.array,
-		selectkey: _react2.default.PropTypes.array,
+		selectKey: _react2.default.PropTypes.array,
 		showKey: _react2.default.PropTypes.array,
 		between: _react2.default.PropTypes.string,
 		outputFormat: _react2.default.PropTypes.string,
@@ -20303,7 +20312,7 @@
 		// type: 'radio',
 		className: '',
 		inputoption: [],
-		selectkey: [],
+		selectKey: [],
 		showKey: [],
 		between: '',
 		// outputResult: {},
@@ -20785,19 +20794,6 @@
 
 /***/ },
 /* 166 */
-/***/ function(module, exports) {
-
-	// removed by extract-text-webpack-plugin
-
-/***/ },
-/* 167 */,
-/* 168 */,
-/* 169 */,
-/* 170 */,
-/* 171 */,
-/* 172 */,
-/* 173 */,
-/* 174 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -20870,6 +20866,12 @@
 	        module.exports = extend;
 	    }
 	})(undefined);
+
+/***/ },
+/* 167 */
+/***/ function(module, exports) {
+
+	// removed by extract-text-webpack-plugin
 
 /***/ }
 /******/ ]);

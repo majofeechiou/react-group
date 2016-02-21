@@ -34,11 +34,10 @@ let _data_checked;
 let _ary_showkey = ['text','uuid'];
 
 function handleChange( bln_change, json_return ){
-	console.log( 'json_return.result ::　', json_return.result );
-	// if( bln_change===true ){
-		// _data_checked = json_return.result;
-		// render();
-	// }
+	if( bln_change===true ){
+		_data_checked = json_return.result;
+		render();
+	}
 }
 
 function render(){
@@ -47,7 +46,7 @@ function render(){
 			onChange={handleChange}
 			outputFormat="array"
 			name="name1"
-			selectkey={_ary_selectkey}
+			selectKey={_ary_selectkey}
 			inputoption={_sary_options}
 			outputResult={_data_checked}
 			showKey={_ary_showkey}
@@ -66,7 +65,7 @@ render();
 // ReactDOM.render(
 // 	<RadioGroup 
 // 		name="name2"
-// 		selectkey={_ary_selectkey}
+// 		selectKey={_ary_selectkey}
 // 		inputoption={_sary_options}
 // 		outputResult={_data_checked}
 // 		showKey={_ary_showkey}
@@ -82,7 +81,7 @@ render();
 // ReactDOM.render(
 // 	<RadioGroup 
 // 		name="name3"
-// 		selectkey={_ary_selectkey}
+// 		selectKey={_ary_selectkey}
 // 		inputoption={_sary_options}
 // 		outputResult={_data_checked}
 // 		showKey={_ary_showkey}
@@ -98,7 +97,7 @@ render();
 // ReactDOM.render(
 // 	<RadioGroup 
 // 		name="name4"
-// 		selectkey={_ary_selectkey}
+// 		selectKey={_ary_selectkey}
 // 		inputoption={_sary_options}
 // 		outputResult={_data_checked}
 // 		showKey={_ary_showkey}
@@ -114,7 +113,7 @@ render();
 // ReactDOM.render(
 // 	<RadioGroup 
 // 		name="name5"
-// 		selectkey={_ary_selectkey}
+// 		selectKey={_ary_selectkey}
 // 		inputoption={_sary_options}
 // 		outputResult={_data_checked}
 // 		showKey={_ary_showkey}
@@ -130,7 +129,7 @@ render();
 // ReactDOM.render(
 // 	<RadioGroup 
 // 		name="name6"
-// 		selectkey={_ary_selectkey}
+// 		selectKey={_ary_selectkey}
 // 		inputoption={_sary_options}
 // 		outputResult={_data_checked}
 // 		showKey={_ary_showkey}
@@ -146,7 +145,7 @@ render();
 // ReactDOM.render(
 // 	<RadioGroup 
 // 		name="name7"
-// 		selectkey={_ary_selectkey}
+// 		selectKey={_ary_selectkey}
 // 		inputoption={_sary_options}
 // 		outputResult={_data_checked}
 // 		showKey={_ary_showkey}
@@ -162,7 +161,7 @@ render();
 // ReactDOM.render(
 // 	<RadioGroup 
 // 		name="name8"
-// 		selectkey={_ary_selectkey}
+// 		selectKey={_ary_selectkey}
 // 		inputoption={_sary_options}
 // 		outputResult={_data_checked}
 // 		showKey={_ary_showkey}
@@ -178,7 +177,7 @@ render();
 // ReactDOM.render(
 // 	<RadioGroup 
 // 		name="name_1"
-// 		selectkey={_ary_selectkey}
+// 		selectKey={_ary_selectkey}
 // 		inputoption={_sary_options}
 // 		outputResult={_data_checked}
 // 		showKey={_ary_showkey}
@@ -194,7 +193,7 @@ render();
 // ReactDOM.render(
 // 	<RadioGroup 
 // 		name="name_2"
-// 		selectkey={_ary_selectkey}
+// 		selectKey={_ary_selectkey}
 // 		inputoption={_sary_options}
 // 		outputResult={_data_checked}
 // 		showKey={_ary_showkey}
@@ -210,7 +209,7 @@ render();
 // ReactDOM.render(
 // 	<RadioGroup 
 // 		name="name_3"
-// 		selectkey={_ary_selectkey}
+// 		selectKey={_ary_selectkey}
 // 		inputoption={_sary_options}
 // 		outputResult={_data_checked}
 // 		showKey={_ary_showkey}
@@ -226,7 +225,7 @@ render();
 // ReactDOM.render(
 // 	<RadioGroup 
 // 		name="name_4"
-// 		selectkey={_ary_selectkey}
+// 		selectKey={_ary_selectkey}
 // 		inputoption={_sary_options}
 // 		outputResult={_data_checked}
 // 		showKey={_ary_showkey}
@@ -242,7 +241,7 @@ render();
 // ReactDOM.render(
 // 	<RadioGroup 
 // 		name="name_5"
-// 		selectkey={_ary_selectkey}
+// 		selectKey={_ary_selectkey}
 // 		inputoption={_sary_options}
 // 		outputResult={_data_checked}
 // 		showKey={_ary_showkey}
@@ -258,7 +257,7 @@ render();
 // ReactDOM.render(
 // 	<RadioGroup 
 // 		name="name_6"
-// 		selectkey={_ary_selectkey}
+// 		selectKey={_ary_selectkey}
 // 		inputoption={_sary_options}
 // 		outputResult={_data_checked}
 // 		showKey={_ary_showkey}
@@ -274,7 +273,7 @@ render();
 // ReactDOM.render(
 // 	<RadioGroup 
 // 		name="name_7"
-// 		selectkey={_ary_selectkey}
+// 		selectKey={_ary_selectkey}
 // 		inputoption={_sary_options}
 // 		outputResult={_data_checked}
 // 		showKey={_ary_showkey}
@@ -290,7 +289,7 @@ render();
 // ReactDOM.render(
 // 	<RadioGroup 
 // 		name="name_8"
-// 		selectkey={_ary_selectkey}
+// 		selectKey={_ary_selectkey}
 // 		inputoption={_sary_options}
 // 		outputResult={_data_checked}
 // 		showKey={_ary_showkey}
