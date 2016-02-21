@@ -111,6 +111,7 @@
 	}
 
 	function render() {
+
 		_reactDom2.default.render(_react2.default.createElement(_RadioGroup2.default, {
 			onChange: handleChange,
 			outputFormat: 'array',
@@ -121,253 +122,272 @@
 			showKey: _ary_showkey,
 			between: '~',
 			display: _Setting2.default.DISPLAY_INBLOCK,
-			padding: _Setting2.default.PADDING_TINY,
+			padding: _Setting2.default.PADDING_BASE,
+			fillet: _Setting2.default.FILLET_CIRCLE,
+			listStyle: _Setting2.default.LIST_STYLE_CIRCLE,
+			listPosition: _Setting2.default.LIST_POSITION_OUTER,
+			iconPosition: _Setting2.default.ICON_POSTION_LEFT,
+			iconShow: [_Setting2.default.ICON_SHOW_EMPTY_HEART, _Setting2.default.ICON_SHOW_HEART] }), document.getElementById("content1"));
+
+		_reactDom2.default.render(_react2.default.createElement(_RadioGroup2.default, {
+			onChange: handleChange,
+			outputFormat: 'array',
+			name: 'name1',
+			selectKey: _ary_selectkey,
+			inputoption: _sary_options,
+			outputResult: _data_checked,
+			showKey: _ary_showkey,
+			between: '~',
+			display: _Setting2.default.DISPLAY_INBLOCK,
+			padding: _Setting2.default.PADDING_BASE,
+			fillet: _Setting2.default.FILLET_CIRCLE,
+			listStyle: _Setting2.default.LIST_STYLE_CIRCLE,
+			listPosition: _Setting2.default.LIST_POSITION_INNER,
+			iconPosition: _Setting2.default.ICON_POSTION_LEFT,
+			iconShow: [_Setting2.default.ICON_SHOW_EMPTY_HEART, _Setting2.default.ICON_SHOW_HEART] }), document.getElementById("content2"));
+
+		_reactDom2.default.render(_react2.default.createElement(_RadioGroup2.default, {
+			onChange: handleChange,
+			outputFormat: 'array',
+			name: 'name1',
+			selectKey: _ary_selectkey,
+			inputoption: _sary_options,
+			outputResult: _data_checked,
+			showKey: _ary_showkey,
+			between: '~',
+			display: _Setting2.default.DISPLAY_INBLOCK,
+			padding: _Setting2.default.PADDING_BASE,
+			fillet: _Setting2.default.FILLET_CIRCLE,
+			listStyle: _Setting2.default.LIST_STYLE_CIRCLE,
 			listPosition: _Setting2.default.LIST_POSITION_OUTER,
 			iconPosition: _Setting2.default.ICON_POSTION_TOP,
-			iconShow: [_Setting2.default.ICON_SHOW_EMPTY_HEART, _Setting2.default.ICON_SHOW_HEART] }), document.getElementById("content1"));
+			iconShow: [_Setting2.default.ICON_SHOW_EMPTY_HEART, _Setting2.default.ICON_SHOW_HEART] }), document.getElementById("content3"));
+
+		_reactDom2.default.render(_react2.default.createElement(_RadioGroup2.default, {
+			onChange: handleChange,
+			outputFormat: 'array',
+			name: 'name1',
+			selectKey: _ary_selectkey,
+			inputoption: _sary_options,
+			outputResult: _data_checked,
+			showKey: _ary_showkey,
+			between: '~',
+			display: _Setting2.default.DISPLAY_INBLOCK,
+			padding: _Setting2.default.PADDING_BASE,
+			fillet: _Setting2.default.FILLET_CIRCLE,
+			listStyle: _Setting2.default.LIST_STYLE_CIRCLE,
+			listPosition: _Setting2.default.LIST_POSITION_INNER,
+			iconPosition: _Setting2.default.ICON_POSTION_TOP,
+			iconShow: [_Setting2.default.ICON_SHOW_EMPTY_HEART, _Setting2.default.ICON_SHOW_HEART] }), document.getElementById("content4"));
+
+		_reactDom2.default.render(_react2.default.createElement(_RadioGroup2.default, {
+			onChange: handleChange,
+			outputFormat: 'array',
+			name: 'name1',
+			selectKey: _ary_selectkey,
+			inputoption: _sary_options,
+			outputResult: _data_checked,
+			showKey: _ary_showkey,
+			between: '~',
+			display: _Setting2.default.DISPLAY_BLOCK,
+			padding: _Setting2.default.PADDING_BASE,
+			fillet: _Setting2.default.FILLET_CIRCLE,
+			listStyle: _Setting2.default.LIST_STYLE_CIRCLE,
+			listPosition: _Setting2.default.LIST_POSITION_OUTER,
+			iconPosition: _Setting2.default.ICON_POSTION_LEFT,
+			iconShow: [_Setting2.default.ICON_SHOW_EMPTY_HEART, _Setting2.default.ICON_SHOW_HEART] }), document.getElementById("content5"));
+
+		_reactDom2.default.render(_react2.default.createElement(_RadioGroup2.default, {
+			onChange: handleChange,
+			outputFormat: 'array',
+			name: 'name1',
+			selectKey: _ary_selectkey,
+			inputoption: _sary_options,
+			outputResult: _data_checked,
+			showKey: _ary_showkey,
+			between: '~',
+			display: _Setting2.default.DISPLAY_BLOCK,
+			padding: _Setting2.default.PADDING_BASE,
+			fillet: _Setting2.default.FILLET_CIRCLE,
+			listStyle: _Setting2.default.LIST_STYLE_CIRCLE,
+			listPosition: _Setting2.default.LIST_POSITION_INNER,
+			iconPosition: _Setting2.default.ICON_POSTION_LEFT,
+			iconShow: [_Setting2.default.ICON_SHOW_EMPTY_HEART, _Setting2.default.ICON_SHOW_HEART] }), document.getElementById("content6"));
+
+		_reactDom2.default.render(_react2.default.createElement(_RadioGroup2.default, {
+			onChange: handleChange,
+			outputFormat: 'array',
+			name: 'name1',
+			selectKey: _ary_selectkey,
+			inputoption: _sary_options,
+			outputResult: _data_checked,
+			showKey: _ary_showkey,
+			between: '~',
+			display: _Setting2.default.DISPLAY_BLOCK,
+			padding: _Setting2.default.PADDING_BASE,
+			fillet: _Setting2.default.FILLET_CIRCLE,
+			listStyle: _Setting2.default.LIST_STYLE_CIRCLE,
+			listPosition: _Setting2.default.LIST_POSITION_OUTER,
+			iconPosition: _Setting2.default.ICON_POSTION_TOP,
+			iconShow: [_Setting2.default.ICON_SHOW_EMPTY_HEART, _Setting2.default.ICON_SHOW_HEART] }), document.getElementById("content7"));
+
+		_reactDom2.default.render(_react2.default.createElement(_RadioGroup2.default, {
+			onChange: handleChange,
+			outputFormat: 'array',
+			name: 'name1',
+			selectKey: _ary_selectkey,
+			inputoption: _sary_options,
+			outputResult: _data_checked,
+			showKey: _ary_showkey,
+			between: '~',
+			display: _Setting2.default.DISPLAY_BLOCK,
+			padding: _Setting2.default.PADDING_BASE,
+			fillet: _Setting2.default.FILLET_CIRCLE,
+			listStyle: _Setting2.default.LIST_STYLE_CIRCLE,
+			listPosition: _Setting2.default.LIST_POSITION_INNER,
+			iconPosition: _Setting2.default.ICON_POSTION_TOP,
+			iconShow: [_Setting2.default.ICON_SHOW_EMPTY_HEART, _Setting2.default.ICON_SHOW_HEART] }), document.getElementById("content8"));
+
+		// ==================
+
+		_reactDom2.default.render(_react2.default.createElement(_RadioGroup2.default, {
+			onChange: handleChange,
+			outputFormat: 'array',
+			name: 'name1',
+			selectKey: _ary_selectkey,
+			inputoption: _sary_options,
+			outputResult: _data_checked,
+			showKey: _ary_showkey,
+			between: '~',
+			display: _Setting2.default.DISPLAY_INBLOCK,
+			padding: _Setting2.default.PADDING_BASE,
+			fillet: _Setting2.default.FILLET_CIRCLE,
+			listStyle: _Setting2.default.LIST_STYLE_CIRCLE,
+			listPosition: _Setting2.default.LIST_POSITION_OUTER,
+			iconPosition: _Setting2.default.ICON_POSTION_RIGHT,
+			iconShow: [_Setting2.default.ICON_SHOW_EMPTY_HEART, _Setting2.default.ICON_SHOW_HEART] }), document.getElementById("ct1"));
+
+		_reactDom2.default.render(_react2.default.createElement(_RadioGroup2.default, {
+			onChange: handleChange,
+			outputFormat: 'array',
+			name: 'name1',
+			selectKey: _ary_selectkey,
+			inputoption: _sary_options,
+			outputResult: _data_checked,
+			showKey: _ary_showkey,
+			between: '~',
+			display: _Setting2.default.DISPLAY_INBLOCK,
+			padding: _Setting2.default.PADDING_BASE,
+			fillet: _Setting2.default.FILLET_CIRCLE,
+			listStyle: _Setting2.default.LIST_STYLE_CIRCLE,
+			listPosition: _Setting2.default.LIST_POSITION_INNER,
+			iconPosition: _Setting2.default.ICON_POSTION_RIGHT,
+			iconShow: [_Setting2.default.ICON_SHOW_EMPTY_HEART, _Setting2.default.ICON_SHOW_HEART] }), document.getElementById("ct2"));
+
+		_reactDom2.default.render(_react2.default.createElement(_RadioGroup2.default, {
+			onChange: handleChange,
+			outputFormat: 'array',
+			name: 'name1',
+			selectKey: _ary_selectkey,
+			inputoption: _sary_options,
+			outputResult: _data_checked,
+			showKey: _ary_showkey,
+			between: '~',
+			display: _Setting2.default.DISPLAY_INBLOCK,
+			padding: _Setting2.default.PADDING_BASE,
+			fillet: _Setting2.default.FILLET_CIRCLE,
+			listStyle: _Setting2.default.LIST_STYLE_CIRCLE,
+			listPosition: _Setting2.default.LIST_POSITION_OUTER,
+			iconPosition: _Setting2.default.ICON_POSTION_BOTTOM,
+			iconShow: [_Setting2.default.ICON_SHOW_EMPTY_HEART, _Setting2.default.ICON_SHOW_HEART] }), document.getElementById("ct3"));
+
+		_reactDom2.default.render(_react2.default.createElement(_RadioGroup2.default, {
+			onChange: handleChange,
+			outputFormat: 'array',
+			name: 'name1',
+			selectKey: _ary_selectkey,
+			inputoption: _sary_options,
+			outputResult: _data_checked,
+			showKey: _ary_showkey,
+			between: '~',
+			display: _Setting2.default.DISPLAY_INBLOCK,
+			padding: _Setting2.default.PADDING_BASE,
+			fillet: _Setting2.default.FILLET_CIRCLE,
+			listStyle: _Setting2.default.LIST_STYLE_CIRCLE,
+			listPosition: _Setting2.default.LIST_POSITION_INNER,
+			iconPosition: _Setting2.default.ICON_POSTION_BOTTOM,
+			iconShow: [_Setting2.default.ICON_SHOW_EMPTY_HEART, _Setting2.default.ICON_SHOW_HEART] }), document.getElementById("ct4"));
+
+		_reactDom2.default.render(_react2.default.createElement(_RadioGroup2.default, {
+			onChange: handleChange,
+			outputFormat: 'array',
+			name: 'name1',
+			selectKey: _ary_selectkey,
+			inputoption: _sary_options,
+			outputResult: _data_checked,
+			showKey: _ary_showkey,
+			between: '~',
+			display: _Setting2.default.DISPLAY_BLOCK,
+			padding: _Setting2.default.PADDING_BASE,
+			fillet: _Setting2.default.FILLET_CIRCLE,
+			listStyle: _Setting2.default.LIST_STYLE_CIRCLE,
+			listPosition: _Setting2.default.LIST_POSITION_OUTER,
+			iconPosition: _Setting2.default.ICON_POSTION_RIGHT,
+			iconShow: [_Setting2.default.ICON_SHOW_EMPTY_HEART, _Setting2.default.ICON_SHOW_HEART] }), document.getElementById("ct5"));
+
+		_reactDom2.default.render(_react2.default.createElement(_RadioGroup2.default, {
+			onChange: handleChange,
+			outputFormat: 'array',
+			name: 'name1',
+			selectKey: _ary_selectkey,
+			inputoption: _sary_options,
+			outputResult: _data_checked,
+			showKey: _ary_showkey,
+			between: '~',
+			display: _Setting2.default.DISPLAY_BLOCK,
+			padding: _Setting2.default.PADDING_BASE,
+			fillet: _Setting2.default.FILLET_CIRCLE,
+			listStyle: _Setting2.default.LIST_STYLE_CIRCLE,
+			listPosition: _Setting2.default.LIST_POSITION_INNER,
+			iconPosition: _Setting2.default.ICON_POSTION_RIGHT,
+			iconShow: [_Setting2.default.ICON_SHOW_EMPTY_HEART, _Setting2.default.ICON_SHOW_HEART] }), document.getElementById("ct6"));
+
+		_reactDom2.default.render(_react2.default.createElement(_RadioGroup2.default, {
+			onChange: handleChange,
+			outputFormat: 'array',
+			name: 'name1',
+			selectKey: _ary_selectkey,
+			inputoption: _sary_options,
+			outputResult: _data_checked,
+			showKey: _ary_showkey,
+			between: '~',
+			display: _Setting2.default.DISPLAY_BLOCK,
+			padding: _Setting2.default.PADDING_BASE,
+			fillet: _Setting2.default.FILLET_CIRCLE,
+			listStyle: _Setting2.default.LIST_STYLE_CIRCLE,
+			listPosition: _Setting2.default.LIST_POSITION_OUTER,
+			iconPosition: _Setting2.default.ICON_POSTION_BOTTOM,
+			iconShow: [_Setting2.default.ICON_SHOW_EMPTY_HEART, _Setting2.default.ICON_SHOW_HEART] }), document.getElementById("ct7"));
+
+		_reactDom2.default.render(_react2.default.createElement(_RadioGroup2.default, {
+			onChange: handleChange,
+			outputFormat: 'array',
+			name: 'name1',
+			selectKey: _ary_selectkey,
+			inputoption: _sary_options,
+			outputResult: _data_checked,
+			showKey: _ary_showkey,
+			between: '~',
+			display: _Setting2.default.DISPLAY_BLOCK,
+			padding: _Setting2.default.PADDING_BASE,
+			fillet: _Setting2.default.FILLET_CIRCLE,
+			listStyle: _Setting2.default.LIST_STYLE_CIRCLE,
+			listPosition: _Setting2.default.LIST_POSITION_INNER,
+			iconPosition: _Setting2.default.ICON_POSTION_BOTTOM,
+			iconShow: [_Setting2.default.ICON_SHOW_EMPTY_HEART, _Setting2.default.ICON_SHOW_HEART] }), document.getElementById("ct8"));
 	};
 
 	render();
-
-	// ReactDOM.render(
-	// 	<RadioGroup
-	// 		name="name2"
-	// 		selectKey={_ary_selectkey}
-	// 		inputoption={_sary_options}
-	// 		outputResult={_data_checked}
-	// 		showKey={_ary_showkey}
-	// 		between="~"
-	// 		display={Setting.DISPLAY_INBLOCK}
-	// 		padding={Setting.PADDING_BASE}
-	// 		listPosition={Setting.LIST_POSITION_INNER}
-	// 		iconPosition={Setting.ICON_POSTION_TOP}
-	// 		iconShow={[Setting.ICON_SHOW_EMPTY_HEART, Setting.ICON_SHOW_HEART]} />,
-	// 	document.getElementById("content2")
-	// );
-
-	// ReactDOM.render(
-	// 	<RadioGroup
-	// 		name="name3"
-	// 		selectKey={_ary_selectkey}
-	// 		inputoption={_sary_options}
-	// 		outputResult={_data_checked}
-	// 		showKey={_ary_showkey}
-	// 		between="~"
-	// 		display={Setting.DISPLAY_INBLOCK}
-	// 		padding={Setting.PADDING_TINY}
-	// 		listPosition={Setting.LIST_POSITION_OUTER}
-	// 		iconPosition={Setting.ICON_POSTION_BOTTOM}
-	// 		iconShow={[Setting.ICON_SHOW_EMPTY_HEART, Setting.ICON_SHOW_HEART]} />,
-	// 	document.getElementById("content3")
-	// );
-
-	// ReactDOM.render(
-	// 	<RadioGroup
-	// 		name="name4"
-	// 		selectKey={_ary_selectkey}
-	// 		inputoption={_sary_options}
-	// 		outputResult={_data_checked}
-	// 		showKey={_ary_showkey}
-	// 		between="~"
-	// 		display={Setting.DISPLAY_INBLOCK}
-	// 		padding={Setting.PADDING_BASE}
-	// 		listPosition={Setting.LIST_POSITION_INNER}
-	// 		iconPosition={Setting.ICON_POSTION_BOTTOM}
-	// 		iconShow={[Setting.ICON_SHOW_EMPTY_HEART, Setting.ICON_SHOW_HEART]} />,
-	// 	document.getElementById("content4")
-	// );
-
-	// ReactDOM.render(
-	// 	<RadioGroup
-	// 		name="name5"
-	// 		selectKey={_ary_selectkey}
-	// 		inputoption={_sary_options}
-	// 		outputResult={_data_checked}
-	// 		showKey={_ary_showkey}
-	// 		between="~"
-	// 		display={Setting.DISPLAY_INBLOCK}
-	// 		padding={Setting.PADDING_TINY}
-	// 		listPosition={Setting.LIST_POSITION_OUTER}
-	// 		iconPosition={Setting.ICON_POSTION_LEFT}
-	// 		iconShow={[Setting.ICON_SHOW_EMPTY_HEART, Setting.ICON_SHOW_HEART]} />,
-	// 	document.getElementById("content5")
-	// );
-
-	// ReactDOM.render(
-	// 	<RadioGroup
-	// 		name="name6"
-	// 		selectKey={_ary_selectkey}
-	// 		inputoption={_sary_options}
-	// 		outputResult={_data_checked}
-	// 		showKey={_ary_showkey}
-	// 		between="~"
-	// 		display={Setting.DISPLAY_INBLOCK}
-	// 		padding={Setting.PADDING_BASE}
-	// 		listPosition={Setting.LIST_POSITION_INNER}
-	// 		iconPosition={Setting.ICON_POSTION_LEFT}
-	// 		iconShow={[Setting.ICON_SHOW_EMPTY_HEART, Setting.ICON_SHOW_HEART]} />,
-	// 	document.getElementById("content6")
-	// );
-
-	// ReactDOM.render(
-	// 	<RadioGroup
-	// 		name="name7"
-	// 		selectKey={_ary_selectkey}
-	// 		inputoption={_sary_options}
-	// 		outputResult={_data_checked}
-	// 		showKey={_ary_showkey}
-	// 		between="~"
-	// 		display={Setting.DISPLAY_INBLOCK}
-	// 		padding={Setting.PADDING_TINY}
-	// 		listPosition={Setting.LIST_POSITION_OUTER}
-	// 		iconPosition={Setting.ICON_POSTION_RIGHT}
-	// 		iconShow={[Setting.ICON_SHOW_EMPTY_HEART, Setting.ICON_SHOW_HEART]} />,
-	// 	document.getElementById("content7")
-	// );
-
-	// ReactDOM.render(
-	// 	<RadioGroup
-	// 		name="name8"
-	// 		selectKey={_ary_selectkey}
-	// 		inputoption={_sary_options}
-	// 		outputResult={_data_checked}
-	// 		showKey={_ary_showkey}
-	// 		between="~"
-	// 		display={Setting.DISPLAY_INBLOCK}
-	// 		padding={Setting.PADDING_BASE}
-	// 		listPosition={Setting.LIST_POSITION_INNER}
-	// 		iconPosition={Setting.ICON_POSTION_RIGHT}
-	// 		iconShow={[Setting.ICON_SHOW_EMPTY_HEART, Setting.ICON_SHOW_HEART]} />,
-	// 	document.getElementById("content8")
-	// );
-
-	// ReactDOM.render(
-	// 	<RadioGroup
-	// 		name="name_1"
-	// 		selectKey={_ary_selectkey}
-	// 		inputoption={_sary_options}
-	// 		outputResult={_data_checked}
-	// 		showKey={_ary_showkey}
-	// 		between="~"
-	// 		display={Setting.DISPLAY_INBLOCK}
-	// 		padding={Setting.PADDING_TINY}
-	// 		listPosition={Setting.LIST_POSITION_OUTER}
-	// 		iconPosition={Setting.ICON_POSTION_TOP}
-	// 		iconShow={[Setting.ICON_SHOW_EMPTY_HEART, Setting.ICON_SHOW_HEART]} />,
-	// 	document.getElementById("ct1")
-	// );
-
-	// ReactDOM.render(
-	// 	<RadioGroup
-	// 		name="name_2"
-	// 		selectKey={_ary_selectkey}
-	// 		inputoption={_sary_options}
-	// 		outputResult={_data_checked}
-	// 		showKey={_ary_showkey}
-	// 		between="~"
-	// 		display={Setting.DISPLAY_INBLOCK}
-	// 		padding={Setting.PADDING_BASE}
-	// 		listPosition={Setting.LIST_POSITION_INNER}
-	// 		iconPosition={Setting.ICON_POSTION_TOP}
-	// 		iconShow={[Setting.ICON_SHOW_EMPTY_HEART, Setting.ICON_SHOW_HEART]} />,
-	// 	document.getElementById("ct2")
-	// );
-
-	// ReactDOM.render(
-	// 	<RadioGroup
-	// 		name="name_3"
-	// 		selectKey={_ary_selectkey}
-	// 		inputoption={_sary_options}
-	// 		outputResult={_data_checked}
-	// 		showKey={_ary_showkey}
-	// 		between="~"
-	// 		display={Setting.DISPLAY_INBLOCK}
-	// 		padding={Setting.PADDING_TINY}
-	// 		listPosition={Setting.LIST_POSITION_OUTER}
-	// 		iconPosition={Setting.ICON_POSTION_BOTTOM}
-	// 		iconShow={[Setting.ICON_SHOW_EMPTY_HEART, Setting.ICON_SHOW_HEART]} />,
-	// 	document.getElementById("ct3")
-	// );
-
-	// ReactDOM.render(
-	// 	<RadioGroup
-	// 		name="name_4"
-	// 		selectKey={_ary_selectkey}
-	// 		inputoption={_sary_options}
-	// 		outputResult={_data_checked}
-	// 		showKey={_ary_showkey}
-	// 		between="~"
-	// 		display={Setting.DISPLAY_INBLOCK}
-	// 		padding={Setting.PADDING_BASE}
-	// 		listPosition={Setting.LIST_POSITION_INNER}
-	// 		iconPosition={Setting.ICON_POSTION_BOTTOM}
-	// 		iconShow={[Setting.ICON_SHOW_EMPTY_HEART, Setting.ICON_SHOW_HEART]} />,
-	// 	document.getElementById("ct4")
-	// );
-
-	// ReactDOM.render(
-	// 	<RadioGroup
-	// 		name="name_5"
-	// 		selectKey={_ary_selectkey}
-	// 		inputoption={_sary_options}
-	// 		outputResult={_data_checked}
-	// 		showKey={_ary_showkey}
-	// 		between="~"
-	// 		display={Setting.DISPLAY_INBLOCK}
-	// 		padding={Setting.PADDING_TINY}
-	// 		listPosition={Setting.LIST_POSITION_OUTER}
-	// 		iconPosition={Setting.ICON_POSTION_LEFT}
-	// 		iconShow={[Setting.ICON_SHOW_EMPTY_HEART, Setting.ICON_SHOW_HEART]} />,
-	// 	document.getElementById("ct5")
-	// );
-
-	// ReactDOM.render(
-	// 	<RadioGroup
-	// 		name="name_6"
-	// 		selectKey={_ary_selectkey}
-	// 		inputoption={_sary_options}
-	// 		outputResult={_data_checked}
-	// 		showKey={_ary_showkey}
-	// 		between="~"
-	// 		display={Setting.DISPLAY_INBLOCK}
-	// 		padding={Setting.PADDING_BASE}
-	// 		listPosition={Setting.LIST_POSITION_INNER}
-	// 		iconPosition={Setting.ICON_POSTION_LEFT}
-	// 		iconShow={[Setting.ICON_SHOW_EMPTY_HEART, Setting.ICON_SHOW_HEART]} />,
-	// 	document.getElementById("ct6")
-	// );
-
-	// ReactDOM.render(
-	// 	<RadioGroup
-	// 		name="name_7"
-	// 		selectKey={_ary_selectkey}
-	// 		inputoption={_sary_options}
-	// 		outputResult={_data_checked}
-	// 		showKey={_ary_showkey}
-	// 		between="~"
-	// 		display={Setting.DISPLAY_INBLOCK}
-	// 		padding={Setting.PADDING_TINY}
-	// 		listPosition={Setting.LIST_POSITION_OUTER}
-	// 		iconPosition={Setting.ICON_POSTION_RIGHT}
-	// 		iconShow={[Setting.ICON_SHOW_EMPTY_HEART, Setting.ICON_SHOW_HEART]} />,
-	// 	document.getElementById("ct7")
-	// );
-
-	// ReactDOM.render(
-	// 	<RadioGroup
-	// 		name="name_8"
-	// 		selectKey={_ary_selectkey}
-	// 		inputoption={_sary_options}
-	// 		outputResult={_data_checked}
-	// 		showKey={_ary_showkey}
-	// 		between="~"
-	// 		display={Setting.DISPLAY_INBLOCK}
-	// 		padding={Setting.PADDING_BASE}
-	// 		listPosition={Setting.LIST_POSITION_INNER}
-	// 		iconPosition={Setting.ICON_POSTION_RIGHT}
-	// 		iconShow={[Setting.ICON_SHOW_EMPTY_HEART, Setting.ICON_SHOW_HEART]} />,
-	// 	document.getElementById("ct8")
-	// );
 
 	// iconShow={[Setting.ICON_SHOW_EMPTY_HEART, Setting.ICON_SHOW_HEART]}
 	// iconPosition={Setting.ICON_POSTION_TOP}
@@ -20238,7 +20258,7 @@
 				var _ClassNames,
 				    _this2 = this;
 
-				var _str_classname_all = (0, _classnames2.default)((_ClassNames = {}, _defineProperty(_ClassNames, this.props.className, !!this.props.className), _defineProperty(_ClassNames, 'pkg-checked', true), _defineProperty(_ClassNames, 'pkg-checked_disabled', this.state.disabled === _Setting2.default.DISABLED_TRUE), _defineProperty(_ClassNames, 'pkg-list', true), _defineProperty(_ClassNames, _CheckedUI2.default.getDisabled(this.props.display), true), _defineProperty(_ClassNames, _CheckedUI2.default.getPadding(this.props.padding), true), _defineProperty(_ClassNames, _CheckedUI2.default.getListStyle(this.props.listStyle), true), _defineProperty(_ClassNames, _CheckedUI2.default.getIconPosition(this.props.iconPosition), true), _defineProperty(_ClassNames, _CheckedUI2.default.getIconShow(this.props.iconShow), true), _ClassNames));
+				var _str_classname_all = (0, _classnames2.default)((_ClassNames = {}, _defineProperty(_ClassNames, this.props.className, !!this.props.className), _defineProperty(_ClassNames, 'pkg-checked', true), _defineProperty(_ClassNames, 'pkg-checked_disabled', this.state.disabled === _Setting2.default.DISABLED_TRUE), _defineProperty(_ClassNames, 'pkg-list', true), _defineProperty(_ClassNames, _CheckedUI2.default.getDisabled(this.props.display), true), _defineProperty(_ClassNames, _CheckedUI2.default.getPadding(this.props.padding), true), _defineProperty(_ClassNames, _CheckedUI2.default.getFillte(this.props.fillet), true), _defineProperty(_ClassNames, _CheckedUI2.default.getListStyle(this.props.listStyle), true), _defineProperty(_ClassNames, _CheckedUI2.default.getListPosition(this.props.listPosition), true), _defineProperty(_ClassNames, _CheckedUI2.default.getIconPosition(this.props.iconPosition), true), _defineProperty(_ClassNames, _CheckedUI2.default.getIconShow(this.props.iconShow), true), _ClassNames));
 				var _str_classname_inner = (0, _classnames2.default)({
 					'pkg-list-option': this.props.listPosition === _Setting2.default.LIST_POSITION_INNER,
 					'pkg-checked-icon': this.props.listPosition !== _Setting2.default.LIST_POSITION_INNER
@@ -20518,6 +20538,16 @@
 
 	'use strict';
 
+	Object.defineProperty(exports, "__esModule", {
+		value: true
+	});
+
+	function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+	var Setting = function Setting() {
+		_classCallCheck(this, Setting);
+	};
+
 	/*
 		有哪些排版：
 		BLOCK - block
@@ -20535,6 +20565,11 @@
 		huge - 2.5em
 	*/
 	/*
+		色彩風格：
+		none - 什麼都不加
+		gray - 淡灰階
+	 */
+	/*
 		spacing:
 		tiny - 0.2em
 		small - 0.5em
@@ -20544,13 +20579,20 @@
 		big - 1.5em
 		large - 2em
 	*/
-	/*
+	/* ?????????
 		有哪些類型：
 		原版 - clean
 		方框 - rectangle
 		按鈕 - button
 		膠囊 - capsule
 		圓形 - circle
+	*/
+	/*
+		圓角：
+		無
+		tiny - 2px
+		base - 5px
+		circle - 50%
 	*/
 	/*
 		轉變動畫：
@@ -20609,16 +20651,6 @@
 		不能作用 - true
 	*/
 
-	Object.defineProperty(exports, "__esModule", {
-		value: true
-	});
-
-	function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
-
-	var Setting = function Setting() {
-		_classCallCheck(this, Setting);
-	};
-
 	Setting.DISPLAY_BLOCK = 'block';
 	Setting.DISPLAY_INBLOCK = 'inline-block';
 	Setting.PADDING_TINY = 'tiny';
@@ -20629,6 +20661,10 @@
 	Setting.PADDING_BIG = 'big';
 	Setting.PADDING_LARGE = 'large';
 	Setting.PADDING_HUGE = 'huge';
+	Setting.FILLET_NONE = 'none';
+	Setting.FILLET_TINY = 'tiny';
+	Setting.FILLET_BASE = 'base';
+	Setting.FILLET_CIRCLE = 'circle';
 	Setting.ICON_POSTION_TOP = 'top';
 	Setting.ICON_POSTION_BOTTOM = 'bottom';
 	Setting.ICON_POSTION_LEFT = 'left';
@@ -20715,6 +20751,20 @@
 				return _str_return;
 			}
 		}, {
+			key: 'getFillte',
+			value: function getFillte(str_fillet) {
+				var _str_return = '';
+				switch (str_fillet) {
+					case _Setting2.default.FILLET_NONE:
+					case _Setting2.default.FILLET_TINY:
+					case _Setting2.default.FILLET_BASE:
+					case _Setting2.default.FILLET_CIRCLE:
+						_str_return = 'pkg-checked_fillet-' + str_fillet;
+						break;
+				}
+				return _str_return;
+			}
+		}, {
 			key: 'getIconPosition',
 			value: function getIconPosition(str_position) {
 				var _str_return = '';
@@ -20781,6 +20831,18 @@
 					case _Setting2.default.LIST_STYLE_LOWER_LATIN:
 					case _Setting2.default.LIST_STYLE_UPPER_LATIN:
 						_str_return = 'pkg-list_style-' + str_style;
+						break;
+				}
+				return _str_return;
+			}
+		}, {
+			key: 'getListPosition',
+			value: function getListPosition(str_position) {
+				var _str_return = '';
+				switch (str_position) {
+					case _Setting2.default.LIST_POSITION_OUTER:
+					case _Setting2.default.LIST_POSITION_INNER:
+						_str_return = 'pkg-checked_listposition-' + str_position;
 						break;
 				}
 				return _str_return;

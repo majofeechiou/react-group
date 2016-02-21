@@ -16,19 +16,12 @@
 
 }
 
-.pkg-checked {
+/*$num_padding_spacing: 0.5em;
 
-	/*.pkg-item {
-		.pkg-item-input {
-			position: fixed;
-			left: -300px;
-			left: -105vw;
-			top: -300px;
-			top: -105vh;
-		}
-	}*/
-
-}
+@define-extend paddingSpacing {
+	padding-left: $num_padding_spacing;
+	padding-right: $num_padding_spacing;
+}*/
 
 .pkg-checked, .pkg-checked * {
 	box-sizing: border-box;
@@ -36,7 +29,23 @@
 }
 
 .pkg-checked .pkg-checked-option {
+	border: 1px solid #ff9;
+
+}
+
+.pkg-checked .pkg-checked-icon {
 	border: 1px solid #f0f;
+	display: inline-block;
+	background: #f9c;
+
+}
+
+.pkg-checked .pkg-item .pkg-item-input {
+	position: fixed;
+	left: -300px;
+	left: -105vw;
+	top: -300px;
+	top: -105vh;
 
 }
 
@@ -57,7 +66,10 @@
 }
 
 .pkg-checked.pkg-checked_display-block .pkg-checked-option {
+
+	/* .pkg-checked-icon { */
 	display: block;
+	border: 1px solid #f00 !important;
 
 }
 
@@ -76,7 +88,10 @@
 }
 
 .pkg-checked.pkg-checked_display-inline-block .pkg-checked-option {
+
+	/* .pkg-checked-icon { */
 	display: inline-block;
+	border: 1px solid #f00 !important;
 
 }
 
@@ -119,6 +134,92 @@
 .pkg-checked.pkg-checked_padding-large .pkg-checked-icon:before, .pkg-checked.pkg-checked_padding-large .pkg-checked-icon:after, .pkg-checked.pkg-checked_padding-large .pkg-checked-icon > * {
 	padding-top: 2em;
 	padding-bottom: 2em;
+
+}
+
+/* .pkg-checked-option { */
+
+.pkg-checked.pkg-checked_fillet-none .pkg-checked-icon {
+	border-radius: 0;
+
+}
+
+/* .pkg-checked-option { */
+
+.pkg-checked.pkg-checked_fillet-tiny .pkg-checked-icon {
+	border-radius: 2px;
+
+}
+
+/* .pkg-checked-option { */
+
+.pkg-checked.pkg-checked_fillet-base .pkg-checked-icon {
+	border-radius: 5px;
+
+}
+
+/* .pkg-checked-option { */
+
+.pkg-checked.pkg-checked_fillet-circle .pkg-checked-icon {
+	border-radius: 50%;
+
+}
+
+.pkg-checked.pkg-checked_listposition-outer {
+
+	/* 設成block以確保padding為正確的 */
+
+	/*
+		listPosition={Setting.LIST_POSITION_OUTER}
+		iconPosition={Setting.ICON_POSTION_TOP} 
+		*/
+
+	/* 設成block以確保padding為正確的 */
+
+	/*
+		listPosition={Setting.LIST_POSITION_OUTER}
+		iconPosition={Setting.ICON_POSTION_BOTTOM} 
+		*/
+
+	/*&.pkg-checked_iconposition-bottom {
+			.pkg-checked-option{
+				&.pkg-list-option {
+					.pkg-checked-icon {
+						>.pkg-item {
+							display: block;
+							background: #9fc;
+						}
+					}
+				}
+			} 
+		}*/
+
+}
+
+.pkg-checked.pkg-checked_listposition-outer.pkg-checked_iconposition-top .pkg-checked-option {}
+
+.pkg-checked.pkg-checked_listposition-outer.pkg-checked_iconposition-top .pkg-checked-option.pkg-list-option .pkg-checked-icon >.pkg-item {
+	display: block;
+	background: #ff9;
+
+}
+
+.pkg-checked.pkg-checked_listposition-inner {
+
+	/* 設成block以確保padding為正確的 */
+
+	/*
+		listPosition={Setting.LIST_POSITION_INNER}
+		iconPosition={Setting.ICON_POSTION_TOP}
+		*/
+
+}
+
+.pkg-checked.pkg-checked_listposition-inner.pkg-checked_iconposition-top .pkg-checked-option, .pkg-checked.pkg-checked_listposition-inner.pkg-checked_iconposition-bottom .pkg-checked-option {}
+
+.pkg-checked.pkg-checked_listposition-inner.pkg-checked_iconposition-top .pkg-checked-option.pkg-checked-icon >.pkg-list-option, .pkg-checked.pkg-checked_listposition-inner.pkg-checked_iconposition-bottom .pkg-checked-option.pkg-checked-icon >.pkg-list-option {
+	display: block;
+	background: #fcc;
 
 }
 

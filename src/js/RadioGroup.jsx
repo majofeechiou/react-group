@@ -157,7 +157,9 @@ export default class RadioGroup extends React.Component {
 			'pkg-list': true,
 			[CheckedUI.getDisabled( this.props.display )]: true,
 			[CheckedUI.getPadding( this.props.padding )]: true,
+			[CheckedUI.getFillte( this.props.fillet )]: true,
 			[CheckedUI.getListStyle( this.props.listStyle )]: true,
+			[CheckedUI.getListPosition( this.props.listPosition )]: true,
 			[CheckedUI.getIconPosition( this.props.iconPosition )]: true,
 			[CheckedUI.getIconShow( this.props.iconShow )]: true
 		});

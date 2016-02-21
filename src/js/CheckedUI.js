@@ -33,6 +33,19 @@ export default class CheckedUI {
 		return _str_return ;
 	};
 
+	static getFillte( str_fillet ){
+		let _str_return = '';
+		switch ( str_fillet ){
+			case Setting.FILLET_NONE:
+			case Setting.FILLET_TINY:
+			case Setting.FILLET_BASE:
+			case Setting.FILLET_CIRCLE:
+				_str_return = 'pkg-checked_fillet-'+str_fillet;
+				break;
+		}
+		return _str_return ;
+	};
+
 	static getIconPosition( str_position ){
 		let _str_return = '';
 		// str_position = str_position || Setting.ICON_POSTION_LEFT ;
@@ -96,6 +109,17 @@ export default class CheckedUI {
 				break;
 		}
 		return _str_return;
+	};
+
+	static getListPosition( str_position ){
+		let _str_return = '';
+		switch ( str_position ){
+			case Setting.LIST_POSITION_OUTER:
+			case Setting.LIST_POSITION_INNER:
+				_str_return = 'pkg-checked_listposition-'+str_position;
+				break;
+		}
+		return _str_return ;
 	};
 
 }
