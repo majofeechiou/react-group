@@ -36,7 +36,8 @@
 .pkg-checked .pkg-checked-icon {
 	border: 1px solid #f0f;
 	display: inline-block;
-	background: #cdf;
+
+	/* ----- background: #cdf; */
 
 }
 
@@ -66,10 +67,9 @@
 }
 
 .pkg-checked.pkg-checked_display-block .pkg-checked-option {
-
-	/* .pkg-checked-icon { */
 	display: block;
-	border: 1px solid #f00 !important;
+
+	/* ----- border: 1px solid #f00 !important; */
 
 }
 
@@ -88,10 +88,9 @@
 }
 
 .pkg-checked.pkg-checked_display-inline-block .pkg-checked-option {
-
-	/* .pkg-checked-icon { */
 	display: inline-block;
-	border: 1px solid #f00 !important;
+
+	/* ----- border: 1px solid #f00 !important; */
 
 }
 
@@ -187,15 +186,22 @@
 
 .pkg-checked.pkg-checked_listposition-outer.pkg-checked_iconposition-top .pkg-checked-option.pkg-list-option .pkg-checked-icon >.pkg-item {
 	display: block;
-	background: #ff9;
+
+	/* ----- background: #ff9; */
 
 }
 
 .pkg-checked.pkg-checked_listposition-outer.pkg-checked_iconposition-bottom .pkg-checked-option {}
 
+.pkg-checked.pkg-checked_listposition-outer.pkg-checked_iconposition-bottom .pkg-checked-option.pkg-list-option .pkg-checked-icon {
+	display: inline-table;
+
+}
+
 .pkg-checked.pkg-checked_listposition-outer.pkg-checked_iconposition-bottom .pkg-checked-option.pkg-list-option .pkg-checked-icon >.pkg-item {
-	display: block;
-	background: #9fc;
+	display: inline-block;
+
+	/* ----- background: #9fc; */
 
 }
 
@@ -214,7 +220,8 @@
 
 .pkg-checked.pkg-checked_listposition-inner.pkg-checked_iconposition-top .pkg-checked-option.pkg-checked-icon >.pkg-list-option, .pkg-checked.pkg-checked_listposition-inner.pkg-checked_iconposition-bottom .pkg-checked-option.pkg-checked-icon >.pkg-list-option {
 	display: block;
-	background: #fcc;
+
+	/* ----- background: #fcc; */
 
 }
 
