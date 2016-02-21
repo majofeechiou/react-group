@@ -258,7 +258,7 @@ $num_fillet_circle: 50%;
 		listPosition={Setting.LIST_POSITION_OUTER}
 		iconPosition={Setting.ICON_POSTION_BOTTOM} 
 		*/
-		/*&.pkg-checked_iconposition-bottom {
+		&.pkg-checked_iconposition-bottom {
 			.pkg-checked-option{
 				&.pkg-list-option {
 					.pkg-checked-icon {
@@ -269,7 +269,7 @@ $num_fillet_circle: 50%;
 					}
 				}
 			} 
-		}*/
+		}
 	}
 
 	&.pkg-checked_listposition-inner {
@@ -364,9 +364,9 @@ $num_fillet_circle: 50%;
 	.pkg-checked-icon {
 		border: 1px solid #f0f;
 		display: inline-block;
-		background: #f9c;
+		background: #cdf;
 	}
-	
+
 	.pkg-item {
 		.pkg-item-input {
 			position: fixed;
