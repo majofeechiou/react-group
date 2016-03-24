@@ -1,4 +1,6 @@
 @import 'font'; 
+/*@import 'looks'; */
+@import 'style'; 
 
 $PADDING_TINY: tiny;
 $PADDING_SMALL: small;
@@ -358,14 +360,22 @@ $num_fillet_circle: 50%;
 	@mixin iconShow close ;
 	@mixin iconShow line ;
 
+	/* ***** 分項標準在這（參考） ***** */
 	.pkg-checked-option {
-		border: 1px solid #ff9;
+		overflow: hidden;
+		&:hover {
+			cursor: pointer;
+		}
+	}
+	/*.pkg-checked-option {
+		border: 1px solid #ff0;
+		background: #ffc; 
 	} 
 	.pkg-checked-icon {
 		border: 1px solid #f0f; 
 		display: inline-block;
-		/* ----- background: #cdf; */
-	}
+		background: #fcf; 
+	}*/
 
 	.pkg-item {
 		.pkg-item-input {

@@ -9,10 +9,48 @@
 	font-style: normal;
 
 }
-
 .pkg-checked.pkg-checked_iconposition-left .pkg-checked-icon:before, .pkg-checked.pkg-checked_iconposition-top .pkg-checked-icon:before, .pkg-checked.pkg-checked_iconposition-right .pkg-checked-icon:after, .pkg-checked.pkg-checked_iconposition-bottom .pkg-checked-icon:after {
 	font-family: MajoCpt;
 	font-style: normal;
+
+} 
+/*@import 'looks'; */
+/*
+	https://color.adobe.com/zh/library/8df9ae20-7f71-11e4-b689-0f79fc4717ce/theme/dd0fe3f2-0bd4-4148-8c29-b4e6c925d478/
+*/
+/* #FFFFFF */
+.pkg-style {}
+.pkg-style.pkg-style_spring .pkg-style-item {
+	background: #F2EAE7;
+	color: #8A7F7D;
+
+}
+.pkg-style.pkg-style_spring .pkg-style-border {
+	border: 1px solid #B2DBCD;
+
+}
+.pkg-style.pkg-style_spring .pkg-style-border.pkg-style-border_checked {
+	border-color: #F1B6AE;
+
+}
+.pkg-style.pkg-style_spring .pkg-style-icon {}
+.pkg-style.pkg-style_spring .pkg-style-icon:before, .pkg-style.pkg-style_spring .pkg-style-icon:after {
+	color: #B2DBCD;
+
+}
+.pkg-style.pkg-style_spring .pkg-style-icon.pkg-style-icon_checked {}
+.pkg-style.pkg-style_spring .pkg-style-icon.pkg-style-icon_checked:before, .pkg-style.pkg-style_spring .pkg-style-icon.pkg-style-icon_checked:after {
+	color: #F1B6AE;
+
+}
+.pkg-style.pkg-style_spring .pkg-style-iconback {}
+.pkg-style.pkg-style_spring .pkg-style-iconback:before, .pkg-style.pkg-style_spring .pkg-style-iconback:after {
+	background: rgba(178, 219, 205, 0.4);
+
+}
+.pkg-style.pkg-style_spring .pkg-style-iconback.pkg-style-iconback_checked {}
+.pkg-style.pkg-style_spring .pkg-style-iconback.pkg-style-iconback_checked:before, .pkg-style.pkg-style_spring .pkg-style-iconback.pkg-style-iconback_checked:after {
+	background: rgba(241, 182, 174, 0.4);
 
 }
 
@@ -28,18 +66,27 @@
 
 }
 
+/* ***** 分項標準在這（參考） ***** */
+
 .pkg-checked .pkg-checked-option {
-	border: 1px solid #ff9;
+	overflow: hidden
 
 }
 
-.pkg-checked .pkg-checked-icon {
-	border: 1px solid #f0f;
-	display: inline-block;
-
-	/* ----- background: #cdf; */
+.pkg-checked .pkg-checked-option:hover {
+	cursor: pointer;
 
 }
+
+/*.pkg-checked-option {
+		border: 1px solid #ff0;
+		background: #ffc; 
+	} 
+	.pkg-checked-icon {
+		border: 1px solid #f0f; 
+		display: inline-block;
+		background: #fcf; 
+	}*/
 
 .pkg-checked .pkg-item .pkg-item-input {
 	position: fixed;
@@ -67,8 +114,7 @@
 }
 
 .pkg-checked.pkg-checked_display-block .pkg-checked-option {
-	display: block;
-
+	display: block; 
 	/* ----- border: 1px solid #f00 !important; */
 
 }
@@ -88,8 +134,7 @@
 }
 
 .pkg-checked.pkg-checked_display-inline-block .pkg-checked-option {
-	display: inline-block;
-
+	display: inline-block; 
 	/* ----- border: 1px solid #f00 !important; */
 
 }
@@ -164,17 +209,13 @@
 
 }
 
-.pkg-checked.pkg-checked_listposition-outer {
-
-	/* 設成block以確保padding為正確的 */
-
+.pkg-checked.pkg-checked_listposition-outer { 
+	/* 設成block以確保padding為正確的 */ 
 	/*
 		listPosition={Setting.LIST_POSITION_OUTER}
 		iconPosition={Setting.ICON_POSTION_TOP} 
-		*/
-
-	/* 設成block以確保padding為正確的 */
-
+		*/ 
+	/* 設成block以確保padding為正確的 */ 
 	/*
 		listPosition={Setting.LIST_POSITION_OUTER}
 		iconPosition={Setting.ICON_POSTION_BOTTOM} 
@@ -185,8 +226,7 @@
 .pkg-checked.pkg-checked_listposition-outer.pkg-checked_iconposition-top .pkg-checked-option {}
 
 .pkg-checked.pkg-checked_listposition-outer.pkg-checked_iconposition-top .pkg-checked-option.pkg-list-option .pkg-checked-icon >.pkg-item {
-	display: block;
-
+	display: block; 
 	/* ----- background: #ff9; */
 
 }
@@ -199,16 +239,13 @@
 }
 
 .pkg-checked.pkg-checked_listposition-outer.pkg-checked_iconposition-bottom .pkg-checked-option.pkg-list-option .pkg-checked-icon >.pkg-item {
-	display: inline-block;
-
+	display: inline-block; 
 	/* ----- background: #9fc; */
 
 }
 
-.pkg-checked.pkg-checked_listposition-inner {
-
-	/* 設成block以確保padding為正確的 */
-
+.pkg-checked.pkg-checked_listposition-inner { 
+	/* 設成block以確保padding為正確的 */ 
 	/*
 		listPosition={Setting.LIST_POSITION_INNER}
 		iconPosition={Setting.ICON_POSTION_TOP}
@@ -219,8 +256,7 @@
 .pkg-checked.pkg-checked_listposition-inner.pkg-checked_iconposition-top .pkg-checked-option, .pkg-checked.pkg-checked_listposition-inner.pkg-checked_iconposition-bottom .pkg-checked-option {}
 
 .pkg-checked.pkg-checked_listposition-inner.pkg-checked_iconposition-top .pkg-checked-option.pkg-checked-icon >.pkg-list-option, .pkg-checked.pkg-checked_listposition-inner.pkg-checked_iconposition-bottom .pkg-checked-option.pkg-checked-icon >.pkg-list-option {
-	display: block;
-
+	display: block; 
 	/* ----- background: #fcc; */
 
 }

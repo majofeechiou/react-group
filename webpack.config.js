@@ -62,7 +62,7 @@ module.exports = {
 	},
 	postcss: function () {
 	    // return [ require('autoprefixer'), require('precss'), require('postcss-fontpath'), require("postcss-calc"), require("postcss-color") ];
-	    return [ require('autoprefixer')({browsers: ['> 1%', 'IE 7']}), require('precss'), require('postcss-fontpath'), require("postcss-calc") ];
+	    return [ require('autoprefixer')({browsers: ['> 1%', 'IE 7']}), require('precss'), require('postcss-fontpath'), require("postcss-calc"), require('postcss-color-alpha') ];
 	},
 	plugins: [
 	    // new HtmlPack({ 

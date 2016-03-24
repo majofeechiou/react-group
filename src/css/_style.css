@@ -1,0 +1,52 @@
+/*
+	https://color.adobe.com/zh/library/8df9ae20-7f71-11e4-b689-0f79fc4717ce/theme/dd0fe3f2-0bd4-4148-8c29-b4e6c925d478/
+*/
+
+$STYLE_SPRING_MAIN_BACK: #F2EAE7 ;
+$STYLE_SPRING_MAIN_TEXT: #8A7F7D ;
+$STYLE_SPRING_ICON_TEXT: #B2DBCD ;
+$STYLE_SPRING_ICON_TEXT_CHECKED: #F1B6AE ;
+$STYLE_SPRING_ICON_BACK: #B2DBCD ;
+$STYLE_SPRING_ICON_BACK_CHECKED: #F1B6AE ;
+$STYLE_SPRING_BORDER: #B2DBCD ;
+$STYLE_SPRING_BORDER_CHECKED: #F1B6AE ;
+/* #FFFFFF */
+  
+.pkg-style {
+	&.pkg-style_spring {
+		.pkg-style-item {
+			background: $STYLE_SPRING_MAIN_BACK;
+			color: $STYLE_SPRING_MAIN_TEXT;
+		}
+		.pkg-style-border {
+			border: 1px solid $STYLE_SPRING_BORDER;
+		}
+		.pkg-style-border.pkg-style-border_checked {
+			border-color: $STYLE_SPRING_BORDER_CHECKED;
+		}
+		.pkg-style-icon {
+			&:before,
+			&:after {
+				color: $STYLE_SPRING_ICON_TEXT;
+			}
+		}
+		.pkg-style-icon.pkg-style-icon_checked {
+			&:before,
+			&:after {
+				color: $STYLE_SPRING_ICON_TEXT_CHECKED;
+			}
+		}
+		.pkg-style-iconback {
+			&:before,
+			&:after {
+				background: rgba($STYLE_SPRING_ICON_BACK, 0.4);
+			}
+		}
+		.pkg-style-iconback.pkg-style-iconback_checked {
+			&:before,
+			&:after {
+				background: rgba($STYLE_SPRING_ICON_BACK_CHECKED, 0.4);
+			}
+		}
+	}
+}

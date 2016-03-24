@@ -1,0 +1,41 @@
+/*
+	https://color.adobe.com/zh/library/8df9ae20-7f71-11e4-b689-0f79fc4717ce/theme/dd0fe3f2-0bd4-4148-8c29-b4e6c925d478/
+*/
+
+$LOOKS_SPRING_MAIN_BACK: #F2EAE7 ;
+$LOOKS_SPRING_ICON_TEXT: #F1B6AE ;
+$LOOKS_SPRING_MAIN_TEXT: #8A7F7D ;
+$LOOKS_SPRING_ICON_BACK: #B2DBCD ;
+$LOOKS_SPRING_BORDER: #B2DBCD ;
+/* #FFFFFF */
+  
+.pkg-looks {
+	&.pkg-looks_spring {
+		.pkg-looks-item {
+			background: $LOOKS_SPRING_MAIN_BACK;
+			color: $LOOKS_SPRING_MAIN_TEXT;
+		}
+		/* &.pkg-looks_border { */
+			.pkg-looks-item {
+				border: 1px solid #999;
+				border-color: $LOOKS_SPRING_BORDER;
+			}
+		/* } */
+		/* &.pkg-looks_icon { */
+			.pkg-looks-icon {
+				&:before,
+				&:after {
+					color: $LOOKS_SPRING_ICON_TEXT;
+				}
+			}
+		/* } */
+		/* &.pkg-looks_iconback { */
+			.pkg-looks-icon {
+				&:before,
+				&:after {
+					background: $LOOKS_SPRING_ICON_BACK;
+				}
+			}
+		/* } */
+	}
+}

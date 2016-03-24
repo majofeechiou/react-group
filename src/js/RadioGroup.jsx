@@ -161,11 +161,17 @@ export default class RadioGroup extends React.Component {
 			[CheckedUI.getListStyle( this.props.listStyle )]: true,
 			[CheckedUI.getListPosition( this.props.listPosition )]: true,
 			[CheckedUI.getIconPosition( this.props.iconPosition )]: true,
-			[CheckedUI.getIconShow( this.props.iconShow )]: true
+			[CheckedUI.getIconShow( this.props.iconShow )]: true,
+			'pkg-style': true,
+
+			'pkg-style_spring': true,
+
 		});
 		let _str_classname_inner = ClassNames({
 			'pkg-list-option': (this.props.listPosition===Setting.LIST_POSITION_INNER),
-			'pkg-checked-icon': (this.props.listPosition!==Setting.LIST_POSITION_INNER)
+			'pkg-checked-icon': (this.props.listPosition!==Setting.LIST_POSITION_INNER),
+			'pkg-style-icon': (this.props.listPosition!==Setting.LIST_POSITION_INNER),
+			'pkg-style-iconback': (this.props.listPosition!==Setting.LIST_POSITION_INNER)
 		});
 		let _str_selectkey = this.getMainSelectKey();
 		return <div>
@@ -174,15 +180,28 @@ export default class RadioGroup extends React.Component {
 
 					let _str_classname_outer = ClassNames({
 						'pkg-checked-option': true,
+						'pkg-checked-option_checked': this.judegItemChecked(json_item),
 						'pkg-list-option': (this.props.listPosition===Setting.LIST_POSITION_OUTER),
 						'pkg-checked-icon': (this.props.listPosition!==Setting.LIST_POSITION_OUTER),
-						'pkg-checked-option_checked': this.judegItemChecked(json_item)
+						'pkg-style-icon': (this.props.listPosition!==Setting.LIST_POSITION_OUTER),
+						'pkg-style-icon_checked': ( (this.props.listPosition!==Setting.LIST_POSITION_OUTER) && this.judegItemChecked(json_item) ),
+						'pkg-style-iconback': (this.props.listPosition!==Setting.LIST_POSITION_OUTER),
+						'pkg-style-iconback_checked': ( (this.props.listPosition!==Setting.LIST_POSITION_OUTER) && this.judegItemChecked(json_item) ),
+						'pkg-style-item': true,
+						'pkg-style-item_checked': this.judegItemChecked(json_item),
+						'pkg-style-border': true,
+						'pkg-style-border_checked': this.judegItemChecked(json_item),
+					});
+
+					let _str_classname_inner_add = ClassNames({
+						'pkg-style-icon_checked': ( (this.props.listPosition!==Setting.LIST_POSITION_INNER) && this.judegItemChecked(json_item) ),
+						'pkg-style-iconback_checked': ( (this.props.listPosition!==Setting.LIST_POSITION_INNER) && this.judegItemChecked(json_item) ),
 					});
 
 					return (
 						<label key={this.props.name+'-'+_str_selectkey+'-'+json_item[_str_selectkey]+Date.now()+'-'+Math.floor(Math.random()*1000)}
 							className={_str_classname_outer}>
-							<span className={_str_classname_inner}>
+							<span className={_str_classname_inner+' '+_str_classname_inner_add}>
 								<ItemBase value={json_item[_str_selectkey]}
 									checked={this.judegItemChecked(json_item)}
 									onChange={this.handleChange}
@@ -206,7 +225,6 @@ export default class RadioGroup extends React.Component {
 
 RadioGroup.propTypes = {
 	onChange: React.PropTypes.func,
-	// type: React.PropTypes.string,
 	className: React.PropTypes.string,
     inputoption: React.PropTypes.array,
     selectKey: React.PropTypes.array,
@@ -221,7 +239,6 @@ RadioGroup.propTypes = {
     iconShow: React.PropTypes.array
 },
 RadioGroup.defaultProps = {
-	// type: 'radio',
 	className: '',
 	inputoption: [],
 	selectKey: [],

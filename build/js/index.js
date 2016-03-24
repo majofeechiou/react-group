@@ -20258,10 +20258,12 @@
 				var _ClassNames,
 				    _this2 = this;
 
-				var _str_classname_all = (0, _classnames2.default)((_ClassNames = {}, _defineProperty(_ClassNames, this.props.className, !!this.props.className), _defineProperty(_ClassNames, 'pkg-checked', true), _defineProperty(_ClassNames, 'pkg-checked_disabled', this.state.disabled === _Setting2.default.DISABLED_TRUE), _defineProperty(_ClassNames, 'pkg-list', true), _defineProperty(_ClassNames, _CheckedUI2.default.getDisabled(this.props.display), true), _defineProperty(_ClassNames, _CheckedUI2.default.getPadding(this.props.padding), true), _defineProperty(_ClassNames, _CheckedUI2.default.getFillte(this.props.fillet), true), _defineProperty(_ClassNames, _CheckedUI2.default.getListStyle(this.props.listStyle), true), _defineProperty(_ClassNames, _CheckedUI2.default.getListPosition(this.props.listPosition), true), _defineProperty(_ClassNames, _CheckedUI2.default.getIconPosition(this.props.iconPosition), true), _defineProperty(_ClassNames, _CheckedUI2.default.getIconShow(this.props.iconShow), true), _ClassNames));
+				var _str_classname_all = (0, _classnames2.default)((_ClassNames = {}, _defineProperty(_ClassNames, this.props.className, !!this.props.className), _defineProperty(_ClassNames, 'pkg-checked', true), _defineProperty(_ClassNames, 'pkg-checked_disabled', this.state.disabled === _Setting2.default.DISABLED_TRUE), _defineProperty(_ClassNames, 'pkg-list', true), _defineProperty(_ClassNames, _CheckedUI2.default.getDisabled(this.props.display), true), _defineProperty(_ClassNames, _CheckedUI2.default.getPadding(this.props.padding), true), _defineProperty(_ClassNames, _CheckedUI2.default.getFillte(this.props.fillet), true), _defineProperty(_ClassNames, _CheckedUI2.default.getListStyle(this.props.listStyle), true), _defineProperty(_ClassNames, _CheckedUI2.default.getListPosition(this.props.listPosition), true), _defineProperty(_ClassNames, _CheckedUI2.default.getIconPosition(this.props.iconPosition), true), _defineProperty(_ClassNames, _CheckedUI2.default.getIconShow(this.props.iconShow), true), _defineProperty(_ClassNames, 'pkg-style', true), _defineProperty(_ClassNames, 'pkg-style_spring', true), _ClassNames));
 				var _str_classname_inner = (0, _classnames2.default)({
 					'pkg-list-option': this.props.listPosition === _Setting2.default.LIST_POSITION_INNER,
-					'pkg-checked-icon': this.props.listPosition !== _Setting2.default.LIST_POSITION_INNER
+					'pkg-checked-icon': this.props.listPosition !== _Setting2.default.LIST_POSITION_INNER,
+					'pkg-style-icon': this.props.listPosition !== _Setting2.default.LIST_POSITION_INNER,
+					'pkg-style-iconback': this.props.listPosition !== _Setting2.default.LIST_POSITION_INNER
 				});
 				var _str_selectkey = this.getMainSelectKey();
 				return _react2.default.createElement(
@@ -20274,9 +20276,22 @@
 
 							var _str_classname_outer = (0, _classnames2.default)({
 								'pkg-checked-option': true,
+								'pkg-checked-option_checked': _this2.judegItemChecked(json_item),
 								'pkg-list-option': _this2.props.listPosition === _Setting2.default.LIST_POSITION_OUTER,
 								'pkg-checked-icon': _this2.props.listPosition !== _Setting2.default.LIST_POSITION_OUTER,
-								'pkg-checked-option_checked': _this2.judegItemChecked(json_item)
+								'pkg-style-icon': _this2.props.listPosition !== _Setting2.default.LIST_POSITION_OUTER,
+								'pkg-style-icon_checked': _this2.props.listPosition !== _Setting2.default.LIST_POSITION_OUTER && _this2.judegItemChecked(json_item),
+								'pkg-style-iconback': _this2.props.listPosition !== _Setting2.default.LIST_POSITION_OUTER,
+								'pkg-style-iconback_checked': _this2.props.listPosition !== _Setting2.default.LIST_POSITION_OUTER && _this2.judegItemChecked(json_item),
+								'pkg-style-item': true,
+								'pkg-style-item_checked': _this2.judegItemChecked(json_item),
+								'pkg-style-border': true,
+								'pkg-style-border_checked': _this2.judegItemChecked(json_item)
+							});
+
+							var _str_classname_inner_add = (0, _classnames2.default)({
+								'pkg-style-icon_checked': _this2.props.listPosition !== _Setting2.default.LIST_POSITION_INNER && _this2.judegItemChecked(json_item),
+								'pkg-style-iconback_checked': _this2.props.listPosition !== _Setting2.default.LIST_POSITION_INNER && _this2.judegItemChecked(json_item)
 							});
 
 							return _react2.default.createElement(
@@ -20285,7 +20300,7 @@
 									className: _str_classname_outer },
 								_react2.default.createElement(
 									'span',
-									{ className: _str_classname_inner },
+									{ className: _str_classname_inner + ' ' + _str_classname_inner_add },
 									_react2.default.createElement(_ItemBase2.default, { value: json_item[_str_selectkey],
 										checked: _this2.judegItemChecked(json_item),
 										onChange: _this2.handleChange,
@@ -20315,7 +20330,6 @@
 
 	RadioGroup.propTypes = {
 		onChange: _react2.default.PropTypes.func,
-		// type: React.PropTypes.string,
 		className: _react2.default.PropTypes.string,
 		inputoption: _react2.default.PropTypes.array,
 		selectKey: _react2.default.PropTypes.array,
@@ -20329,7 +20343,6 @@
 		iconPosition: _react2.default.PropTypes.string,
 		iconShow: _react2.default.PropTypes.array
 	}, RadioGroup.defaultProps = {
-		// type: 'radio',
 		className: '',
 		inputoption: [],
 		selectKey: [],
