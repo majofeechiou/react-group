@@ -19,6 +19,7 @@
 	https://color.adobe.com/zh/library/8df9ae20-7f71-11e4-b689-0f79fc4717ce/theme/dd0fe3f2-0bd4-4148-8c29-b4e6c925d478/
 */
 /* #FFFFFF */
+/* 好想用json格式合mixin去套用呀ToT */
 .pkg-style {}
 .pkg-style.pkg-style_on .pkg-style-iconback {}
 .pkg-style.pkg-style_on .pkg-style-iconback:before, .pkg-style.pkg-style_on .pkg-style-iconback:after {

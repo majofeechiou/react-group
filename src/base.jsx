@@ -58,7 +58,12 @@ function render(){
 			listStyle={Setting.LIST_STYLE_CIRCLE}
 			listPosition={Setting.LIST_POSITION_OUTER}
 			iconPosition={Setting.ICON_POSTION_LEFT}
-			iconShow={[Setting.ICON_SHOW_EMPTY_HEART, Setting.ICON_SHOW_HEART]} />, 
+			iconShow={[Setting.ICON_SHOW_EMPTY_HEART, Setting.ICON_SHOW_HEART]}
+			styleName={Setting.STYLE_NAME_SPRING}
+			styleBorder={true}
+			styleIcon={true}
+			styleIconBack={true}
+			styleList={true} />, 
 		document.getElementById("content1")
 	);
 
@@ -78,7 +83,12 @@ function render(){
 			listStyle={Setting.LIST_STYLE_CIRCLE}
 			listPosition={Setting.LIST_POSITION_INNER}
 			iconPosition={Setting.ICON_POSTION_LEFT}
-			iconShow={[Setting.ICON_SHOW_EMPTY_HEART, Setting.ICON_SHOW_HEART]} />, 
+			iconShow={[Setting.ICON_SHOW_EMPTY_HEART, Setting.ICON_SHOW_HEART]}
+			styleName={Setting.STYLE_NAME_SPRING}
+			styleBorder={true}
+			styleIcon={true}
+			styleIconBack={true}
+			styleList={true} />, 
 		document.getElementById("content2")
 	);
 
@@ -98,7 +108,12 @@ function render(){
 			listStyle={Setting.LIST_STYLE_CIRCLE}
 			listPosition={Setting.LIST_POSITION_OUTER}
 			iconPosition={Setting.ICON_POSTION_TOP}
-			iconShow={[Setting.ICON_SHOW_EMPTY_HEART, Setting.ICON_SHOW_HEART]} />, 
+			iconShow={[Setting.ICON_SHOW_EMPTY_HEART, Setting.ICON_SHOW_HEART]}
+			styleName={Setting.STYLE_NAME_SPRING}
+			styleBorder={true}
+			styleIcon={true}
+			styleIconBack={true}
+			styleList={true} />, 
 		document.getElementById("content3")
 	);
 
@@ -118,7 +133,12 @@ function render(){
 			listStyle={Setting.LIST_STYLE_CIRCLE}
 			listPosition={Setting.LIST_POSITION_INNER}
 			iconPosition={Setting.ICON_POSTION_TOP}
-			iconShow={[Setting.ICON_SHOW_EMPTY_HEART, Setting.ICON_SHOW_HEART]} />, 
+			iconShow={[Setting.ICON_SHOW_EMPTY_HEART, Setting.ICON_SHOW_HEART]}
+			styleName={Setting.STYLE_NAME_SPRING}
+			styleBorder={true}
+			styleIcon={true}
+			styleIconBack={true}
+			styleList={true} />, 
 		document.getElementById("content4")
 	);
 	
@@ -138,7 +158,12 @@ function render(){
 			listStyle={Setting.LIST_STYLE_CIRCLE}
 			listPosition={Setting.LIST_POSITION_OUTER}
 			iconPosition={Setting.ICON_POSTION_LEFT}
-			iconShow={[Setting.ICON_SHOW_EMPTY_HEART, Setting.ICON_SHOW_HEART]} />, 
+			iconShow={[Setting.ICON_SHOW_EMPTY_HEART, Setting.ICON_SHOW_HEART]}
+			styleName={Setting.STYLE_NAME_SPRING}
+			styleBorder={true}
+			styleIcon={true}
+			styleIconBack={true}
+			styleList={true} />, 
 		document.getElementById("content5")
 	);
 
@@ -158,7 +183,12 @@ function render(){
 			listStyle={Setting.LIST_STYLE_CIRCLE}
 			listPosition={Setting.LIST_POSITION_INNER}
 			iconPosition={Setting.ICON_POSTION_LEFT}
-			iconShow={[Setting.ICON_SHOW_EMPTY_HEART, Setting.ICON_SHOW_HEART]} />, 
+			iconShow={[Setting.ICON_SHOW_EMPTY_HEART, Setting.ICON_SHOW_HEART]}
+			styleName={Setting.STYLE_NAME_SPRING}
+			styleBorder={true}
+			styleIcon={true}
+			styleIconBack={true}
+			styleList={true} />, 
 		document.getElementById("content6")
 	);
 
@@ -178,7 +208,12 @@ function render(){
 			listStyle={Setting.LIST_STYLE_CIRCLE}
 			listPosition={Setting.LIST_POSITION_OUTER}
 			iconPosition={Setting.ICON_POSTION_TOP}
-			iconShow={[Setting.ICON_SHOW_EMPTY_HEART, Setting.ICON_SHOW_HEART]} />, 
+			iconShow={[Setting.ICON_SHOW_EMPTY_HEART, Setting.ICON_SHOW_HEART]}
+			styleName={Setting.STYLE_NAME_SPRING}
+			styleBorder={true}
+			styleIcon={true}
+			styleIconBack={true}
+			styleList={true} />, 
 		document.getElementById("content7")
 	);
 
@@ -198,7 +233,12 @@ function render(){
 			listStyle={Setting.LIST_STYLE_CIRCLE}
 			listPosition={Setting.LIST_POSITION_INNER}
 			iconPosition={Setting.ICON_POSTION_TOP}
-			iconShow={[Setting.ICON_SHOW_EMPTY_HEART, Setting.ICON_SHOW_HEART]} />, 
+			iconShow={[Setting.ICON_SHOW_EMPTY_HEART, Setting.ICON_SHOW_HEART]}
+			styleName={Setting.STYLE_NAME_SPRING}
+			styleBorder={true}
+			styleIcon={true}
+			styleIconBack={true}
+			styleList={true} />, 
 		document.getElementById("content8")
 	);
 
@@ -221,7 +261,12 @@ function render(){
 			listStyle={Setting.LIST_STYLE_CIRCLE}
 			listPosition={Setting.LIST_POSITION_OUTER}
 			iconPosition={Setting.ICON_POSTION_RIGHT}
-			iconShow={[Setting.ICON_SHOW_EMPTY_HEART, Setting.ICON_SHOW_HEART]} />, 
+			iconShow={[Setting.ICON_SHOW_EMPTY_HEART, Setting.ICON_SHOW_HEART]}
+			styleName={Setting.STYLE_NAME_SPRING}
+			styleBorder={true}
+			styleIcon={true}
+			styleIconBack={true}
+			styleList={true} />, 
 		document.getElementById("ct1")
 	);
 
@@ -241,7 +286,12 @@ function render(){
 			listStyle={Setting.LIST_STYLE_CIRCLE}
 			listPosition={Setting.LIST_POSITION_INNER}
 			iconPosition={Setting.ICON_POSTION_RIGHT}
-			iconShow={[Setting.ICON_SHOW_EMPTY_HEART, Setting.ICON_SHOW_HEART]} />, 
+			iconShow={[Setting.ICON_SHOW_EMPTY_HEART, Setting.ICON_SHOW_HEART]}
+			styleName={Setting.STYLE_NAME_SPRING}
+			styleBorder={true}
+			styleIcon={true}
+			styleIconBack={true}
+			styleList={true} />, 
 		document.getElementById("ct2")
 	);
 
@@ -261,7 +311,12 @@ function render(){
 			listStyle={Setting.LIST_STYLE_CIRCLE}
 			listPosition={Setting.LIST_POSITION_OUTER}
 			iconPosition={Setting.ICON_POSTION_BOTTOM}
-			iconShow={[Setting.ICON_SHOW_EMPTY_HEART, Setting.ICON_SHOW_HEART]} />, 
+			iconShow={[Setting.ICON_SHOW_EMPTY_HEART, Setting.ICON_SHOW_HEART]}
+			styleName={Setting.STYLE_NAME_SPRING}
+			styleBorder={true}
+			styleIcon={true}
+			styleIconBack={true}
+			styleList={true} />, 
 		document.getElementById("ct3")
 	);
 
@@ -281,7 +336,12 @@ function render(){
 			listStyle={Setting.LIST_STYLE_CIRCLE}
 			listPosition={Setting.LIST_POSITION_INNER}
 			iconPosition={Setting.ICON_POSTION_BOTTOM}
-			iconShow={[Setting.ICON_SHOW_EMPTY_HEART, Setting.ICON_SHOW_HEART]} />, 
+			iconShow={[Setting.ICON_SHOW_EMPTY_HEART, Setting.ICON_SHOW_HEART]}
+			styleName={Setting.STYLE_NAME_SPRING}
+			styleBorder={true}
+			styleIcon={true}
+			styleIconBack={true}
+			styleList={true} />, 
 		document.getElementById("ct4")
 	);
 	
@@ -301,7 +361,12 @@ function render(){
 			listStyle={Setting.LIST_STYLE_CIRCLE}
 			listPosition={Setting.LIST_POSITION_OUTER}
 			iconPosition={Setting.ICON_POSTION_RIGHT}
-			iconShow={[Setting.ICON_SHOW_EMPTY_HEART, Setting.ICON_SHOW_HEART]} />, 
+			iconShow={[Setting.ICON_SHOW_EMPTY_HEART, Setting.ICON_SHOW_HEART]}
+			styleName={Setting.STYLE_NAME_SPRING}
+			styleBorder={true}
+			styleIcon={true}
+			styleIconBack={true}
+			styleList={true} />, 
 		document.getElementById("ct5")
 	);
 
@@ -321,7 +386,12 @@ function render(){
 			listStyle={Setting.LIST_STYLE_CIRCLE}
 			listPosition={Setting.LIST_POSITION_INNER}
 			iconPosition={Setting.ICON_POSTION_RIGHT}
-			iconShow={[Setting.ICON_SHOW_EMPTY_HEART, Setting.ICON_SHOW_HEART]} />, 
+			iconShow={[Setting.ICON_SHOW_EMPTY_HEART, Setting.ICON_SHOW_HEART]}
+			styleName={Setting.STYLE_NAME_SPRING}
+			styleBorder={true}
+			styleIcon={true}
+			styleIconBack={true}
+			styleList={true} />, 
 		document.getElementById("ct6")
 	);
 
@@ -341,7 +411,12 @@ function render(){
 			listStyle={Setting.LIST_STYLE_CIRCLE}
 			listPosition={Setting.LIST_POSITION_OUTER}
 			iconPosition={Setting.ICON_POSTION_BOTTOM}
-			iconShow={[Setting.ICON_SHOW_EMPTY_HEART, Setting.ICON_SHOW_HEART]} />, 
+			iconShow={[Setting.ICON_SHOW_EMPTY_HEART, Setting.ICON_SHOW_HEART]}
+			styleName={Setting.STYLE_NAME_SPRING}
+			styleBorder={true}
+			styleIcon={true}
+			styleIconBack={true}
+			styleList={true} />, 
 		document.getElementById("ct7")
 	);
 
@@ -361,7 +436,12 @@ function render(){
 			listStyle={Setting.LIST_STYLE_CIRCLE}
 			listPosition={Setting.LIST_POSITION_INNER}
 			iconPosition={Setting.ICON_POSTION_BOTTOM}
-			iconShow={[Setting.ICON_SHOW_EMPTY_HEART, Setting.ICON_SHOW_HEART]} />, 
+			iconShow={[Setting.ICON_SHOW_EMPTY_HEART, Setting.ICON_SHOW_HEART]}
+			styleName={Setting.STYLE_NAME_SPRING}
+			styleBorder={true}
+			styleIcon={true}
+			styleIconBack={true}
+			styleList={true} />, 
 		document.getElementById("ct8")
 	);
 

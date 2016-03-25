@@ -54,6 +54,9 @@ export default class Setting {
 	static LIST_STYLE_LOWER_LATIN = 'lower-latin'; // 小寫的拉丁字母
 	static LIST_STYLE_UPPER_LATIN = 'upper-latin'; // 大寫的拉丁字母
 
+	// 色彩風格
+	static STYLE_NAME_SPRING = 'spring'; // 春天
+
 	// 能不能作用（disabled）
 	static DISABLED_TRUE = true;
 	static DISABLED_FALSE = false;

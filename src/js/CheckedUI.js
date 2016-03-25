@@ -122,4 +122,14 @@ export default class CheckedUI {
 		return _str_return ;
 	};
 
+	static getStyleName( str_style ){
+		str_style = str_style || '' ;
+		let _ary_style = [Setting.STYLE_NAME_SPRING];
+		if( _ary_style.indexOf(str_style)>=0 ){
+			return 'pkg-style pkg-style_on pkg-style_'+str_style;
+		}else{
+			return 'pkg-style';
+		}
+	}
+
 }

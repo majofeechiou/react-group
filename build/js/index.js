@@ -127,7 +127,12 @@
 			listStyle: _Setting2.default.LIST_STYLE_CIRCLE,
 			listPosition: _Setting2.default.LIST_POSITION_OUTER,
 			iconPosition: _Setting2.default.ICON_POSTION_LEFT,
-			iconShow: [_Setting2.default.ICON_SHOW_EMPTY_HEART, _Setting2.default.ICON_SHOW_HEART] }), document.getElementById("content1"));
+			iconShow: [_Setting2.default.ICON_SHOW_EMPTY_HEART, _Setting2.default.ICON_SHOW_HEART],
+			styleName: _Setting2.default.STYLE_NAME_SPRING,
+			styleBorder: true,
+			styleIcon: true,
+			styleIconBack: true,
+			styleList: true }), document.getElementById("content1"));
 
 		_reactDom2.default.render(_react2.default.createElement(_RadioGroup2.default, {
 			onChange: handleChange,
@@ -144,7 +149,12 @@
 			listStyle: _Setting2.default.LIST_STYLE_CIRCLE,
 			listPosition: _Setting2.default.LIST_POSITION_INNER,
 			iconPosition: _Setting2.default.ICON_POSTION_LEFT,
-			iconShow: [_Setting2.default.ICON_SHOW_EMPTY_HEART, _Setting2.default.ICON_SHOW_HEART] }), document.getElementById("content2"));
+			iconShow: [_Setting2.default.ICON_SHOW_EMPTY_HEART, _Setting2.default.ICON_SHOW_HEART],
+			styleName: _Setting2.default.STYLE_NAME_SPRING,
+			styleBorder: true,
+			styleIcon: true,
+			styleIconBack: true,
+			styleList: true }), document.getElementById("content2"));
 
 		_reactDom2.default.render(_react2.default.createElement(_RadioGroup2.default, {
 			onChange: handleChange,
@@ -161,7 +171,12 @@
 			listStyle: _Setting2.default.LIST_STYLE_CIRCLE,
 			listPosition: _Setting2.default.LIST_POSITION_OUTER,
 			iconPosition: _Setting2.default.ICON_POSTION_TOP,
-			iconShow: [_Setting2.default.ICON_SHOW_EMPTY_HEART, _Setting2.default.ICON_SHOW_HEART] }), document.getElementById("content3"));
+			iconShow: [_Setting2.default.ICON_SHOW_EMPTY_HEART, _Setting2.default.ICON_SHOW_HEART],
+			styleName: _Setting2.default.STYLE_NAME_SPRING,
+			styleBorder: true,
+			styleIcon: true,
+			styleIconBack: true,
+			styleList: true }), document.getElementById("content3"));
 
 		_reactDom2.default.render(_react2.default.createElement(_RadioGroup2.default, {
 			onChange: handleChange,
@@ -178,7 +193,12 @@
 			listStyle: _Setting2.default.LIST_STYLE_CIRCLE,
 			listPosition: _Setting2.default.LIST_POSITION_INNER,
 			iconPosition: _Setting2.default.ICON_POSTION_TOP,
-			iconShow: [_Setting2.default.ICON_SHOW_EMPTY_HEART, _Setting2.default.ICON_SHOW_HEART] }), document.getElementById("content4"));
+			iconShow: [_Setting2.default.ICON_SHOW_EMPTY_HEART, _Setting2.default.ICON_SHOW_HEART],
+			styleName: _Setting2.default.STYLE_NAME_SPRING,
+			styleBorder: true,
+			styleIcon: true,
+			styleIconBack: true,
+			styleList: true }), document.getElementById("content4"));
 
 		_reactDom2.default.render(_react2.default.createElement(_RadioGroup2.default, {
 			onChange: handleChange,
@@ -195,7 +215,12 @@
 			listStyle: _Setting2.default.LIST_STYLE_CIRCLE,
 			listPosition: _Setting2.default.LIST_POSITION_OUTER,
 			iconPosition: _Setting2.default.ICON_POSTION_LEFT,
-			iconShow: [_Setting2.default.ICON_SHOW_EMPTY_HEART, _Setting2.default.ICON_SHOW_HEART] }), document.getElementById("content5"));
+			iconShow: [_Setting2.default.ICON_SHOW_EMPTY_HEART, _Setting2.default.ICON_SHOW_HEART],
+			styleName: _Setting2.default.STYLE_NAME_SPRING,
+			styleBorder: true,
+			styleIcon: true,
+			styleIconBack: true,
+			styleList: true }), document.getElementById("content5"));
 
 		_reactDom2.default.render(_react2.default.createElement(_RadioGroup2.default, {
 			onChange: handleChange,
@@ -212,7 +237,12 @@
 			listStyle: _Setting2.default.LIST_STYLE_CIRCLE,
 			listPosition: _Setting2.default.LIST_POSITION_INNER,
 			iconPosition: _Setting2.default.ICON_POSTION_LEFT,
-			iconShow: [_Setting2.default.ICON_SHOW_EMPTY_HEART, _Setting2.default.ICON_SHOW_HEART] }), document.getElementById("content6"));
+			iconShow: [_Setting2.default.ICON_SHOW_EMPTY_HEART, _Setting2.default.ICON_SHOW_HEART],
+			styleName: _Setting2.default.STYLE_NAME_SPRING,
+			styleBorder: true,
+			styleIcon: true,
+			styleIconBack: true,
+			styleList: true }), document.getElementById("content6"));
 
 		_reactDom2.default.render(_react2.default.createElement(_RadioGroup2.default, {
 			onChange: handleChange,
@@ -229,7 +259,12 @@
 			listStyle: _Setting2.default.LIST_STYLE_CIRCLE,
 			listPosition: _Setting2.default.LIST_POSITION_OUTER,
 			iconPosition: _Setting2.default.ICON_POSTION_TOP,
-			iconShow: [_Setting2.default.ICON_SHOW_EMPTY_HEART, _Setting2.default.ICON_SHOW_HEART] }), document.getElementById("content7"));
+			iconShow: [_Setting2.default.ICON_SHOW_EMPTY_HEART, _Setting2.default.ICON_SHOW_HEART],
+			styleName: _Setting2.default.STYLE_NAME_SPRING,
+			styleBorder: true,
+			styleIcon: true,
+			styleIconBack: true,
+			styleList: true }), document.getElementById("content7"));
 
 		_reactDom2.default.render(_react2.default.createElement(_RadioGroup2.default, {
 			onChange: handleChange,
@@ -246,7 +281,12 @@
 			listStyle: _Setting2.default.LIST_STYLE_CIRCLE,
 			listPosition: _Setting2.default.LIST_POSITION_INNER,
 			iconPosition: _Setting2.default.ICON_POSTION_TOP,
-			iconShow: [_Setting2.default.ICON_SHOW_EMPTY_HEART, _Setting2.default.ICON_SHOW_HEART] }), document.getElementById("content8"));
+			iconShow: [_Setting2.default.ICON_SHOW_EMPTY_HEART, _Setting2.default.ICON_SHOW_HEART],
+			styleName: _Setting2.default.STYLE_NAME_SPRING,
+			styleBorder: true,
+			styleIcon: true,
+			styleIconBack: true,
+			styleList: true }), document.getElementById("content8"));
 
 		// ==================
 
@@ -265,7 +305,12 @@
 			listStyle: _Setting2.default.LIST_STYLE_CIRCLE,
 			listPosition: _Setting2.default.LIST_POSITION_OUTER,
 			iconPosition: _Setting2.default.ICON_POSTION_RIGHT,
-			iconShow: [_Setting2.default.ICON_SHOW_EMPTY_HEART, _Setting2.default.ICON_SHOW_HEART] }), document.getElementById("ct1"));
+			iconShow: [_Setting2.default.ICON_SHOW_EMPTY_HEART, _Setting2.default.ICON_SHOW_HEART],
+			styleName: _Setting2.default.STYLE_NAME_SPRING,
+			styleBorder: true,
+			styleIcon: true,
+			styleIconBack: true,
+			styleList: true }), document.getElementById("ct1"));
 
 		_reactDom2.default.render(_react2.default.createElement(_RadioGroup2.default, {
 			onChange: handleChange,
@@ -282,7 +327,12 @@
 			listStyle: _Setting2.default.LIST_STYLE_CIRCLE,
 			listPosition: _Setting2.default.LIST_POSITION_INNER,
 			iconPosition: _Setting2.default.ICON_POSTION_RIGHT,
-			iconShow: [_Setting2.default.ICON_SHOW_EMPTY_HEART, _Setting2.default.ICON_SHOW_HEART] }), document.getElementById("ct2"));
+			iconShow: [_Setting2.default.ICON_SHOW_EMPTY_HEART, _Setting2.default.ICON_SHOW_HEART],
+			styleName: _Setting2.default.STYLE_NAME_SPRING,
+			styleBorder: true,
+			styleIcon: true,
+			styleIconBack: true,
+			styleList: true }), document.getElementById("ct2"));
 
 		_reactDom2.default.render(_react2.default.createElement(_RadioGroup2.default, {
 			onChange: handleChange,
@@ -299,7 +349,12 @@
 			listStyle: _Setting2.default.LIST_STYLE_CIRCLE,
 			listPosition: _Setting2.default.LIST_POSITION_OUTER,
 			iconPosition: _Setting2.default.ICON_POSTION_BOTTOM,
-			iconShow: [_Setting2.default.ICON_SHOW_EMPTY_HEART, _Setting2.default.ICON_SHOW_HEART] }), document.getElementById("ct3"));
+			iconShow: [_Setting2.default.ICON_SHOW_EMPTY_HEART, _Setting2.default.ICON_SHOW_HEART],
+			styleName: _Setting2.default.STYLE_NAME_SPRING,
+			styleBorder: true,
+			styleIcon: true,
+			styleIconBack: true,
+			styleList: true }), document.getElementById("ct3"));
 
 		_reactDom2.default.render(_react2.default.createElement(_RadioGroup2.default, {
 			onChange: handleChange,
@@ -316,7 +371,12 @@
 			listStyle: _Setting2.default.LIST_STYLE_CIRCLE,
 			listPosition: _Setting2.default.LIST_POSITION_INNER,
 			iconPosition: _Setting2.default.ICON_POSTION_BOTTOM,
-			iconShow: [_Setting2.default.ICON_SHOW_EMPTY_HEART, _Setting2.default.ICON_SHOW_HEART] }), document.getElementById("ct4"));
+			iconShow: [_Setting2.default.ICON_SHOW_EMPTY_HEART, _Setting2.default.ICON_SHOW_HEART],
+			styleName: _Setting2.default.STYLE_NAME_SPRING,
+			styleBorder: true,
+			styleIcon: true,
+			styleIconBack: true,
+			styleList: true }), document.getElementById("ct4"));
 
 		_reactDom2.default.render(_react2.default.createElement(_RadioGroup2.default, {
 			onChange: handleChange,
@@ -333,7 +393,12 @@
 			listStyle: _Setting2.default.LIST_STYLE_CIRCLE,
 			listPosition: _Setting2.default.LIST_POSITION_OUTER,
 			iconPosition: _Setting2.default.ICON_POSTION_RIGHT,
-			iconShow: [_Setting2.default.ICON_SHOW_EMPTY_HEART, _Setting2.default.ICON_SHOW_HEART] }), document.getElementById("ct5"));
+			iconShow: [_Setting2.default.ICON_SHOW_EMPTY_HEART, _Setting2.default.ICON_SHOW_HEART],
+			styleName: _Setting2.default.STYLE_NAME_SPRING,
+			styleBorder: true,
+			styleIcon: true,
+			styleIconBack: true,
+			styleList: true }), document.getElementById("ct5"));
 
 		_reactDom2.default.render(_react2.default.createElement(_RadioGroup2.default, {
 			onChange: handleChange,
@@ -350,7 +415,12 @@
 			listStyle: _Setting2.default.LIST_STYLE_CIRCLE,
 			listPosition: _Setting2.default.LIST_POSITION_INNER,
 			iconPosition: _Setting2.default.ICON_POSTION_RIGHT,
-			iconShow: [_Setting2.default.ICON_SHOW_EMPTY_HEART, _Setting2.default.ICON_SHOW_HEART] }), document.getElementById("ct6"));
+			iconShow: [_Setting2.default.ICON_SHOW_EMPTY_HEART, _Setting2.default.ICON_SHOW_HEART],
+			styleName: _Setting2.default.STYLE_NAME_SPRING,
+			styleBorder: true,
+			styleIcon: true,
+			styleIconBack: true,
+			styleList: true }), document.getElementById("ct6"));
 
 		_reactDom2.default.render(_react2.default.createElement(_RadioGroup2.default, {
 			onChange: handleChange,
@@ -367,7 +437,12 @@
 			listStyle: _Setting2.default.LIST_STYLE_CIRCLE,
 			listPosition: _Setting2.default.LIST_POSITION_OUTER,
 			iconPosition: _Setting2.default.ICON_POSTION_BOTTOM,
-			iconShow: [_Setting2.default.ICON_SHOW_EMPTY_HEART, _Setting2.default.ICON_SHOW_HEART] }), document.getElementById("ct7"));
+			iconShow: [_Setting2.default.ICON_SHOW_EMPTY_HEART, _Setting2.default.ICON_SHOW_HEART],
+			styleName: _Setting2.default.STYLE_NAME_SPRING,
+			styleBorder: true,
+			styleIcon: true,
+			styleIconBack: true,
+			styleList: true }), document.getElementById("ct7"));
 
 		_reactDom2.default.render(_react2.default.createElement(_RadioGroup2.default, {
 			onChange: handleChange,
@@ -384,7 +459,12 @@
 			listStyle: _Setting2.default.LIST_STYLE_CIRCLE,
 			listPosition: _Setting2.default.LIST_POSITION_INNER,
 			iconPosition: _Setting2.default.ICON_POSTION_BOTTOM,
-			iconShow: [_Setting2.default.ICON_SHOW_EMPTY_HEART, _Setting2.default.ICON_SHOW_HEART] }), document.getElementById("ct8"));
+			iconShow: [_Setting2.default.ICON_SHOW_EMPTY_HEART, _Setting2.default.ICON_SHOW_HEART],
+			styleName: _Setting2.default.STYLE_NAME_SPRING,
+			styleBorder: true,
+			styleIcon: true,
+			styleIconBack: true,
+			styleList: true }), document.getElementById("ct8"));
 	};
 
 	render();
@@ -20258,13 +20338,13 @@
 				var _ClassNames,
 				    _this2 = this;
 
-				var _str_classname_all = (0, _classnames2.default)((_ClassNames = {}, _defineProperty(_ClassNames, this.props.className, !!this.props.className), _defineProperty(_ClassNames, 'pkg-checked', true), _defineProperty(_ClassNames, 'pkg-checked_disabled', this.state.disabled === _Setting2.default.DISABLED_TRUE), _defineProperty(_ClassNames, 'pkg-list', true), _defineProperty(_ClassNames, _CheckedUI2.default.getDisabled(this.props.display), true), _defineProperty(_ClassNames, _CheckedUI2.default.getPadding(this.props.padding), true), _defineProperty(_ClassNames, _CheckedUI2.default.getFillte(this.props.fillet), true), _defineProperty(_ClassNames, _CheckedUI2.default.getListStyle(this.props.listStyle), true), _defineProperty(_ClassNames, _CheckedUI2.default.getListPosition(this.props.listPosition), true), _defineProperty(_ClassNames, _CheckedUI2.default.getIconPosition(this.props.iconPosition), true), _defineProperty(_ClassNames, _CheckedUI2.default.getIconShow(this.props.iconShow), true), _defineProperty(_ClassNames, 'pkg-style', true), _defineProperty(_ClassNames, 'pkg-style_on pkg-style_spring', true), _ClassNames));
+				var _str_classname_all = (0, _classnames2.default)((_ClassNames = {}, _defineProperty(_ClassNames, this.props.className, !!this.props.className), _defineProperty(_ClassNames, 'pkg-checked', true), _defineProperty(_ClassNames, 'pkg-checked_disabled', this.state.disabled === _Setting2.default.DISABLED_TRUE), _defineProperty(_ClassNames, 'pkg-list', true), _defineProperty(_ClassNames, _CheckedUI2.default.getDisabled(this.props.display), true), _defineProperty(_ClassNames, _CheckedUI2.default.getPadding(this.props.padding), true), _defineProperty(_ClassNames, _CheckedUI2.default.getFillte(this.props.fillet), true), _defineProperty(_ClassNames, _CheckedUI2.default.getListStyle(this.props.listStyle), true), _defineProperty(_ClassNames, _CheckedUI2.default.getListPosition(this.props.listPosition), true), _defineProperty(_ClassNames, _CheckedUI2.default.getIconPosition(this.props.iconPosition), true), _defineProperty(_ClassNames, _CheckedUI2.default.getIconShow(this.props.iconShow), true), _defineProperty(_ClassNames, _CheckedUI2.default.getStyleName(this.props.styleName), true), _ClassNames));
 				var _str_classname_inner = (0, _classnames2.default)({
 					'pkg-list-option': this.props.listPosition === _Setting2.default.LIST_POSITION_INNER,
 					'pkg-checked-icon': this.props.listPosition !== _Setting2.default.LIST_POSITION_INNER,
-					'pkg-style-icon': this.props.listPosition !== _Setting2.default.LIST_POSITION_INNER,
-					'pkg-style-iconback': this.props.listPosition !== _Setting2.default.LIST_POSITION_INNER,
-					'pkg-style-list': this.props.listPosition === _Setting2.default.LIST_POSITION_INNER
+					'pkg-style-icon': this.props.styleIcon === true && this.props.listPosition !== _Setting2.default.LIST_POSITION_INNER,
+					'pkg-style-iconback': this.props.styleIconBack === true && this.props.listPosition !== _Setting2.default.LIST_POSITION_INNER,
+					'pkg-style-list': this.props.styleList === true && this.props.listPosition === _Setting2.default.LIST_POSITION_INNER
 				});
 				var _str_selectkey = this.getMainSelectKey();
 				return _react2.default.createElement(
@@ -20280,22 +20360,23 @@
 								'pkg-checked-option_checked': _this2.judegItemChecked(json_item),
 								'pkg-list-option': _this2.props.listPosition === _Setting2.default.LIST_POSITION_OUTER,
 								'pkg-checked-icon': _this2.props.listPosition !== _Setting2.default.LIST_POSITION_OUTER,
-								'pkg-style-icon': _this2.props.listPosition !== _Setting2.default.LIST_POSITION_OUTER,
-								'pkg-style-icon_checked': _this2.props.listPosition !== _Setting2.default.LIST_POSITION_OUTER && _this2.judegItemChecked(json_item),
-								'pkg-style-iconback': _this2.props.listPosition !== _Setting2.default.LIST_POSITION_OUTER,
-								'pkg-style-iconback_checked': _this2.props.listPosition !== _Setting2.default.LIST_POSITION_OUTER && _this2.judegItemChecked(json_item),
+
 								'pkg-style-item': true,
 								'pkg-style-item_checked': _this2.judegItemChecked(json_item),
-								'pkg-style-border': true,
-								'pkg-style-border_checked': _this2.judegItemChecked(json_item),
-								'pkg-style-list': _this2.props.listPosition === _Setting2.default.LIST_POSITION_OUTER,
-								'pkg-style-list_checked': _this2.props.listPosition === _Setting2.default.LIST_POSITION_OUTER && _this2.judegItemChecked(json_item)
+								'pkg-style-icon': _this2.props.styleIcon === true && _this2.props.listPosition !== _Setting2.default.LIST_POSITION_OUTER,
+								'pkg-style-icon_checked': _this2.props.styleIcon === true && _this2.props.listPosition !== _Setting2.default.LIST_POSITION_OUTER && _this2.judegItemChecked(json_item),
+								'pkg-style-iconback': _this2.props.styleIconBack === true && _this2.props.listPosition !== _Setting2.default.LIST_POSITION_OUTER,
+								'pkg-style-iconback_checked': _this2.props.styleIconBack === true && _this2.props.listPosition !== _Setting2.default.LIST_POSITION_OUTER && _this2.judegItemChecked(json_item),
+								'pkg-style-border': _this2.props.styleBorder === true,
+								'pkg-style-border_checked': _this2.props.styleBorder === true && _this2.judegItemChecked(json_item),
+								'pkg-style-list': _this2.props.styleList === true && _this2.props.listPosition === _Setting2.default.LIST_POSITION_OUTER,
+								'pkg-style-list_checked': _this2.props.styleList === true && _this2.props.listPosition === _Setting2.default.LIST_POSITION_OUTER && _this2.judegItemChecked(json_item)
 							});
 
 							var _str_classname_inner_add = (0, _classnames2.default)({
-								'pkg-style-icon_checked': _this2.props.listPosition !== _Setting2.default.LIST_POSITION_INNER && _this2.judegItemChecked(json_item),
-								'pkg-style-iconback_checked': _this2.props.listPosition !== _Setting2.default.LIST_POSITION_INNER && _this2.judegItemChecked(json_item),
-								'pkg-style-list_checked': _this2.props.listPosition === _Setting2.default.LIST_POSITION_INNER && _this2.judegItemChecked(json_item)
+								'pkg-style-icon_checked': _this2.props.styleIcon === true && _this2.props.listPosition !== _Setting2.default.LIST_POSITION_INNER && _this2.judegItemChecked(json_item),
+								'pkg-style-iconback_checked': _this2.props.styleIconBack === true && _this2.props.listPosition !== _Setting2.default.LIST_POSITION_INNER && _this2.judegItemChecked(json_item),
+								'pkg-style-list_checked': _this2.props.styleList === true && _this2.props.listPosition === _Setting2.default.LIST_POSITION_INNER && _this2.judegItemChecked(json_item)
 							});
 
 							return _react2.default.createElement(
@@ -20339,25 +20420,33 @@
 		selectKey: _react2.default.PropTypes.array,
 		showKey: _react2.default.PropTypes.array,
 		between: _react2.default.PropTypes.string,
-		outputFormat: _react2.default.PropTypes.string,
-		// outputResult: React.PropTypes.object,
+		outputFormat: _react2.default.PropTypes.string.isRequired,
 		display: _react2.default.PropTypes.string,
 		listStyle: _react2.default.PropTypes.string,
 		listPosition: _react2.default.PropTypes.string,
 		iconPosition: _react2.default.PropTypes.string,
-		iconShow: _react2.default.PropTypes.array
+		iconShow: _react2.default.PropTypes.array,
+		styleName: _react2.default.PropTypes.string,
+		styleBorder: _react2.default.PropTypes.bool,
+		styleIcon: _react2.default.PropTypes.bool,
+		styleIconBack: _react2.default.PropTypes.bool,
+		styleList: _react2.default.PropTypes.bool
 	}, RadioGroup.defaultProps = {
 		className: '',
 		inputoption: [],
 		selectKey: [],
 		showKey: [],
 		between: '',
-		// outputResult: {},
 		display: _Setting2.default.DISPLAY_INBLOCK,
 		listStyle: '',
 		listPosition: _Setting2.default.LIST_POSITION_INNER,
 		iconPosition: _Setting2.default.ICON_POSTION_LEFT,
-		iconShow: []
+		iconShow: [],
+		styleName: '',
+		styleBorder: false,
+		styleIcon: false,
+		styleIconBack: false,
+		styleList: false
 	};
 
 /***/ },
@@ -20706,6 +20795,7 @@
 	Setting.LIST_STYLE_LOWER_GREEK = 'lower-greek';
 	Setting.LIST_STYLE_LOWER_LATIN = 'lower-latin';
 	Setting.LIST_STYLE_UPPER_LATIN = 'upper-latin';
+	Setting.STYLE_NAME_SPRING = 'spring';
 	Setting.DISABLED_TRUE = true;
 	Setting.DISABLED_FALSE = false;
 	exports.default = Setting;
@@ -20863,6 +20953,17 @@
 						break;
 				}
 				return _str_return;
+			}
+		}, {
+			key: 'getStyleName',
+			value: function getStyleName(str_style) {
+				str_style = str_style || '';
+				var _ary_style = [_Setting2.default.STYLE_NAME_SPRING];
+				if (_ary_style.indexOf(str_style) >= 0) {
+					return 'pkg-style pkg-style_on pkg-style_' + str_style;
+				} else {
+					return 'pkg-style';
+				}
 			}
 		}]);
 
