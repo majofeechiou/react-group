@@ -20,6 +20,12 @@
 */
 /* #FFFFFF */
 .pkg-style {}
+.pkg-style.pkg-style_on .pkg-style-iconback {}
+.pkg-style.pkg-style_on .pkg-style-iconback:before, .pkg-style.pkg-style_on .pkg-style-iconback:after {
+	padding-left: 0.5em;
+	padding-right: 0.5em;
+
+}
 .pkg-style.pkg-style_spring .pkg-style-item {
 	background: #F2EAE7;
 	color: #8A7F7D;
@@ -33,13 +39,13 @@
 	border-color: #F1B6AE;
 
 }
-.pkg-style.pkg-style_spring .pkg-style-icon {}
-.pkg-style.pkg-style_spring .pkg-style-icon:before, .pkg-style.pkg-style_spring .pkg-style-icon:after {
+.pkg-style.pkg-style_spring .pkg-style-list, .pkg-style.pkg-style_spring .pkg-style-icon {}
+.pkg-style.pkg-style_spring .pkg-style-list:before, .pkg-style.pkg-style_spring .pkg-style-list:after, .pkg-style.pkg-style_spring .pkg-style-icon:before, .pkg-style.pkg-style_spring .pkg-style-icon:after {
 	color: #B2DBCD;
 
 }
-.pkg-style.pkg-style_spring .pkg-style-icon.pkg-style-icon_checked {}
-.pkg-style.pkg-style_spring .pkg-style-icon.pkg-style-icon_checked:before, .pkg-style.pkg-style_spring .pkg-style-icon.pkg-style-icon_checked:after {
+.pkg-style.pkg-style_spring .pkg-style-list.pkg-style-list_checked, .pkg-style.pkg-style_spring .pkg-style-icon.pkg-style-icon_checked {}
+.pkg-style.pkg-style_spring .pkg-style-list.pkg-style-list_checked:before, .pkg-style.pkg-style_spring .pkg-style-list.pkg-style-list_checked:after, .pkg-style.pkg-style_spring .pkg-style-icon.pkg-style-icon_checked:before, .pkg-style.pkg-style_spring .pkg-style-icon.pkg-style-icon_checked:after {
 	color: #F1B6AE;
 
 }
@@ -99,6 +105,13 @@
 
 .pkg-checked.pkg-checked_disabled {
 	opacity: 0.6;
+
+}
+
+.pkg-checked.pkg-checked_disabled .pkg-checked-option {}
+
+.pkg-checked.pkg-checked_disabled .pkg-checked-option:hover {
+	cursor: default;
 
 }
 

@@ -217,6 +217,11 @@ $num_fillet_circle: 50%;
 
 	&.pkg-checked_disabled {
 		opacity: 0.6;
+		.pkg-checked-option {
+			&:hover {
+				cursor: default;
+			}
+		}
 	}
 
 	@mixin checkedDisplay block ;
