@@ -11,7 +11,8 @@ $STYLE_SPRING_ICON_BACK_CHECKED: color(#F1B6AE a(40%)) ;
 $STYLE_SPRING_BORDER: #B2DBCD ;
 $STYLE_SPRING_BORDER_CHECKED: #F1B6AE ;
 /* #FFFFFF */
-  
+
+ /* 好想用json格式合mixin去套用呀ToT */ 
 .pkg-style {
 	&.pkg-style_on {
 		.pkg-style-iconback {
