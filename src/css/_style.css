@@ -3,7 +3,7 @@
 */
 $STYLE_RESURGENCE_MAIN_BACK: #F2EAE7 ;
 $STYLE_RESURGENCE_MAIN_TEXT: #8A7F7D ;
-$STYLE_RESURGENCE_LIST_TEXT: color(#FFFFFF a(40%)) ;
+$STYLE_RESURGENCE_LIST_TEXT: color(#FFFFFF a(75%)) ;
 $STYLE_RESURGENCE_LIST_TEXT_CHECKED: #FFFFFF ;
 $STYLE_RESURGENCE_ICON_TEXT: #B2DBCD ;
 $STYLE_RESURGENCE_ICON_TEXT_CHECKED: #F1B6AE ;
@@ -34,11 +34,35 @@ $STYLE_SPRING_BORDER_CHECKED: #73398C ;
 $STYLE_WINE_MAIN_BACK: #8C2756 ;
 $STYLE_WINE_MAIN_TEXT: #F2B6D7 ;
 $STYLE_WINE_MAIN_TEXTSHADOW_CHECKED: color(#F2F2F2 a(80%)) ;
+$STYLE_WINE_LIST_TEXT: color(#F2B6D7 a(40%)) ;
+$STYLE_WINE_LIST_TEXT_CHECKED: #F2B6D7 ;
 $STYLE_WINE_ICON_TEXT: color(#F2B6D7 a(40%)) ;
 $STYLE_WINE_ICON_TEXT_CHECKED: #F2B6D7 ;
 $STYLE_WINE_ICON_BACK: #73294C ;
 $STYLE_WINE_ICON_BACK_CHECKED: color(#593649 a(40%)) ;
 $STYLE_WINE_BORDER: #F2F2F2 ;
+
+/*
+	https://color.adobe.com/zh/library/8df9ae20-7f71-11e4-b689-0f79fc4717ce/theme/c6ad5646-2656-4179-a512-4d0fc726f660/
+*/
+$STYLE_BLUESKY_MAIN_BACK: #B6D7F6 ;
+$STYLE_BLUESKY_MAIN_BACKLINEAR_CHECKED_UP: #B6D7F6 ;
+$STYLE_BLUESKY_MAIN_BACKLINEAR_CHECKED_DOWN: #9EC7EF ;
+$STYLE_BLUESKY_MAIN_TEXT: #7AAADB ;
+$STYLE_BLUESKY_LIST_TEXT: #4E86C2 ;
+$STYLE_BLUESKY_ICON_TEXT: white ;
+$STYLE_BLUESKY_ICONINICONBACK_TEXT: #B6D7F6 ;
+$STYLE_BLUESKY_ICONINICONBACK_TEXT_CHECKED: color(#9EC7EF lightness(90%)) ;
+$STYLE_BLUESKY_ICON_BACKLINEAR_CHECKED_UP: #4E86C2 ;
+$STYLE_BLUESKY_ICON_BACKLINEAR_CHECKED_DOWN: #3F70A8 ;
+$STYLE_BLUESKY_BORDER: #7AAADB ;
+/*
+#3F70A8
+#4E86C2
+#7AAADB
+#9EC7EF
+#B6D7F6
+*/
 
  /* 好想用json格式合mixin去套用呀ToT */ 
 .pkg-style {
@@ -155,14 +179,24 @@ $STYLE_WINE_BORDER: #F2F2F2 ;
 		.pkg-style-border {
 			border: 1px solid $STYLE_WINE_BORDER;
 		}
-		.pkg-style-list,
+		.pkg-style-list {
+			&:before,
+			&:after {
+				color: $STYLE_WINE_LIST_TEXT;
+			}
+		}
+		.pkg-style-list.pkg-style-list_checked {
+			&:before,
+			&:after {
+				color: $STYLE_WINE_LIST_TEXT_CHECKED;
+			}
+		}
 		.pkg-style-icon {
 			&:before,
 			&:after {
 				color: $STYLE_WINE_ICON_TEXT;
 			}
 		}
-		.pkg-style-list.pkg-style-list_checked,
 		.pkg-style-icon.pkg-style-icon_checked {
 			&:before,
 			&:after {
@@ -179,6 +213,56 @@ $STYLE_WINE_BORDER: #F2F2F2 ;
 			&:before,
 			&:after {
 				background: $STYLE_WINE_ICON_BACK_CHECKED;
+			}
+		}
+	}
+	&.pkg-style_bluesky {
+		.pkg-style-item {
+			background: $STYLE_BLUESKY_MAIN_BACK;
+			color: $STYLE_BLUESKY_MAIN_TEXT;
+		}
+		.pkg-style-item.pkg-style-item_checked {
+			background: $STYLE_BLUESKY_MAIN_BACKLINEAR_CHECKED_UP; /* Old browsers */
+			background: -moz-linear-gradient(top,  $STYLE_BLUESKY_MAIN_BACKLINEAR_CHECKED_UP 48%, $STYLE_BLUESKY_MAIN_BACKLINEAR_CHECKED_DOWN 52%); /* FF3.6-15 */
+			background: -webkit-linear-gradient(top,  $STYLE_BLUESKY_MAIN_BACKLINEAR_CHECKED_UP 48%,$STYLE_BLUESKY_MAIN_BACKLINEAR_CHECKED_DOWN 52%); /* Chrome10-25,Safari5.1-6 */
+			background: linear-gradient(to bottom,  $STYLE_BLUESKY_MAIN_BACKLINEAR_CHECKED_UP 48%,$STYLE_BLUESKY_MAIN_BACKLINEAR_CHECKED_DOWN 52%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+			filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='$STYLE_BLUESKY_MAIN_BACKLINEAR_CHECKED_UP', endColorstr='$STYLE_BLUESKY_MAIN_BACKLINEAR_CHECKED_DOWN',GradientType=0 ); /* IE6-9 */
+		}
+		.pkg-style-border {
+			border: 1px solid $STYLE_BLUESKY_BORDER;
+		}
+		.pkg-style-icon {
+			&:before,
+			&:after {
+				color: $STYLE_BLUESKY_ICON_TEXT;
+			}
+		}
+		.pkg-style-icon.pkg-style-iconback {
+			&:before,
+			&:after {
+				color: $STYLE_BLUESKY_ICONINICONBACK_TEXT;
+			}
+		}
+		.pkg-style-list {
+			&:before,
+			&:after {
+				color: $STYLE_BLUESKY_LIST_TEXT;
+			}
+		}
+		.pkg-style-iconback {
+			&:before,
+			&:after {
+				background: $STYLE_BLUESKY_ICON_BACKLINEAR_CHECKED_UP; /* Old browsers */
+				background: -moz-linear-gradient(top,  $STYLE_BLUESKY_ICON_BACKLINEAR_CHECKED_UP 48%, $STYLE_BLUESKY_ICON_BACKLINEAR_CHECKED_DOWN 52%); /* FF3.6-15 */
+				background: -webkit-linear-gradient(top,  $STYLE_BLUESKY_ICON_BACKLINEAR_CHECKED_UP 48%,$STYLE_BLUESKY_ICON_BACKLINEAR_CHECKED_DOWN 52%); /* Chrome10-25,Safari5.1-6 */
+				background: linear-gradient(to bottom,  $STYLE_BLUESKY_ICON_BACKLINEAR_CHECKED_UP 48%,$STYLE_BLUESKY_ICON_BACKLINEAR_CHECKED_DOWN 52%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+				filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='$STYLE_BLUESKY_ICON_BACKLINEAR_CHECKED_UP', endColorstr='$STYLE_BLUESKY_ICON_BACKLINEAR_CHECKED_DOWN',GradientType=0 ); /* IE6-9 */
+			}
+		}
+		.pkg-style-iconback.pkg-style-iconback_checked {
+			&:before,
+			&:after {
+				color: $STYLE_BLUESKY_ICONINICONBACK_TEXT_CHECKED;
 			}
 		}
 	}

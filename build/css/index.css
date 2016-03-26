@@ -26,6 +26,16 @@
 /*
 	https://color.adobe.com/zh/library/8df9ae20-7f71-11e4-b689-0f79fc4717ce/theme/fa36b31a-7501-4fc5-9983-43505d8c89b0/
 */
+/*
+	https://color.adobe.com/zh/library/8df9ae20-7f71-11e4-b689-0f79fc4717ce/theme/c6ad5646-2656-4179-a512-4d0fc726f660/
+*/
+/*
+#3F70A8
+#4E86C2
+#7AAADB
+#9EC7EF
+#B6D7F6
+*/
 /* 好想用json格式合mixin去套用呀ToT */
 .pkg-style {}
 .pkg-style.pkg-style_on .pkg-style-iconback {}
@@ -49,7 +59,7 @@
 }
 .pkg-style.pkg-style_resurgence .pkg-style-list {}
 .pkg-style.pkg-style_resurgence .pkg-style-list:before, .pkg-style.pkg-style_resurgence .pkg-style-list:after {
-	color: rgba(255, 255, 255, 0.4);
+	color: rgba(255, 255, 255, 0.75);
 
 }
 .pkg-style.pkg-style_resurgence .pkg-style-list.pkg-style-list_checked {}
@@ -132,13 +142,23 @@
 	border: 1px solid #F2F2F2;
 
 }
-.pkg-style.pkg-style_wine .pkg-style-list, .pkg-style.pkg-style_wine .pkg-style-icon {}
-.pkg-style.pkg-style_wine .pkg-style-list:before, .pkg-style.pkg-style_wine .pkg-style-list:after, .pkg-style.pkg-style_wine .pkg-style-icon:before, .pkg-style.pkg-style_wine .pkg-style-icon:after {
+.pkg-style.pkg-style_wine .pkg-style-list {}
+.pkg-style.pkg-style_wine .pkg-style-list:before, .pkg-style.pkg-style_wine .pkg-style-list:after {
 	color: rgba(242, 182, 215, 0.4);
 
 }
-.pkg-style.pkg-style_wine .pkg-style-list.pkg-style-list_checked, .pkg-style.pkg-style_wine .pkg-style-icon.pkg-style-icon_checked {}
-.pkg-style.pkg-style_wine .pkg-style-list.pkg-style-list_checked:before, .pkg-style.pkg-style_wine .pkg-style-list.pkg-style-list_checked:after, .pkg-style.pkg-style_wine .pkg-style-icon.pkg-style-icon_checked:before, .pkg-style.pkg-style_wine .pkg-style-icon.pkg-style-icon_checked:after {
+.pkg-style.pkg-style_wine .pkg-style-list.pkg-style-list_checked {}
+.pkg-style.pkg-style_wine .pkg-style-list.pkg-style-list_checked:before, .pkg-style.pkg-style_wine .pkg-style-list.pkg-style-list_checked:after {
+	color: #F2B6D7;
+
+}
+.pkg-style.pkg-style_wine .pkg-style-icon {}
+.pkg-style.pkg-style_wine .pkg-style-icon:before, .pkg-style.pkg-style_wine .pkg-style-icon:after {
+	color: rgba(242, 182, 215, 0.4);
+
+}
+.pkg-style.pkg-style_wine .pkg-style-icon.pkg-style-icon_checked {}
+.pkg-style.pkg-style_wine .pkg-style-icon.pkg-style-icon_checked:before, .pkg-style.pkg-style_wine .pkg-style-icon.pkg-style-icon_checked:after {
 	color: #F2B6D7;
 
 }
@@ -150,6 +170,62 @@
 .pkg-style.pkg-style_wine .pkg-style-iconback.pkg-style-iconback_checked {}
 .pkg-style.pkg-style_wine .pkg-style-iconback.pkg-style-iconback_checked:before, .pkg-style.pkg-style_wine .pkg-style-iconback.pkg-style-iconback_checked:after {
 	background: rgba(89, 54, 73, 0.4);
+
+}
+.pkg-style.pkg-style_bluesky .pkg-style-item {
+	background: #B6D7F6;
+	color: #7AAADB;
+
+}
+.pkg-style.pkg-style_bluesky .pkg-style-item.pkg-style-item_checked {
+	background: #B6D7F6; 
+	/* Old browsers */
+	background: -moz-linear-gradient(top,  #B6D7F6 48%, #9EC7EF 52%); 
+	/* FF3.6-15 */
+	background: -webkit-linear-gradient(top,  #B6D7F6 48%,#9EC7EF 52%); 
+	/* Chrome10-25,Safari5.1-6 */
+	background: linear-gradient(to bottom,  #B6D7F6 48%,#9EC7EF 52%); 
+	/* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#B6D7F6', endColorstr='#9EC7EF',GradientType=0 ); 
+	/* IE6-9 */
+
+}
+.pkg-style.pkg-style_bluesky .pkg-style-border {
+	border: 1px solid #7AAADB;
+
+}
+.pkg-style.pkg-style_bluesky .pkg-style-icon {}
+.pkg-style.pkg-style_bluesky .pkg-style-icon:before, .pkg-style.pkg-style_bluesky .pkg-style-icon:after {
+	color: white;
+
+}
+.pkg-style.pkg-style_bluesky .pkg-style-icon.pkg-style-iconback {}
+.pkg-style.pkg-style_bluesky .pkg-style-icon.pkg-style-iconback:before, .pkg-style.pkg-style_bluesky .pkg-style-icon.pkg-style-iconback:after {
+	color: #B6D7F6;
+
+}
+.pkg-style.pkg-style_bluesky .pkg-style-list {}
+.pkg-style.pkg-style_bluesky .pkg-style-list:before, .pkg-style.pkg-style_bluesky .pkg-style-list:after {
+	color: #4E86C2;
+
+}
+.pkg-style.pkg-style_bluesky .pkg-style-iconback {}
+.pkg-style.pkg-style_bluesky .pkg-style-iconback:before, .pkg-style.pkg-style_bluesky .pkg-style-iconback:after {
+	background: #4E86C2; 
+	/* Old browsers */
+	background: -moz-linear-gradient(top,  #4E86C2 48%, #3F70A8 52%); 
+	/* FF3.6-15 */
+	background: -webkit-linear-gradient(top,  #4E86C2 48%,#3F70A8 52%); 
+	/* Chrome10-25,Safari5.1-6 */
+	background: linear-gradient(to bottom,  #4E86C2 48%,#3F70A8 52%); 
+	/* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#4E86C2', endColorstr='#3F70A8',GradientType=0 ); 
+	/* IE6-9 */
+
+}
+.pkg-style.pkg-style_bluesky .pkg-style-iconback.pkg-style-iconback_checked {}
+.pkg-style.pkg-style_bluesky .pkg-style-iconback.pkg-style-iconback_checked:before, .pkg-style.pkg-style_bluesky .pkg-style-iconback.pkg-style-iconback_checked:after {
+	color: rgb(211, 229, 248);
 
 }
 

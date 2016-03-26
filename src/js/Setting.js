@@ -58,6 +58,7 @@ export default class Setting {
 	static STYLE_NAME_RESURGENCE = 'resurgence'; // 死灰復燃
 	static STYLE_NAME_SPRING = 'spring'; // 春天
 	static STYLE_NAME_WINE = 'wine'; // 紅酒
+	static STYLE_NAME_BLUESKY = 'bluesky'; // 藍天
 
 	// 能不能作用（disabled）
 	static DISABLED_TRUE = true;

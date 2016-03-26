@@ -34,8 +34,9 @@ let _data_checked;
 let _ary_showkey = ['text','uuid'];
 
 // let _str_style = Setting.STYLE_NAME_RESURGENCE;
-let _str_style = Setting.STYLE_NAME_SPRING;
+// let _str_style = Setting.STYLE_NAME_SPRING;
 // let _str_style = Setting.STYLE_NAME_WINE;
+let _str_style = Setting.STYLE_NAME_BLUESKY;
 
 function handleChange( bln_change, json_return ){
 	if( bln_change===true ){

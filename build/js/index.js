@@ -104,8 +104,9 @@
 	var _ary_showkey = ['text', 'uuid'];
 
 	// let _str_style = Setting.STYLE_NAME_RESURGENCE;
-	var _str_style = _Setting2.default.STYLE_NAME_SPRING;
+	// let _str_style = Setting.STYLE_NAME_SPRING;
 	// let _str_style = Setting.STYLE_NAME_WINE;
+	var _str_style = _Setting2.default.STYLE_NAME_BLUESKY;
 
 	function handleChange(bln_change, json_return) {
 		if (bln_change === true) {
@@ -20802,6 +20803,7 @@
 	Setting.STYLE_NAME_RESURGENCE = 'resurgence';
 	Setting.STYLE_NAME_SPRING = 'spring';
 	Setting.STYLE_NAME_WINE = 'wine';
+	Setting.STYLE_NAME_BLUESKY = 'bluesky';
 	Setting.DISABLED_TRUE = true;
 	Setting.DISABLED_FALSE = false;
 	exports.default = Setting;
@@ -20964,7 +20966,7 @@
 			key: 'getStyleName',
 			value: function getStyleName(str_style) {
 				str_style = str_style || '';
-				var _ary_style = [_Setting2.default.STYLE_NAME_RESURGENCE, _Setting2.default.STYLE_NAME_SPRING, _Setting2.default.STYLE_NAME_WINE];
+				var _ary_style = [_Setting2.default.STYLE_NAME_RESURGENCE, _Setting2.default.STYLE_NAME_SPRING, _Setting2.default.STYLE_NAME_WINE, _Setting2.default.STYLE_NAME_BLUESKY];
 				if (_ary_style.indexOf(str_style) >= 0) {
 					return 'pkg-style pkg-style_on pkg-style_' + str_style;
 				} else {
