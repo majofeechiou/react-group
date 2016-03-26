@@ -33,10 +33,14 @@ let _data_checked;
 
 let _ary_showkey = ['text','uuid'];
 
-// let _str_style = Setting.STYLE_NAME_RESURGENCE;
+let _bln_iconback_01 = false;
+let _bln_iconback_02 = true;
+
+let _str_style = Setting.STYLE_NAME_RESURGENCE;
 // let _str_style = Setting.STYLE_NAME_SPRING;
 // let _str_style = Setting.STYLE_NAME_WINE;
-let _str_style = Setting.STYLE_NAME_BLUESKY;
+// let _str_style = Setting.STYLE_NAME_BLUESKY;
+// let _str_style = Setting.STYLE_NAME_LOVELY;
 
 function handleChange( bln_change, json_return ){
 	if( bln_change===true ){
@@ -59,7 +63,7 @@ function render(){
 			between="~"
 			display={Setting.DISPLAY_INBLOCK}
 			padding={Setting.PADDING_BASE}
-			fillet={Setting.FILLET_CIRCLE}
+			fillet={Setting.FILLET_BASE}
 			listStyle={Setting.LIST_STYLE_CIRCLE}
 			listPosition={Setting.LIST_POSITION_OUTER}
 			iconPosition={Setting.ICON_POSTION_LEFT}
@@ -67,7 +71,7 @@ function render(){
 			styleName={_str_style}
 			styleBorder={true}
 			styleIcon={true}
-			styleIconBack={true}
+			styleIconBack={_bln_iconback_01}
 			styleList={true} />, 
 		document.getElementById("content1")
 	);
@@ -84,7 +88,7 @@ function render(){
 			between="~"
 			display={Setting.DISPLAY_INBLOCK}
 			padding={Setting.PADDING_BASE}
-			fillet={Setting.FILLET_CIRCLE}
+			fillet={Setting.FILLET_BASE}
 			listStyle={Setting.LIST_STYLE_CIRCLE}
 			listPosition={Setting.LIST_POSITION_INNER}
 			iconPosition={Setting.ICON_POSTION_LEFT}
@@ -92,7 +96,7 @@ function render(){
 			styleName={_str_style}
 			styleBorder={true}
 			styleIcon={true}
-			styleIconBack={true}
+			styleIconBack={_bln_iconback_01}
 			styleList={true} />, 
 		document.getElementById("content2")
 	);
@@ -109,7 +113,7 @@ function render(){
 			between="~"
 			display={Setting.DISPLAY_INBLOCK}
 			padding={Setting.PADDING_BASE}
-			fillet={Setting.FILLET_CIRCLE}
+			fillet={Setting.FILLET_BASE}
 			listStyle={Setting.LIST_STYLE_CIRCLE}
 			listPosition={Setting.LIST_POSITION_OUTER}
 			iconPosition={Setting.ICON_POSTION_TOP}
@@ -117,7 +121,7 @@ function render(){
 			styleName={_str_style}
 			styleBorder={true}
 			styleIcon={true}
-			styleIconBack={true}
+			styleIconBack={_bln_iconback_01}
 			styleList={true} />, 
 		document.getElementById("content3")
 	);
@@ -134,7 +138,7 @@ function render(){
 			between="~"
 			display={Setting.DISPLAY_INBLOCK}
 			padding={Setting.PADDING_BASE}
-			fillet={Setting.FILLET_CIRCLE}
+			fillet={Setting.FILLET_BASE}
 			listStyle={Setting.LIST_STYLE_CIRCLE}
 			listPosition={Setting.LIST_POSITION_INNER}
 			iconPosition={Setting.ICON_POSTION_TOP}
@@ -142,7 +146,7 @@ function render(){
 			styleName={_str_style}
 			styleBorder={true}
 			styleIcon={true}
-			styleIconBack={true}
+			styleIconBack={_bln_iconback_01}
 			styleList={true} />, 
 		document.getElementById("content4")
 	);
@@ -159,7 +163,7 @@ function render(){
 			between="~"
 			display={Setting.DISPLAY_BLOCK}
 			padding={Setting.PADDING_BASE}
-			fillet={Setting.FILLET_CIRCLE}
+			fillet={Setting.FILLET_BASE}
 			listStyle={Setting.LIST_STYLE_CIRCLE}
 			listPosition={Setting.LIST_POSITION_OUTER}
 			iconPosition={Setting.ICON_POSTION_LEFT}
@@ -167,7 +171,7 @@ function render(){
 			styleName={_str_style}
 			styleBorder={true}
 			styleIcon={true}
-			styleIconBack={true}
+			styleIconBack={_bln_iconback_01}
 			styleList={true} />, 
 		document.getElementById("content5")
 	);
@@ -184,7 +188,7 @@ function render(){
 			between="~"
 			display={Setting.DISPLAY_BLOCK}
 			padding={Setting.PADDING_BASE}
-			fillet={Setting.FILLET_CIRCLE}
+			fillet={Setting.FILLET_BASE}
 			listStyle={Setting.LIST_STYLE_CIRCLE}
 			listPosition={Setting.LIST_POSITION_INNER}
 			iconPosition={Setting.ICON_POSTION_LEFT}
@@ -192,7 +196,7 @@ function render(){
 			styleName={_str_style}
 			styleBorder={true}
 			styleIcon={true}
-			styleIconBack={true}
+			styleIconBack={_bln_iconback_01}
 			styleList={true} />, 
 		document.getElementById("content6")
 	);
@@ -209,7 +213,7 @@ function render(){
 			between="~"
 			display={Setting.DISPLAY_BLOCK}
 			padding={Setting.PADDING_BASE}
-			fillet={Setting.FILLET_CIRCLE}
+			fillet={Setting.FILLET_BASE}
 			listStyle={Setting.LIST_STYLE_CIRCLE}
 			listPosition={Setting.LIST_POSITION_OUTER}
 			iconPosition={Setting.ICON_POSTION_TOP}
@@ -217,7 +221,7 @@ function render(){
 			styleName={_str_style}
 			styleBorder={true}
 			styleIcon={true}
-			styleIconBack={true}
+			styleIconBack={_bln_iconback_01}
 			styleList={true} />, 
 		document.getElementById("content7")
 	);
@@ -234,7 +238,7 @@ function render(){
 			between="~"
 			display={Setting.DISPLAY_BLOCK}
 			padding={Setting.PADDING_BASE}
-			fillet={Setting.FILLET_CIRCLE}
+			fillet={Setting.FILLET_BASE}
 			listStyle={Setting.LIST_STYLE_CIRCLE}
 			listPosition={Setting.LIST_POSITION_INNER}
 			iconPosition={Setting.ICON_POSTION_TOP}
@@ -242,7 +246,7 @@ function render(){
 			styleName={_str_style}
 			styleBorder={true}
 			styleIcon={true}
-			styleIconBack={true}
+			styleIconBack={_bln_iconback_01}
 			styleList={true} />, 
 		document.getElementById("content8")
 	);
@@ -262,7 +266,7 @@ function render(){
 			between="~"
 			display={Setting.DISPLAY_INBLOCK}
 			padding={Setting.PADDING_BASE}
-			fillet={Setting.FILLET_CIRCLE}
+			fillet={Setting.FILLET_BASE}
 			listStyle={Setting.LIST_STYLE_CIRCLE}
 			listPosition={Setting.LIST_POSITION_OUTER}
 			iconPosition={Setting.ICON_POSTION_RIGHT}
@@ -270,7 +274,7 @@ function render(){
 			styleName={_str_style}
 			styleBorder={true}
 			styleIcon={true}
-			styleIconBack={true}
+			styleIconBack={_bln_iconback_02}
 			styleList={true} />, 
 		document.getElementById("ct1")
 	);
@@ -287,7 +291,7 @@ function render(){
 			between="~"
 			display={Setting.DISPLAY_INBLOCK}
 			padding={Setting.PADDING_BASE}
-			fillet={Setting.FILLET_CIRCLE}
+			fillet={Setting.FILLET_BASE}
 			listStyle={Setting.LIST_STYLE_CIRCLE}
 			listPosition={Setting.LIST_POSITION_INNER}
 			iconPosition={Setting.ICON_POSTION_RIGHT}
@@ -295,7 +299,7 @@ function render(){
 			styleName={_str_style}
 			styleBorder={true}
 			styleIcon={true}
-			styleIconBack={true}
+			styleIconBack={_bln_iconback_02}
 			styleList={true} />, 
 		document.getElementById("ct2")
 	);
@@ -312,7 +316,7 @@ function render(){
 			between="~"
 			display={Setting.DISPLAY_INBLOCK}
 			padding={Setting.PADDING_BASE}
-			fillet={Setting.FILLET_CIRCLE}
+			fillet={Setting.FILLET_BASE}
 			listStyle={Setting.LIST_STYLE_CIRCLE}
 			listPosition={Setting.LIST_POSITION_OUTER}
 			iconPosition={Setting.ICON_POSTION_BOTTOM}
@@ -320,7 +324,7 @@ function render(){
 			styleName={_str_style}
 			styleBorder={true}
 			styleIcon={true}
-			styleIconBack={true}
+			styleIconBack={_bln_iconback_02}
 			styleList={true} />, 
 		document.getElementById("ct3")
 	);
@@ -337,7 +341,7 @@ function render(){
 			between="~"
 			display={Setting.DISPLAY_INBLOCK}
 			padding={Setting.PADDING_BASE}
-			fillet={Setting.FILLET_CIRCLE}
+			fillet={Setting.FILLET_BASE}
 			listStyle={Setting.LIST_STYLE_CIRCLE}
 			listPosition={Setting.LIST_POSITION_INNER}
 			iconPosition={Setting.ICON_POSTION_BOTTOM}
@@ -345,7 +349,7 @@ function render(){
 			styleName={_str_style}
 			styleBorder={true}
 			styleIcon={true}
-			styleIconBack={true}
+			styleIconBack={_bln_iconback_02}
 			styleList={true} />, 
 		document.getElementById("ct4")
 	);
@@ -362,7 +366,7 @@ function render(){
 			between="~"
 			display={Setting.DISPLAY_BLOCK}
 			padding={Setting.PADDING_BASE}
-			fillet={Setting.FILLET_CIRCLE}
+			fillet={Setting.FILLET_BASE}
 			listStyle={Setting.LIST_STYLE_CIRCLE}
 			listPosition={Setting.LIST_POSITION_OUTER}
 			iconPosition={Setting.ICON_POSTION_RIGHT}
@@ -370,7 +374,7 @@ function render(){
 			styleName={_str_style}
 			styleBorder={true}
 			styleIcon={true}
-			styleIconBack={true}
+			styleIconBack={_bln_iconback_02}
 			styleList={true} />, 
 		document.getElementById("ct5")
 	);
@@ -387,7 +391,7 @@ function render(){
 			between="~"
 			display={Setting.DISPLAY_BLOCK}
 			padding={Setting.PADDING_BASE}
-			fillet={Setting.FILLET_CIRCLE}
+			fillet={Setting.FILLET_BASE}
 			listStyle={Setting.LIST_STYLE_CIRCLE}
 			listPosition={Setting.LIST_POSITION_INNER}
 			iconPosition={Setting.ICON_POSTION_RIGHT}
@@ -395,7 +399,7 @@ function render(){
 			styleName={_str_style}
 			styleBorder={true}
 			styleIcon={true}
-			styleIconBack={true}
+			styleIconBack={_bln_iconback_02}
 			styleList={true} />, 
 		document.getElementById("ct6")
 	);
@@ -412,7 +416,7 @@ function render(){
 			between="~"
 			display={Setting.DISPLAY_BLOCK}
 			padding={Setting.PADDING_BASE}
-			fillet={Setting.FILLET_CIRCLE}
+			fillet={Setting.FILLET_BASE}
 			listStyle={Setting.LIST_STYLE_CIRCLE}
 			listPosition={Setting.LIST_POSITION_OUTER}
 			iconPosition={Setting.ICON_POSTION_BOTTOM}
@@ -420,7 +424,7 @@ function render(){
 			styleName={_str_style}
 			styleBorder={true}
 			styleIcon={true}
-			styleIconBack={true}
+			styleIconBack={_bln_iconback_02}
 			styleList={true} />, 
 		document.getElementById("ct7")
 	);
@@ -437,7 +441,7 @@ function render(){
 			between="~"
 			display={Setting.DISPLAY_BLOCK}
 			padding={Setting.PADDING_BASE}
-			fillet={Setting.FILLET_CIRCLE}
+			fillet={Setting.FILLET_BASE}
 			listStyle={Setting.LIST_STYLE_CIRCLE}
 			listPosition={Setting.LIST_POSITION_INNER}
 			iconPosition={Setting.ICON_POSTION_BOTTOM}
@@ -445,7 +449,7 @@ function render(){
 			styleName={_str_style}
 			styleBorder={true}
 			styleIcon={true}
-			styleIconBack={true}
+			styleIconBack={_bln_iconback_02}
 			styleList={true} />, 
 		document.getElementById("ct8")
 	);

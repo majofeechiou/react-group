@@ -59,6 +59,7 @@ export default class Setting {
 	static STYLE_NAME_SPRING = 'spring'; // 春天
 	static STYLE_NAME_WINE = 'wine'; // 紅酒
 	static STYLE_NAME_BLUESKY = 'bluesky'; // 藍天
+	static STYLE_NAME_LOVELY = 'lovely'; // 可愛
 
 	// 能不能作用（disabled）
 	static DISABLED_TRUE = true;
@@ -67,27 +68,30 @@ export default class Setting {
 }
 
 
-	/*
-		有哪些排版：
-		BLOCK - block
-		INBLOCK - inline-block
-	*/
-	/*
-		padding:
-		tiny - 0.2em
-		small - 0.5em
-		little - 0.8em
-		base - 1em
-		middle - 1.2em
-		big - 1.5em
-		large - 2em
-		huge - 2.5em
-	*/
-/*
-	色彩風格：
-	none - 什麼都不加
-	gray - 淡灰階
- */
+		/*
+			有哪些排版：
+			BLOCK - block
+			INBLOCK - inline-block
+		*/
+		/*
+			padding:
+			tiny - 0.2em
+			small - 0.5em
+			little - 0.8em
+			base - 1em
+			middle - 1.2em
+			big - 1.5em
+			large - 2em
+			huge - 2.5em
+		*/
+		/*
+			色彩風格：
+			resurgence - 死灰復燃
+			spring - 春天
+			wine - 紅酒
+			bluesky - 藍天
+			lovely - 可愛
+		 */
 /*
 	spacing:
 	tiny - 0.2em

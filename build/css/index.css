@@ -36,6 +36,16 @@
 #9EC7EF
 #B6D7F6
 */
+/*
+	https://color.adobe.com/zh/library/8df9ae20-7f71-11e4-b689-0f79fc4717ce/theme/fcc85d41-19fd-4645-9aa1-13c8d21b2515/
+*/
+/*
+#1A413C
+#7CC699
+#F3E4C2
+#F37A5A
+#EF4926
+*/
 /* 好想用json格式合mixin去套用呀ToT */
 .pkg-style {}
 .pkg-style.pkg-style_on .pkg-style-iconback {}
@@ -226,6 +236,74 @@
 .pkg-style.pkg-style_bluesky .pkg-style-iconback.pkg-style-iconback_checked {}
 .pkg-style.pkg-style_bluesky .pkg-style-iconback.pkg-style-iconback_checked:before, .pkg-style.pkg-style_bluesky .pkg-style-iconback.pkg-style-iconback_checked:after {
 	color: rgb(211, 229, 248);
+
+}
+.pkg-style.pkg-style_lovely .pkg-style-item {
+	color: #1A413C;
+	background: rgba(124, 198, 153, 0); 
+	/* Old browsers */
+	background: #F3E4C2 -moz-linear-gradient(top,  rgba(124, 198, 153, 0) 48%, rgba(124, 198, 153, 0.2) 52%); 
+	/* FF3.6-15 */
+	background: #F3E4C2 -webkit-linear-gradient(top,  rgba(124, 198, 153, 0) 48%,rgba(124, 198, 153, 0.2) 52%); 
+	/* Chrome10-25,Safari5.1-6 */
+	background: #F3E4C2 linear-gradient(to bottom,  rgba(124, 198, 153, 0) 48%,rgba(124, 198, 153, 0.2) 52%); 
+	/* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='rgba(124, 198, 153, 0)', endColorstr='rgba(124, 198, 153, 0.2)',GradientType=0 ); 
+	/* IE6-9 */
+
+}
+.pkg-style.pkg-style_lovely .pkg-style-item.pkg-style-item_checked {
+	color: #EF4926;
+	background: rgba(243, 122, 90, 0); 
+	/* Old browsers */
+	background: #F3E4C2 -moz-linear-gradient(top,  rgba(243, 122, 90, 0) 48%, rgba(243, 122, 90, 0.2) 52%); 
+	/* FF3.6-15 */
+	background: #F3E4C2 -webkit-linear-gradient(top,  rgba(243, 122, 90, 0) 48%,rgba(243, 122, 90, 0.2) 52%); 
+	/* Chrome10-25,Safari5.1-6 */
+	background: #F3E4C2 linear-gradient(to bottom,  rgba(243, 122, 90, 0) 48%,rgba(243, 122, 90, 0.2) 52%); 
+	/* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='rgba(243, 122, 90, 0)', endColorstr='rgba(243, 122, 90, 0.2)',GradientType=0 ); 
+	/* IE6-9 */
+
+}
+.pkg-style.pkg-style_lovely .pkg-style-border {
+	border: 1px solid #1A413C;
+
+}
+.pkg-style.pkg-style_lovely .pkg-style-border.pkg-style-border_checked {
+	border: 1px solid #EF4926;
+
+}
+.pkg-style.pkg-style_lovely .pkg-style-list {}
+.pkg-style.pkg-style_lovely .pkg-style-list:before, .pkg-style.pkg-style_lovely .pkg-style-list:after {
+	color: rgb(47, 106, 71);
+
+}
+.pkg-style.pkg-style_lovely .pkg-style-list.pkg-style-list_checked {}
+.pkg-style.pkg-style_lovely .pkg-style-list.pkg-style-list_checked:before, .pkg-style.pkg-style_lovely .pkg-style-list.pkg-style-list_checked:after {
+	color: rgb(142, 39, 11);
+
+}
+.pkg-style.pkg-style_lovely .pkg-style-icon {}
+.pkg-style.pkg-style_lovely .pkg-style-icon:before, .pkg-style.pkg-style_lovely .pkg-style-icon:after {
+	color: rgb(58, 146, 134);
+
+}
+.pkg-style.pkg-style_lovely .pkg-style-icon.pkg-style-icon_checked {}
+.pkg-style.pkg-style_lovely .pkg-style-icon.pkg-style-icon_checked:before, .pkg-style.pkg-style_lovely .pkg-style-icon.pkg-style-icon_checked:after {
+	color: rgb(190, 44, 14);
+
+}
+.pkg-style.pkg-style_lovely .pkg-style-iconback {}
+.pkg-style.pkg-style_lovely .pkg-style-iconback:before, .pkg-style.pkg-style_lovely .pkg-style-iconback:after {
+	background: rgba(26, 65, 60, 0.6);
+	color: #F3E4C2;
+
+}
+.pkg-style.pkg-style_lovely .pkg-style-iconback.pkg-style-iconback_checked {}
+.pkg-style.pkg-style_lovely .pkg-style-iconback.pkg-style-iconback_checked:before, .pkg-style.pkg-style_lovely .pkg-style-iconback.pkg-style-iconback_checked:after {
+	background: rgba(239, 73, 38, 0.6);
+	color: #F3E4C2;
 
 }
 

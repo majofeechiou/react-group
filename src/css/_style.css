@@ -64,6 +64,33 @@ $STYLE_BLUESKY_BORDER: #7AAADB ;
 #B6D7F6
 */
 
+/*
+	https://color.adobe.com/zh/library/8df9ae20-7f71-11e4-b689-0f79fc4717ce/theme/fcc85d41-19fd-4645-9aa1-13c8d21b2515/
+*/
+$STYLE_LOVELY_MAIN_BACK: #F3E4C2 ;
+$STYLE_LOVELY_MAIN_BACKLINEAR_UP: color(#7CC699 a(0%)) ;
+$STYLE_LOVELY_MAIN_BACKLINEAR_DOWN: color(#7CC699 a(20%)) ;
+$STYLE_LOVELY_MAIN_BACKLINEAR_CHECKED_UP: color(#F37A5A a(0%)) ;
+$STYLE_LOVELY_MAIN_BACKLINEAR_CHECKED_DOWN: color(#F37A5A a(20%)) ;
+$STYLE_LOVELY_MAIN_TEXT: #1A413C ;
+$STYLE_LOVELY_MAIN_TEXT_CHECKED: #EF4926 ;
+$STYLE_LOVELY_LIST_TEXT: color(#7CC699 lightness(30%)) ;
+$STYLE_LOVELY_LIST_TEXT_CHECKED: color(#F37A5A lightness(30%)) ;
+$STYLE_LOVELY_ICON_TEXT: color(#1A413C lightness(40%)) ;
+$STYLE_LOVELY_ICON_TEXT_CHECKED: color(#EF4926 lightness(40%)) ;
+$STYLE_LOVELY_ICONBACK: color(#1A413C a(60%)) ;
+$STYLE_LOVELY_ICONBACK_CHECKED: color(#EF4926 a(60%)) ;
+$STYLE_LOVELY_ICONINICONBACK_TEXT: #F3E4C2 ;
+$STYLE_LOVELY_BORDER: #1A413C ;
+$STYLE_LOVELY_BORDER_CHECKED: #EF4926 ;
+/*
+#1A413C
+#7CC699
+#F3E4C2
+#F37A5A
+#EF4926
+*/
+
  /* 好想用json格式合mixin去套用呀ToT */ 
 .pkg-style {
 	&.pkg-style_on {
@@ -263,6 +290,68 @@ $STYLE_BLUESKY_BORDER: #7AAADB ;
 			&:before,
 			&:after {
 				color: $STYLE_BLUESKY_ICONINICONBACK_TEXT_CHECKED;
+			}
+		}
+	}
+	&.pkg-style_lovely {
+		.pkg-style-item {
+			color: $STYLE_LOVELY_MAIN_TEXT;
+			background: $STYLE_LOVELY_MAIN_BACKLINEAR_UP; /* Old browsers */
+			background: $STYLE_LOVELY_MAIN_BACK -moz-linear-gradient(top,  $STYLE_LOVELY_MAIN_BACKLINEAR_UP 48%, $STYLE_LOVELY_MAIN_BACKLINEAR_DOWN 52%); /* FF3.6-15 */
+			background: $STYLE_LOVELY_MAIN_BACK -webkit-linear-gradient(top,  $STYLE_LOVELY_MAIN_BACKLINEAR_UP 48%,$STYLE_LOVELY_MAIN_BACKLINEAR_DOWN 52%); /* Chrome10-25,Safari5.1-6 */
+			background: $STYLE_LOVELY_MAIN_BACK linear-gradient(to bottom,  $STYLE_LOVELY_MAIN_BACKLINEAR_UP 48%,$STYLE_LOVELY_MAIN_BACKLINEAR_DOWN 52%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+			filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='$STYLE_LOVELY_MAIN_BACKLINEAR_UP', endColorstr='$STYLE_LOVELY_MAIN_BACKLINEAR_DOWN',GradientType=0 ); /* IE6-9 */
+		}
+		.pkg-style-item.pkg-style-item_checked {
+			color: $STYLE_LOVELY_MAIN_TEXT_CHECKED;
+			background: $STYLE_LOVELY_MAIN_BACKLINEAR_CHECKED_UP; /* Old browsers */
+			background: $STYLE_LOVELY_MAIN_BACK -moz-linear-gradient(top,  $STYLE_LOVELY_MAIN_BACKLINEAR_CHECKED_UP 48%, $STYLE_LOVELY_MAIN_BACKLINEAR_CHECKED_DOWN 52%); /* FF3.6-15 */
+			background: $STYLE_LOVELY_MAIN_BACK -webkit-linear-gradient(top,  $STYLE_LOVELY_MAIN_BACKLINEAR_CHECKED_UP 48%,$STYLE_LOVELY_MAIN_BACKLINEAR_CHECKED_DOWN 52%); /* Chrome10-25,Safari5.1-6 */
+			background: $STYLE_LOVELY_MAIN_BACK linear-gradient(to bottom,  $STYLE_LOVELY_MAIN_BACKLINEAR_CHECKED_UP 48%,$STYLE_LOVELY_MAIN_BACKLINEAR_CHECKED_DOWN 52%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+			filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='$STYLE_LOVELY_MAIN_BACKLINEAR_CHECKED_UP', endColorstr='$STYLE_LOVELY_MAIN_BACKLINEAR_CHECKED_DOWN',GradientType=0 ); /* IE6-9 */
+		}
+		.pkg-style-border {
+			border: 1px solid $STYLE_LOVELY_BORDER;
+		}
+		.pkg-style-border.pkg-style-border_checked {
+			border: 1px solid $STYLE_LOVELY_BORDER_CHECKED;
+		}
+		.pkg-style-list {
+			&:before,
+			&:after {
+				color: $STYLE_LOVELY_LIST_TEXT;
+			}
+		}
+		.pkg-style-list.pkg-style-list_checked {
+			&:before,
+			&:after {
+				color: $STYLE_LOVELY_LIST_TEXT_CHECKED;
+			}
+		}
+		.pkg-style-icon {
+			&:before,
+			&:after {
+				color: $STYLE_LOVELY_ICON_TEXT;
+			}
+		}
+		.pkg-style-icon.pkg-style-icon_checked {
+			&:before,
+			&:after {
+				color: $STYLE_LOVELY_ICON_TEXT_CHECKED;
+			}
+		}
+		.pkg-style-iconback {
+			&:before,
+			&:after {
+				background: $STYLE_LOVELY_ICONBACK;	
+				color: $STYLE_LOVELY_ICONINICONBACK_TEXT;		
+			}
+		}
+		.pkg-style-iconback.pkg-style-iconback_checked {
+			&:before,
+			&:after {
+				background: $STYLE_LOVELY_ICONBACK_CHECKED;
+				color: $STYLE_LOVELY_ICONINICONBACK_TEXT;
 			}
 		}
 	}

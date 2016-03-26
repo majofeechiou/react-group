@@ -128,7 +128,8 @@ export default class CheckedUI {
 			Setting.STYLE_NAME_RESURGENCE,
 			Setting.STYLE_NAME_SPRING,
 			Setting.STYLE_NAME_WINE,
-			Setting.STYLE_NAME_BLUESKY
+			Setting.STYLE_NAME_BLUESKY,
+			Setting.STYLE_NAME_LOVELY
 		];
 		if( _ary_style.indexOf(str_style)>=0 ){
 			return 'pkg-style pkg-style_on pkg-style_'+str_style;

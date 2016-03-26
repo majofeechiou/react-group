@@ -103,10 +103,14 @@
 
 	var _ary_showkey = ['text', 'uuid'];
 
-	// let _str_style = Setting.STYLE_NAME_RESURGENCE;
+	var _bln_iconback_01 = false;
+	var _bln_iconback_02 = true;
+
+	var _str_style = _Setting2.default.STYLE_NAME_RESURGENCE;
 	// let _str_style = Setting.STYLE_NAME_SPRING;
 	// let _str_style = Setting.STYLE_NAME_WINE;
-	var _str_style = _Setting2.default.STYLE_NAME_BLUESKY;
+	// let _str_style = Setting.STYLE_NAME_BLUESKY;
+	// let _str_style = Setting.STYLE_NAME_LOVELY;
 
 	function handleChange(bln_change, json_return) {
 		if (bln_change === true) {
@@ -128,7 +132,7 @@
 			between: '~',
 			display: _Setting2.default.DISPLAY_INBLOCK,
 			padding: _Setting2.default.PADDING_BASE,
-			fillet: _Setting2.default.FILLET_CIRCLE,
+			fillet: _Setting2.default.FILLET_BASE,
 			listStyle: _Setting2.default.LIST_STYLE_CIRCLE,
 			listPosition: _Setting2.default.LIST_POSITION_OUTER,
 			iconPosition: _Setting2.default.ICON_POSTION_LEFT,
@@ -136,7 +140,7 @@
 			styleName: _str_style,
 			styleBorder: true,
 			styleIcon: true,
-			styleIconBack: true,
+			styleIconBack: _bln_iconback_01,
 			styleList: true }), document.getElementById("content1"));
 
 		_reactDom2.default.render(_react2.default.createElement(_RadioGroup2.default, {
@@ -150,7 +154,7 @@
 			between: '~',
 			display: _Setting2.default.DISPLAY_INBLOCK,
 			padding: _Setting2.default.PADDING_BASE,
-			fillet: _Setting2.default.FILLET_CIRCLE,
+			fillet: _Setting2.default.FILLET_BASE,
 			listStyle: _Setting2.default.LIST_STYLE_CIRCLE,
 			listPosition: _Setting2.default.LIST_POSITION_INNER,
 			iconPosition: _Setting2.default.ICON_POSTION_LEFT,
@@ -158,7 +162,7 @@
 			styleName: _str_style,
 			styleBorder: true,
 			styleIcon: true,
-			styleIconBack: true,
+			styleIconBack: _bln_iconback_01,
 			styleList: true }), document.getElementById("content2"));
 
 		_reactDom2.default.render(_react2.default.createElement(_RadioGroup2.default, {
@@ -172,7 +176,7 @@
 			between: '~',
 			display: _Setting2.default.DISPLAY_INBLOCK,
 			padding: _Setting2.default.PADDING_BASE,
-			fillet: _Setting2.default.FILLET_CIRCLE,
+			fillet: _Setting2.default.FILLET_BASE,
 			listStyle: _Setting2.default.LIST_STYLE_CIRCLE,
 			listPosition: _Setting2.default.LIST_POSITION_OUTER,
 			iconPosition: _Setting2.default.ICON_POSTION_TOP,
@@ -180,7 +184,7 @@
 			styleName: _str_style,
 			styleBorder: true,
 			styleIcon: true,
-			styleIconBack: true,
+			styleIconBack: _bln_iconback_01,
 			styleList: true }), document.getElementById("content3"));
 
 		_reactDom2.default.render(_react2.default.createElement(_RadioGroup2.default, {
@@ -194,7 +198,7 @@
 			between: '~',
 			display: _Setting2.default.DISPLAY_INBLOCK,
 			padding: _Setting2.default.PADDING_BASE,
-			fillet: _Setting2.default.FILLET_CIRCLE,
+			fillet: _Setting2.default.FILLET_BASE,
 			listStyle: _Setting2.default.LIST_STYLE_CIRCLE,
 			listPosition: _Setting2.default.LIST_POSITION_INNER,
 			iconPosition: _Setting2.default.ICON_POSTION_TOP,
@@ -202,7 +206,7 @@
 			styleName: _str_style,
 			styleBorder: true,
 			styleIcon: true,
-			styleIconBack: true,
+			styleIconBack: _bln_iconback_01,
 			styleList: true }), document.getElementById("content4"));
 
 		_reactDom2.default.render(_react2.default.createElement(_RadioGroup2.default, {
@@ -216,7 +220,7 @@
 			between: '~',
 			display: _Setting2.default.DISPLAY_BLOCK,
 			padding: _Setting2.default.PADDING_BASE,
-			fillet: _Setting2.default.FILLET_CIRCLE,
+			fillet: _Setting2.default.FILLET_BASE,
 			listStyle: _Setting2.default.LIST_STYLE_CIRCLE,
 			listPosition: _Setting2.default.LIST_POSITION_OUTER,
 			iconPosition: _Setting2.default.ICON_POSTION_LEFT,
@@ -224,7 +228,7 @@
 			styleName: _str_style,
 			styleBorder: true,
 			styleIcon: true,
-			styleIconBack: true,
+			styleIconBack: _bln_iconback_01,
 			styleList: true }), document.getElementById("content5"));
 
 		_reactDom2.default.render(_react2.default.createElement(_RadioGroup2.default, {
@@ -238,7 +242,7 @@
 			between: '~',
 			display: _Setting2.default.DISPLAY_BLOCK,
 			padding: _Setting2.default.PADDING_BASE,
-			fillet: _Setting2.default.FILLET_CIRCLE,
+			fillet: _Setting2.default.FILLET_BASE,
 			listStyle: _Setting2.default.LIST_STYLE_CIRCLE,
 			listPosition: _Setting2.default.LIST_POSITION_INNER,
 			iconPosition: _Setting2.default.ICON_POSTION_LEFT,
@@ -246,7 +250,7 @@
 			styleName: _str_style,
 			styleBorder: true,
 			styleIcon: true,
-			styleIconBack: true,
+			styleIconBack: _bln_iconback_01,
 			styleList: true }), document.getElementById("content6"));
 
 		_reactDom2.default.render(_react2.default.createElement(_RadioGroup2.default, {
@@ -260,7 +264,7 @@
 			between: '~',
 			display: _Setting2.default.DISPLAY_BLOCK,
 			padding: _Setting2.default.PADDING_BASE,
-			fillet: _Setting2.default.FILLET_CIRCLE,
+			fillet: _Setting2.default.FILLET_BASE,
 			listStyle: _Setting2.default.LIST_STYLE_CIRCLE,
 			listPosition: _Setting2.default.LIST_POSITION_OUTER,
 			iconPosition: _Setting2.default.ICON_POSTION_TOP,
@@ -268,7 +272,7 @@
 			styleName: _str_style,
 			styleBorder: true,
 			styleIcon: true,
-			styleIconBack: true,
+			styleIconBack: _bln_iconback_01,
 			styleList: true }), document.getElementById("content7"));
 
 		_reactDom2.default.render(_react2.default.createElement(_RadioGroup2.default, {
@@ -282,7 +286,7 @@
 			between: '~',
 			display: _Setting2.default.DISPLAY_BLOCK,
 			padding: _Setting2.default.PADDING_BASE,
-			fillet: _Setting2.default.FILLET_CIRCLE,
+			fillet: _Setting2.default.FILLET_BASE,
 			listStyle: _Setting2.default.LIST_STYLE_CIRCLE,
 			listPosition: _Setting2.default.LIST_POSITION_INNER,
 			iconPosition: _Setting2.default.ICON_POSTION_TOP,
@@ -290,7 +294,7 @@
 			styleName: _str_style,
 			styleBorder: true,
 			styleIcon: true,
-			styleIconBack: true,
+			styleIconBack: _bln_iconback_01,
 			styleList: true }), document.getElementById("content8"));
 
 		// ==================
@@ -306,7 +310,7 @@
 			between: '~',
 			display: _Setting2.default.DISPLAY_INBLOCK,
 			padding: _Setting2.default.PADDING_BASE,
-			fillet: _Setting2.default.FILLET_CIRCLE,
+			fillet: _Setting2.default.FILLET_BASE,
 			listStyle: _Setting2.default.LIST_STYLE_CIRCLE,
 			listPosition: _Setting2.default.LIST_POSITION_OUTER,
 			iconPosition: _Setting2.default.ICON_POSTION_RIGHT,
@@ -314,7 +318,7 @@
 			styleName: _str_style,
 			styleBorder: true,
 			styleIcon: true,
-			styleIconBack: true,
+			styleIconBack: _bln_iconback_02,
 			styleList: true }), document.getElementById("ct1"));
 
 		_reactDom2.default.render(_react2.default.createElement(_RadioGroup2.default, {
@@ -328,7 +332,7 @@
 			between: '~',
 			display: _Setting2.default.DISPLAY_INBLOCK,
 			padding: _Setting2.default.PADDING_BASE,
-			fillet: _Setting2.default.FILLET_CIRCLE,
+			fillet: _Setting2.default.FILLET_BASE,
 			listStyle: _Setting2.default.LIST_STYLE_CIRCLE,
 			listPosition: _Setting2.default.LIST_POSITION_INNER,
 			iconPosition: _Setting2.default.ICON_POSTION_RIGHT,
@@ -336,7 +340,7 @@
 			styleName: _str_style,
 			styleBorder: true,
 			styleIcon: true,
-			styleIconBack: true,
+			styleIconBack: _bln_iconback_02,
 			styleList: true }), document.getElementById("ct2"));
 
 		_reactDom2.default.render(_react2.default.createElement(_RadioGroup2.default, {
@@ -350,7 +354,7 @@
 			between: '~',
 			display: _Setting2.default.DISPLAY_INBLOCK,
 			padding: _Setting2.default.PADDING_BASE,
-			fillet: _Setting2.default.FILLET_CIRCLE,
+			fillet: _Setting2.default.FILLET_BASE,
 			listStyle: _Setting2.default.LIST_STYLE_CIRCLE,
 			listPosition: _Setting2.default.LIST_POSITION_OUTER,
 			iconPosition: _Setting2.default.ICON_POSTION_BOTTOM,
@@ -358,7 +362,7 @@
 			styleName: _str_style,
 			styleBorder: true,
 			styleIcon: true,
-			styleIconBack: true,
+			styleIconBack: _bln_iconback_02,
 			styleList: true }), document.getElementById("ct3"));
 
 		_reactDom2.default.render(_react2.default.createElement(_RadioGroup2.default, {
@@ -372,7 +376,7 @@
 			between: '~',
 			display: _Setting2.default.DISPLAY_INBLOCK,
 			padding: _Setting2.default.PADDING_BASE,
-			fillet: _Setting2.default.FILLET_CIRCLE,
+			fillet: _Setting2.default.FILLET_BASE,
 			listStyle: _Setting2.default.LIST_STYLE_CIRCLE,
 			listPosition: _Setting2.default.LIST_POSITION_INNER,
 			iconPosition: _Setting2.default.ICON_POSTION_BOTTOM,
@@ -380,7 +384,7 @@
 			styleName: _str_style,
 			styleBorder: true,
 			styleIcon: true,
-			styleIconBack: true,
+			styleIconBack: _bln_iconback_02,
 			styleList: true }), document.getElementById("ct4"));
 
 		_reactDom2.default.render(_react2.default.createElement(_RadioGroup2.default, {
@@ -394,7 +398,7 @@
 			between: '~',
 			display: _Setting2.default.DISPLAY_BLOCK,
 			padding: _Setting2.default.PADDING_BASE,
-			fillet: _Setting2.default.FILLET_CIRCLE,
+			fillet: _Setting2.default.FILLET_BASE,
 			listStyle: _Setting2.default.LIST_STYLE_CIRCLE,
 			listPosition: _Setting2.default.LIST_POSITION_OUTER,
 			iconPosition: _Setting2.default.ICON_POSTION_RIGHT,
@@ -402,7 +406,7 @@
 			styleName: _str_style,
 			styleBorder: true,
 			styleIcon: true,
-			styleIconBack: true,
+			styleIconBack: _bln_iconback_02,
 			styleList: true }), document.getElementById("ct5"));
 
 		_reactDom2.default.render(_react2.default.createElement(_RadioGroup2.default, {
@@ -416,7 +420,7 @@
 			between: '~',
 			display: _Setting2.default.DISPLAY_BLOCK,
 			padding: _Setting2.default.PADDING_BASE,
-			fillet: _Setting2.default.FILLET_CIRCLE,
+			fillet: _Setting2.default.FILLET_BASE,
 			listStyle: _Setting2.default.LIST_STYLE_CIRCLE,
 			listPosition: _Setting2.default.LIST_POSITION_INNER,
 			iconPosition: _Setting2.default.ICON_POSTION_RIGHT,
@@ -424,7 +428,7 @@
 			styleName: _str_style,
 			styleBorder: true,
 			styleIcon: true,
-			styleIconBack: true,
+			styleIconBack: _bln_iconback_02,
 			styleList: true }), document.getElementById("ct6"));
 
 		_reactDom2.default.render(_react2.default.createElement(_RadioGroup2.default, {
@@ -438,7 +442,7 @@
 			between: '~',
 			display: _Setting2.default.DISPLAY_BLOCK,
 			padding: _Setting2.default.PADDING_BASE,
-			fillet: _Setting2.default.FILLET_CIRCLE,
+			fillet: _Setting2.default.FILLET_BASE,
 			listStyle: _Setting2.default.LIST_STYLE_CIRCLE,
 			listPosition: _Setting2.default.LIST_POSITION_OUTER,
 			iconPosition: _Setting2.default.ICON_POSTION_BOTTOM,
@@ -446,7 +450,7 @@
 			styleName: _str_style,
 			styleBorder: true,
 			styleIcon: true,
-			styleIconBack: true,
+			styleIconBack: _bln_iconback_02,
 			styleList: true }), document.getElementById("ct7"));
 
 		_reactDom2.default.render(_react2.default.createElement(_RadioGroup2.default, {
@@ -460,7 +464,7 @@
 			between: '~',
 			display: _Setting2.default.DISPLAY_BLOCK,
 			padding: _Setting2.default.PADDING_BASE,
-			fillet: _Setting2.default.FILLET_CIRCLE,
+			fillet: _Setting2.default.FILLET_BASE,
 			listStyle: _Setting2.default.LIST_STYLE_CIRCLE,
 			listPosition: _Setting2.default.LIST_POSITION_INNER,
 			iconPosition: _Setting2.default.ICON_POSTION_BOTTOM,
@@ -468,7 +472,7 @@
 			styleName: _str_style,
 			styleBorder: true,
 			styleIcon: true,
-			styleIconBack: true,
+			styleIconBack: _bln_iconback_02,
 			styleList: true }), document.getElementById("ct8"));
 	};
 
@@ -20677,8 +20681,11 @@
 	*/
 	/*
 		色彩風格：
-		none - 什麼都不加
-		gray - 淡灰階
+		resurgence - 死灰復燃
+		spring - 春天
+		wine - 紅酒
+		bluesky - 藍天
+		lovely - 可愛
 	 */
 	/*
 		spacing:
@@ -20804,6 +20811,7 @@
 	Setting.STYLE_NAME_SPRING = 'spring';
 	Setting.STYLE_NAME_WINE = 'wine';
 	Setting.STYLE_NAME_BLUESKY = 'bluesky';
+	Setting.STYLE_NAME_LOVELY = 'lovely';
 	Setting.DISABLED_TRUE = true;
 	Setting.DISABLED_FALSE = false;
 	exports.default = Setting;
@@ -20966,7 +20974,7 @@
 			key: 'getStyleName',
 			value: function getStyleName(str_style) {
 				str_style = str_style || '';
-				var _ary_style = [_Setting2.default.STYLE_NAME_RESURGENCE, _Setting2.default.STYLE_NAME_SPRING, _Setting2.default.STYLE_NAME_WINE, _Setting2.default.STYLE_NAME_BLUESKY];
+				var _ary_style = [_Setting2.default.STYLE_NAME_RESURGENCE, _Setting2.default.STYLE_NAME_SPRING, _Setting2.default.STYLE_NAME_WINE, _Setting2.default.STYLE_NAME_BLUESKY, _Setting2.default.STYLE_NAME_LOVELY];
 				if (_ary_style.indexOf(str_style) >= 0) {
 					return 'pkg-style pkg-style_on pkg-style_' + str_style;
 				} else {
