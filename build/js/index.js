@@ -103,6 +103,10 @@
 
 	var _ary_showkey = ['text', 'uuid'];
 
+	// let _str_style = Setting.STYLE_NAME_RESURGENCE;
+	var _str_style = _Setting2.default.STYLE_NAME_SPRING;
+	// let _str_style = Setting.STYLE_NAME_WINE;
+
 	function handleChange(bln_change, json_return) {
 		if (bln_change === true) {
 			_data_checked = json_return.result;
@@ -128,7 +132,7 @@
 			listPosition: _Setting2.default.LIST_POSITION_OUTER,
 			iconPosition: _Setting2.default.ICON_POSTION_LEFT,
 			iconShow: [_Setting2.default.ICON_SHOW_EMPTY_HEART, _Setting2.default.ICON_SHOW_HEART],
-			styleName: _Setting2.default.STYLE_NAME_SPRING,
+			styleName: _str_style,
 			styleBorder: true,
 			styleIcon: true,
 			styleIconBack: true,
@@ -150,7 +154,7 @@
 			listPosition: _Setting2.default.LIST_POSITION_INNER,
 			iconPosition: _Setting2.default.ICON_POSTION_LEFT,
 			iconShow: [_Setting2.default.ICON_SHOW_EMPTY_HEART, _Setting2.default.ICON_SHOW_HEART],
-			styleName: _Setting2.default.STYLE_NAME_SPRING,
+			styleName: _str_style,
 			styleBorder: true,
 			styleIcon: true,
 			styleIconBack: true,
@@ -172,7 +176,7 @@
 			listPosition: _Setting2.default.LIST_POSITION_OUTER,
 			iconPosition: _Setting2.default.ICON_POSTION_TOP,
 			iconShow: [_Setting2.default.ICON_SHOW_EMPTY_HEART, _Setting2.default.ICON_SHOW_HEART],
-			styleName: _Setting2.default.STYLE_NAME_SPRING,
+			styleName: _str_style,
 			styleBorder: true,
 			styleIcon: true,
 			styleIconBack: true,
@@ -194,7 +198,7 @@
 			listPosition: _Setting2.default.LIST_POSITION_INNER,
 			iconPosition: _Setting2.default.ICON_POSTION_TOP,
 			iconShow: [_Setting2.default.ICON_SHOW_EMPTY_HEART, _Setting2.default.ICON_SHOW_HEART],
-			styleName: _Setting2.default.STYLE_NAME_SPRING,
+			styleName: _str_style,
 			styleBorder: true,
 			styleIcon: true,
 			styleIconBack: true,
@@ -216,7 +220,7 @@
 			listPosition: _Setting2.default.LIST_POSITION_OUTER,
 			iconPosition: _Setting2.default.ICON_POSTION_LEFT,
 			iconShow: [_Setting2.default.ICON_SHOW_EMPTY_HEART, _Setting2.default.ICON_SHOW_HEART],
-			styleName: _Setting2.default.STYLE_NAME_SPRING,
+			styleName: _str_style,
 			styleBorder: true,
 			styleIcon: true,
 			styleIconBack: true,
@@ -238,7 +242,7 @@
 			listPosition: _Setting2.default.LIST_POSITION_INNER,
 			iconPosition: _Setting2.default.ICON_POSTION_LEFT,
 			iconShow: [_Setting2.default.ICON_SHOW_EMPTY_HEART, _Setting2.default.ICON_SHOW_HEART],
-			styleName: _Setting2.default.STYLE_NAME_SPRING,
+			styleName: _str_style,
 			styleBorder: true,
 			styleIcon: true,
 			styleIconBack: true,
@@ -260,7 +264,7 @@
 			listPosition: _Setting2.default.LIST_POSITION_OUTER,
 			iconPosition: _Setting2.default.ICON_POSTION_TOP,
 			iconShow: [_Setting2.default.ICON_SHOW_EMPTY_HEART, _Setting2.default.ICON_SHOW_HEART],
-			styleName: _Setting2.default.STYLE_NAME_SPRING,
+			styleName: _str_style,
 			styleBorder: true,
 			styleIcon: true,
 			styleIconBack: true,
@@ -282,7 +286,7 @@
 			listPosition: _Setting2.default.LIST_POSITION_INNER,
 			iconPosition: _Setting2.default.ICON_POSTION_TOP,
 			iconShow: [_Setting2.default.ICON_SHOW_EMPTY_HEART, _Setting2.default.ICON_SHOW_HEART],
-			styleName: _Setting2.default.STYLE_NAME_SPRING,
+			styleName: _str_style,
 			styleBorder: true,
 			styleIcon: true,
 			styleIconBack: true,
@@ -306,7 +310,7 @@
 			listPosition: _Setting2.default.LIST_POSITION_OUTER,
 			iconPosition: _Setting2.default.ICON_POSTION_RIGHT,
 			iconShow: [_Setting2.default.ICON_SHOW_EMPTY_HEART, _Setting2.default.ICON_SHOW_HEART],
-			styleName: _Setting2.default.STYLE_NAME_SPRING,
+			styleName: _str_style,
 			styleBorder: true,
 			styleIcon: true,
 			styleIconBack: true,
@@ -328,7 +332,7 @@
 			listPosition: _Setting2.default.LIST_POSITION_INNER,
 			iconPosition: _Setting2.default.ICON_POSTION_RIGHT,
 			iconShow: [_Setting2.default.ICON_SHOW_EMPTY_HEART, _Setting2.default.ICON_SHOW_HEART],
-			styleName: _Setting2.default.STYLE_NAME_SPRING,
+			styleName: _str_style,
 			styleBorder: true,
 			styleIcon: true,
 			styleIconBack: true,
@@ -350,7 +354,7 @@
 			listPosition: _Setting2.default.LIST_POSITION_OUTER,
 			iconPosition: _Setting2.default.ICON_POSTION_BOTTOM,
 			iconShow: [_Setting2.default.ICON_SHOW_EMPTY_HEART, _Setting2.default.ICON_SHOW_HEART],
-			styleName: _Setting2.default.STYLE_NAME_SPRING,
+			styleName: _str_style,
 			styleBorder: true,
 			styleIcon: true,
 			styleIconBack: true,
@@ -372,7 +376,7 @@
 			listPosition: _Setting2.default.LIST_POSITION_INNER,
 			iconPosition: _Setting2.default.ICON_POSTION_BOTTOM,
 			iconShow: [_Setting2.default.ICON_SHOW_EMPTY_HEART, _Setting2.default.ICON_SHOW_HEART],
-			styleName: _Setting2.default.STYLE_NAME_SPRING,
+			styleName: _str_style,
 			styleBorder: true,
 			styleIcon: true,
 			styleIconBack: true,
@@ -394,7 +398,7 @@
 			listPosition: _Setting2.default.LIST_POSITION_OUTER,
 			iconPosition: _Setting2.default.ICON_POSTION_RIGHT,
 			iconShow: [_Setting2.default.ICON_SHOW_EMPTY_HEART, _Setting2.default.ICON_SHOW_HEART],
-			styleName: _Setting2.default.STYLE_NAME_SPRING,
+			styleName: _str_style,
 			styleBorder: true,
 			styleIcon: true,
 			styleIconBack: true,
@@ -416,7 +420,7 @@
 			listPosition: _Setting2.default.LIST_POSITION_INNER,
 			iconPosition: _Setting2.default.ICON_POSTION_RIGHT,
 			iconShow: [_Setting2.default.ICON_SHOW_EMPTY_HEART, _Setting2.default.ICON_SHOW_HEART],
-			styleName: _Setting2.default.STYLE_NAME_SPRING,
+			styleName: _str_style,
 			styleBorder: true,
 			styleIcon: true,
 			styleIconBack: true,
@@ -438,7 +442,7 @@
 			listPosition: _Setting2.default.LIST_POSITION_OUTER,
 			iconPosition: _Setting2.default.ICON_POSTION_BOTTOM,
 			iconShow: [_Setting2.default.ICON_SHOW_EMPTY_HEART, _Setting2.default.ICON_SHOW_HEART],
-			styleName: _Setting2.default.STYLE_NAME_SPRING,
+			styleName: _str_style,
 			styleBorder: true,
 			styleIcon: true,
 			styleIconBack: true,
@@ -460,7 +464,7 @@
 			listPosition: _Setting2.default.LIST_POSITION_INNER,
 			iconPosition: _Setting2.default.ICON_POSTION_BOTTOM,
 			iconShow: [_Setting2.default.ICON_SHOW_EMPTY_HEART, _Setting2.default.ICON_SHOW_HEART],
-			styleName: _Setting2.default.STYLE_NAME_SPRING,
+			styleName: _str_style,
 			styleBorder: true,
 			styleIcon: true,
 			styleIconBack: true,
@@ -20795,7 +20799,9 @@
 	Setting.LIST_STYLE_LOWER_GREEK = 'lower-greek';
 	Setting.LIST_STYLE_LOWER_LATIN = 'lower-latin';
 	Setting.LIST_STYLE_UPPER_LATIN = 'upper-latin';
+	Setting.STYLE_NAME_RESURGENCE = 'resurgence';
 	Setting.STYLE_NAME_SPRING = 'spring';
+	Setting.STYLE_NAME_WINE = 'wine';
 	Setting.DISABLED_TRUE = true;
 	Setting.DISABLED_FALSE = false;
 	exports.default = Setting;
@@ -20958,7 +20964,7 @@
 			key: 'getStyleName',
 			value: function getStyleName(str_style) {
 				str_style = str_style || '';
-				var _ary_style = [_Setting2.default.STYLE_NAME_SPRING];
+				var _ary_style = [_Setting2.default.STYLE_NAME_RESURGENCE, _Setting2.default.STYLE_NAME_SPRING, _Setting2.default.STYLE_NAME_WINE];
 				if (_ary_style.indexOf(str_style) >= 0) {
 					return 'pkg-style pkg-style_on pkg-style_' + str_style;
 				} else {

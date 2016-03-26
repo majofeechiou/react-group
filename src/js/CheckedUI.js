@@ -124,7 +124,11 @@ export default class CheckedUI {
 
 	static getStyleName( str_style ){
 		str_style = str_style || '' ;
-		let _ary_style = [Setting.STYLE_NAME_SPRING];
+		let _ary_style = [
+			Setting.STYLE_NAME_RESURGENCE,
+			Setting.STYLE_NAME_SPRING,
+			Setting.STYLE_NAME_WINE
+		];
 		if( _ary_style.indexOf(str_style)>=0 ){
 			return 'pkg-style pkg-style_on pkg-style_'+str_style;
 		}else{

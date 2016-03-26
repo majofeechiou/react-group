@@ -33,6 +33,10 @@ let _data_checked;
 
 let _ary_showkey = ['text','uuid'];
 
+// let _str_style = Setting.STYLE_NAME_RESURGENCE;
+let _str_style = Setting.STYLE_NAME_SPRING;
+// let _str_style = Setting.STYLE_NAME_WINE;
+
 function handleChange( bln_change, json_return ){
 	if( bln_change===true ){
 		_data_checked = json_return.result;
@@ -59,7 +63,7 @@ function render(){
 			listPosition={Setting.LIST_POSITION_OUTER}
 			iconPosition={Setting.ICON_POSTION_LEFT}
 			iconShow={[Setting.ICON_SHOW_EMPTY_HEART, Setting.ICON_SHOW_HEART]}
-			styleName={Setting.STYLE_NAME_SPRING}
+			styleName={_str_style}
 			styleBorder={true}
 			styleIcon={true}
 			styleIconBack={true}
@@ -84,7 +88,7 @@ function render(){
 			listPosition={Setting.LIST_POSITION_INNER}
 			iconPosition={Setting.ICON_POSTION_LEFT}
 			iconShow={[Setting.ICON_SHOW_EMPTY_HEART, Setting.ICON_SHOW_HEART]}
-			styleName={Setting.STYLE_NAME_SPRING}
+			styleName={_str_style}
 			styleBorder={true}
 			styleIcon={true}
 			styleIconBack={true}
@@ -109,7 +113,7 @@ function render(){
 			listPosition={Setting.LIST_POSITION_OUTER}
 			iconPosition={Setting.ICON_POSTION_TOP}
 			iconShow={[Setting.ICON_SHOW_EMPTY_HEART, Setting.ICON_SHOW_HEART]}
-			styleName={Setting.STYLE_NAME_SPRING}
+			styleName={_str_style}
 			styleBorder={true}
 			styleIcon={true}
 			styleIconBack={true}
@@ -134,7 +138,7 @@ function render(){
 			listPosition={Setting.LIST_POSITION_INNER}
 			iconPosition={Setting.ICON_POSTION_TOP}
 			iconShow={[Setting.ICON_SHOW_EMPTY_HEART, Setting.ICON_SHOW_HEART]}
-			styleName={Setting.STYLE_NAME_SPRING}
+			styleName={_str_style}
 			styleBorder={true}
 			styleIcon={true}
 			styleIconBack={true}
@@ -159,7 +163,7 @@ function render(){
 			listPosition={Setting.LIST_POSITION_OUTER}
 			iconPosition={Setting.ICON_POSTION_LEFT}
 			iconShow={[Setting.ICON_SHOW_EMPTY_HEART, Setting.ICON_SHOW_HEART]}
-			styleName={Setting.STYLE_NAME_SPRING}
+			styleName={_str_style}
 			styleBorder={true}
 			styleIcon={true}
 			styleIconBack={true}
@@ -184,7 +188,7 @@ function render(){
 			listPosition={Setting.LIST_POSITION_INNER}
 			iconPosition={Setting.ICON_POSTION_LEFT}
 			iconShow={[Setting.ICON_SHOW_EMPTY_HEART, Setting.ICON_SHOW_HEART]}
-			styleName={Setting.STYLE_NAME_SPRING}
+			styleName={_str_style}
 			styleBorder={true}
 			styleIcon={true}
 			styleIconBack={true}
@@ -209,7 +213,7 @@ function render(){
 			listPosition={Setting.LIST_POSITION_OUTER}
 			iconPosition={Setting.ICON_POSTION_TOP}
 			iconShow={[Setting.ICON_SHOW_EMPTY_HEART, Setting.ICON_SHOW_HEART]}
-			styleName={Setting.STYLE_NAME_SPRING}
+			styleName={_str_style}
 			styleBorder={true}
 			styleIcon={true}
 			styleIconBack={true}
@@ -234,7 +238,7 @@ function render(){
 			listPosition={Setting.LIST_POSITION_INNER}
 			iconPosition={Setting.ICON_POSTION_TOP}
 			iconShow={[Setting.ICON_SHOW_EMPTY_HEART, Setting.ICON_SHOW_HEART]}
-			styleName={Setting.STYLE_NAME_SPRING}
+			styleName={_str_style}
 			styleBorder={true}
 			styleIcon={true}
 			styleIconBack={true}
@@ -262,7 +266,7 @@ function render(){
 			listPosition={Setting.LIST_POSITION_OUTER}
 			iconPosition={Setting.ICON_POSTION_RIGHT}
 			iconShow={[Setting.ICON_SHOW_EMPTY_HEART, Setting.ICON_SHOW_HEART]}
-			styleName={Setting.STYLE_NAME_SPRING}
+			styleName={_str_style}
 			styleBorder={true}
 			styleIcon={true}
 			styleIconBack={true}
@@ -287,7 +291,7 @@ function render(){
 			listPosition={Setting.LIST_POSITION_INNER}
 			iconPosition={Setting.ICON_POSTION_RIGHT}
 			iconShow={[Setting.ICON_SHOW_EMPTY_HEART, Setting.ICON_SHOW_HEART]}
-			styleName={Setting.STYLE_NAME_SPRING}
+			styleName={_str_style}
 			styleBorder={true}
 			styleIcon={true}
 			styleIconBack={true}
@@ -312,7 +316,7 @@ function render(){
 			listPosition={Setting.LIST_POSITION_OUTER}
 			iconPosition={Setting.ICON_POSTION_BOTTOM}
 			iconShow={[Setting.ICON_SHOW_EMPTY_HEART, Setting.ICON_SHOW_HEART]}
-			styleName={Setting.STYLE_NAME_SPRING}
+			styleName={_str_style}
 			styleBorder={true}
 			styleIcon={true}
 			styleIconBack={true}
@@ -337,7 +341,7 @@ function render(){
 			listPosition={Setting.LIST_POSITION_INNER}
 			iconPosition={Setting.ICON_POSTION_BOTTOM}
 			iconShow={[Setting.ICON_SHOW_EMPTY_HEART, Setting.ICON_SHOW_HEART]}
-			styleName={Setting.STYLE_NAME_SPRING}
+			styleName={_str_style}
 			styleBorder={true}
 			styleIcon={true}
 			styleIconBack={true}
@@ -362,7 +366,7 @@ function render(){
 			listPosition={Setting.LIST_POSITION_OUTER}
 			iconPosition={Setting.ICON_POSTION_RIGHT}
 			iconShow={[Setting.ICON_SHOW_EMPTY_HEART, Setting.ICON_SHOW_HEART]}
-			styleName={Setting.STYLE_NAME_SPRING}
+			styleName={_str_style}
 			styleBorder={true}
 			styleIcon={true}
 			styleIconBack={true}
@@ -387,7 +391,7 @@ function render(){
 			listPosition={Setting.LIST_POSITION_INNER}
 			iconPosition={Setting.ICON_POSTION_RIGHT}
 			iconShow={[Setting.ICON_SHOW_EMPTY_HEART, Setting.ICON_SHOW_HEART]}
-			styleName={Setting.STYLE_NAME_SPRING}
+			styleName={_str_style}
 			styleBorder={true}
 			styleIcon={true}
 			styleIconBack={true}
@@ -412,7 +416,7 @@ function render(){
 			listPosition={Setting.LIST_POSITION_OUTER}
 			iconPosition={Setting.ICON_POSTION_BOTTOM}
 			iconShow={[Setting.ICON_SHOW_EMPTY_HEART, Setting.ICON_SHOW_HEART]}
-			styleName={Setting.STYLE_NAME_SPRING}
+			styleName={_str_style}
 			styleBorder={true}
 			styleIcon={true}
 			styleIconBack={true}
@@ -437,7 +441,7 @@ function render(){
 			listPosition={Setting.LIST_POSITION_INNER}
 			iconPosition={Setting.ICON_POSTION_BOTTOM}
 			iconShow={[Setting.ICON_SHOW_EMPTY_HEART, Setting.ICON_SHOW_HEART]}
-			styleName={Setting.STYLE_NAME_SPRING}
+			styleName={_str_style}
 			styleBorder={true}
 			styleIcon={true}
 			styleIconBack={true}

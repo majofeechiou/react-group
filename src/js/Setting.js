@@ -55,7 +55,9 @@ export default class Setting {
 	static LIST_STYLE_UPPER_LATIN = 'upper-latin'; // 大寫的拉丁字母
 
 	// 色彩風格
+	static STYLE_NAME_RESURGENCE = 'resurgence'; // 死灰復燃
 	static STYLE_NAME_SPRING = 'spring'; // 春天
+	static STYLE_NAME_WINE = 'wine'; // 紅酒
 
 	// 能不能作用（disabled）
 	static DISABLED_TRUE = true;
