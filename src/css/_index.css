@@ -116,7 +116,8 @@ $num_fillet_circle: 50%;
 
 @define-mixin checkedFillet $name {
 	&.pkg-checked_fillet-$name {
-		/* .pkg-checked-option { */
+		/* *** .pkg-checked-option { *** */
+		.pkg-checked-option,
 		.pkg-checked-icon {
 			@if $name == $FILLET_NONE {
 				border-radius: $num_fillet_none;

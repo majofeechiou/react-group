@@ -443,28 +443,28 @@
 
 /* .pkg-checked-option { */
 
-.pkg-checked.pkg-checked_fillet-none .pkg-checked-icon {
+.pkg-checked.pkg-checked_fillet-none .pkg-checked-option, .pkg-checked.pkg-checked_fillet-none .pkg-checked-icon {
 	border-radius: 0;
 
 }
 
 /* .pkg-checked-option { */
 
-.pkg-checked.pkg-checked_fillet-tiny .pkg-checked-icon {
+.pkg-checked.pkg-checked_fillet-tiny .pkg-checked-option, .pkg-checked.pkg-checked_fillet-tiny .pkg-checked-icon {
 	border-radius: 2px;
 
 }
 
 /* .pkg-checked-option { */
 
-.pkg-checked.pkg-checked_fillet-base .pkg-checked-icon {
+.pkg-checked.pkg-checked_fillet-base .pkg-checked-option, .pkg-checked.pkg-checked_fillet-base .pkg-checked-icon {
 	border-radius: 5px;
 
 }
 
 /* .pkg-checked-option { */
 
-.pkg-checked.pkg-checked_fillet-circle .pkg-checked-icon {
+.pkg-checked.pkg-checked_fillet-circle .pkg-checked-option, .pkg-checked.pkg-checked_fillet-circle .pkg-checked-icon {
 	border-radius: 50%;
 
 }
