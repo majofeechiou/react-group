@@ -211,6 +211,22 @@ $num_fillet_circle: 50%;
 	}
 }
 
+/* 各元件的spacing */
+.pkg-item {
+	padding-left: 0.5em;
+	padding-right: 0.5em;
+}
+.pkg-list-option::before {
+	padding-left: 0.5em;
+}
+
+.pkg-checked.pkg-checked_iconposition-left .pkg-checked-icon:before {
+	padding-left: 0.5em;
+}
+.pkg-checked.pkg-checked_iconposition-right .pkg-checked-icon:after {
+	padding-right: 0.5em;
+}
+
 .pkg-checked {
 	&, * {
 		box-sizing: border-box;
@@ -420,6 +436,8 @@ $num_fillet_circle: 50%;
 .pkg-item {
 	&, * {
 		box-sizing: border-box;
+		display: inline-block; /* ***加不加呢*** */
+        /* transform: scale(1.2); */
 	}
 	line-height: 100%;
 	.pkg-item-input {

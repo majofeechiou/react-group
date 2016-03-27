@@ -1,5 +1,7 @@
 'use strict';
 
+/* 3D旋轉選項 */
+
 export default class Setting {
 
 	// display排版方式
@@ -60,6 +62,8 @@ export default class Setting {
 	static STYLE_NAME_WINE = 'wine'; // 紅酒
 	static STYLE_NAME_BLUESKY = 'bluesky'; // 藍天
 	static STYLE_NAME_LOVELY = 'lovely'; // 可愛
+	static STYLE_NAME_LUXURY = 'luxury'; // 華貴
+	static STYLE_NAME_FANTASY = 'fantasy'; // 奇幻
 
 	// 能不能作用（disabled）
 	static DISABLED_TRUE = true;

@@ -36,11 +36,13 @@ let _ary_showkey = ['text','uuid'];
 let _bln_iconback_01 = false;
 let _bln_iconback_02 = true;
 
-let _str_style = Setting.STYLE_NAME_RESURGENCE;
+// let _str_style = Setting.STYLE_NAME_RESURGENCE;
 // let _str_style = Setting.STYLE_NAME_SPRING;
 // let _str_style = Setting.STYLE_NAME_WINE;
 // let _str_style = Setting.STYLE_NAME_BLUESKY;
 // let _str_style = Setting.STYLE_NAME_LOVELY;
+// let _str_style = Setting.STYLE_NAME_LUXURY;
+let _str_style = Setting.STYLE_NAME_FANTASY;
 
 function handleChange( bln_change, json_return ){
 	if( bln_change===true ){

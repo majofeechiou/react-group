@@ -106,11 +106,13 @@
 	var _bln_iconback_01 = false;
 	var _bln_iconback_02 = true;
 
-	var _str_style = _Setting2.default.STYLE_NAME_RESURGENCE;
+	// let _str_style = Setting.STYLE_NAME_RESURGENCE;
 	// let _str_style = Setting.STYLE_NAME_SPRING;
 	// let _str_style = Setting.STYLE_NAME_WINE;
 	// let _str_style = Setting.STYLE_NAME_BLUESKY;
 	// let _str_style = Setting.STYLE_NAME_LOVELY;
+	// let _str_style = Setting.STYLE_NAME_LUXURY;
+	var _str_style = _Setting2.default.STYLE_NAME_FANTASY;
 
 	function handleChange(bln_change, json_return) {
 		if (bln_change === true) {
@@ -20653,6 +20655,8 @@
 
 	'use strict';
 
+	/* 3D旋轉選項 */
+
 	Object.defineProperty(exports, "__esModule", {
 		value: true
 	});
@@ -20812,6 +20816,8 @@
 	Setting.STYLE_NAME_WINE = 'wine';
 	Setting.STYLE_NAME_BLUESKY = 'bluesky';
 	Setting.STYLE_NAME_LOVELY = 'lovely';
+	Setting.STYLE_NAME_LUXURY = 'luxury';
+	Setting.STYLE_NAME_FANTASY = 'fantasy';
 	Setting.DISABLED_TRUE = true;
 	Setting.DISABLED_FALSE = false;
 	exports.default = Setting;
@@ -20974,7 +20980,7 @@
 			key: 'getStyleName',
 			value: function getStyleName(str_style) {
 				str_style = str_style || '';
-				var _ary_style = [_Setting2.default.STYLE_NAME_RESURGENCE, _Setting2.default.STYLE_NAME_SPRING, _Setting2.default.STYLE_NAME_WINE, _Setting2.default.STYLE_NAME_BLUESKY, _Setting2.default.STYLE_NAME_LOVELY];
+				var _ary_style = [_Setting2.default.STYLE_NAME_RESURGENCE, _Setting2.default.STYLE_NAME_SPRING, _Setting2.default.STYLE_NAME_WINE, _Setting2.default.STYLE_NAME_BLUESKY, _Setting2.default.STYLE_NAME_LOVELY, _Setting2.default.STYLE_NAME_LUXURY, _Setting2.default.STYLE_NAME_FANTASY];
 				if (_ary_style.indexOf(str_style) >= 0) {
 					return 'pkg-style pkg-style_on pkg-style_' + str_style;
 				} else {

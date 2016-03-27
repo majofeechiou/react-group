@@ -20,9 +20,12 @@ $STYLE_SPRING_MAIN_BACK_CHECKED: color(#F2358D lightness(40%)) ;
 $STYLE_SPRING_MAIN_TEXT: #F2CED8 ;
 $STYLE_SPRING_LIST_TEXT: color(#F2E963 a(80%)) ;
 $STYLE_SPRING_LIST_TEXT_CHECKED: #F2E963 ;
-$STYLE_SPRING_ICON_TEXT: color(#F2358D a(40%)) ;
-$STYLE_SPRING_ICON_TEXT_CHECKED: #F2358D ;
+$STYLE_SPRING_ICON_TEXT: color(#F2E963 a(80%)) ;
+$STYLE_SPRING_ICON_TEXT_CHECKED: #F2E963 ;
+$STYLE_SPRING_ICONINICONBACK_TEXT: #F2358D ;
+$STYLE_SPRING_ICONINICONBACK_TEXT_CHECKED: color(#F2358D lightness(30%)) ;
 $STYLE_SPRING_ICON_BACK: #F2CED8 ;
+$STYLE_SPRING_ICON_BACK_CHECKED: color(#F2CED8 a(60%)) ;
 $STYLE_SPRING_BORDER: color(#73398C a(40%)) ;
 $STYLE_SPRING_BORDER_CHECKED: #73398C ;
 /* #F2E963 */
@@ -89,6 +92,54 @@ $STYLE_LOVELY_BORDER_CHECKED: #EF4926 ;
 #F3E4C2
 #F37A5A
 #EF4926
+*/
+
+/*
+	https://color.adobe.com/zh/library/8df9ae20-7f71-11e4-b689-0f79fc4717ce/theme/df27ac7c-a11e-43ec-80c7-7415a3db8ab7/
+*/
+$STYLE_LUXURY_MAIN_BACK: #A70704 ;
+$STYLE_LUXURY_MAIN_BACK_CHECKED: #580001 ;
+$STYLE_LUXURY_MAIN_BACKSHADOW: color(#F4F4F2 a(30%)) ;
+$STYLE_LUXURY_MAIN_TEXT: #F2A20D ;
+$STYLE_LUXURY_MAIN_TEXT_CHECKED: #F3D64B ;
+$STYLE_LUXURY_MAIN_TEXTSHADOW_CHECKED: #F4F4F2 ;
+$STYLE_LUXURY_BORDERLEFTTOP: color(#A70704 lightness(70%)) ;
+$STYLE_LUXURY_BORDERLEFTTOP_CHECKED: color(#580001 lightness(70%)) ;
+$STYLE_LUXURY_BORDERRIGHTBOTTOM: color(#A70704 lightness(85%)) ;
+$STYLE_LUXURY_BORDERRIGHTBOTTOM_CHECKED: color(#580001 lightness(85%)) ;
+$STYLE_LUXURY_LIST_TEXT: color(#F4F4F2 a(80%)) ;
+$STYLE_LUXURY_LIST_TEXT_CHECKED: #F4F4F2 ;
+$STYLE_LUXURY_ICON_TEXT: color(#F4F4F2 a(80%)) ;
+$STYLE_LUXURY_ICON_TEXT_CHECKED: #F4F4F2 ;
+$STYLE_LUXURY_ICONBACK: color(#580001 a(30%)) ;
+$STYLE_LUXURY_ICONBACK_CHECKED: color(#A70704 a(30%)) ;
+/*
+#F3D64B
+#F2A20D
+#580001
+#A70704
+#F4F4F2
+*/
+
+/*
+	https://color.adobe.com/zh/library/8df9ae20-7f71-11e4-b689-0f79fc4717ce/theme/0a072ea5-e1b5-4565-8f58-96cba1dc82b6/
+*/
+$STYLE_FANTASY_MAIN_BACK: #74FCFF ;
+$STYLE_FANTASY_MAIN_TEXT: #2DB0B2 ;
+$STYLE_FANTASY_MAIN_TEXT_CHECKED: color(#2DB0B2 lightness(30%)) ;
+$STYLE_FANTASY_BORDER: color(#2DB0B2 a(60%)) ;
+$STYLE_FANTASY_LIST_TEXT: color(#2DB0B2 a(60%)) ;
+$STYLE_FANTASY_ICON_TEXT: color(#2DB0B2 a(60%)) ;
+$STYLE_FANTASY_ICON_TEXT_CHECKED: color(#2DB0B2 a(80%)) ;
+$STYLE_FANTASY_ICON_TEXTINICONBACK: color(#FA853C a(75%)) ;
+$STYLE_FANTASY_ICON_TEXTINICONBACK_CHECKED: #FA853C ;
+$STYLE_FANTASY_ICONBACK: #FFA974 ;
+/*
+#FA853C
+#FFB98D
+#FFA974
+#2DB0B2
+#74FCFF
 */
 
  /* 好想用json格式合mixin去套用呀ToT */ 
@@ -188,10 +239,28 @@ $STYLE_LOVELY_BORDER_CHECKED: #EF4926 ;
 				color: $STYLE_SPRING_ICON_TEXT_CHECKED;
 			}
 		}
+		.pkg-style-icon.pkg-style-iconback {
+			&:before,
+			&:after {
+				color: $STYLE_SPRING_ICONINICONBACK_TEXT;
+			}
+		}
+		.pkg-style-icon.pkg-style-icon_checked.pkg-style-iconback {
+			&:before,
+			&:after {
+				color: $STYLE_SPRING_ICONINICONBACK_TEXT_CHECKED;
+			}
+		}
 		.pkg-style-iconback {
 			&:before,
 			&:after {
 				background: $STYLE_SPRING_ICON_BACK;
+			}
+		}
+		.pkg-style-iconback.pkg-style-iconback_checked {
+			&:before,
+			&:after {
+				background: $STYLE_SPRING_ICON_BACK_CHECKED;
 			}
 		}
 	}
@@ -352,6 +421,115 @@ $STYLE_LOVELY_BORDER_CHECKED: #EF4926 ;
 			&:after {
 				background: $STYLE_LOVELY_ICONBACK_CHECKED;
 				color: $STYLE_LOVELY_ICONINICONBACK_TEXT;
+			}
+		}
+	}
+	&.pkg-style_luxury {
+		.pkg-style-item {
+			background: $STYLE_LUXURY_MAIN_BACK;
+			color: $STYLE_LUXURY_MAIN_TEXT;
+			box-shadow: 0 0 0 2px $STYLE_LUXURY_MAIN_BACKSHADOW inset;
+		}
+		.pkg-style-item.pkg-style-item_checked {
+			background: $STYLE_LUXURY_MAIN_BACK_CHECKED;
+			color: $STYLE_LUXURY_MAIN_TEXT_CHECKED;
+			text-shadow: 0 0 6px $STYLE_LUXURY_MAIN_TEXTSHADOW_CHECKED, 0 0 3px $STYLE_LUXURY_MAIN_TEXTSHADOW_CHECKED;
+		}
+		.pkg-style-border {
+			border-left: 1px solid $STYLE_LUXURY_BORDERLEFTTOP;
+			border-top: 1px solid $STYLE_LUXURY_BORDERLEFTTOP;
+			border-right: 1px solid $STYLE_LUXURY_BORDERRIGHTBOTTOM;
+			border-bottom: 1px solid $STYLE_LUXURY_BORDERRIGHTBOTTOM;
+		}
+		.pkg-style-border.pkg-style-border_checked {
+			border-left: 1px solid $STYLE_LUXURY_BORDERLEFTTOP_CHECKED;
+			border-top: 1px solid $STYLE_LUXURY_BORDERLEFTTOP_CHECKED;
+			border-right: 1px solid $STYLE_LUXURY_BORDERRIGHTBOTTOM_CHECKED;
+			border-bottom: 1px solid $STYLE_LUXURY_BORDERRIGHTBOTTOM_CHECKED;
+		}
+		.pkg-style-list {
+			&:before,
+			&:after {
+				color: $STYLE_LUXURY_LIST_TEXT;
+			}
+		}
+		.pkg-style-list.pkg-style-list_checked {
+			&:before,
+			&:after {
+				color: $STYLE_LUXURY_LIST_TEXT_CHECKED;
+			}
+		}
+		.pkg-style-icon {
+			&:before,
+			&:after {
+				color: $STYLE_LUXURY_ICON_TEXT;
+			}
+		}
+		.pkg-style-icon.pkg-style-icon_checked {
+			&:before,
+			&:after {
+				color: $STYLE_LUXURY_ICON_TEXT_CHECKED;
+			}
+		}
+		.pkg-style-iconback {
+			&:before,
+			&:after {
+				background: $STYLE_LUXURY_ICONBACK;
+			}
+		}
+		.pkg-style-iconback.pkg-style-iconback_checked {
+			&:before,
+			&:after {
+				background: $STYLE_LUXURY_ICONBACK_CHECKED;
+			}
+		}
+	}
+	&.pkg-style_fantasy {
+		.pkg-style-item {
+			background: $STYLE_FANTASY_MAIN_BACK;
+			color: $STYLE_FANTASY_MAIN_TEXT;
+		}
+		.pkg-style-item.pkg-style-item_checked {
+			color: $STYLE_FANTASY_MAIN_TEXT_CHECKED;
+		}
+		.pkg-style-border {
+			border: 2px solid $STYLE_FANTASY_BORDER;
+		}
+		.pkg-style-list {
+			&:before,
+			&:after {
+				color: $STYLE_FANTASY_LIST_TEXT;
+			}
+		}
+		.pkg-style-icon {
+			&:before,
+			&:after {
+				color: $STYLE_FANTASY_ICON_TEXT;
+			}
+		}
+		.pkg-style-icon.pkg-style-icon_checked {
+			&:before,
+			&:after {
+				color: $STYLE_FANTASY_ICON_TEXT_CHECKED;
+			}
+		}
+		.pkg-style-iconback {
+			&:before,
+			&:after {
+				background: $STYLE_FANTASY_ICONBACK;
+			}
+		}
+		.pkg-style-iconback.pkg-style-icon {
+			&:before,
+			&:after {
+				background: $STYLE_FANTASY_ICONBACK;
+				color: $STYLE_FANTASY_ICON_TEXTINICONBACK;
+			}
+		}
+		.pkg-style-iconback.pkg-style-iconback_checked.pkg-style-icon {
+			&:before,
+			&:after {
+				color: $STYLE_FANTASY_ICON_TEXTINICONBACK_CHECKED;
 			}
 		}
 	}
