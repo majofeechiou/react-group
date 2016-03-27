@@ -112,7 +112,9 @@
 	// let _str_style = Setting.STYLE_NAME_BLUESKY;
 	// let _str_style = Setting.STYLE_NAME_LOVELY;
 	// let _str_style = Setting.STYLE_NAME_LUXURY;
-	var _str_style = _Setting2.default.STYLE_NAME_FANTASY;
+	// let _str_style = Setting.STYLE_NAME_FANTASY;
+	// let _str_style = Setting.STYLE_NAME_RIGID;
+	var _str_style = _Setting2.default.STYLE_NAME_WATERSIDE;
 
 	function handleChange(bln_change, json_return) {
 		if (bln_change === true) {
@@ -20690,6 +20692,10 @@
 		wine - 紅酒
 		bluesky - 藍天
 		lovely - 可愛
+		luxury - 華貴
+		fantasy - 奇幻
+		rigid'- 鋼硬
+		waterside - 水畔
 	 */
 	/*
 		spacing:
@@ -20818,6 +20824,8 @@
 	Setting.STYLE_NAME_LOVELY = 'lovely';
 	Setting.STYLE_NAME_LUXURY = 'luxury';
 	Setting.STYLE_NAME_FANTASY = 'fantasy';
+	Setting.STYLE_NAME_RIGID = 'rigid';
+	Setting.STYLE_NAME_WATERSIDE = 'waterside';
 	Setting.DISABLED_TRUE = true;
 	Setting.DISABLED_FALSE = false;
 	exports.default = Setting;
@@ -20980,7 +20988,7 @@
 			key: 'getStyleName',
 			value: function getStyleName(str_style) {
 				str_style = str_style || '';
-				var _ary_style = [_Setting2.default.STYLE_NAME_RESURGENCE, _Setting2.default.STYLE_NAME_SPRING, _Setting2.default.STYLE_NAME_WINE, _Setting2.default.STYLE_NAME_BLUESKY, _Setting2.default.STYLE_NAME_LOVELY, _Setting2.default.STYLE_NAME_LUXURY, _Setting2.default.STYLE_NAME_FANTASY];
+				var _ary_style = [_Setting2.default.STYLE_NAME_RESURGENCE, _Setting2.default.STYLE_NAME_SPRING, _Setting2.default.STYLE_NAME_WINE, _Setting2.default.STYLE_NAME_BLUESKY, _Setting2.default.STYLE_NAME_LOVELY, _Setting2.default.STYLE_NAME_LUXURY, _Setting2.default.STYLE_NAME_FANTASY, _Setting2.default.STYLE_NAME_RIGID, _Setting2.default.STYLE_NAME_WATERSIDE];
 				if (_ary_style.indexOf(str_style) >= 0) {
 					return 'pkg-style pkg-style_on pkg-style_' + str_style;
 				} else {

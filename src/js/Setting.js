@@ -64,6 +64,8 @@ export default class Setting {
 	static STYLE_NAME_LOVELY = 'lovely'; // 可愛
 	static STYLE_NAME_LUXURY = 'luxury'; // 華貴
 	static STYLE_NAME_FANTASY = 'fantasy'; // 奇幻
+	static STYLE_NAME_RIGID = 'rigid'; // 鋼硬
+	static STYLE_NAME_WATERSIDE = 'waterside'; // 水畔
 
 	// 能不能作用（disabled）
 	static DISABLED_TRUE = true;
@@ -95,6 +97,10 @@ export default class Setting {
 			wine - 紅酒
 			bluesky - 藍天
 			lovely - 可愛
+			luxury - 華貴
+			fantasy - 奇幻
+			rigid'- 鋼硬
+			waterside - 水畔
 		 */
 /*
 	spacing:

@@ -42,7 +42,9 @@ let _bln_iconback_02 = true;
 // let _str_style = Setting.STYLE_NAME_BLUESKY;
 // let _str_style = Setting.STYLE_NAME_LOVELY;
 // let _str_style = Setting.STYLE_NAME_LUXURY;
-let _str_style = Setting.STYLE_NAME_FANTASY;
+// let _str_style = Setting.STYLE_NAME_FANTASY;
+// let _str_style = Setting.STYLE_NAME_RIGID;
+let _str_style = Setting.STYLE_NAME_WATERSIDE;
 
 function handleChange( bln_change, json_return ){
 	if( bln_change===true ){

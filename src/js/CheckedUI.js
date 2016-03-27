@@ -131,7 +131,9 @@ export default class CheckedUI {
 			Setting.STYLE_NAME_BLUESKY,
 			Setting.STYLE_NAME_LOVELY,
 			Setting.STYLE_NAME_LUXURY,
-			Setting.STYLE_NAME_FANTASY
+			Setting.STYLE_NAME_FANTASY,
+			Setting.STYLE_NAME_RIGID,
+			Setting.STYLE_NAME_WATERSIDE
 		];
 		if( _ary_style.indexOf(str_style)>=0 ){
 			return 'pkg-style pkg-style_on pkg-style_'+str_style;

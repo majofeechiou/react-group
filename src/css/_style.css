@@ -142,7 +142,54 @@ $STYLE_FANTASY_ICONBACK: #FFA974 ;
 #74FCFF
 */
 
- /* 好想用json格式合mixin去套用呀ToT */ 
+/*
+	https://color.adobe.com/zh/library/8df9ae20-7f71-11e4-b689-0f79fc4717ce/theme/3e66e788-a3ae-4396-8579-c73e1eac817b/
+*/
+$STYLE_RIGID_MAIN_BACK: #DEE0E2 ;
+$STYLE_RIGID_MAIN_TEXT: #393430 ;
+$STYLE_RIGID_MAIN_TEXT_CHECKED: color(#393430 lightness(30%)) ;
+$STYLE_RIGID_MAIN_TEXTSHADOW_CHECKED: white ;
+$STYLE_RIGID_BORDER: #A47F6C ;
+$STYLE_RIGID_BORDER_CHECKED: color(#A47F6C lightness(30%)) ;
+$STYLE_RIGID_SHADOW: color(#A47F6C a(40%)) ;
+$STYLE_RIGID_LIST_TEXT: #F1BA49 ;
+$STYLE_RIGID_ICON_TEXT: #D0803C ;
+$STYLE_RIGID_ICON_TEXT_CHECKED: color(#D0803C lightness(30%)) ;
+$STYLE_RIGID_ICONBACK: color(#F1BA49 a(80%)) ;
+$STYLE_RIGID_ICONBACK_CHECKED: #F1BA49 ;
+$STYLE_RIGID_ICON_TEXTINICONBACK: #DEE0E2 ;
+$STYLE_RIGID_ICON_TEXTINICONBACK_CHECKED: white ;
+/*
+#DEE0E2
+#F1BA49
+#D0803C
+#A47F6C
+#393430
+*/
+
+/*
+	https://color.adobe.com/zh/library/8df9ae20-7f71-11e4-b689-0f79fc4717ce/theme/a80e5c0b-1a7e-4c20-a6cf-cd9f83240db3/
+*/
+$STYLE_WATERSIDE_MAIN_BACK: #CCCB20 ;
+$STYLE_WATERSIDE_MAIN_BACK_CHECKED: color(#CCCB20 blackness(25%)) ;
+$STYLE_WATERSIDE_MAIN_TEXT: #999946 ;
+$STYLE_WATERSIDE_MAIN_TEXT_CHECKED: color(#999946 blackness(65%)) ;
+$STYLE_WATERSIDE_MAIN_BACKSHADOW01: color(#FFCE0F a(75%));
+$STYLE_WATERSIDE_MAIN_BACKSHADOW02: color(white a(55%));
+$STYLE_WATERSIDE_BORDER: #FFCE0F ;
+$STYLE_WATERSIDE_LIST_TEXT: color(#FFCE0F whiteness(65%)) ;
+$STYLE_WATERSIDE_ICON_TEXT: #4F88FF ;
+$STYLE_WATERSIDE_ICON_TEXT_CHECKED: #2085CC ;
+$STYLE_WATERSIDE_ICONBACK: #FFCE0F ;
+$STYLE_WATERSIDE_ICONBACKSHADOW: color(#999946 blackness(65%)) ;
+/*
+#CCCB20
+#999946
+#FFCE0F
+#4F88FF
+#2085CC
+*/
+
 .pkg-style {
 	&.pkg-style_on {
 		.pkg-style-iconback {
@@ -355,7 +402,8 @@ $STYLE_FANTASY_ICONBACK: #FFA974 ;
 				filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='$STYLE_BLUESKY_ICON_BACKLINEAR_CHECKED_UP', endColorstr='$STYLE_BLUESKY_ICON_BACKLINEAR_CHECKED_DOWN',GradientType=0 ); /* IE6-9 */
 			}
 		}
-		.pkg-style-iconback.pkg-style-iconback_checked {
+		.pkg-style-iconback.pkg-style-iconback_checked,
+		.pkg-style-iconback.pkg-style-iconback_checked.pkg-style-icon {
 			&:before,
 			&:after {
 				color: $STYLE_BLUESKY_ICONINICONBACK_TEXT_CHECKED;
@@ -409,14 +457,16 @@ $STYLE_FANTASY_ICONBACK: #FFA974 ;
 				color: $STYLE_LOVELY_ICON_TEXT_CHECKED;
 			}
 		}
-		.pkg-style-iconback {
+		.pkg-style-iconback,
+		.pkg-style-iconback.pkg-style-icon {
 			&:before,
 			&:after {
 				background: $STYLE_LOVELY_ICONBACK;	
 				color: $STYLE_LOVELY_ICONINICONBACK_TEXT;		
 			}
 		}
-		.pkg-style-iconback.pkg-style-iconback_checked {
+		.pkg-style-iconback.pkg-style-iconback_checked,
+		.pkg-style-iconback.pkg-style-iconback_checked.pkg-style-icon {
 			&:before,
 			&:after {
 				background: $STYLE_LOVELY_ICONBACK_CHECKED;
@@ -519,6 +569,7 @@ $STYLE_FANTASY_ICONBACK: #FFA974 ;
 				background: $STYLE_FANTASY_ICONBACK;
 			}
 		}
+		.pkg-style-iconback,
 		.pkg-style-iconback.pkg-style-icon {
 			&:before,
 			&:after {
@@ -526,10 +577,101 @@ $STYLE_FANTASY_ICONBACK: #FFA974 ;
 				color: $STYLE_FANTASY_ICON_TEXTINICONBACK;
 			}
 		}
+		.pkg-style-iconback.pkg-style-iconback_checked,
 		.pkg-style-iconback.pkg-style-iconback_checked.pkg-style-icon {
 			&:before,
 			&:after {
 				color: $STYLE_FANTASY_ICON_TEXTINICONBACK_CHECKED;
+			}
+		}
+	}
+	&.pkg-style_rigid {
+		.pkg-style-item {
+			background: $STYLE_RIGID_MAIN_BACK;
+			color: $STYLE_RIGID_MAIN_TEXT;
+		}
+		.pkg-style-item.pkg-style-item_checked {
+			color: $STYLE_RIGID_MAIN_TEXT_CHECKED;
+			text-shadow: 0 0 4px $STYLE_RIGID_MAIN_TEXTSHADOW_CHECKED;
+		}
+		.pkg-style-border {
+			border: 1px solid $STYLE_RIGID_BORDER;
+			box-shadow: 0 0 2px 0 $STYLE_RIGID_BORDER_CHECKED;
+		}
+		.pkg-style-border.pkg-style-border_checked {
+			border: 1px solid $STYLE_RIGID_BORDER_CHECKED;
+		}
+		.pkg-style-list {
+			&:before,
+			&:after {
+				color: $STYLE_RIGID_LIST_TEXT;
+			}
+		}
+		.pkg-style-icon {
+			&:before,
+			&:after {
+				color: $STYLE_RIGID_ICON_TEXT;
+			}
+		}
+		.pkg-style-icon.pkg-style-icon_checked {
+			&:before,
+			&:after {
+				color: $STYLE_RIGID_ICON_TEXT_CHECKED;
+			}
+		}
+		.pkg-style-iconback,
+		.pkg-style-iconback.pkg-style-icon {
+			&:before,
+			&:after {
+				background: $STYLE_RIGID_ICONBACK;
+				color: $STYLE_RIGID_ICON_TEXTINICONBACK;
+			}
+		}
+		.pkg-style-iconback.pkg-style-iconback_checked,
+		.pkg-style-iconback.pkg-style-iconback_checked.pkg-style-icon {
+			&:before,
+			&:after {
+				background: $STYLE_RIGID_ICONBACK_CHECKED;
+				color: $STYLE_RIGID_ICON_TEXTINICONBACK_CHECKED;
+			}
+		}
+	}
+	&.pkg-style_waterside {
+		.pkg-style-item {
+			background: $STYLE_WATERSIDE_MAIN_BACK;
+			color: $STYLE_WATERSIDE_MAIN_TEXT;
+			box-shadow: 0 0 13px 0 $STYLE_WATERSIDE_MAIN_BACKSHADOW02 inset, 0 0 8px 1px $STYLE_WATERSIDE_MAIN_BACKSHADOW01 inset;
+		}
+		.pkg-style-item.pkg-style-item_checked {
+			background: $STYLE_WATERSIDE_MAIN_BACK_CHECKED;
+			color: $STYLE_WATERSIDE_MAIN_TEXT_CHECKED;
+		}
+		.pkg-style-border {
+			border: 1px solid $STYLE_WATERSIDE_BORDER;
+		}
+		.pkg-style-list {
+			&:before,
+			&:after {
+				color: $STYLE_WATERSIDE_LIST_TEXT;
+			}
+		}
+		.pkg-style-icon {
+			&:before,
+			&:after {
+				color: $STYLE_WATERSIDE_ICON_TEXT;
+			}
+		}
+		.pkg-style-icon.pkg-style-icon_checked {
+			&:before,
+			&:after {
+				color: $STYLE_WATERSIDE_ICON_TEXT_CHECKED;
+			}
+		}
+		.pkg-style-iconback {
+			&:before,
+			&:after {
+				background: $STYLE_WATERSIDE_ICONBACK;
+				box-shadow: 0 0 5px 0 $STYLE_WATERSIDE_ICONBACKSHADOW;
 			}
 		}
 	}
