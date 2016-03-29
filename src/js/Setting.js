@@ -102,6 +102,39 @@ export default class Setting {
 			rigid'- 鋼硬
 			waterside - 水畔
 		 */
+
+/*
+	composition:
+	half - 1/2
+	third - 1/3
+	quarter - 1/4
+	fifth - 1/5
+	sixth - 1/6
+	eighth - 1/8
+	tenth - 1/10
+	twelfth - 1/12
+	tinyem - 0.2em
+	smallem - 0.5em
+	littleem - 0.8em
+	baseem - 1em
+	middleem - 1.2em
+	bigem - 1.5em
+	largeem - 2em
+	tinypercent - 2%
+	smallpercent - 5%
+	littlepercent - 8%
+	basepercent - 10%
+	middlepercent - 12%
+	bigpercent - 15%
+	largepercent - 20%m
+	tiny - 2px
+	small - 5px
+	little - 10px
+	base - 15px
+	middle - 20px
+	big - 30px
+	large - 50px
+*/
 /*
 	spacing:
 	tiny - 0.2em

@@ -20860,11 +20860,9 @@
 			value: function getDisabled(str_display) {
 				var _str_return = '';
 				str_display = str_display || _Setting2.default.DISPLAY_INBLOCK;
-				switch (str_display) {
-					case _Setting2.default.DISPLAY_INBLOCK:
-					case _Setting2.default.DISPLAY_BLOCK:
-						_str_return = 'pkg-checked_display-' + str_display;
-						break;
+				var _ary_display = [_Setting2.default.DISPLAY_INBLOCK, _Setting2.default.DISPLAY_BLOCK];
+				if (_ary_display.indexOf(str_display) >= 0) {
+					_str_return = 'pkg-checked_display-' + str_display;
 				}
 				return _str_return;
 			}
@@ -20873,17 +20871,9 @@
 			value: function getPadding(str_padding) {
 				var _str_return = '';
 				str_padding = str_padding || _Setting2.default.DISPLAY_INBLOCK;
-				switch (str_padding) {
-					case _Setting2.default.PADDING_TINY:
-					case _Setting2.default.PADDING_SMALL:
-					case _Setting2.default.PADDING_LITTLE:
-					case _Setting2.default.PADDING_BASE:
-					case _Setting2.default.PADDING_MIDDLE:
-					case _Setting2.default.PADDING_BIG:
-					case _Setting2.default.PADDING_LARGE:
-					case _Setting2.default.PADDING_HUGE:
-						_str_return = 'pkg-checked_padding-' + str_padding;
-						break;
+				var _ary_padding = [_Setting2.default.PADDING_TINY, _Setting2.default.PADDING_SMALL, _Setting2.default.PADDING_LITTLE, _Setting2.default.PADDING_BASE, _Setting2.default.PADDING_MIDDLE, _Setting2.default.PADDING_BIG, _Setting2.default.PADDING_LARGE, _Setting2.default.PADDING_HUGE];
+				if (_ary_padding.indexOf(str_padding) >= 0) {
+					_str_return = 'pkg-checked_padding-' + str_padding;
 				}
 				return _str_return;
 			}
@@ -20891,13 +20881,9 @@
 			key: 'getFillte',
 			value: function getFillte(str_fillet) {
 				var _str_return = '';
-				switch (str_fillet) {
-					case _Setting2.default.FILLET_NONE:
-					case _Setting2.default.FILLET_TINY:
-					case _Setting2.default.FILLET_BASE:
-					case _Setting2.default.FILLET_CIRCLE:
-						_str_return = 'pkg-checked_fillet-' + str_fillet;
-						break;
+				var _ary_fillet = [_Setting2.default.FILLET_NONE, _Setting2.default.FILLET_TINY, _Setting2.default.FILLET_BASE, _Setting2.default.FILLET_CIRCLE];
+				if (_ary_fillet.indexOf(str_fillet) >= 0) {
+					_str_return = 'pkg-checked_fillet-' + str_fillet;
 				}
 				return _str_return;
 			}
@@ -20906,14 +20892,9 @@
 			value: function getIconPosition(str_position) {
 				var _str_return = '';
 				// str_position = str_position || Setting.ICON_POSTION_LEFT ;
-				switch (str_position) {
-					case _Setting2.default.ICON_POSTION_TOP:
-					case _Setting2.default.ICON_POSTION_BOTTOM:
-					case _Setting2.default.ICON_POSTION_LEFT:
-					case _Setting2.default.ICON_POSTION_RIGHT:
-					case _Setting2.default.ICON_POSTION_NONE:
-						_str_return = 'pkg-checked_iconposition-' + str_position;
-						break;
+				var _ary_position = [_Setting2.default.ICON_POSTION_TOP, _Setting2.default.ICON_POSTION_BOTTOM, _Setting2.default.ICON_POSTION_LEFT, _Setting2.default.ICON_POSTION_RIGHT, _Setting2.default.ICON_POSTION_NONE];
+				if (_ary_position.indexOf(str_position) >= 0) {
+					_str_return = 'pkg-checked_iconposition-' + str_position;
 				}
 				return _str_return;
 			}
@@ -20922,16 +20903,9 @@
 			value: function getIconShowCN(str_icon, num_index) {
 				var _str_return = '';
 				var _str_cname = num_index === 1 ? 'pkg-checked_iconchecked-' : 'pkg-checked_iconshow-';
-				switch (str_icon) {
-					case _Setting2.default.ICON_SHOW_HEART:
-					case _Setting2.default.ICON_SHOW_EMPTY_HEART:
-					case _Setting2.default.ICON_SHOW_CHECKED:
-					case _Setting2.default.ICON_SHOW_SQUARE_CHECKED:
-					case _Setting2.default.ICON_SHOW_SQUARE:
-					case _Setting2.default.ICON_SHOW_CLOSE:
-					case _Setting2.default.ICON_SHOW_LINE:
-						_str_return = _str_cname + str_icon.replace('-', '');
-						break;
+				var _ary_icon = [_Setting2.default.ICON_SHOW_HEART, _Setting2.default.ICON_SHOW_EMPTY_HEART, _Setting2.default.ICON_SHOW_CHECKED, _Setting2.default.ICON_SHOW_SQUARE_CHECKED, _Setting2.default.ICON_SHOW_SQUARE, _Setting2.default.ICON_SHOW_CLOSE, _Setting2.default.ICON_SHOW_LINE];
+				if (_ary_icon.indexOf(str_icon) >= 0) {
+					_str_return = _str_cname + str_icon.replace('-', '');
 				}
 				return _str_return;
 			}
@@ -20956,19 +20930,9 @@
 			key: 'getListStyle',
 			value: function getListStyle(str_style) {
 				var _str_return = '';
-				switch (str_style) {
-					case _Setting2.default.LIST_STYLE_DISC:
-					case _Setting2.default.LIST_STYLE_CIRCLE:
-					case _Setting2.default.LIST_STYLE_DECIMAL:
-					case _Setting2.default.LIST_STYLE_SQUARE:
-					case _Setting2.default.LIST_STYLE_DECIMAL_LEADING_ZERO:
-					case _Setting2.default.LIST_STYLE_LOWER_ROMAN:
-					case _Setting2.default.LIST_STYLE_UPPER_ROMAN:
-					case _Setting2.default.LIST_STYLE_LOWER_GREEK:
-					case _Setting2.default.LIST_STYLE_LOWER_LATIN:
-					case _Setting2.default.LIST_STYLE_UPPER_LATIN:
-						_str_return = 'pkg-list_style-' + str_style;
-						break;
+				var _ary_style = [_Setting2.default.LIST_STYLE_DISC, _Setting2.default.LIST_STYLE_CIRCLE, _Setting2.default.LIST_STYLE_DECIMAL, _Setting2.default.LIST_STYLE_SQUARE, _Setting2.default.LIST_STYLE_DECIMAL_LEADING_ZERO, _Setting2.default.LIST_STYLE_LOWER_ROMAN, _Setting2.default.LIST_STYLE_UPPER_ROMAN, _Setting2.default.LIST_STYLE_LOWER_GREEK, _Setting2.default.LIST_STYLE_LOWER_LATIN, _Setting2.default.LIST_STYLE_UPPER_LATI];
+				if (_ary_style.indexOf(str_style) >= 0) {
+					_str_return = 'pkg-list_style-' + str_style;
 				}
 				return _str_return;
 			}
@@ -20976,11 +20940,9 @@
 			key: 'getListPosition',
 			value: function getListPosition(str_position) {
 				var _str_return = '';
-				switch (str_position) {
-					case _Setting2.default.LIST_POSITION_OUTER:
-					case _Setting2.default.LIST_POSITION_INNER:
-						_str_return = 'pkg-checked_listposition-' + str_position;
-						break;
+				var _ary_position = [_Setting2.default.LIST_POSITION_OUTER, _Setting2.default.LIST_POSITION_INNER];
+				if (_ary_position.indexOf(str_position) >= 0) {
+					_str_return = 'pkg-checked_listposition-' + str_position;
 				}
 				return _str_return;
 			}
