@@ -23,9 +23,29 @@ export default class RadioGroup extends React.Component {
 		if( typeof props.outputFormat === 'string' && (props.outputFormat).match(/^((string)|(json)|(array)|(sarry))$/i)!==null ){
 			_str_format = props.outputFormat ;
 		}
-		let _data_result = 
-			( _str_format==='array' || _str_format==='sarry' )? [] : 
-			(( _str_format==='json' )? {} : '' ) ;
+		// let _data_result = 
+		// 	( _str_format==='array' || _str_format==='sarry' )? [] : 
+		// 	(( _str_format==='json' )? {} : '' ) ;
+		let _data_result;
+		if(  _str_format==='array' || _str_format==='sarry' ){
+			if( props.outputResult instanceof Array === true ){
+				_data_result = props.outputResult;
+			}else{
+				_data_result = [];
+			}
+		}else if( _str_format==='string' ){
+			if( typeof props.outputResult === 'string' ){
+				_data_result = props.outputResult;
+			}else{
+				_data_result = '';
+			}
+		}else{
+			if( typeof props.outputResult === 'object' ){
+				_data_result = props.outputResult;
+			}else{
+				_data_result = {};
+			}
+		}
 		this.state = {
 			format: _str_format ,
 			disabled: false ,
@@ -162,7 +182,7 @@ export default class RadioGroup extends React.Component {
 			[CheckedUI.getListPosition( this.props.listPosition )]: true,
 			[CheckedUI.getIconPosition( this.props.iconPosition )]: true,
 			[CheckedUI.getIconShow( this.props.iconShow )]: true,
-			[CheckedUI.getStyleName( this.props.styleName )]: true,
+			[CheckedUI.getStyleName( this.props.styleName, this.props.offBack )]: true,
 			[CheckedUI.getComposition( this.props.composition )]: true,
 
 		});
@@ -229,6 +249,7 @@ export default class RadioGroup extends React.Component {
 
 RadioGroup.propTypes = {
 	onChange: React.PropTypes.func,
+	outputResult: React.PropTypes.any.isRequired,
 	className: React.PropTypes.string,
     inputoption: React.PropTypes.array,
     selectKey: React.PropTypes.array,
@@ -241,6 +262,7 @@ RadioGroup.propTypes = {
     iconPosition: React.PropTypes.string,
     iconShow: React.PropTypes.array,
     styleName: React.PropTypes.string,
+    offBack: React.PropTypes.bool,
     composition: React.PropTypes.string,
     styleBorder: React.PropTypes.bool,
     styleIcon: React.PropTypes.bool,
@@ -249,6 +271,7 @@ RadioGroup.propTypes = {
 },
 RadioGroup.defaultProps = {
 	className: '',
+	outputResult: null,
 	inputoption: [],
 	selectKey: [],
 	showKey: [],
@@ -259,6 +282,7 @@ RadioGroup.defaultProps = {
     iconPosition: Setting.ICON_POSTION_LEFT,
     iconShow: [],
     styleName: '',
+    offBack: false,
     composition: '',
     styleBorder: false,
     styleIcon: false,

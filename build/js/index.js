@@ -126,11 +126,7 @@
 	}];
 
 	var _ary_selectkey = ['uuid'];
-	var _data_checked = undefined;
-	// let _data_checked = [{
-	// 	uuid: 'd',
-	// 	text: 'D'
-	// }];
+	var _data_checked = ['a', 'b', 'c', 'd', 'e', 'f'];
 
 	var _ary_showkey = ['text', 'uuid'];
 
@@ -142,10 +138,13 @@
 	// let _str_style = Setting.STYLE_NAME_WINE;
 	// let _str_style = Setting.STYLE_NAME_BLUESKY;
 	// let _str_style = Setting.STYLE_NAME_LOVELY;
-	// let _str_style = Setting.STYLE_NAME_LUXURY;
+	var _str_style = _Setting2.default.STYLE_NAME_LUXURY;
 	// let _str_style = Setting.STYLE_NAME_FANTASY;
 	// let _str_style = Setting.STYLE_NAME_RIGID;
-	var _str_style = _Setting2.default.STYLE_NAME_WATERSIDE;
+	// let _str_style = Setting.STYLE_NAME_WATERSIDE;
+
+	var _bln_offBack_01 = true;
+	var _bln_offBack_02 = false;
 
 	// let _str_composition = Setting.COMPOSITION_HALF;
 	// let _str_composition = Setting.COMPOSITION_THIRD;
@@ -207,6 +206,7 @@
 			iconShow: [_Setting2.default.ICON_SHOW_EMPTY_HEART, _Setting2.default.ICON_SHOW_HEART],
 			styleName: _str_style,
 			composition: _str_composition,
+			offBack: _bln_offBack_01,
 			styleBorder: true,
 			styleIcon: true,
 			styleIconBack: _bln_iconback_01,
@@ -230,6 +230,7 @@
 			iconShow: [_Setting2.default.ICON_SHOW_EMPTY_HEART, _Setting2.default.ICON_SHOW_HEART],
 			styleName: _str_style,
 			composition: _str_composition,
+			offBack: _bln_offBack_01,
 			styleBorder: true,
 			styleIcon: true,
 			styleIconBack: _bln_iconback_01,
@@ -253,6 +254,7 @@
 			iconShow: [_Setting2.default.ICON_SHOW_EMPTY_HEART, _Setting2.default.ICON_SHOW_HEART],
 			styleName: _str_style,
 			composition: _str_composition,
+			offBack: _bln_offBack_01,
 			styleBorder: true,
 			styleIcon: true,
 			styleIconBack: _bln_iconback_01,
@@ -276,6 +278,7 @@
 			iconShow: [_Setting2.default.ICON_SHOW_EMPTY_HEART, _Setting2.default.ICON_SHOW_HEART],
 			styleName: _str_style,
 			composition: _str_composition,
+			offBack: _bln_offBack_01,
 			styleBorder: true,
 			styleIcon: true,
 			styleIconBack: _bln_iconback_01,
@@ -299,6 +302,7 @@
 			iconShow: [_Setting2.default.ICON_SHOW_EMPTY_HEART, _Setting2.default.ICON_SHOW_HEART],
 			styleName: _str_style,
 			composition: _str_composition,
+			offBack: _bln_offBack_01,
 			styleBorder: true,
 			styleIcon: true,
 			styleIconBack: _bln_iconback_01,
@@ -322,6 +326,7 @@
 			iconShow: [_Setting2.default.ICON_SHOW_EMPTY_HEART, _Setting2.default.ICON_SHOW_HEART],
 			styleName: _str_style,
 			composition: _str_composition,
+			offBack: _bln_offBack_01,
 			styleBorder: true,
 			styleIcon: true,
 			styleIconBack: _bln_iconback_01,
@@ -345,6 +350,7 @@
 			iconShow: [_Setting2.default.ICON_SHOW_EMPTY_HEART, _Setting2.default.ICON_SHOW_HEART],
 			styleName: _str_style,
 			composition: _str_composition,
+			offBack: _bln_offBack_01,
 			styleBorder: true,
 			styleIcon: true,
 			styleIconBack: _bln_iconback_01,
@@ -368,6 +374,7 @@
 			iconShow: [_Setting2.default.ICON_SHOW_EMPTY_HEART, _Setting2.default.ICON_SHOW_HEART],
 			styleName: _str_style,
 			composition: _str_composition,
+			offBack: _bln_offBack_01,
 			styleBorder: true,
 			styleIcon: true,
 			styleIconBack: _bln_iconback_01,
@@ -393,6 +400,7 @@
 			iconShow: [_Setting2.default.ICON_SHOW_EMPTY_HEART, _Setting2.default.ICON_SHOW_HEART],
 			styleName: _str_style,
 			composition: _str_composition,
+			offBack: _bln_offBack_02,
 			styleBorder: true,
 			styleIcon: true,
 			styleIconBack: _bln_iconback_02,
@@ -416,6 +424,7 @@
 			iconShow: [_Setting2.default.ICON_SHOW_EMPTY_HEART, _Setting2.default.ICON_SHOW_HEART],
 			styleName: _str_style,
 			composition: _str_composition,
+			offBack: _bln_offBack_02,
 			styleBorder: true,
 			styleIcon: true,
 			styleIconBack: _bln_iconback_02,
@@ -439,6 +448,7 @@
 			iconShow: [_Setting2.default.ICON_SHOW_EMPTY_HEART, _Setting2.default.ICON_SHOW_HEART],
 			styleName: _str_style,
 			composition: _str_composition,
+			offBack: _bln_offBack_02,
 			styleBorder: true,
 			styleIcon: true,
 			styleIconBack: _bln_iconback_02,
@@ -462,6 +472,7 @@
 			iconShow: [_Setting2.default.ICON_SHOW_EMPTY_HEART, _Setting2.default.ICON_SHOW_HEART],
 			styleName: _str_style,
 			composition: _str_composition,
+			offBack: _bln_offBack_02,
 			styleBorder: true,
 			styleIcon: true,
 			styleIconBack: _bln_iconback_02,
@@ -485,6 +496,7 @@
 			iconShow: [_Setting2.default.ICON_SHOW_EMPTY_HEART, _Setting2.default.ICON_SHOW_HEART],
 			styleName: _str_style,
 			composition: _str_composition,
+			offBack: _bln_offBack_02,
 			styleBorder: true,
 			styleIcon: true,
 			styleIconBack: _bln_iconback_02,
@@ -508,6 +520,7 @@
 			iconShow: [_Setting2.default.ICON_SHOW_EMPTY_HEART, _Setting2.default.ICON_SHOW_HEART],
 			styleName: _str_style,
 			composition: _str_composition,
+			offBack: _bln_offBack_02,
 			styleBorder: true,
 			styleIcon: true,
 			styleIconBack: _bln_iconback_02,
@@ -531,6 +544,7 @@
 			iconShow: [_Setting2.default.ICON_SHOW_EMPTY_HEART, _Setting2.default.ICON_SHOW_HEART],
 			styleName: _str_style,
 			composition: _str_composition,
+			offBack: _bln_offBack_02,
 			styleBorder: true,
 			styleIcon: true,
 			styleIconBack: _bln_iconback_02,
@@ -554,6 +568,7 @@
 			iconShow: [_Setting2.default.ICON_SHOW_EMPTY_HEART, _Setting2.default.ICON_SHOW_HEART],
 			styleName: _str_style,
 			composition: _str_composition,
+			offBack: _bln_offBack_02,
 			styleBorder: true,
 			styleIcon: true,
 			styleIconBack: _bln_iconback_02,
@@ -20235,6 +20250,8 @@
 		"homepage": "http://github.com/react-component/radio",
 	*/
 
+	var _typeof = typeof Symbol === "function" && typeof Symbol.iterator === "symbol" ? function (obj) { return typeof obj; } : function (obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol ? "symbol" : typeof obj; };
+
 	var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
 
 	Object.defineProperty(exports, "__esModule", {
@@ -20289,7 +20306,29 @@
 			if (typeof props.outputFormat === 'string' && props.outputFormat.match(/^((string)|(json)|(array)|(sarry))$/i) !== null) {
 				_str_format = props.outputFormat;
 			}
-			var _data_result = _str_format === 'array' || _str_format === 'sarry' ? [] : _str_format === 'json' ? {} : '';
+			// let _data_result =
+			// 	( _str_format==='array' || _str_format==='sarry' )? [] :
+			// 	(( _str_format==='json' )? {} : '' ) ;
+			var _data_result = undefined;
+			if (_str_format === 'array' || _str_format === 'sarry') {
+				if (props.outputResult instanceof Array === true) {
+					_data_result = props.outputResult;
+				} else {
+					_data_result = [];
+				}
+			} else if (_str_format === 'string') {
+				if (typeof props.outputResult === 'string') {
+					_data_result = props.outputResult;
+				} else {
+					_data_result = '';
+				}
+			} else {
+				if (_typeof(props.outputResult) === 'object') {
+					_data_result = props.outputResult;
+				} else {
+					_data_result = {};
+				}
+			}
 			_this.state = {
 				format: _str_format,
 				disabled: false,
@@ -20431,7 +20470,7 @@
 				var _ClassNames,
 				    _this2 = this;
 
-				var _str_classname_all = (0, _classnames2.default)((_ClassNames = {}, _defineProperty(_ClassNames, this.props.className, !!this.props.className), _defineProperty(_ClassNames, 'pkg-checked', true), _defineProperty(_ClassNames, 'pkg-checked_disabled', this.state.disabled === _Setting2.default.DISABLED_TRUE), _defineProperty(_ClassNames, 'pkg-list', true), _defineProperty(_ClassNames, _CheckedUI2.default.getDisabled(this.props.display), true), _defineProperty(_ClassNames, _CheckedUI2.default.getPadding(this.props.padding), true), _defineProperty(_ClassNames, _CheckedUI2.default.getFillte(this.props.fillet), true), _defineProperty(_ClassNames, _CheckedUI2.default.getListStyle(this.props.listStyle), true), _defineProperty(_ClassNames, _CheckedUI2.default.getListPosition(this.props.listPosition), true), _defineProperty(_ClassNames, _CheckedUI2.default.getIconPosition(this.props.iconPosition), true), _defineProperty(_ClassNames, _CheckedUI2.default.getIconShow(this.props.iconShow), true), _defineProperty(_ClassNames, _CheckedUI2.default.getStyleName(this.props.styleName), true), _defineProperty(_ClassNames, _CheckedUI2.default.getComposition(this.props.composition), true), _ClassNames));
+				var _str_classname_all = (0, _classnames2.default)((_ClassNames = {}, _defineProperty(_ClassNames, this.props.className, !!this.props.className), _defineProperty(_ClassNames, 'pkg-checked', true), _defineProperty(_ClassNames, 'pkg-checked_disabled', this.state.disabled === _Setting2.default.DISABLED_TRUE), _defineProperty(_ClassNames, 'pkg-list', true), _defineProperty(_ClassNames, _CheckedUI2.default.getDisabled(this.props.display), true), _defineProperty(_ClassNames, _CheckedUI2.default.getPadding(this.props.padding), true), _defineProperty(_ClassNames, _CheckedUI2.default.getFillte(this.props.fillet), true), _defineProperty(_ClassNames, _CheckedUI2.default.getListStyle(this.props.listStyle), true), _defineProperty(_ClassNames, _CheckedUI2.default.getListPosition(this.props.listPosition), true), _defineProperty(_ClassNames, _CheckedUI2.default.getIconPosition(this.props.iconPosition), true), _defineProperty(_ClassNames, _CheckedUI2.default.getIconShow(this.props.iconShow), true), _defineProperty(_ClassNames, _CheckedUI2.default.getStyleName(this.props.styleName, this.props.offBack), true), _defineProperty(_ClassNames, _CheckedUI2.default.getComposition(this.props.composition), true), _ClassNames));
 				var _str_classname_inner = (0, _classnames2.default)({
 					'pkg-list-option': this.props.listPosition === _Setting2.default.LIST_POSITION_INNER,
 					'pkg-checked-icon': this.props.listPosition !== _Setting2.default.LIST_POSITION_INNER,
@@ -20508,6 +20547,7 @@
 
 	RadioGroup.propTypes = {
 		onChange: _react2.default.PropTypes.func,
+		outputResult: _react2.default.PropTypes.any.isRequired,
 		className: _react2.default.PropTypes.string,
 		inputoption: _react2.default.PropTypes.array,
 		selectKey: _react2.default.PropTypes.array,
@@ -20520,6 +20560,7 @@
 		iconPosition: _react2.default.PropTypes.string,
 		iconShow: _react2.default.PropTypes.array,
 		styleName: _react2.default.PropTypes.string,
+		offBack: _react2.default.PropTypes.bool,
 		composition: _react2.default.PropTypes.string,
 		styleBorder: _react2.default.PropTypes.bool,
 		styleIcon: _react2.default.PropTypes.bool,
@@ -20527,6 +20568,7 @@
 		styleList: _react2.default.PropTypes.bool
 	}, RadioGroup.defaultProps = {
 		className: '',
+		outputResult: null,
 		inputoption: [],
 		selectKey: [],
 		showKey: [],
@@ -20537,6 +20579,7 @@
 		iconPosition: _Setting2.default.ICON_POSTION_LEFT,
 		iconShow: [],
 		styleName: '',
+		offBack: false,
 		composition: '',
 		styleBorder: false,
 		styleIcon: false,
@@ -21102,13 +21145,14 @@
 			}
 		}, {
 			key: 'getStyleName',
-			value: function getStyleName(str_style) {
+			value: function getStyleName(str_style, bln_offback) {
 				str_style = str_style || '';
 				var _ary_style = [_Setting2.default.STYLE_NAME_RESURGENCE, _Setting2.default.STYLE_NAME_SPRING, _Setting2.default.STYLE_NAME_WINE, _Setting2.default.STYLE_NAME_BLUESKY, _Setting2.default.STYLE_NAME_LOVELY, _Setting2.default.STYLE_NAME_LUXURY, _Setting2.default.STYLE_NAME_FANTASY, _Setting2.default.STYLE_NAME_RIGID, _Setting2.default.STYLE_NAME_WATERSIDE];
+				var _str_offback = !!bln_offback === true ? ' pkg-style_offback' : '';
 				if (_ary_style.indexOf(str_style) >= 0) {
-					return 'pkg-style pkg-style_on pkg-style_' + str_style;
+					return 'pkg-style pkg-style_on pkg-style_' + str_style + _str_offback;
 				} else {
-					return 'pkg-style';
+					return 'pkg-style' + _str_offback;
 				}
 			}
 		}]);

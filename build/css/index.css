@@ -90,6 +90,9 @@
 	padding-left: 0.5em;
 	padding-right: 0.5em;
 }
+.pkg-style.pkg-style_offback .pkg-style-item {
+	background: transparent !important;
+}
 .pkg-style.pkg-style_resurgence .pkg-style-item {
 	background: #F2EAE7;
 	color: #8A7F7D;

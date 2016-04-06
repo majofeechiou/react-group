@@ -200,6 +200,11 @@ $STYLE_WATERSIDE_ICONBACKSHADOW: color(#999946 blackness(65%)) ;
 			}
 		}
 	}
+	&.pkg-style_offback {
+		.pkg-style-item {
+			background: transparent !important;
+		}
+	}
 	&.pkg-style_resurgence {
 		.pkg-style-item {
 			background: $STYLE_RESURGENCE_MAIN_BACK;
