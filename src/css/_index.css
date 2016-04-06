@@ -47,6 +47,103 @@ $num_fillet_circle: 50%;
 	}
 }
 
+@define-mixin composition $name {
+	&.pkg-checked_composition-$name{
+		.pkg-checked-option {
+			@if $name == half {
+				width: 50%;
+			}
+			@if $name == third {
+				width: 33.3%;
+			}
+			@if $name == quarter {
+				width: 25%;
+			}
+			@if $name == fifth {
+				width: 20%;
+			}
+			@if $name == sixth {
+				width: 16.6%;
+			}
+			@if $name == eighth {
+				width: 12.5%;
+			}
+			@if $name == tenth {
+				width: 10%;
+			}
+			@if $name == twelfth {
+				width: 8.3%;
+			}
+
+			@if $name == tinyem {
+				margin: 0.2em;
+			}
+			@if $name == smallem {
+				margin: 0.5em;
+			}
+			@if $name == littleem {
+				margin: 0.8em;
+			}
+			@if $name == baseem {
+				margin: 1em;
+			}
+			@if $name == middleem {
+				margin: 1.2em;
+			}
+			@if $name == bigem {
+				margin: 1.5em;
+			}
+			@if $name == largeem {
+				margin: 2em;
+			}
+
+			@if $name == tinypercent {
+				margin: 1%;
+			}
+			@if $name == smallpercent {
+				margin: 2.5%;
+			}
+			@if $name == littlepercent {
+				margin: 4%;
+			}
+			@if $name == basepercent {
+				margin: 5%;
+			}
+			@if $name == middlepercent {
+				margin: 7.5%;
+			}
+			@if $name == bigpercent {
+				margin: 10%;
+			}
+			@if $name == largepercent {
+				margin: 15%;
+			}
+
+			@if $name == tiny {
+				margin: 1px;
+			}
+			@if $name == small {
+				margin: 2px;
+			}
+			@if $name == little {
+				margin: 5px;
+			}
+			@if $name == base {
+				margin: 10px;
+			}
+			@if $name == middle {
+				margin: 15px;
+			}
+			@if $name == big {
+				margin: 20px;
+			}
+			@if $name == large {
+				margin: 30px;
+			}
+		}
+	}
+}
+
 @define-mixin checkedDisplay $name {
 	&.pkg-checked_display-$name{
 		position: relative;
@@ -256,6 +353,39 @@ $num_fillet_circle: 50%;
 	@mixin checkedFillet tiny ;
 	@mixin checkedFillet base ;
 	@mixin checkedFillet circle ;
+
+	@mixin composition half ;
+	@mixin composition third ;
+	@mixin composition quarter ;
+	@mixin composition fifth ;
+	@mixin composition sixth ;
+	@mixin composition eighth ;
+	@mixin composition tenth ;
+	@mixin composition twelfth ;
+
+	@mixin composition tinyem ;
+	@mixin composition smallem ;
+	@mixin composition littleem ;
+	@mixin composition baseem ;
+	@mixin composition middleem ;
+	@mixin composition bigem ;
+	@mixin composition largeem ;
+
+	@mixin composition tinypercent ;
+	@mixin composition smallpercent ;
+	@mixin composition littlepercent ;
+	@mixin composition basepercent ;
+	@mixin composition middlepercent ;
+	@mixin composition bigpercent ;
+	@mixin composition largepercent ;
+
+	@mixin composition tiny ;
+	@mixin composition small ;
+	@mixin composition little ;
+	@mixin composition base ;
+	@mixin composition middle ;
+	@mixin composition big ;
+	@mixin composition large ;
 
 	&.pkg-checked_listposition-outer {
 		/* 設成block以確保padding為正確的 */

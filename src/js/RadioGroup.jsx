@@ -163,6 +163,7 @@ export default class RadioGroup extends React.Component {
 			[CheckedUI.getIconPosition( this.props.iconPosition )]: true,
 			[CheckedUI.getIconShow( this.props.iconShow )]: true,
 			[CheckedUI.getStyleName( this.props.styleName )]: true,
+			[CheckedUI.getComposition( this.props.composition )]: true,
 
 		});
 		let _str_classname_inner = ClassNames({
@@ -240,6 +241,7 @@ RadioGroup.propTypes = {
     iconPosition: React.PropTypes.string,
     iconShow: React.PropTypes.array,
     styleName: React.PropTypes.string,
+    composition: React.PropTypes.string,
     styleBorder: React.PropTypes.bool,
     styleIcon: React.PropTypes.bool,
     styleIconBack: React.PropTypes.bool,
@@ -257,6 +259,7 @@ RadioGroup.defaultProps = {
     iconPosition: Setting.ICON_POSTION_LEFT,
     iconShow: [],
     styleName: '',
+    composition: '',
     styleBorder: false,
     styleIcon: false,
     styleIconBack: false,

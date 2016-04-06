@@ -82,6 +82,18 @@
 		uuid: 'b',
 		text: 'B'
 	}, {
+		uuid: 'c',
+		text: 'C'
+	}, {
+		uuid: 'd',
+		text: 'D'
+	}, {
+		uuid: 'e',
+		text: 'E'
+	}, {
+		uuid: 'f',
+		text: 'F'
+	}, {
 		uuid: 'ooxx-001',
 		text: 'text-001'
 	}, {
@@ -96,10 +108,29 @@
 	}, {
 		uuid: 'ooxx-005',
 		text: 'text-005'
+	}, {
+		uuid: 'ooxx-006',
+		text: 'text-006'
+	}, {
+		uuid: 'ooxx-007',
+		text: 'text-007'
+	}, {
+		uuid: 'ooxx-008',
+		text: 'text-008'
+	}, {
+		uuid: 'ooxx-009',
+		text: 'text-009'
+	}, {
+		uuid: 'ooxx-010',
+		text: 'text-010'
 	}];
 
 	var _ary_selectkey = ['uuid'];
 	var _data_checked = undefined;
+	// let _data_checked = [{
+	// 	uuid: 'd',
+	// 	text: 'D'
+	// }];
 
 	var _ary_showkey = ['text', 'uuid'];
 
@@ -115,6 +146,39 @@
 	// let _str_style = Setting.STYLE_NAME_FANTASY;
 	// let _str_style = Setting.STYLE_NAME_RIGID;
 	var _str_style = _Setting2.default.STYLE_NAME_WATERSIDE;
+
+	// let _str_composition = Setting.COMPOSITION_HALF;
+	// let _str_composition = Setting.COMPOSITION_THIRD;
+	// let _str_composition = Setting.COMPOSITION_QUARTER;
+	// let _str_composition = Setting.COMPOSITION_FIFTH;
+	// let _str_composition = Setting.COMPOSITION_SIXTH;
+	// let _str_composition = Setting.COMPOSITION_EIGHTH;
+	// let _str_composition = Setting.COMPOSITION_TENTH;
+	// let _str_composition = Setting.COMPOSITION_TWELFTH;
+
+	// let _str_composition = Setting.COMPOSITION_TINYEM;
+	// let _str_composition = Setting.COMPOSITION_SMALLEM;
+	// let _str_composition = Setting.COMPOSITION_LITTLEEM;
+	// let _str_composition = Setting.COMPOSITION_BASEEM;
+	// let _str_composition = Setting.COMPOSITION_MIDDLEEM;
+	// let _str_composition = Setting.COMPOSITION_BIGEM;
+	// let _str_composition = Setting.COMPOSITION_LARGEEM;
+
+	// let _str_composition = Setting.COMPOSITION_TINYPERCENT;
+	// let _str_composition = Setting.COMPOSITION_SMALLPERCENT;
+	// let _str_composition = Setting.COMPOSITION_LITTLEPERCENT;
+	// let _str_composition = Setting.COMPOSITION_BASEPERCENT;
+	// let _str_composition = Setting.COMPOSITION_MIDDLEPERCENT;
+	// let _str_composition = Setting.COMPOSITION_BIGPERCENT;
+	// let _str_composition = Setting.COMPOSITION_LARGEPERCENT;
+
+	var _str_composition = _Setting2.default.COMPOSITION_TINY;
+	// let _str_composition = Setting.COMPOSITION_SMALL;
+	// let _str_composition = Setting.COMPOSITION_LITTLE;
+	// let _str_composition = Setting.COMPOSITION_BASE;
+	// let _str_composition = Setting.COMPOSITION_MIDDLE;
+	// let _str_composition = Setting.COMPOSITION_BIG;
+	// let _str_composition = Setting.COMPOSITION_LARGE;
 
 	function handleChange(bln_change, json_return) {
 		if (bln_change === true) {
@@ -142,6 +206,7 @@
 			iconPosition: _Setting2.default.ICON_POSTION_LEFT,
 			iconShow: [_Setting2.default.ICON_SHOW_EMPTY_HEART, _Setting2.default.ICON_SHOW_HEART],
 			styleName: _str_style,
+			composition: _str_composition,
 			styleBorder: true,
 			styleIcon: true,
 			styleIconBack: _bln_iconback_01,
@@ -164,6 +229,7 @@
 			iconPosition: _Setting2.default.ICON_POSTION_LEFT,
 			iconShow: [_Setting2.default.ICON_SHOW_EMPTY_HEART, _Setting2.default.ICON_SHOW_HEART],
 			styleName: _str_style,
+			composition: _str_composition,
 			styleBorder: true,
 			styleIcon: true,
 			styleIconBack: _bln_iconback_01,
@@ -186,6 +252,7 @@
 			iconPosition: _Setting2.default.ICON_POSTION_TOP,
 			iconShow: [_Setting2.default.ICON_SHOW_EMPTY_HEART, _Setting2.default.ICON_SHOW_HEART],
 			styleName: _str_style,
+			composition: _str_composition,
 			styleBorder: true,
 			styleIcon: true,
 			styleIconBack: _bln_iconback_01,
@@ -208,6 +275,7 @@
 			iconPosition: _Setting2.default.ICON_POSTION_TOP,
 			iconShow: [_Setting2.default.ICON_SHOW_EMPTY_HEART, _Setting2.default.ICON_SHOW_HEART],
 			styleName: _str_style,
+			composition: _str_composition,
 			styleBorder: true,
 			styleIcon: true,
 			styleIconBack: _bln_iconback_01,
@@ -230,6 +298,7 @@
 			iconPosition: _Setting2.default.ICON_POSTION_LEFT,
 			iconShow: [_Setting2.default.ICON_SHOW_EMPTY_HEART, _Setting2.default.ICON_SHOW_HEART],
 			styleName: _str_style,
+			composition: _str_composition,
 			styleBorder: true,
 			styleIcon: true,
 			styleIconBack: _bln_iconback_01,
@@ -252,6 +321,7 @@
 			iconPosition: _Setting2.default.ICON_POSTION_LEFT,
 			iconShow: [_Setting2.default.ICON_SHOW_EMPTY_HEART, _Setting2.default.ICON_SHOW_HEART],
 			styleName: _str_style,
+			composition: _str_composition,
 			styleBorder: true,
 			styleIcon: true,
 			styleIconBack: _bln_iconback_01,
@@ -274,6 +344,7 @@
 			iconPosition: _Setting2.default.ICON_POSTION_TOP,
 			iconShow: [_Setting2.default.ICON_SHOW_EMPTY_HEART, _Setting2.default.ICON_SHOW_HEART],
 			styleName: _str_style,
+			composition: _str_composition,
 			styleBorder: true,
 			styleIcon: true,
 			styleIconBack: _bln_iconback_01,
@@ -296,6 +367,7 @@
 			iconPosition: _Setting2.default.ICON_POSTION_TOP,
 			iconShow: [_Setting2.default.ICON_SHOW_EMPTY_HEART, _Setting2.default.ICON_SHOW_HEART],
 			styleName: _str_style,
+			composition: _str_composition,
 			styleBorder: true,
 			styleIcon: true,
 			styleIconBack: _bln_iconback_01,
@@ -320,6 +392,7 @@
 			iconPosition: _Setting2.default.ICON_POSTION_RIGHT,
 			iconShow: [_Setting2.default.ICON_SHOW_EMPTY_HEART, _Setting2.default.ICON_SHOW_HEART],
 			styleName: _str_style,
+			composition: _str_composition,
 			styleBorder: true,
 			styleIcon: true,
 			styleIconBack: _bln_iconback_02,
@@ -342,6 +415,7 @@
 			iconPosition: _Setting2.default.ICON_POSTION_RIGHT,
 			iconShow: [_Setting2.default.ICON_SHOW_EMPTY_HEART, _Setting2.default.ICON_SHOW_HEART],
 			styleName: _str_style,
+			composition: _str_composition,
 			styleBorder: true,
 			styleIcon: true,
 			styleIconBack: _bln_iconback_02,
@@ -364,6 +438,7 @@
 			iconPosition: _Setting2.default.ICON_POSTION_BOTTOM,
 			iconShow: [_Setting2.default.ICON_SHOW_EMPTY_HEART, _Setting2.default.ICON_SHOW_HEART],
 			styleName: _str_style,
+			composition: _str_composition,
 			styleBorder: true,
 			styleIcon: true,
 			styleIconBack: _bln_iconback_02,
@@ -386,6 +461,7 @@
 			iconPosition: _Setting2.default.ICON_POSTION_BOTTOM,
 			iconShow: [_Setting2.default.ICON_SHOW_EMPTY_HEART, _Setting2.default.ICON_SHOW_HEART],
 			styleName: _str_style,
+			composition: _str_composition,
 			styleBorder: true,
 			styleIcon: true,
 			styleIconBack: _bln_iconback_02,
@@ -408,6 +484,7 @@
 			iconPosition: _Setting2.default.ICON_POSTION_RIGHT,
 			iconShow: [_Setting2.default.ICON_SHOW_EMPTY_HEART, _Setting2.default.ICON_SHOW_HEART],
 			styleName: _str_style,
+			composition: _str_composition,
 			styleBorder: true,
 			styleIcon: true,
 			styleIconBack: _bln_iconback_02,
@@ -430,6 +507,7 @@
 			iconPosition: _Setting2.default.ICON_POSTION_RIGHT,
 			iconShow: [_Setting2.default.ICON_SHOW_EMPTY_HEART, _Setting2.default.ICON_SHOW_HEART],
 			styleName: _str_style,
+			composition: _str_composition,
 			styleBorder: true,
 			styleIcon: true,
 			styleIconBack: _bln_iconback_02,
@@ -452,6 +530,7 @@
 			iconPosition: _Setting2.default.ICON_POSTION_BOTTOM,
 			iconShow: [_Setting2.default.ICON_SHOW_EMPTY_HEART, _Setting2.default.ICON_SHOW_HEART],
 			styleName: _str_style,
+			composition: _str_composition,
 			styleBorder: true,
 			styleIcon: true,
 			styleIconBack: _bln_iconback_02,
@@ -474,6 +553,7 @@
 			iconPosition: _Setting2.default.ICON_POSTION_BOTTOM,
 			iconShow: [_Setting2.default.ICON_SHOW_EMPTY_HEART, _Setting2.default.ICON_SHOW_HEART],
 			styleName: _str_style,
+			composition: _str_composition,
 			styleBorder: true,
 			styleIcon: true,
 			styleIconBack: _bln_iconback_02,
@@ -20351,7 +20431,7 @@
 				var _ClassNames,
 				    _this2 = this;
 
-				var _str_classname_all = (0, _classnames2.default)((_ClassNames = {}, _defineProperty(_ClassNames, this.props.className, !!this.props.className), _defineProperty(_ClassNames, 'pkg-checked', true), _defineProperty(_ClassNames, 'pkg-checked_disabled', this.state.disabled === _Setting2.default.DISABLED_TRUE), _defineProperty(_ClassNames, 'pkg-list', true), _defineProperty(_ClassNames, _CheckedUI2.default.getDisabled(this.props.display), true), _defineProperty(_ClassNames, _CheckedUI2.default.getPadding(this.props.padding), true), _defineProperty(_ClassNames, _CheckedUI2.default.getFillte(this.props.fillet), true), _defineProperty(_ClassNames, _CheckedUI2.default.getListStyle(this.props.listStyle), true), _defineProperty(_ClassNames, _CheckedUI2.default.getListPosition(this.props.listPosition), true), _defineProperty(_ClassNames, _CheckedUI2.default.getIconPosition(this.props.iconPosition), true), _defineProperty(_ClassNames, _CheckedUI2.default.getIconShow(this.props.iconShow), true), _defineProperty(_ClassNames, _CheckedUI2.default.getStyleName(this.props.styleName), true), _ClassNames));
+				var _str_classname_all = (0, _classnames2.default)((_ClassNames = {}, _defineProperty(_ClassNames, this.props.className, !!this.props.className), _defineProperty(_ClassNames, 'pkg-checked', true), _defineProperty(_ClassNames, 'pkg-checked_disabled', this.state.disabled === _Setting2.default.DISABLED_TRUE), _defineProperty(_ClassNames, 'pkg-list', true), _defineProperty(_ClassNames, _CheckedUI2.default.getDisabled(this.props.display), true), _defineProperty(_ClassNames, _CheckedUI2.default.getPadding(this.props.padding), true), _defineProperty(_ClassNames, _CheckedUI2.default.getFillte(this.props.fillet), true), _defineProperty(_ClassNames, _CheckedUI2.default.getListStyle(this.props.listStyle), true), _defineProperty(_ClassNames, _CheckedUI2.default.getListPosition(this.props.listPosition), true), _defineProperty(_ClassNames, _CheckedUI2.default.getIconPosition(this.props.iconPosition), true), _defineProperty(_ClassNames, _CheckedUI2.default.getIconShow(this.props.iconShow), true), _defineProperty(_ClassNames, _CheckedUI2.default.getStyleName(this.props.styleName), true), _defineProperty(_ClassNames, _CheckedUI2.default.getComposition(this.props.composition), true), _ClassNames));
 				var _str_classname_inner = (0, _classnames2.default)({
 					'pkg-list-option': this.props.listPosition === _Setting2.default.LIST_POSITION_INNER,
 					'pkg-checked-icon': this.props.listPosition !== _Setting2.default.LIST_POSITION_INNER,
@@ -20440,6 +20520,7 @@
 		iconPosition: _react2.default.PropTypes.string,
 		iconShow: _react2.default.PropTypes.array,
 		styleName: _react2.default.PropTypes.string,
+		composition: _react2.default.PropTypes.string,
 		styleBorder: _react2.default.PropTypes.bool,
 		styleIcon: _react2.default.PropTypes.bool,
 		styleIconBack: _react2.default.PropTypes.bool,
@@ -20456,6 +20537,7 @@
 		iconPosition: _Setting2.default.ICON_POSTION_LEFT,
 		iconShow: [],
 		styleName: '',
+		composition: '',
 		styleBorder: false,
 		styleIcon: false,
 		styleIconBack: false,
@@ -20697,6 +20779,39 @@
 		rigid'- 鋼硬
 		waterside - 水畔
 	 */
+
+	/*
+		composition:
+		half - 1/2
+		third - 1/3
+		quarter - 1/4
+		fifth - 1/5
+		sixth - 1/6
+		eighth - 1/8
+		tenth - 1/10
+		twelfth - 1/12
+		tinyem - 0.2em
+		smallem - 0.5em
+		littleem - 0.8em
+		baseem - 1em
+		middleem - 1.2em
+		bigem - 1.5em
+		largeem - 2em
+		tinypercent - 2%
+		smallpercent - 5%
+		littlepercent - 8%
+		basepercent - 10%
+		middlepercent - 12%
+		bigpercent - 15%
+		largepercent - 20%
+		tiny - 2px
+		small - 5px
+		little - 10px
+		base - 15px
+		middle - 20px
+		big - 30px
+		large - 50px
+	*/
 	/*
 		spacing:
 		tiny - 0.2em
@@ -20826,6 +20941,35 @@
 	Setting.STYLE_NAME_FANTASY = 'fantasy';
 	Setting.STYLE_NAME_RIGID = 'rigid';
 	Setting.STYLE_NAME_WATERSIDE = 'waterside';
+	Setting.COMPOSITION_HALF = 'half';
+	Setting.COMPOSITION_THIRD = 'third';
+	Setting.COMPOSITION_QUARTER = 'quarter';
+	Setting.COMPOSITION_FIFTH = 'fifth';
+	Setting.COMPOSITION_SIXTH = 'sixth';
+	Setting.COMPOSITION_EIGHTH = 'eighth';
+	Setting.COMPOSITION_TENTH = 'tenth';
+	Setting.COMPOSITION_TWELFTH = 'twelfth';
+	Setting.COMPOSITION_TINYEM = 'tiny-em';
+	Setting.COMPOSITION_SMALLEM = 'small-em';
+	Setting.COMPOSITION_LITTLEEM = 'little-em';
+	Setting.COMPOSITION_BASEEM = 'base-em';
+	Setting.COMPOSITION_MIDDLEEM = 'middle-em';
+	Setting.COMPOSITION_BIGEM = 'big-em';
+	Setting.COMPOSITION_LARGEEM = 'large-em';
+	Setting.COMPOSITION_TINYPERCENT = 'tiny-percent';
+	Setting.COMPOSITION_SMALLPERCENT = 'small-percent';
+	Setting.COMPOSITION_LITTLEPERCENT = 'little-percent';
+	Setting.COMPOSITION_BASEPERCENT = 'base-percent';
+	Setting.COMPOSITION_MIDDLEPERCENT = 'middle-percent';
+	Setting.COMPOSITION_BIGPERCENT = 'big-percent';
+	Setting.COMPOSITION_LARGEPERCENT = 'large-percent';
+	Setting.COMPOSITION_TINY = 'tiny';
+	Setting.COMPOSITION_SMALL = 'small';
+	Setting.COMPOSITION_LITTLE = 'little';
+	Setting.COMPOSITION_BASE = 'base';
+	Setting.COMPOSITION_MIDDLE = 'middle';
+	Setting.COMPOSITION_BIG = 'big';
+	Setting.COMPOSITION_LARGE = 'large';
 	Setting.DISABLED_TRUE = true;
 	Setting.DISABLED_FALSE = false;
 	exports.default = Setting;
@@ -20933,6 +21077,16 @@
 				var _ary_style = [_Setting2.default.LIST_STYLE_DISC, _Setting2.default.LIST_STYLE_CIRCLE, _Setting2.default.LIST_STYLE_DECIMAL, _Setting2.default.LIST_STYLE_SQUARE, _Setting2.default.LIST_STYLE_DECIMAL_LEADING_ZERO, _Setting2.default.LIST_STYLE_LOWER_ROMAN, _Setting2.default.LIST_STYLE_UPPER_ROMAN, _Setting2.default.LIST_STYLE_LOWER_GREEK, _Setting2.default.LIST_STYLE_LOWER_LATIN, _Setting2.default.LIST_STYLE_UPPER_LATI];
 				if (_ary_style.indexOf(str_style) >= 0) {
 					_str_return = 'pkg-list_style-' + str_style;
+				}
+				return _str_return;
+			}
+		}, {
+			key: 'getComposition',
+			value: function getComposition(str_composition) {
+				var _str_return = '';
+				var _ary_composition = [_Setting2.default.COMPOSITION_HALF, _Setting2.default.COMPOSITION_THIRD, _Setting2.default.COMPOSITION_QUARTER, _Setting2.default.COMPOSITION_FIFTH, _Setting2.default.COMPOSITION_SIXTH, _Setting2.default.COMPOSITION_EIGHTH, _Setting2.default.COMPOSITION_TENTH, _Setting2.default.COMPOSITION_TWELFTH, _Setting2.default.COMPOSITION_TINYEM, _Setting2.default.COMPOSITION_SMALLEM, _Setting2.default.COMPOSITION_LITTLEEM, _Setting2.default.COMPOSITION_BASEEM, _Setting2.default.COMPOSITION_MIDDLEEM, _Setting2.default.COMPOSITION_BIGEM, _Setting2.default.COMPOSITION_LARGEEM, _Setting2.default.COMPOSITION_TINYPERCENT, _Setting2.default.COMPOSITION_SMALLPERCENT, _Setting2.default.COMPOSITION_LITTLEPERCENT, _Setting2.default.COMPOSITION_BASEPERCENT, _Setting2.default.COMPOSITION_MIDDLEPERCENT, _Setting2.default.COMPOSITION_BIGPERCENT, _Setting2.default.COMPOSITION_LARGEPERCENT, _Setting2.default.COMPOSITION_TINY, _Setting2.default.COMPOSITION_SMALL, _Setting2.default.COMPOSITION_LITTLE, _Setting2.default.COMPOSITION_BASE, _Setting2.default.COMPOSITION_MIDDLE, _Setting2.default.COMPOSITION_BIG, _Setting2.default.COMPOSITION_LARGE];
+				if (_ary_composition.indexOf(str_composition) >= 0) {
+					_str_return = 'pkg-checked_composition-' + str_composition.replace(/\-/g, '');
 				}
 				return _str_return;
 			}

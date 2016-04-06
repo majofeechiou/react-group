@@ -12,6 +12,18 @@ let _sary_options = [{
 	uuid: 'b',
 	text: 'B'
 },{
+	uuid: 'c',
+	text: 'C'
+},{
+	uuid: 'd',
+	text: 'D'
+},{
+	uuid: 'e',
+	text: 'E'
+},{
+	uuid: 'f',
+	text: 'F'
+},{
 	uuid: 'ooxx-001',
 	text: 'text-001'
 },{
@@ -26,10 +38,29 @@ let _sary_options = [{
 },{
 	uuid: 'ooxx-005',
 	text: 'text-005'
+},{
+	uuid: 'ooxx-006',
+	text: 'text-006'
+},{
+	uuid: 'ooxx-007',
+	text: 'text-007'
+},{
+	uuid: 'ooxx-008',
+	text: 'text-008'
+},{
+	uuid: 'ooxx-009',
+	text: 'text-009'
+},{
+	uuid: 'ooxx-010',
+	text: 'text-010'
 }];
 
 let _ary_selectkey = ['uuid'];
 let _data_checked;
+// let _data_checked = [{
+// 	uuid: 'd',
+// 	text: 'D'
+// }];
 
 let _ary_showkey = ['text','uuid'];
 
@@ -45,6 +76,39 @@ let _bln_iconback_02 = true;
 // let _str_style = Setting.STYLE_NAME_FANTASY;
 // let _str_style = Setting.STYLE_NAME_RIGID;
 let _str_style = Setting.STYLE_NAME_WATERSIDE;
+
+// let _str_composition = Setting.COMPOSITION_HALF;
+// let _str_composition = Setting.COMPOSITION_THIRD;
+// let _str_composition = Setting.COMPOSITION_QUARTER;
+// let _str_composition = Setting.COMPOSITION_FIFTH;
+// let _str_composition = Setting.COMPOSITION_SIXTH;
+// let _str_composition = Setting.COMPOSITION_EIGHTH;
+// let _str_composition = Setting.COMPOSITION_TENTH;
+// let _str_composition = Setting.COMPOSITION_TWELFTH;
+
+// let _str_composition = Setting.COMPOSITION_TINYEM;
+// let _str_composition = Setting.COMPOSITION_SMALLEM;
+// let _str_composition = Setting.COMPOSITION_LITTLEEM;
+// let _str_composition = Setting.COMPOSITION_BASEEM;
+// let _str_composition = Setting.COMPOSITION_MIDDLEEM;
+// let _str_composition = Setting.COMPOSITION_BIGEM;
+// let _str_composition = Setting.COMPOSITION_LARGEEM;
+
+// let _str_composition = Setting.COMPOSITION_TINYPERCENT;
+// let _str_composition = Setting.COMPOSITION_SMALLPERCENT;
+// let _str_composition = Setting.COMPOSITION_LITTLEPERCENT;
+// let _str_composition = Setting.COMPOSITION_BASEPERCENT;
+// let _str_composition = Setting.COMPOSITION_MIDDLEPERCENT;
+// let _str_composition = Setting.COMPOSITION_BIGPERCENT;
+// let _str_composition = Setting.COMPOSITION_LARGEPERCENT;
+
+let _str_composition = Setting.COMPOSITION_TINY;
+// let _str_composition = Setting.COMPOSITION_SMALL;
+// let _str_composition = Setting.COMPOSITION_LITTLE;
+// let _str_composition = Setting.COMPOSITION_BASE;
+// let _str_composition = Setting.COMPOSITION_MIDDLE;
+// let _str_composition = Setting.COMPOSITION_BIG;
+// let _str_composition = Setting.COMPOSITION_LARGE;
 
 function handleChange( bln_change, json_return ){
 	if( bln_change===true ){
@@ -73,6 +137,7 @@ function render(){
 			iconPosition={Setting.ICON_POSTION_LEFT}
 			iconShow={[Setting.ICON_SHOW_EMPTY_HEART, Setting.ICON_SHOW_HEART]}
 			styleName={_str_style}
+			composition={_str_composition}
 			styleBorder={true}
 			styleIcon={true}
 			styleIconBack={_bln_iconback_01}
@@ -98,6 +163,7 @@ function render(){
 			iconPosition={Setting.ICON_POSTION_LEFT}
 			iconShow={[Setting.ICON_SHOW_EMPTY_HEART, Setting.ICON_SHOW_HEART]}
 			styleName={_str_style}
+			composition={_str_composition}
 			styleBorder={true}
 			styleIcon={true}
 			styleIconBack={_bln_iconback_01}
@@ -123,6 +189,7 @@ function render(){
 			iconPosition={Setting.ICON_POSTION_TOP}
 			iconShow={[Setting.ICON_SHOW_EMPTY_HEART, Setting.ICON_SHOW_HEART]}
 			styleName={_str_style}
+			composition={_str_composition}
 			styleBorder={true}
 			styleIcon={true}
 			styleIconBack={_bln_iconback_01}
@@ -148,6 +215,7 @@ function render(){
 			iconPosition={Setting.ICON_POSTION_TOP}
 			iconShow={[Setting.ICON_SHOW_EMPTY_HEART, Setting.ICON_SHOW_HEART]}
 			styleName={_str_style}
+			composition={_str_composition}
 			styleBorder={true}
 			styleIcon={true}
 			styleIconBack={_bln_iconback_01}
@@ -173,6 +241,7 @@ function render(){
 			iconPosition={Setting.ICON_POSTION_LEFT}
 			iconShow={[Setting.ICON_SHOW_EMPTY_HEART, Setting.ICON_SHOW_HEART]}
 			styleName={_str_style}
+			composition={_str_composition}
 			styleBorder={true}
 			styleIcon={true}
 			styleIconBack={_bln_iconback_01}
@@ -198,6 +267,7 @@ function render(){
 			iconPosition={Setting.ICON_POSTION_LEFT}
 			iconShow={[Setting.ICON_SHOW_EMPTY_HEART, Setting.ICON_SHOW_HEART]}
 			styleName={_str_style}
+			composition={_str_composition}
 			styleBorder={true}
 			styleIcon={true}
 			styleIconBack={_bln_iconback_01}
@@ -223,6 +293,7 @@ function render(){
 			iconPosition={Setting.ICON_POSTION_TOP}
 			iconShow={[Setting.ICON_SHOW_EMPTY_HEART, Setting.ICON_SHOW_HEART]}
 			styleName={_str_style}
+			composition={_str_composition}
 			styleBorder={true}
 			styleIcon={true}
 			styleIconBack={_bln_iconback_01}
@@ -248,6 +319,7 @@ function render(){
 			iconPosition={Setting.ICON_POSTION_TOP}
 			iconShow={[Setting.ICON_SHOW_EMPTY_HEART, Setting.ICON_SHOW_HEART]}
 			styleName={_str_style}
+			composition={_str_composition}
 			styleBorder={true}
 			styleIcon={true}
 			styleIconBack={_bln_iconback_01}
@@ -276,6 +348,7 @@ function render(){
 			iconPosition={Setting.ICON_POSTION_RIGHT}
 			iconShow={[Setting.ICON_SHOW_EMPTY_HEART, Setting.ICON_SHOW_HEART]}
 			styleName={_str_style}
+			composition={_str_composition}
 			styleBorder={true}
 			styleIcon={true}
 			styleIconBack={_bln_iconback_02}
@@ -301,6 +374,7 @@ function render(){
 			iconPosition={Setting.ICON_POSTION_RIGHT}
 			iconShow={[Setting.ICON_SHOW_EMPTY_HEART, Setting.ICON_SHOW_HEART]}
 			styleName={_str_style}
+			composition={_str_composition}
 			styleBorder={true}
 			styleIcon={true}
 			styleIconBack={_bln_iconback_02}
@@ -326,6 +400,7 @@ function render(){
 			iconPosition={Setting.ICON_POSTION_BOTTOM}
 			iconShow={[Setting.ICON_SHOW_EMPTY_HEART, Setting.ICON_SHOW_HEART]}
 			styleName={_str_style}
+			composition={_str_composition}
 			styleBorder={true}
 			styleIcon={true}
 			styleIconBack={_bln_iconback_02}
@@ -351,6 +426,7 @@ function render(){
 			iconPosition={Setting.ICON_POSTION_BOTTOM}
 			iconShow={[Setting.ICON_SHOW_EMPTY_HEART, Setting.ICON_SHOW_HEART]}
 			styleName={_str_style}
+			composition={_str_composition}
 			styleBorder={true}
 			styleIcon={true}
 			styleIconBack={_bln_iconback_02}
@@ -376,6 +452,7 @@ function render(){
 			iconPosition={Setting.ICON_POSTION_RIGHT}
 			iconShow={[Setting.ICON_SHOW_EMPTY_HEART, Setting.ICON_SHOW_HEART]}
 			styleName={_str_style}
+			composition={_str_composition}
 			styleBorder={true}
 			styleIcon={true}
 			styleIconBack={_bln_iconback_02}
@@ -401,6 +478,7 @@ function render(){
 			iconPosition={Setting.ICON_POSTION_RIGHT}
 			iconShow={[Setting.ICON_SHOW_EMPTY_HEART, Setting.ICON_SHOW_HEART]}
 			styleName={_str_style}
+			composition={_str_composition}
 			styleBorder={true}
 			styleIcon={true}
 			styleIconBack={_bln_iconback_02}
@@ -426,6 +504,7 @@ function render(){
 			iconPosition={Setting.ICON_POSTION_BOTTOM}
 			iconShow={[Setting.ICON_SHOW_EMPTY_HEART, Setting.ICON_SHOW_HEART]}
 			styleName={_str_style}
+			composition={_str_composition}
 			styleBorder={true}
 			styleIcon={true}
 			styleIconBack={_bln_iconback_02}
@@ -451,6 +530,7 @@ function render(){
 			iconPosition={Setting.ICON_POSTION_BOTTOM}
 			iconShow={[Setting.ICON_SHOW_EMPTY_HEART, Setting.ICON_SHOW_HEART]}
 			styleName={_str_style}
+			composition={_str_composition}
 			styleBorder={true}
 			styleIcon={true}
 			styleIconBack={_bln_iconback_02}

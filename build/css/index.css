@@ -612,6 +612,122 @@
 	border-radius: 50%;
 }
 
+.pkg-checked.pkg-checked_composition-half .pkg-checked-option {
+	width: 50%;
+}
+
+.pkg-checked.pkg-checked_composition-third .pkg-checked-option {
+	width: 33.3%;
+}
+
+.pkg-checked.pkg-checked_composition-quarter .pkg-checked-option {
+	width: 25%;
+}
+
+.pkg-checked.pkg-checked_composition-fifth .pkg-checked-option {
+	width: 20%;
+}
+
+.pkg-checked.pkg-checked_composition-sixth .pkg-checked-option {
+	width: 16.6%;
+}
+
+.pkg-checked.pkg-checked_composition-eighth .pkg-checked-option {
+	width: 12.5%;
+}
+
+.pkg-checked.pkg-checked_composition-tenth .pkg-checked-option {
+	width: 10%;
+}
+
+.pkg-checked.pkg-checked_composition-twelfth .pkg-checked-option {
+	width: 8.3%;
+}
+
+.pkg-checked.pkg-checked_composition-tinyem .pkg-checked-option {
+	margin: 0.2em;
+}
+
+.pkg-checked.pkg-checked_composition-smallem .pkg-checked-option {
+	margin: 0.5em;
+}
+
+.pkg-checked.pkg-checked_composition-littleem .pkg-checked-option {
+	margin: 0.8em;
+}
+
+.pkg-checked.pkg-checked_composition-baseem .pkg-checked-option {
+	margin: 1em;
+}
+
+.pkg-checked.pkg-checked_composition-middleem .pkg-checked-option {
+	margin: 1.2em;
+}
+
+.pkg-checked.pkg-checked_composition-bigem .pkg-checked-option {
+	margin: 1.5em;
+}
+
+.pkg-checked.pkg-checked_composition-largeem .pkg-checked-option {
+	margin: 2em;
+}
+
+.pkg-checked.pkg-checked_composition-tinypercent .pkg-checked-option {
+	margin: 1%;
+}
+
+.pkg-checked.pkg-checked_composition-smallpercent .pkg-checked-option {
+	margin: 2.5%;
+}
+
+.pkg-checked.pkg-checked_composition-littlepercent .pkg-checked-option {
+	margin: 4%;
+}
+
+.pkg-checked.pkg-checked_composition-basepercent .pkg-checked-option {
+	margin: 5%;
+}
+
+.pkg-checked.pkg-checked_composition-middlepercent .pkg-checked-option {
+	margin: 7.5%;
+}
+
+.pkg-checked.pkg-checked_composition-bigpercent .pkg-checked-option {
+	margin: 10%;
+}
+
+.pkg-checked.pkg-checked_composition-largepercent .pkg-checked-option {
+	margin: 15%;
+}
+
+.pkg-checked.pkg-checked_composition-tiny .pkg-checked-option {
+	margin: 1px;
+}
+
+.pkg-checked.pkg-checked_composition-small .pkg-checked-option {
+	margin: 2px;
+}
+
+.pkg-checked.pkg-checked_composition-little .pkg-checked-option {
+	margin: 5px;
+}
+
+.pkg-checked.pkg-checked_composition-base .pkg-checked-option {
+	margin: 10px;
+}
+
+.pkg-checked.pkg-checked_composition-middle .pkg-checked-option {
+	margin: 15px;
+}
+
+.pkg-checked.pkg-checked_composition-big .pkg-checked-option {
+	margin: 20px;
+}
+
+.pkg-checked.pkg-checked_composition-large .pkg-checked-option {
+	margin: 30px;
+}
+
 .pkg-checked.pkg-checked_listposition-outer { 
 	/* 設成block以確保padding為正確的 */ 
 	/*

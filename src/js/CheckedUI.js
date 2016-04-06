@@ -117,6 +117,45 @@ export default class CheckedUI {
 		return _str_return;
 	};
 
+	static getComposition( str_composition ){
+		let _str_return = '';
+		let _ary_composition = [
+			Setting.COMPOSITION_HALF,
+			Setting.COMPOSITION_THIRD,
+			Setting.COMPOSITION_QUARTER,
+			Setting.COMPOSITION_FIFTH,
+			Setting.COMPOSITION_SIXTH,
+			Setting.COMPOSITION_EIGHTH,
+			Setting.COMPOSITION_TENTH,
+			Setting.COMPOSITION_TWELFTH,
+			Setting.COMPOSITION_TINYEM,
+			Setting.COMPOSITION_SMALLEM,
+			Setting.COMPOSITION_LITTLEEM,
+			Setting.COMPOSITION_BASEEM,
+			Setting.COMPOSITION_MIDDLEEM,
+			Setting.COMPOSITION_BIGEM,
+			Setting.COMPOSITION_LARGEEM,
+			Setting.COMPOSITION_TINYPERCENT,
+			Setting.COMPOSITION_SMALLPERCENT,
+			Setting.COMPOSITION_LITTLEPERCENT,
+			Setting.COMPOSITION_BASEPERCENT,
+			Setting.COMPOSITION_MIDDLEPERCENT,
+			Setting.COMPOSITION_BIGPERCENT,
+			Setting.COMPOSITION_LARGEPERCENT,
+			Setting.COMPOSITION_TINY,
+			Setting.COMPOSITION_SMALL,
+			Setting.COMPOSITION_LITTLE,
+			Setting.COMPOSITION_BASE,
+			Setting.COMPOSITION_MIDDLE,
+			Setting.COMPOSITION_BIG,
+			Setting.COMPOSITION_LARGE,
+		];
+		if( _ary_composition.indexOf(str_composition)>=0 ){
+			_str_return = 'pkg-checked_composition-'+str_composition.replace(/\-/g,'');
+		}
+		return _str_return;
+	};
+
 	static getListPosition( str_position ){
 		let _str_return = '';
 		let _ary_position = [

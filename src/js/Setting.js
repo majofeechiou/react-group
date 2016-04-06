@@ -67,6 +67,37 @@ export default class Setting {
 	static STYLE_NAME_RIGID = 'rigid'; // 鋼硬
 	static STYLE_NAME_WATERSIDE = 'waterside'; // 水畔
 
+	// 佈局
+	static COMPOSITION_HALF = 'half'; // 一半（1/2）
+	static COMPOSITION_THIRD = 'third'; // 三分之一（1/3）
+	static COMPOSITION_QUARTER = 'quarter'; // 四分之一（1/4）
+	static COMPOSITION_FIFTH = 'fifth'; // 五分之一（1/5）
+	static COMPOSITION_SIXTH = 'sixth'; // 六分之一（1/6）
+	static COMPOSITION_EIGHTH = 'eighth'; // 八分之一（1/8）
+	static COMPOSITION_TENTH = 'tenth'; // 十分之一（1/10）
+	static COMPOSITION_TWELFTH = 'twelfth'; // 十二分之一（1/12）
+	static COMPOSITION_TINYEM = 'tiny-em'; // 0.2em
+	static COMPOSITION_SMALLEM = 'small-em'; // 0.5em
+	static COMPOSITION_LITTLEEM = 'little-em'; // 0.8em
+	static COMPOSITION_BASEEM = 'base-em'; // 1em
+	static COMPOSITION_MIDDLEEM = 'middle-em'; // 1.2em
+	static COMPOSITION_BIGEM = 'big-em'; // 1.5em
+	static COMPOSITION_LARGEEM = 'large-em'; // 2em
+	static COMPOSITION_TINYPERCENT = 'tiny-percent'; // 1%
+	static COMPOSITION_SMALLPERCENT = 'small-percent'; // 2.5%
+	static COMPOSITION_LITTLEPERCENT = 'little-percent'; // 4%
+	static COMPOSITION_BASEPERCENT = 'base-percent'; // 5%
+	static COMPOSITION_MIDDLEPERCENT = 'middle-percent'; // 7.5%
+	static COMPOSITION_BIGPERCENT = 'big-percent'; // 10%
+	static COMPOSITION_LARGEPERCENT = 'large-percent'; // 15%
+	static COMPOSITION_TINY = 'tiny'; // 1px
+	static COMPOSITION_SMALL = 'small'; // 2px
+	static COMPOSITION_LITTLE = 'little'; // 5px
+	static COMPOSITION_BASE = 'base'; // 10px
+	static COMPOSITION_MIDDLE = 'middle'; // 15px
+	static COMPOSITION_BIG = 'big'; // 20px
+	static COMPOSITION_LARGE = 'large'; // 30px
+
 	// 能不能作用（disabled）
 	static DISABLED_TRUE = true;
 	static DISABLED_FALSE = false;
@@ -126,7 +157,7 @@ export default class Setting {
 	basepercent - 10%
 	middlepercent - 12%
 	bigpercent - 15%
-	largepercent - 20%m
+	largepercent - 20%
 	tiny - 2px
 	small - 5px
 	little - 10px
