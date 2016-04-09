@@ -104,78 +104,6 @@ export default class Setting {
 
 }
 
-
-		/*
-			有哪些排版：
-			BLOCK - block
-			INBLOCK - inline-block
-		*/
-		/*
-			padding:
-			tiny - 0.2em
-			small - 0.5em
-			little - 0.8em
-			base - 1em
-			middle - 1.2em
-			big - 1.5em
-			large - 2em
-			huge - 2.5em
-		*/
-		/*
-			色彩風格：
-			resurgence - 死灰復燃
-			spring - 春天
-			wine - 紅酒
-			bluesky - 藍天
-			lovely - 可愛
-			luxury - 華貴
-			fantasy - 奇幻
-			rigid'- 鋼硬
-			waterside - 水畔
-		 */
-
-/*
-	composition:
-	half - 1/2
-	third - 1/3
-	quarter - 1/4
-	fifth - 1/5
-	sixth - 1/6
-	eighth - 1/8
-	tenth - 1/10
-	twelfth - 1/12
-	tinyem - 0.2em
-	smallem - 0.5em
-	littleem - 0.8em
-	baseem - 1em
-	middleem - 1.2em
-	bigem - 1.5em
-	largeem - 2em
-	tinypercent - 2%
-	smallpercent - 5%
-	littlepercent - 8%
-	basepercent - 10%
-	middlepercent - 12%
-	bigpercent - 15%
-	largepercent - 20%
-	tiny - 2px
-	small - 5px
-	little - 10px
-	base - 15px
-	middle - 20px
-	big - 30px
-	large - 50px
-*/
-/*
-	spacing:
-	tiny - 0.2em
-	small - 0.5em
-	little - 0.8em
-	base - 1em
-	middle - 1.2em
-	big - 1.5em
-	large - 2em
-*/
 /* ?????????
 	有哪些類型：
 	原版 - clean
@@ -184,13 +112,6 @@ export default class Setting {
 	膠囊 - capsule
 	圓形 - circle
 */
-		/*
-			圓角：
-			無
-			tiny - 2px
-			base - 5px
-			circle - 50%
-		*/
 /*
 	轉變動畫：
 	rotate-旋轉
@@ -202,48 +123,3 @@ export default class Setting {
 	filter-模糊
 	translateY-雨滴落下
 */
-		/*
-			ICON位置或不顯示：
-			上 - top
-			下 - bottom
-			左 - left
-			右 - right
-			不要 - none
-		*/
-		/*
-			ICON類型：
-			實的愛心
-			純勾勾
-			方框
-			方框中有勾勾
-			純叉叉
-			方根中有叉叉
-			純橫線
-			方框中有橫線
-		*/
-		/*
-			ICON類型（已選-若沒寫的話，將和未選是一樣的）：
-		*/
-		/*
-			清單位置：
-			左外 - outer
-			左內 - inner
-		*/
-		/*
-			清單類型：
-			實心圓 - disc
-			空心圓 - circle
-			阿拉伯數字 - decimal
-			方形 - square
-			帶有0的阿拉伯數字 - decimal-leading-zero
-			小寫的羅馬文字 - lower-roman
-			大寫的羅馬文字 - upper-roman
-			小寫的希臘文 - lower-greek
-			小寫的拉丁字母 - lower-latin
-			大寫的拉丁字母 - upper-latin
-		*/
-		/*
-			能不能作用（disabled）：
-			能作用 - false
-			不能作用 - true
-		*/
