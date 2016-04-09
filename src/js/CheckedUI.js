@@ -4,8 +4,8 @@ import Setting from './Setting';
 export default class CheckedUI {
 
 	static getDisabled( str_display ){
-		let _str_return = '';
 		str_display = str_display || Setting.DISPLAY_INBLOCK ;
+		let _str_return = '';
 		let _ary_display = [
 			Setting.DISPLAY_INBLOCK,
 			Setting.DISPLAY_BLOCK
@@ -17,8 +17,8 @@ export default class CheckedUI {
 	};
 
 	static getPadding( str_padding ){
-		let _str_return = '';
 		str_padding = str_padding || Setting.DISPLAY_INBLOCK ;
+		let _str_return = '';
 		let _ary_padding = [
 			Setting.PADDING_TINY,
 			Setting.PADDING_SMALL,

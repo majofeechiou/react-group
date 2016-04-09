@@ -58,10 +58,17 @@ let _sary_options = [{
 let _ary_selectkey = ['uuid'];
 let _data_checked = ['a','b','c','d','e','f'];
 
+setTimeout(function(){
+	_data_checked = ['a','b'];
+	_str_style = Setting.STYLE_NAME_SPRING;
+	_str_composition = Setting.COMPOSITION_QUARTER
+	render();
+},5000);
+
 let _ary_showkey = ['text','uuid'];
 
-let _bln_iconback_01 = false;
-let _bln_iconback_02 = true;
+let _bln_iconback_01 = true;
+let _bln_iconback_02 = false;
 
 // let _str_style = Setting.STYLE_NAME_RESURGENCE;
 // let _str_style = Setting.STYLE_NAME_SPRING;
@@ -73,8 +80,8 @@ let _str_style = Setting.STYLE_NAME_LUXURY;
 // let _str_style = Setting.STYLE_NAME_RIGID;
 // let _str_style = Setting.STYLE_NAME_WATERSIDE;
 
-let _bln_offBack_01 = true;
-let _bln_offBack_02 = false;
+let _bln_offBack_01 = false;
+let _bln_offBack_02 = true;
 
 // let _str_composition = Setting.COMPOSITION_HALF;
 // let _str_composition = Setting.COMPOSITION_THIRD;
@@ -110,6 +117,7 @@ let _str_composition = Setting.COMPOSITION_TINY;
 // let _str_composition = Setting.COMPOSITION_LARGE;
 
 function handleChange( bln_change, json_return ){
+	console.log('bln_change :: ', bln_change);
 	if( bln_change===true ){
 		_data_checked = json_return.result;
 		render();

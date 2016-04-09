@@ -128,10 +128,17 @@
 	var _ary_selectkey = ['uuid'];
 	var _data_checked = ['a', 'b', 'c', 'd', 'e', 'f'];
 
+	setTimeout(function () {
+		_data_checked = ['a', 'b'];
+		_str_style = _Setting2.default.STYLE_NAME_SPRING;
+		_str_composition = _Setting2.default.COMPOSITION_QUARTER;
+		render();
+	}, 5000);
+
 	var _ary_showkey = ['text', 'uuid'];
 
-	var _bln_iconback_01 = false;
-	var _bln_iconback_02 = true;
+	var _bln_iconback_01 = true;
+	var _bln_iconback_02 = false;
 
 	// let _str_style = Setting.STYLE_NAME_RESURGENCE;
 	// let _str_style = Setting.STYLE_NAME_SPRING;
@@ -143,8 +150,8 @@
 	// let _str_style = Setting.STYLE_NAME_RIGID;
 	// let _str_style = Setting.STYLE_NAME_WATERSIDE;
 
-	var _bln_offBack_01 = true;
-	var _bln_offBack_02 = false;
+	var _bln_offBack_01 = false;
+	var _bln_offBack_02 = true;
 
 	// let _str_composition = Setting.COMPOSITION_HALF;
 	// let _str_composition = Setting.COMPOSITION_THIRD;
@@ -180,6 +187,7 @@
 	// let _str_composition = Setting.COMPOSITION_LARGE;
 
 	function handleChange(bln_change, json_return) {
+		console.log('bln_change :: ', bln_change);
 		if (bln_change === true) {
 			_data_checked = json_return.result;
 			render();
@@ -20302,42 +20310,16 @@
 
 			_this.handleChange = _this.handleChange.bind(_this);
 			_this.toggleDisabled = _this.toggleDisabled.bind(_this);
-			var _str_format = 'string';
-			if (typeof props.outputFormat === 'string' && props.outputFormat.match(/^((string)|(json)|(array)|(sarry))$/i) !== null) {
-				_str_format = props.outputFormat;
-			}
-			// let _data_result =
-			// 	( _str_format==='array' || _str_format==='sarry' )? [] :
-			// 	(( _str_format==='json' )? {} : '' ) ;
-			var _data_result = undefined;
-			if (_str_format === 'array' || _str_format === 'sarry') {
-				if (props.outputResult instanceof Array === true) {
-					_data_result = props.outputResult;
-				} else {
-					_data_result = [];
-				}
-			} else if (_str_format === 'string') {
-				if (typeof props.outputResult === 'string') {
-					_data_result = props.outputResult;
-				} else {
-					_data_result = '';
-				}
-			} else {
-				if (_typeof(props.outputResult) === 'object') {
-					_data_result = props.outputResult;
-				} else {
-					_data_result = {};
-				}
-			}
-			_this.state = {
-				format: _str_format,
-				disabled: false,
-				outputResult: _data_result
-			};
+			_this.arrangeProps(props);
 			return _this;
 		}
 
 		_createClass(RadioGroup, [{
+			key: 'componentWillReceiveProps',
+			value: function componentWillReceiveProps(nextProps) {
+				this.arrangeProps(nextProps);
+			}
+		}, {
 			key: 'mergeState',
 			value: function mergeState(json) {
 				var _json_state = JSON.parse(JSON.stringify(this.state)),
@@ -20348,6 +20330,47 @@
 			key: 'getMainSelectKey',
 			value: function getMainSelectKey() {
 				return this.props.selectKey[0];
+			}
+		}, {
+			key: 'arrangeProps',
+			value: function arrangeProps(props) {
+				var _str_format = 'string';
+				if (typeof props.outputFormat === 'string' && props.outputFormat.match(/^((string)|(json)|(array)|(sarry))$/i) !== null) {
+					_str_format = props.outputFormat;
+				}
+				// let _data_result =
+				// 	( _str_format==='array' || _str_format==='sarry' )? [] :
+				// 	(( _str_format==='json' )? {} : '' ) ;
+				var _data_result = undefined;
+				if (_str_format === 'array' || _str_format === 'sarry') {
+					if (props.outputResult instanceof Array === true) {
+						_data_result = props.outputResult;
+					} else {
+						_data_result = [];
+					}
+				} else if (_str_format === 'string') {
+					if (typeof props.outputResult === 'string') {
+						_data_result = props.outputResult;
+					} else {
+						_data_result = '';
+					}
+				} else {
+					if (_typeof(props.outputResult) === 'object') {
+						_data_result = props.outputResult;
+					} else {
+						_data_result = {};
+					}
+				}
+				// this.setState({
+				// 	format: _str_format ,
+				// 	disabled: false ,
+				// 	outputResult: _data_result
+				// });
+				this.state = {
+					format: _str_format,
+					disabled: false,
+					outputResult: _data_result
+				};
 			}
 		}, {
 			key: 'handleChange',
@@ -20794,77 +20817,6 @@
 		_classCallCheck(this, Setting);
 	};
 
-	/*
-		有哪些排版：
-		BLOCK - block
-		INBLOCK - inline-block
-	*/
-	/*
-		padding:
-		tiny - 0.2em
-		small - 0.5em
-		little - 0.8em
-		base - 1em
-		middle - 1.2em
-		big - 1.5em
-		large - 2em
-		huge - 2.5em
-	*/
-	/*
-		色彩風格：
-		resurgence - 死灰復燃
-		spring - 春天
-		wine - 紅酒
-		bluesky - 藍天
-		lovely - 可愛
-		luxury - 華貴
-		fantasy - 奇幻
-		rigid'- 鋼硬
-		waterside - 水畔
-	 */
-
-	/*
-		composition:
-		half - 1/2
-		third - 1/3
-		quarter - 1/4
-		fifth - 1/5
-		sixth - 1/6
-		eighth - 1/8
-		tenth - 1/10
-		twelfth - 1/12
-		tinyem - 0.2em
-		smallem - 0.5em
-		littleem - 0.8em
-		baseem - 1em
-		middleem - 1.2em
-		bigem - 1.5em
-		largeem - 2em
-		tinypercent - 2%
-		smallpercent - 5%
-		littlepercent - 8%
-		basepercent - 10%
-		middlepercent - 12%
-		bigpercent - 15%
-		largepercent - 20%
-		tiny - 2px
-		small - 5px
-		little - 10px
-		base - 15px
-		middle - 20px
-		big - 30px
-		large - 50px
-	*/
-	/*
-		spacing:
-		tiny - 0.2em
-		small - 0.5em
-		little - 0.8em
-		base - 1em
-		middle - 1.2em
-		big - 1.5em
-		large - 2em
-	*/
 	/* ?????????
 		有哪些類型：
 		原版 - clean
@@ -20872,13 +20824,6 @@
 		按鈕 - button
 		膠囊 - capsule
 		圓形 - circle
-	*/
-	/*
-		圓角：
-		無
-		tiny - 2px
-		base - 5px
-		circle - 50%
 	*/
 	/*
 		轉變動畫：
@@ -20890,51 +20835,6 @@
 		scale-心臟跳動
 		filter-模糊
 		translateY-雨滴落下
-	*/
-	/*
-		ICON位置或不顯示：
-		上 - top
-		下 - bottom
-		左 - left
-		右 - right
-		不要 - none
-	*/
-	/*
-		ICON類型：
-		實的愛心
-		純勾勾
-		方框
-		方框中有勾勾
-		純叉叉
-		方根中有叉叉
-		純橫線
-		方框中有橫線
-	*/
-	/*
-		ICON類型（已選-若沒寫的話，將和未選是一樣的）：
-	*/
-	/*
-		清單位置：
-		左外 - outer
-		左內 - inner
-	*/
-	/*
-		清單類型：
-		實心圓 - disc
-		空心圓 - circle
-		阿拉伯數字 - decimal
-		方形 - square
-		帶有0的阿拉伯數字 - decimal-leading-zero
-		小寫的羅馬文字 - lower-roman
-		大寫的羅馬文字 - upper-roman
-		小寫的希臘文 - lower-greek
-		小寫的拉丁字母 - lower-latin
-		大寫的拉丁字母 - upper-latin
-	*/
-	/*
-		能不能作用（disabled）：
-		能作用 - false
-		不能作用 - true
 	*/
 
 	Setting.DISPLAY_BLOCK = 'block';
@@ -21045,8 +20945,8 @@
 		_createClass(CheckedUI, null, [{
 			key: 'getDisabled',
 			value: function getDisabled(str_display) {
-				var _str_return = '';
 				str_display = str_display || _Setting2.default.DISPLAY_INBLOCK;
+				var _str_return = '';
 				var _ary_display = [_Setting2.default.DISPLAY_INBLOCK, _Setting2.default.DISPLAY_BLOCK];
 				if (_ary_display.indexOf(str_display) >= 0) {
 					_str_return = 'pkg-checked_display-' + str_display;
@@ -21056,8 +20956,8 @@
 		}, {
 			key: 'getPadding',
 			value: function getPadding(str_padding) {
-				var _str_return = '';
 				str_padding = str_padding || _Setting2.default.DISPLAY_INBLOCK;
+				var _str_return = '';
 				var _ary_padding = [_Setting2.default.PADDING_TINY, _Setting2.default.PADDING_SMALL, _Setting2.default.PADDING_LITTLE, _Setting2.default.PADDING_BASE, _Setting2.default.PADDING_MIDDLE, _Setting2.default.PADDING_BIG, _Setting2.default.PADDING_LARGE, _Setting2.default.PADDING_HUGE];
 				if (_ary_padding.indexOf(str_padding) >= 0) {
 					_str_return = 'pkg-checked_padding-' + str_padding;

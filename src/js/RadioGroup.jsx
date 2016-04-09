@@ -19,6 +19,24 @@ export default class RadioGroup extends React.Component {
 		super(props);
 		this.handleChange = this.handleChange.bind(this);
 		this.toggleDisabled = this.toggleDisabled.bind(this);
+		this.arrangeProps(props);
+	}
+
+	componentWillReceiveProps(nextProps){
+		this.arrangeProps(nextProps);
+	}
+
+	mergeState(json){
+		let _json_state = JSON.parse(JSON.stringify(this.state)),
+			_json_extend = extend(_json_state, json);
+		this.setState( _json_extend );
+	}
+
+	getMainSelectKey(){
+		return this.props.selectKey[0];
+	}
+
+	arrangeProps(props){
 		let _str_format = 'string' ; 
 		if( typeof props.outputFormat === 'string' && (props.outputFormat).match(/^((string)|(json)|(array)|(sarry))$/i)!==null ){
 			_str_format = props.outputFormat ;
@@ -46,21 +64,16 @@ export default class RadioGroup extends React.Component {
 				_data_result = {};
 			}
 		}
+		// this.setState({
+		// 	format: _str_format ,
+		// 	disabled: false ,
+		// 	outputResult: _data_result
+		// });
 		this.state = {
 			format: _str_format ,
 			disabled: false ,
 			outputResult: _data_result
 		};
-	}
-
-	mergeState(json){
-		let _json_state = JSON.parse(JSON.stringify(this.state)),
-			_json_extend = extend(_json_state, json);
-		this.setState( _json_extend );
-	}
-
-	getMainSelectKey(){
-		return this.props.selectKey[0];
 	}
 
 	handleChange(e) {
