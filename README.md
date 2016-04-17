@@ -1,2 +1,2 @@
-# react-radio
-react-radio
+# react-group
+react-group

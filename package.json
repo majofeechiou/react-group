@@ -1,7 +1,7 @@
 {
-  "name": "@majo/react-radio",
+  "name": "@majo/react-group",
   "version": "1.0.0",
-  "description": "react-radio",
+  "description": "react-group",
   "main": "build/js/index.js",
   "dependencies": {},
   "devDependencies": {
@@ -42,12 +42,12 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/majofeechiou/react-radio.git"
+    "url": "git+https://github.com/majofeechiou/react-group.git"
   },
   "author": "",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/majofeechiou/react-radio/issues"
+    "url": "https://github.com/majofeechiou/react-group/issues"
   },
-  "homepage": "https://github.com/majofeechiou/react-radio#readme"
+  "homepage": "https://github.com/majofeechiou/react-group#readme"
 }
