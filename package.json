@@ -4,7 +4,7 @@
   "description": "react-group",
   "main": "build/js/index.js",
   "dependencies": {
-    "json-extend": "^0.1.0",
+    "json-extend": "^0.1.0"
   },
   "devDependencies": {
     "autoprefixer": "^6.3.2",
