@@ -2,5 +2,6 @@
 
 // module.exports = require('./base');
 
-require('./base');
+// require('./base');
 require('./css/_index');
+require('./js/RadioGroup');

@@ -2,7 +2,7 @@
   "name": "@majo/react-radio",
   "version": "1.0.0",
   "description": "react-radio",
-  "main": "src/index.js",
+  "main": "build/js/index.js",
   "dependencies": {},
   "devDependencies": {
     "autoprefixer": "^6.3.2",
