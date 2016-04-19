@@ -60,7 +60,7 @@ module.exports = {
 	resolve: {
 		extensions: ['', '.css', '.js', '.jsx'],
         alias: {
-            'json-extend': path.join(__dirname, 'node_modules/json-extend/index.js'),
+            'JsonExtend': path.join(__dirname, 'node_modules/json-extend/index.js'),
         }
 	},
 	postcss: function () {

@@ -11,7 +11,7 @@ import ItemBase from './ItemBase';
 import ClassNames from 'classnames';
 import Setting from './Setting';
 import CheckedUI from './CheckedUI';
-import extend from 'json-extend';
+import extend from 'JsonExtend';
 
 export default class RadioGroup extends React.Component {
 
