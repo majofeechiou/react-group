@@ -132,7 +132,7 @@ function render(){
 			outputFormat="array"
 			name="name1"
 			selectKey={_ary_selectkey}
-			inputoption={_sary_options}
+			inputOption={_sary_options}
 			outputResult={_data_checked}
 			showKey={_ary_showkey}
 			between="~"
@@ -159,7 +159,7 @@ function render(){
 			outputFormat="array"
 			name="name1"
 			selectKey={_ary_selectkey}
-			inputoption={_sary_options}
+			inputOption={_sary_options}
 			outputResult={_data_checked}
 			showKey={_ary_showkey}
 			between="~"
@@ -186,7 +186,7 @@ function render(){
 			outputFormat="array"
 			name="name1"
 			selectKey={_ary_selectkey}
-			inputoption={_sary_options}
+			inputOption={_sary_options}
 			outputResult={_data_checked}
 			showKey={_ary_showkey}
 			between="~"
@@ -213,7 +213,7 @@ function render(){
 			outputFormat="array"
 			name="name1"
 			selectKey={_ary_selectkey}
-			inputoption={_sary_options}
+			inputOption={_sary_options}
 			outputResult={_data_checked}
 			showKey={_ary_showkey}
 			between="~"
@@ -240,7 +240,7 @@ function render(){
 			outputFormat="array"
 			name="name1"
 			selectKey={_ary_selectkey}
-			inputoption={_sary_options}
+			inputOption={_sary_options}
 			outputResult={_data_checked}
 			showKey={_ary_showkey}
 			between="~"
@@ -267,7 +267,7 @@ function render(){
 			outputFormat="array"
 			name="name1"
 			selectKey={_ary_selectkey}
-			inputoption={_sary_options}
+			inputOption={_sary_options}
 			outputResult={_data_checked}
 			showKey={_ary_showkey}
 			between="~"
@@ -294,7 +294,7 @@ function render(){
 			outputFormat="array"
 			name="name1"
 			selectKey={_ary_selectkey}
-			inputoption={_sary_options}
+			inputOption={_sary_options}
 			outputResult={_data_checked}
 			showKey={_ary_showkey}
 			between="~"
@@ -321,7 +321,7 @@ function render(){
 			outputFormat="array"
 			name="name1"
 			selectKey={_ary_selectkey}
-			inputoption={_sary_options}
+			inputOption={_sary_options}
 			outputResult={_data_checked}
 			showKey={_ary_showkey}
 			between="~"
@@ -351,7 +351,7 @@ function render(){
 			outputFormat="array"
 			name="name1"
 			selectKey={_ary_selectkey}
-			inputoption={_sary_options}
+			inputOption={_sary_options}
 			outputResult={_data_checked}
 			showKey={_ary_showkey}
 			between="~"
@@ -378,7 +378,7 @@ function render(){
 			outputFormat="array"
 			name="name1"
 			selectKey={_ary_selectkey}
-			inputoption={_sary_options}
+			inputOption={_sary_options}
 			outputResult={_data_checked}
 			showKey={_ary_showkey}
 			between="~"
@@ -405,7 +405,7 @@ function render(){
 			outputFormat="array"
 			name="name1"
 			selectKey={_ary_selectkey}
-			inputoption={_sary_options}
+			inputOption={_sary_options}
 			outputResult={_data_checked}
 			showKey={_ary_showkey}
 			between="~"
@@ -432,7 +432,7 @@ function render(){
 			outputFormat="array"
 			name="name1"
 			selectKey={_ary_selectkey}
-			inputoption={_sary_options}
+			inputOption={_sary_options}
 			outputResult={_data_checked}
 			showKey={_ary_showkey}
 			between="~"
@@ -459,7 +459,7 @@ function render(){
 			outputFormat="array"
 			name="name1"
 			selectKey={_ary_selectkey}
-			inputoption={_sary_options}
+			inputOption={_sary_options}
 			outputResult={_data_checked}
 			showKey={_ary_showkey}
 			between="~"
@@ -486,7 +486,7 @@ function render(){
 			outputFormat="array"
 			name="name1"
 			selectKey={_ary_selectkey}
-			inputoption={_sary_options}
+			inputOption={_sary_options}
 			outputResult={_data_checked}
 			showKey={_ary_showkey}
 			between="~"
@@ -513,7 +513,7 @@ function render(){
 			outputFormat="array"
 			name="name1"
 			selectKey={_ary_selectkey}
-			inputoption={_sary_options}
+			inputOption={_sary_options}
 			outputResult={_data_checked}
 			showKey={_ary_showkey}
 			between="~"
@@ -540,7 +540,7 @@ function render(){
 			outputFormat="array"
 			name="name1"
 			selectKey={_ary_selectkey}
-			inputoption={_sary_options}
+			inputOption={_sary_options}
 			outputResult={_data_checked}
 			showKey={_ary_showkey}
 			between="~"

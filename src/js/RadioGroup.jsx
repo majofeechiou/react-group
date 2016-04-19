@@ -81,7 +81,7 @@ export default class RadioGroup extends React.Component {
 		let _bln_changed = false;
 		let _str_value = e.target.value;
 		let _str_selectkey = _scope.getMainSelectKey();
-		(this.props.inputoption).find(function(json){
+		(this.props.inputOption).find(function(json){
 
 			if( json[_str_selectkey]===_str_value ){
 				let _json_args = {},
@@ -209,7 +209,7 @@ export default class RadioGroup extends React.Component {
 		let _str_selectkey = this.getMainSelectKey();
 		return <div>
 			<div className={_str_classname_all}>
-				{this.props.inputoption.map((json_item)=>{
+				{this.props.inputOption.map((json_item)=>{
 
 					let _str_classname_outer = ClassNames({
 						'pkg-checked-option': true,
@@ -264,7 +264,7 @@ RadioGroup.propTypes = {
 	onChange: React.PropTypes.func,
 	outputResult: React.PropTypes.any.isRequired,
 	className: React.PropTypes.string,
-    inputoption: React.PropTypes.array,
+    inputOption: React.PropTypes.array,
     selectKey: React.PropTypes.array,
     showKey: React.PropTypes.array,
     between: React.PropTypes.string,
@@ -285,7 +285,7 @@ RadioGroup.propTypes = {
 RadioGroup.defaultProps = {
 	className: '',
 	outputResult: null,
-	inputoption: [],
+	inputOption: [],
 	selectKey: [],
 	showKey: [],
 	between: '',

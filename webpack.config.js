@@ -4,10 +4,13 @@ var path = require('path');
 var ExtractTextPlugin = require('extract-text-webpack-plugin');
 
 module.exports = {
-	entry: './src/index.js',
+	entry: {
+        index: './src/index.js',
+        demo: './src/demo.js'
+    },
 	output: {
 		path: './build/',
-		filename: 'js/index.js',
+		filename: 'js/[name].js',
 	},
 	module: {
 		loaders: [{
@@ -71,6 +74,6 @@ module.exports = {
 	    //   template: './src/swarovski/index.html',
 	    //   inject: 'body' // 檔案會從輸出的index.html的哪裡link入
 	    // }),
-	    new ExtractTextPlugin('css/index.css')
+	    new ExtractTextPlugin('css/[name].css')
 	]
 };
