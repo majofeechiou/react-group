@@ -254,11 +254,11 @@ export default class RadioGroup extends React.Component {
 				})}
 			</div>
 
-			<button onClick={this.toggleDisabled}>toggle disabled</button>
-
 		</div>;
 	}
 }
+
+// <button onClick={this.toggleDisabled}>toggle disabled</button> // 這個要移除
 
 RadioGroup.propTypes = {
 	onChange: React.PropTypes.func,
