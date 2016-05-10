@@ -234,25 +234,37 @@ $num_fillet_circle: 50%;
 
 @define-mixin iconShowContent $name {
 	@if $name == heart {
-		content: "\e010";
+		content: "\f116";
 	}
 	@if $name == emptyheart {
-		content: "\e014";
+		content: "\f11a";
 	}
 	@if $name == checked {
-		content: "\e007";
+		content: "\f107";
 	}
 	@if $name == squarechecked {
-		content: "\e006";
+		content: "\f126";
 	}
 	@if $name == square {
-		content: "\e017";
+		content: "\f121";
 	}
 	@if $name == close {
-		content: "\e00f";
+		content: "\f115";
 	}
 	@if $name == line {
-		content: "\e004";
+		content: "\f104";
+	}
+	@if $name == emptysquare {
+		content: "\f112";
+	}
+	@if $name == rhombus {
+		content: "\f11d";
+	}
+	@if $name == star {
+		content: "\f114";
+	}
+	@if $name == emptystar {
+		content: "\f124";
 	}
 }
 
