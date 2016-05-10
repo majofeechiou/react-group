@@ -266,6 +266,12 @@ $num_fillet_circle: 50%;
 	@if $name == emptystar {
 		content: "\f124";
 	}
+	@if $name == circle {
+		content: "\f10b";
+	}
+	@if $name == emptycircle {
+		content: "\f10a";
+	}
 }
 
 @define-mixin iconShow $name {
