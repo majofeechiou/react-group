@@ -529,6 +529,13 @@ $num_fillet_circle: 50%;
 	@mixin iconShow square ;
 	@mixin iconShow close ;
 	@mixin iconShow line ;
+	
+	@mixin iconShow emptysquare ;
+	@mixin iconShow rhombus ;
+	@mixin iconShow star ;
+	@mixin iconShow emptystar ;
+	@mixin iconShow circle ;
+	@mixin iconShow emptycircle ;
 
 	/* ***** 分項標準在這（參考） ***** */
 	.pkg-checked-option {
