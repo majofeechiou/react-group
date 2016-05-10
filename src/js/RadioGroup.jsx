@@ -38,14 +38,14 @@ export default class RadioGroup extends React.Component {
 
 	arrangeProps(props){
 		let _str_format = 'string' ; 
-		if( typeof props.outputFormat === 'string' && (props.outputFormat).match(/^((string)|(json)|(array)|(sarry))$/i)!==null ){
+		if( typeof props.outputFormat === 'string' && (props.outputFormat).match(/^((string)|(json)|(array)|(sarray))$/i)!==null ){
 			_str_format = props.outputFormat ;
 		}
 		// let _data_result = 
-		// 	( _str_format==='array' || _str_format==='sarry' )? [] : 
+		// 	( _str_format==='array' || _str_format==='sarray' )? [] : 
 		// 	(( _str_format==='json' )? {} : '' ) ;
 		let _data_result;
-		if(  _str_format==='array' || _str_format==='sarry' ){
+		if(  _str_format==='array' || _str_format==='sarray' ){
 			if( props.outputResult instanceof Array === true ){
 				_data_result = props.outputResult;
 			}else{
@@ -243,7 +243,7 @@ export default class RadioGroup extends React.Component {
 									checked={this.judegItemChecked(json_item)}
 									onChange={this.handleChange}
 									disabled={this.state.disabled}
-									type={ (this.state.format==='array' || this.state.format==='sarry')? 'checkbox' : 'radio' }
+									type={ (this.state.format==='array' || this.state.format==='sarray')? 'checkbox' : 'radio' }
 									name={this.props.name}
 									showKey={this.props.showKey}
 									between={this.props.between}
