@@ -50,6 +50,9 @@ $num_fillet_circle: 50%;
 @define-mixin composition $name {
 	&.pkg-checked_composition-$name{
 		.pkg-checked-option {
+			@if $name == whole {
+				width: 100%;
+			}
 			@if $name == half {
 				width: 50%;
 			}
@@ -372,6 +375,7 @@ $num_fillet_circle: 50%;
 	@mixin checkedFillet base ;
 	@mixin checkedFillet circle ;
 
+	@mixin composition whole ;
 	@mixin composition half ;
 	@mixin composition third ;
 	@mixin composition quarter ;
