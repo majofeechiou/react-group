@@ -2,8 +2,8 @@
 
 import React from 'react';
 import ReactDOM from 'react-dom';
-import RadioGroup from './js/RadioGroup';
-import Setting from './js/Setting';
+import RadioGroup from './../js/RadioGroup';
+import Setting from './../js/Setting';
 
 let _sary_options = [{
 	uuid: 'a',
@@ -141,7 +141,7 @@ function render(){
 			fillet={Setting.FILLET_BASE}
 			listStyle={Setting.LIST_STYLE_CIRCLE}
 			listPosition={Setting.LIST_POSITION_OUTER}
-			iconPosition={Setting.ICON_POSTION_LEFT}
+			iconPosition={Setting.ICON_POSITION_LEFT}
 			iconShow={[Setting.ICON_SHOW_EMPTY_HEART, Setting.ICON_SHOW_HEART]}
 			styleName={_str_style}
 			composition={_str_composition}
@@ -168,7 +168,7 @@ function render(){
 			fillet={Setting.FILLET_BASE}
 			listStyle={Setting.LIST_STYLE_CIRCLE}
 			listPosition={Setting.LIST_POSITION_INNER}
-			iconPosition={Setting.ICON_POSTION_LEFT}
+			iconPosition={Setting.ICON_POSITION_LEFT}
 			iconShow={[Setting.ICON_SHOW_EMPTY_HEART, Setting.ICON_SHOW_HEART]}
 			styleName={_str_style}
 			composition={_str_composition}
@@ -195,7 +195,7 @@ function render(){
 			fillet={Setting.FILLET_BASE}
 			listStyle={Setting.LIST_STYLE_CIRCLE}
 			listPosition={Setting.LIST_POSITION_OUTER}
-			iconPosition={Setting.ICON_POSTION_TOP}
+			iconPosition={Setting.ICON_POSITION_TOP}
 			iconShow={[Setting.ICON_SHOW_EMPTY_HEART, Setting.ICON_SHOW_HEART]}
 			styleName={_str_style}
 			composition={_str_composition}
@@ -222,7 +222,7 @@ function render(){
 			fillet={Setting.FILLET_BASE}
 			listStyle={Setting.LIST_STYLE_CIRCLE}
 			listPosition={Setting.LIST_POSITION_INNER}
-			iconPosition={Setting.ICON_POSTION_TOP}
+			iconPosition={Setting.ICON_POSITION_TOP}
 			iconShow={[Setting.ICON_SHOW_EMPTY_HEART, Setting.ICON_SHOW_HEART]}
 			styleName={_str_style}
 			composition={_str_composition}
@@ -249,7 +249,7 @@ function render(){
 			fillet={Setting.FILLET_BASE}
 			listStyle={Setting.LIST_STYLE_CIRCLE}
 			listPosition={Setting.LIST_POSITION_OUTER}
-			iconPosition={Setting.ICON_POSTION_LEFT}
+			iconPosition={Setting.ICON_POSITION_LEFT}
 			iconShow={[Setting.ICON_SHOW_EMPTY_HEART, Setting.ICON_SHOW_HEART]}
 			styleName={_str_style}
 			composition={_str_composition}
@@ -276,7 +276,7 @@ function render(){
 			fillet={Setting.FILLET_BASE}
 			listStyle={Setting.LIST_STYLE_CIRCLE}
 			listPosition={Setting.LIST_POSITION_INNER}
-			iconPosition={Setting.ICON_POSTION_LEFT}
+			iconPosition={Setting.ICON_POSITION_LEFT}
 			iconShow={[Setting.ICON_SHOW_EMPTY_HEART, Setting.ICON_SHOW_HEART]}
 			styleName={_str_style}
 			composition={_str_composition}
@@ -303,7 +303,7 @@ function render(){
 			fillet={Setting.FILLET_BASE}
 			listStyle={Setting.LIST_STYLE_CIRCLE}
 			listPosition={Setting.LIST_POSITION_OUTER}
-			iconPosition={Setting.ICON_POSTION_TOP}
+			iconPosition={Setting.ICON_POSITION_TOP}
 			iconShow={[Setting.ICON_SHOW_EMPTY_HEART, Setting.ICON_SHOW_HEART]}
 			styleName={_str_style}
 			composition={_str_composition}
@@ -330,7 +330,7 @@ function render(){
 			fillet={Setting.FILLET_BASE}
 			listStyle={Setting.LIST_STYLE_CIRCLE}
 			listPosition={Setting.LIST_POSITION_INNER}
-			iconPosition={Setting.ICON_POSTION_TOP}
+			iconPosition={Setting.ICON_POSITION_TOP}
 			iconShow={[Setting.ICON_SHOW_EMPTY_HEART, Setting.ICON_SHOW_HEART]}
 			styleName={_str_style}
 			composition={_str_composition}
@@ -360,7 +360,7 @@ function render(){
 			fillet={Setting.FILLET_BASE}
 			listStyle={Setting.LIST_STYLE_CIRCLE}
 			listPosition={Setting.LIST_POSITION_OUTER}
-			iconPosition={Setting.ICON_POSTION_RIGHT}
+			iconPosition={Setting.ICON_POSITION_RIGHT}
 			iconShow={[Setting.ICON_SHOW_EMPTY_HEART, Setting.ICON_SHOW_HEART]}
 			styleName={_str_style}
 			composition={_str_composition}
@@ -387,7 +387,7 @@ function render(){
 			fillet={Setting.FILLET_BASE}
 			listStyle={Setting.LIST_STYLE_CIRCLE}
 			listPosition={Setting.LIST_POSITION_INNER}
-			iconPosition={Setting.ICON_POSTION_RIGHT}
+			iconPosition={Setting.ICON_POSITION_RIGHT}
 			iconShow={[Setting.ICON_SHOW_EMPTY_HEART, Setting.ICON_SHOW_HEART]}
 			styleName={_str_style}
 			composition={_str_composition}
@@ -414,7 +414,7 @@ function render(){
 			fillet={Setting.FILLET_BASE}
 			listStyle={Setting.LIST_STYLE_CIRCLE}
 			listPosition={Setting.LIST_POSITION_OUTER}
-			iconPosition={Setting.ICON_POSTION_BOTTOM}
+			iconPosition={Setting.ICON_POSITION_BOTTOM}
 			iconShow={[Setting.ICON_SHOW_EMPTY_HEART, Setting.ICON_SHOW_HEART]}
 			styleName={_str_style}
 			composition={_str_composition}
@@ -441,7 +441,7 @@ function render(){
 			fillet={Setting.FILLET_BASE}
 			listStyle={Setting.LIST_STYLE_CIRCLE}
 			listPosition={Setting.LIST_POSITION_INNER}
-			iconPosition={Setting.ICON_POSTION_BOTTOM}
+			iconPosition={Setting.ICON_POSITION_BOTTOM}
 			iconShow={[Setting.ICON_SHOW_EMPTY_HEART, Setting.ICON_SHOW_HEART]}
 			styleName={_str_style}
 			composition={_str_composition}
@@ -468,7 +468,7 @@ function render(){
 			fillet={Setting.FILLET_BASE}
 			listStyle={Setting.LIST_STYLE_CIRCLE}
 			listPosition={Setting.LIST_POSITION_OUTER}
-			iconPosition={Setting.ICON_POSTION_RIGHT}
+			iconPosition={Setting.ICON_POSITION_RIGHT}
 			iconShow={[Setting.ICON_SHOW_EMPTY_HEART, Setting.ICON_SHOW_HEART]}
 			styleName={_str_style}
 			composition={_str_composition}
@@ -495,7 +495,7 @@ function render(){
 			fillet={Setting.FILLET_BASE}
 			listStyle={Setting.LIST_STYLE_CIRCLE}
 			listPosition={Setting.LIST_POSITION_INNER}
-			iconPosition={Setting.ICON_POSTION_RIGHT}
+			iconPosition={Setting.ICON_POSITION_RIGHT}
 			iconShow={[Setting.ICON_SHOW_EMPTY_HEART, Setting.ICON_SHOW_HEART]}
 			styleName={_str_style}
 			composition={_str_composition}
@@ -522,7 +522,7 @@ function render(){
 			fillet={Setting.FILLET_BASE}
 			listStyle={Setting.LIST_STYLE_CIRCLE}
 			listPosition={Setting.LIST_POSITION_OUTER}
-			iconPosition={Setting.ICON_POSTION_BOTTOM}
+			iconPosition={Setting.ICON_POSITION_BOTTOM}
 			iconShow={[Setting.ICON_SHOW_EMPTY_HEART, Setting.ICON_SHOW_HEART]}
 			styleName={_str_style}
 			composition={_str_composition}
@@ -549,7 +549,7 @@ function render(){
 			fillet={Setting.FILLET_BASE}
 			listStyle={Setting.LIST_STYLE_CIRCLE}
 			listPosition={Setting.LIST_POSITION_INNER}
-			iconPosition={Setting.ICON_POSTION_BOTTOM}
+			iconPosition={Setting.ICON_POSITION_BOTTOM}
 			iconShow={[Setting.ICON_SHOW_EMPTY_HEART, Setting.ICON_SHOW_HEART]}
 			styleName={_str_style}
 			composition={_str_composition}
@@ -566,7 +566,7 @@ function render(){
 render();
 
 // iconShow={[Setting.ICON_SHOW_EMPTY_HEART, Setting.ICON_SHOW_HEART]}
-// iconPosition={Setting.ICON_POSTION_TOP}
+// iconPosition={Setting.ICON_POSITION_TOP}
 // display={Setting.DISPLAY_BLOCK}
 // padding={Setting.PADDING_BASE}
 // listStyle={Setting.LIST_STYLE_CIRCLE}

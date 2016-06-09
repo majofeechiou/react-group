@@ -1,6 +1,6 @@
 'use strict';
 
-require('./other/demo');
+require('./other/develop');
 require('./js/RadioGroup');
 
 require('./css/_index');
