@@ -62,6 +62,7 @@ module.exports = {
 		extensions: ['', '.css', '.js', '.jsx'],
         alias: {
             'JsonExtend': path.join(__dirname, 'node_modules/json-extend/index.js'),
+            'DeepExtend': path.join(__dirname, 'node_modules/deep-extend/index.js'),
         }
 	},
 	postcss: function () {

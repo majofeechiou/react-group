@@ -4,6 +4,7 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import RadioGroup from './../js/RadioGroup';
 import Setting from './../js/Setting';
+import DemoTemplate from './demoTemplate';
 
 let _sary_options = [{
 	uuid: 'a',
@@ -127,33 +128,42 @@ function handleChange( bln_change, json_return ){
 function render(){
 
 	ReactDOM.render(
-		<RadioGroup 
-			onChange={handleChange}
-			outputFormat="array"
-			name="name"
-			selectKey={_ary_selectkey}
-			inputOption={_sary_options}
-			outputResult={_data_checked}
-			showKey={_ary_showkey}
-			between="~"
-			display={Setting.DISPLAY_INBLOCK}
-			padding={Setting.PADDING_BASE}
-			fillet={Setting.FILLET_BASE}
-			listStyle={Setting.LIST_STYLE_CIRCLE}
-			listPosition={Setting.LIST_POSITION_OUTER}
-			iconPosition={Setting.ICON_POSITION_LEFT}
-			iconShow={[Setting.ICON_SHOW_EMPTY_HEART, Setting.ICON_SHOW_HEART]}
-			styleName={_str_style}
-			composition={_str_composition}
-			offBack={_bln_offBack_01}
-			styleBorder={true}
-			styleIcon={true}
-			styleIconBack={_bln_iconback_01}
-			styleList={true} />, 
+		<DemoTemplate />, 
 		document.getElementById("content")
 	);
 
 };
+
+// function render(){
+
+// 	ReactDOM.render(
+// 		<RadioGroup 
+// 			onChange={handleChange}
+// 			outputFormat="array"
+// 			name="name"
+// 			selectKey={_ary_selectkey}
+// 			inputOption={_sary_options}
+// 			outputResult={_data_checked}
+// 			showKey={_ary_showkey}
+// 			between="~"
+// 			display={Setting.DISPLAY_INBLOCK}
+// 			padding={Setting.PADDING_BASE}
+// 			fillet={Setting.FILLET_BASE}
+// 			listStyle={Setting.LIST_STYLE_CIRCLE}
+// 			listPosition={Setting.LIST_POSITION_OUTER}
+// 			iconPosition={Setting.ICON_POSITION_LEFT}
+// 			iconShow={[Setting.ICON_SHOW_EMPTY_HEART, Setting.ICON_SHOW_HEART]}
+// 			styleName={_str_style}
+// 			composition={_str_composition}
+// 			offBack={_bln_offBack_01}
+// 			styleBorder={true}
+// 			styleIcon={true}
+// 			styleIconBack={_bln_iconback_01}
+// 			styleList={true} />, 
+// 		document.getElementById("content")
+// 	);
+
+// };
 
 render();
 
