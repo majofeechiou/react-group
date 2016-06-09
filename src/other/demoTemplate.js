@@ -18,6 +18,11 @@ export default class demoTemplate extends React.Component {
         _scope.arrangeProps( props );
 
         _scope.handleChangeDisplay = _scope.handleChangeDisplay.bind(_scope);
+        _scope.handleChangePadding = _scope.handleChangePadding.bind(_scope);
+        _scope.handleChangeFillet = _scope.handleChangeFillet.bind(_scope);
+        _scope.handleChangeIconPosition = _scope.handleChangeIconPosition.bind(_scope);
+        _scope.handleChangeIconShow01 = _scope.handleChangeIconShow01.bind(_scope);
+        _scope.handleChangeIconShow02 = _scope.handleChangeIconShow02.bind(_scope);
     }
 
     getSelectKey(){
@@ -38,9 +43,72 @@ export default class demoTemplate extends React.Component {
         }];
     }
 
-    componentWillReceiveProps(nextProps){
-        this.arrangeProps(nextProps);
+    getOptionPadding(){
+        return [{
+            name: Setting.PADDING_TINY + ' 〔0.2em〕',
+            value: Setting.PADDING_TINY
+        }, {
+            name: Setting.PADDING_SMALL + ' 〔0.5em〕',
+            value: Setting.PADDING_SMALL
+        }, {
+            name: Setting.PADDING_LITTLE + ' 〔0.8em〕',
+            value: Setting.PADDING_LITTLE
+        }, {
+            name: Setting.PADDING_BASE + ' 〔1em〕',
+            value: Setting.PADDING_BASE
+        }, {
+            name: Setting.PADDING_MIDDLE + ' 〔1.2em〕',
+            value: Setting.PADDING_MIDDLE
+        }, {
+            name: Setting.PADDING_BIG + ' 〔1.5em〕',
+            value: Setting.PADDING_BIG
+        }, {
+            name: Setting.PADDING_LARGE + ' 〔2em〕',
+            value: Setting.PADDING_LARGE
+        }, {
+            name: Setting.PADDING_HUGE + ' 〔2.5em〕',
+            value: Setting.PADDING_HUGE
+        }];
     }
+
+    getOptionFillet(){
+        return [{
+            name: Setting.FILLET_NONE,
+            value: Setting.FILLET_NONE
+        }, {
+            name: Setting.FILLET_TINY,
+            value: Setting.FILLET_TINY
+        }, {
+            name: Setting.FILLET_BASE,
+            value: Setting.FILLET_BASE
+        }, {
+            name: Setting.FILLET_CIRCLE,
+            value: Setting.FILLET_CIRCLE
+        }];
+    }
+
+    getOptioniIconPosition(){
+        return [{
+            name: Setting.ICON_POSITION_TOP,
+            value: Setting.ICON_POSITION_TOP
+        }, {
+            name: Setting.ICON_POSITION_BOTTOM,
+            value: Setting.ICON_POSITION_BOTTOM
+        }, {
+            name: Setting.ICON_POSITION_LEFT,
+            value: Setting.ICON_POSITION_LEFT
+        }, {
+            name: Setting.ICON_POSITION_RIGHT,
+            value: Setting.ICON_POSITION_RIGHT
+        }, {
+            name: Setting.ICON_POSITION_NONE,
+            value: Setting.ICON_POSITION_NONE
+        }];
+    }
+
+    // componentWillReceiveProps(nextProps){
+    //     this.arrangeProps(nextProps);
+    // }
 
     handleChangeDisplay( bln_change, json_return ){
         let _scope = this ;
@@ -50,11 +118,56 @@ export default class demoTemplate extends React.Component {
         }
     }
 
+    handleChangePadding( bln_change, json_return ){
+        let _scope = this ;
+        if( bln_change===true ){
+            let _json_new = _scope.arrangeState( {style: {padding: json_return.result}} );
+            _scope.setState( _json_new );
+        }
+    }
+
+    handleChangeFillet( bln_change, json_return ){
+        let _scope = this ;
+        if( bln_change===true ){
+            let _json_new = _scope.arrangeState( {style: {fillet: json_return.result}} );
+            _scope.setState( _json_new );
+        }
+    }
+
+    handleChangeIconPosition( bln_change, json_return ){
+        let _scope = this ;
+        if( bln_change===true ){
+            let _json_new = _scope.arrangeState( {style: {iconPosition: json_return.result}} );
+            _scope.setState( _json_new );
+        }
+    }
+
+    handleChangeIconShow01( bln_change, json_return ){
+        let _scope = this ;
+        if( bln_change===true ){
+            let _json_new = _scope.arrangeState( {style: {iconShow01: json_return.result}} );
+            _scope.setState( _json_new );
+        }
+    }
+
+    handleChangeIconShow02( bln_change, json_return ){
+        let _scope = this ;
+        if( bln_change===true ){
+            let _json_new = _scope.arrangeState( {style: {iconShow02: json_return.result}} );
+            _scope.setState( _json_new );
+        }
+    }
+
     arrangeProps(json_next, callback){
 
         let _json_next = {...json_next} || {} ;
         _json_next.style = _json_next.style || {} ;
         _json_next.style.display = _json_next.style.display || Setting.DISPLAY_INBLOCK ;
+        _json_next.style.padding = _json_next.style.padding || Setting.PADDING_TINY ;
+        _json_next.style.fillet = _json_next.style.fillet || Setting.FILLET_TINY ;
+        _json_next.style.iconPosition = _json_next.style.iconPosition || Setting.ICON_POSITION_LEFT ;
+        _json_next.style.iconShow01 = _json_next.style.iconShow01 || Setting.ICON_SHOW_EMPTY_SQUARE ;
+        _json_next.style.iconShow02 = _json_next.style.iconShow02 || '' ;
 
         if( this.state ){
             this.setState( {
@@ -80,15 +193,60 @@ export default class demoTemplate extends React.Component {
         return DeepExtend( _json_output, json );
     }
 
+    getOptioniIconShow(){
+        return [{
+            name: Setting.ICON_SHOW_HEART + ' 〔實的愛心〕',
+            value: Setting.ICON_SHOW_HEART
+        }, {
+            name: Setting.ICON_SHOW_EMPTY_HEART + ' 〔空的愛心〕',
+            value: Setting.ICON_SHOW_EMPTY_HEART
+        }, {
+            name: Setting.ICON_SHOW_CHECKED + ' 〔純勾勾〕',
+            value: Setting.ICON_SHOW_CHECKED
+        }, {
+            name: Setting.ICON_SHOW_SQUARE_CHECKED + ' 〔方框中有勾勾〕',
+            value: Setting.ICON_SHOW_SQUARE_CHECKED
+        }, {
+            name: Setting.ICON_SHOW_SQUARE + ' 〔純方形〕',
+            value: Setting.ICON_SHOW_SQUARE
+        }, {
+            name: Setting.ICON_SHOW_CLOSE + ' 〔純叉叉〕',
+            value: Setting.ICON_SHOW_CLOSE
+        }, {
+            name: Setting.ICON_SHOW_LINE + ' 〔純橫線〕',
+            value: Setting.ICON_SHOW_LINE
+        }, {
+            name: Setting.ICON_SHOW_EMPTY_SQUARE + ' 〔純方框〕',
+            value: Setting.ICON_SHOW_EMPTY_SQUARE
+        }, {
+            name: Setting.ICON_SHOW_RHOMBUS + ' 〔菱形〕',
+            value: Setting.ICON_SHOW_RHOMBUS
+        }, {
+            name: Setting.ICON_SHOW_STAR + ' 〔星形〕',
+            value: Setting.ICON_SHOW_STAR
+        }, {
+            name: Setting.ICON_SHOW_EMPTY_STAR + ' 〔空心星形〕',
+            value: Setting.ICON_SHOW_EMPTY_STAR
+        }, {
+            name: Setting.ICON_SHOW_CIRCLE + ' 〔圓形〕',
+            value: Setting.ICON_SHOW_CIRCLE
+        }, {
+            name: Setting.ICON_SHOW_EMPTY_CIRCLE + ' 〔空心圓形〕',
+            value: Setting.ICON_SHOW_EMPTY_CIRCLE
+        }];
+    }
+
     render() {
         let _scope = this;
+        let _sary_iconshow02 = ([{
+                name: ' 〔不使用〕',
+                value: ''
+            }]).concat(_scope.getOptioniIconShow());
         return (
             <table>
                 <tr>
                     <th>display 〔display排版方式〕</th>
                     <td>
-                        <label><input type="radio" name="display" value="block" />block</label>
-                        <label><input type="radio" name="display" value="inline-block" />inline-block</label>
                         <RadioGroup 
                             onChange={_scope.handleChangeDisplay}
                             outputFormat="string"
@@ -98,62 +256,119 @@ export default class demoTemplate extends React.Component {
                             outputResult={_scope.state.style.display}
                             showKey={_scope.getShowKey()}
                             display={Setting.DISPLAY_INBLOCK}
-                            padding={Setting.PADDING_SMALL}
+                            padding={Setting.PADDING_TINY}
                             fillet={Setting.FILLET_TINY}
                             listPosition={Setting.ICON_POSITION_INNER}
                             styleName={Setting.STYLE_NAME_RESURGENCE}
-                            composition={Setting.COMPOSITION_BASEEM}
-                            iconShow={[Setting.ICON_SHOW_EMPTY_SQUARE, Setting.ICON_SHOW_CHECKED]} />
+                            composition={Setting.COMPOSITION_SMALLEM}
+                            iconShow={[Setting.ICON_SHOW_EMPTY_SQUARE, Setting.ICON_SHOW_CHECKED]}
+                            styleIcon={true} 
+                            styleBorder={true} />
                     </td>
                 </tr>
                 <tr>
                     <th>padding 〔padding的大小〕</th>
                     <td>
-                        <label><input type="radio" name="padding" value="tiny" />tiny 〔0.2em〕</label>
-                        <label><input type="radio" name="padding" value="small" />small 〔0.5em〕</label>
-                        <label><input type="radio" name="padding" value="little" />little 〔0.8em〕</label>
-                        <label><input type="radio" name="padding" value="base" />base 〔1em〕</label>
-                        <label><input type="radio" name="padding" value="middle" />middle 〔1.2em〕</label>
-                        <label><input type="radio" name="padding" value="big" />big 〔1.5em〕</label>
-                        <label><input type="radio" name="padding" value="large" />large 〔2em〕</label>
-                        <label><input type="radio" name="padding" value="huge" />huge 〔2.5em〕</label>
+                        <RadioGroup 
+                            onChange={_scope.handleChangePadding}
+                            outputFormat="string"
+                            name="padding"
+                            selectKey={_scope.getSelectKey()}
+                            inputOption={_scope.getOptionPadding()}
+                            outputResult={_scope.state.style.padding}
+                            showKey={_scope.getShowKey()}
+                            display={Setting.DISPLAY_INBLOCK}
+                            padding={Setting.PADDING_TINY}
+                            fillet={Setting.FILLET_TINY}
+                            listPosition={Setting.ICON_POSITION_INNER}
+                            styleName={Setting.STYLE_NAME_RESURGENCE}
+                            composition={Setting.COMPOSITION_SMALLEM}
+                            iconShow={[Setting.ICON_SHOW_EMPTY_SQUARE, Setting.ICON_SHOW_CHECKED]}
+                            styleIcon={true} 
+                            styleBorder={true} />
                     </td>
                 </tr>  
                 <tr>
                     <th>fillet 〔圓角〕</th>
                     <td>
-                        <label><input type="radio" name="fillet" value="none" />none</label>
-                        <label><input type="radio" name="fillet" value="tiny" />tiny</label>
-                        <label><input type="radio" name="fillet" value="base" />base</label>
-                        <label><input type="radio" name="fillet" value="circle" />circle</label>
+                        <RadioGroup 
+                            onChange={_scope.handleChangeFillet}
+                            outputFormat="string"
+                            name="fillet"
+                            selectKey={_scope.getSelectKey()}
+                            inputOption={_scope.getOptionFillet()}
+                            outputResult={_scope.state.style.fillet}
+                            showKey={_scope.getShowKey()}
+                            display={Setting.DISPLAY_INBLOCK}
+                            padding={Setting.PADDING_TINY}
+                            fillet={Setting.FILLET_TINY}
+                            listPosition={Setting.ICON_POSITION_INNER}
+                            styleName={Setting.STYLE_NAME_RESURGENCE}
+                            composition={Setting.COMPOSITION_SMALLEM}
+                            iconShow={[Setting.ICON_SHOW_EMPTY_SQUARE, Setting.ICON_SHOW_CHECKED]}
+                            styleIcon={true} 
+                            styleBorder={true} />
                     </td>
                 </tr>   
                 <tr>
                     <th>iconPostion 〔ICON位置或不顯示〕</th>
                     <td>
-                        <label><input type="radio" name="iconPosition" value="top" />top</label>
-                        <label><input type="radio" name="iconPosition" value="bottom" />bottom</label>
-                        <label><input type="radio" name="iconPosition" value="left" />left</label>
-                        <label><input type="radio" name="iconPosition" value="right" />right</label>
-                        <label><input type="radio" name="iconPosition" value="none" />none</label>
+                        <RadioGroup 
+                            onChange={_scope.handleChangeIconPosition}
+                            outputFormat="string"
+                            name="iconPosition"
+                            selectKey={_scope.getSelectKey()}
+                            inputOption={_scope.getOptioniIconPosition()}
+                            outputResult={_scope.state.style.iconPosition}
+                            showKey={_scope.getShowKey()}
+                            display={Setting.DISPLAY_INBLOCK}
+                            padding={Setting.PADDING_TINY}
+                            fillet={Setting.FILLET_TINY}
+                            listPosition={Setting.ICON_POSITION_INNER}
+                            styleName={Setting.STYLE_NAME_RESURGENCE}
+                            composition={Setting.COMPOSITION_SMALLEM}
+                            iconShow={[Setting.ICON_SHOW_EMPTY_SQUARE, Setting.ICON_SHOW_CHECKED]}
+                            styleIcon={true} 
+                            styleBorder={true} />
                     </td>
                 </tr>    
                 <tr>
                     <th>iconShow 〔ICON類型〕</th>
                     <td>
-                        <label><input type="radio" name="iconShow" value="heart" />heart 〔實的愛心〕</label>
-                        <label><input type="radio" name="iconShow" value="empty-heart" />empty-heart 〔空的愛心〕</label>
-                        <label><input type="radio" name="iconShow" value="checked" />checked 〔純勾勾〕</label>
-                        <label><input type="radio" name="iconShow" value="square-checked" />square-checked 〔方框中有勾勾〕</label>
-                        <label><input type="radio" name="iconShow" value="square" />square 〔純方形〕</label>
-                        <label><input type="radio" name="iconShow" value="close" />close 〔純叉叉〕</label>
-                        <label><input type="radio" name="iconShow" value="line" />line 〔純橫線〕</label>
-                        <label><input type="radio" name="iconShow" value="empty-square" />empty-square 〔純方框〕</label>
-                        <label><input type="radio" name="iconShow" value="rhombus" />rhombus 〔菱形〕</label>
-                        <label><input type="radio" name="iconShow" value="star" />star 〔星形〕</label>
-                        <label><input type="radio" name="iconShow" value="empty-star" />empty-star 〔空心星形〕</label>
-                        <label><input type="radio" name="iconShow" value="circle" />circle 〔圓形〕</label>
-                        <label><input type="radio" name="iconShow" value="empty-circle" />empty-circle 〔空心圓形〕</label>
+                        <RadioGroup 
+                            onChange={_scope.handleChangeIconShow01}
+                            outputFormat="string"
+                            name="iconShow01"
+                            selectKey={_scope.getSelectKey()}
+                            inputOption={_scope.getOptioniIconShow()}
+                            outputResult={_scope.state.style.iconShow01}
+                            showKey={_scope.getShowKey()}
+                            display={Setting.DISPLAY_INBLOCK}
+                            padding={Setting.PADDING_TINY}
+                            fillet={Setting.FILLET_TINY}
+                            listPosition={Setting.ICON_POSITION_INNER}
+                            styleName={Setting.STYLE_NAME_RESURGENCE}
+                            composition={Setting.COMPOSITION_SMALLEM}
+                            iconShow={[Setting.ICON_SHOW_EMPTY_SQUARE, Setting.ICON_SHOW_CHECKED]}
+                            styleIcon={true} 
+                            styleBorder={true} />
+                        <RadioGroup 
+                            onChange={_scope.handleChangeIconShow02}
+                            outputFormat="string"
+                            name="iconShow02"
+                            selectKey={_scope.getSelectKey()}
+                            inputOption={_sary_iconshow02}
+                            outputResult={_scope.state.style.iconShow02}
+                            showKey={_scope.getShowKey()}
+                            display={Setting.DISPLAY_INBLOCK}
+                            padding={Setting.PADDING_TINY}
+                            fillet={Setting.FILLET_TINY}
+                            listPosition={Setting.ICON_POSITION_INNER}
+                            styleName={Setting.STYLE_NAME_RESURGENCE}
+                            composition={Setting.COMPOSITION_SMALLEM}
+                            iconShow={[Setting.ICON_SHOW_EMPTY_SQUARE, Setting.ICON_SHOW_CHECKED]}
+                            styleIcon={true} 
+                            styleBorder={true} />
                     </td>
                 </tr>
                 <tr>
