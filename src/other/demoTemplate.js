@@ -676,7 +676,7 @@ export default class demoTemplate extends React.Component {
             <div className="pkg-tmp">
                 <div className="pkg-tmp-preview">
                     <div className="pkg-tmp-outlink">
-                        <a href="//github.com/majofeechiou/drawing-board" target="_blank">GITHUB</a>
+                        <a href="//github.com/majofeechiou/react-group" target="_blank">GITHUB</a>
                     </div>
                     <h4 className="ui-bigtitle">資料格式設定 與 外觀預覽</h4>
                     <div className="pkg-tmp-block pkg-tmp-block_header">
