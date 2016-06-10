@@ -18,6 +18,9 @@ body * {
 		margin: 10px;
 		padding: 5px;
 		border: 1px dotted #f99;
+		&.pkg-tmp-block_header {
+			background-color: #FFFCFB;
+		}
 	}
 	.pkg-tmp-subblock {
 		margin-bottom: 10px;
@@ -95,8 +98,9 @@ body * {
 .ui-note {
 	margin-left: 1em;
 	padding: 0.2em 0.5em;
-	background-color: #e4e4e4;
-	color: #862711;
+	background-color: #e9e9e9;
+	color: #CE9689;
 	font-size: 9px;
 	border-radius: 2px;
+	vertical-align: middle;
 }

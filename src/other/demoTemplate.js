@@ -135,9 +135,9 @@ export default class demoTemplate extends React.Component {
             name: Setting.ICON_SHOW_CHECKED + ' 〔純勾勾〕',
             value: Setting.ICON_SHOW_CHECKED
         }, {
-            name: Setting.ICON_SHOW_SQUARE_CHECKED + ' 〔方框中有勾勾〕',
-            value: Setting.ICON_SHOW_SQUARE_CHECKED
-        }, {
+        //     name: Setting.ICON_SHOW_SQUARE_CHECKED + ' 〔方框中有勾勾〕',
+        //     value: Setting.ICON_SHOW_SQUARE_CHECKED
+        // }, {
             name: Setting.ICON_SHOW_SQUARE + ' 〔純方形〕',
             value: Setting.ICON_SHOW_SQUARE
         }, {
@@ -364,43 +364,69 @@ export default class demoTemplate extends React.Component {
     getOptions(){
         return [{
             name: 'A',
-            value: 'a'
+            name2: 'A2',
+            value: 'a',
+            value2: 'a2'
         }, {
             name: 'B',
-            value: 'b'
+            name2: 'B2',
+            value: 'b',
+            value2: 'b2'
         }, {
             name: 'C',
-            value: 'c'
+            name2: 'C2',
+            value: 'c',
+            value2: 'c2'
         }, {
             name: 'D',
-            value: 'd'
+            name2: 'D2',
+            value: 'd',
+            value2: 'd2'
         }, {
             name: 'E',
-            value: 'e'
+            name2: 'E2',
+            value: 'e',
+            value2: 'e2'
         }, {
             name: 'F',
-            value: 'f'
+            name2: 'F2',
+            value: 'f',
+            value2: 'f2'
         }, {
             name: 'G',
-            value: 'g'
+            name2: 'G2',
+            value: 'g',
+            value2: 'g2'
         }, {
             name: 'H',
-            value: 'h'
+            name2: 'H2',
+            value: 'h',
+            value2: 'h2'
         }, {
             name: 'I',
-            value: 'i'
+            name2: 'I2',
+            value: 'i',
+            value2: 'i2'
         }, {
             name: 'J',
-            value: 'j'
+            name2: 'J2',
+            value: 'j',
+            value2: 'j2'
         }, {
             name: 'K',
-            value: 'k'
+            name2: 'K2',
+            value: 'k',
+            value2: 'k2'
         }, {
             name: 'L',
-            value: 'l'
+            name2: 'L2',
+            value: 'l',
+            value2: 'l2'
         }, {
             name: 'M',
-            value: 'm'
+            name2: 'M2',
+            value: 'm',
+            value2: 'm2'
         }];
     }
 
@@ -638,12 +664,18 @@ export default class demoTemplate extends React.Component {
                 name: ' 〔不設定〕',
                 value: ''
             }]),
-            _ary_showkey = ['name'],
-            _ary_selectkey = ['value'];
+            _ary_showkey_string = ['name'],
+            _ary_showkey_json = ['name','name2'],
+            _ary_showkey_array = ['name','name2'],
+            _ary_showkey_sarray = ['name','name2','value'],
+            _ary_selectkey_string = ['value'],
+            _ary_selectkey_json = ['value','value2'],
+            _ary_selectkey_array = ['value'],
+            _ary_selectkey_sarray = ['value','value2','name'];
         return (
             <div className="pkg-tmp">
                 <div className="pkg-tmp-preview">
-                    <div>
+                    <div className="pkg-tmp-block pkg-tmp-block_header">
                         <h5 className="ui-title">
                             <span>可選選項</span>
                         </h5>
@@ -657,10 +689,10 @@ export default class demoTemplate extends React.Component {
                             onChange={_scope.handleChangeStringValue}
                             outputFormat="string"
                             name="previewStyleString"
-                            selectKey={_ary_selectkey}
+                            selectKey={_ary_selectkey_string}
                             inputOption={_scope.getOptions()}
                             outputResult={_scope.state.preview.stringValue}
-                            showKey={_ary_showkey}
+                            showKey={_ary_showkey_string}
                             between="~"
                             display={_scope.state.style.display}
                             padding={_scope.state.style.padding}
@@ -687,7 +719,8 @@ export default class demoTemplate extends React.Component {
                                 outputFormat="string"<span className="ui-note">// 決定輸出的格式</span><br />
                                 name="previewStyleString"<span className="ui-note">// 自訂，會成為input中name="previewStyleString"</span><br />
                                 selectKey=｛_ary_selectkey｝<span className="ui-note">// 輸出會用到的選項key</span><br />
-                                showKey=｛_ary_showkey｝<span className="ui-note">// 顯示於頁面上的選項key</span>
+                                showKey=｛_ary_showkey｝<span className="ui-note">// 顯示於頁面上的選項key</span><br />
+                                between="~"<span className="ui-note">// 當showKey為2個以上時，做為分割用的字串</span>
                             </div>
                         </div>
                         <div className="pkg-tmp-subblock">
@@ -705,10 +738,10 @@ export default class demoTemplate extends React.Component {
                             onChange={_scope.handleChangeJsonValue}
                             outputFormat="json"
                             name="previewStyleJson"
-                            selectKey={_ary_selectkey}
+                            selectKey={_ary_selectkey_json}
                             inputOption={_scope.getOptions()}
                             outputResult={_scope.state.preview.jsonValue}
-                            showKey={_ary_showkey}
+                            showKey={_ary_showkey_json}
                             between="~"
                             display={_scope.state.style.display}
                             padding={_scope.state.style.padding}
@@ -730,12 +763,13 @@ export default class demoTemplate extends React.Component {
                                 <span>設定選項</span>
                             </h5>
                             <div className="ui-description">
-                                var _ary_selectkey = ["value"];<br />
-                                var _ary_showkey = ["name"];<br />
+                                var _ary_selectkey = ["value","value2"];<br />
+                                var _ary_showkey = ["name","name2"];<br />
                                 outputFormat="json"<span className="ui-note">// 決定輸出的格式</span><br />
                                 name="previewStyleJson"<span className="ui-note">// 自訂，會成為input中name="previewStyleJson"</span><br />
                                 selectKey=｛_ary_selectkey｝<span className="ui-note">// 輸出會用到的選項key</span><br />
-                                showKey=｛_ary_showkey｝<span className="ui-note">// 顯示於頁面上的選項key</span>
+                                showKey=｛_ary_showkey｝<span className="ui-note">// 顯示於頁面上的選項key</span><br />
+                                between="~"<span className="ui-note">// 當showKey為2個以上時，做為分割用的字串</span>
                             </div>
                         </div>
                         <div className="pkg-tmp-subblock">
@@ -753,11 +787,11 @@ export default class demoTemplate extends React.Component {
                             onChange={_scope.handleChangeArrayValue}
                             outputFormat="array"
                             name="previewStyleArray"
-                            selectKey={_ary_selectkey}
+                            selectKey={_ary_selectkey_array}
                             inputOption={_scope.getOptions()}
                             outputResult={_scope.state.preview.arrayValue}
-                            showKey={_ary_showkey}
-                            between="~"
+                            showKey={_ary_showkey_array}
+                            between="/"
                             display={_scope.state.style.display}
                             padding={_scope.state.style.padding}
                             fillet={_scope.state.style.fillet}
@@ -779,11 +813,12 @@ export default class demoTemplate extends React.Component {
                             </h5>
                             <div className="ui-description">
                                 var _ary_selectkey = ["value"];<br />
-                                var _ary_showkey = ["name"];<br />
+                                var _ary_showkey = ["name","name2"];<br />
                                 outputFormat="array"<span className="ui-note">// 決定輸出的格式</span><br />
                                 name="previewStyleArray"<span className="ui-note">// 自訂，會成為input中name="previewStyleArray"</span><br />
                                 selectKey=｛_ary_selectkey｝<span className="ui-note">// 輸出會用到的選項key</span><br />
-                                showKey=｛_ary_showkey｝<span className="ui-note">// 顯示於頁面上的選項key</span>
+                                showKey=｛_ary_showkey｝<span className="ui-note">// 顯示於頁面上的選項key</span><br />
+                                between="/"<span className="ui-note">// 當showKey為2個以上時，做為分割用的字串</span>
                             </div>
                         </div>
                         <div className="pkg-tmp-subblock">
@@ -801,11 +836,11 @@ export default class demoTemplate extends React.Component {
                             onChange={_scope.handleChangeSarrayValue}
                             outputFormat="sarray"
                             name="previewStyleSarray"
-                            selectKey={_ary_selectkey}
+                            selectKey={_ary_selectkey_sarray}
                             inputOption={_scope.getOptions()}
                             outputResult={_scope.state.preview.sarrayValue}
-                            showKey={_ary_showkey}
-                            between="~"
+                            showKey={_ary_showkey_sarray}
+                            between="."
                             display={_scope.state.style.display}
                             padding={_scope.state.style.padding}
                             fillet={_scope.state.style.fillet}
@@ -826,12 +861,13 @@ export default class demoTemplate extends React.Component {
                                 <span>設定選項</span>
                             </h5>
                             <div className="ui-description">
-                                var _ary_selectkey = ["value"];<br />
-                                var _ary_showkey = ["name"];<br />
+                                var _ary_selectkey = ["value","value2","name"];<br />
+                                var _ary_showkey = ["name","name2","value"];<br />
                                 outputFormat="sarray"<span className="ui-note">// 決定輸出的格式</span><br />
                                 name="previewStyleSarray"<span className="ui-note">// 自訂，會成為input中name="previewStyleSarray"</span><br />
                                 selectKey=｛_ary_selectkey｝<span className="ui-note">// 輸出會用到的選項key</span><br />
-                                showKey=｛_ary_showkey｝<span className="ui-note">// 顯示於頁面上的選項key</span>
+                                showKey=｛_ary_showkey｝<span className="ui-note">// 顯示於頁面上的選項key</span><br />
+                                between="."<span className="ui-note">// 當showKey為2個以上時，做為分割用的字串</span>
                             </div>
                         </div>
                         <div className="pkg-tmp-subblock">
