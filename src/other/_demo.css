@@ -6,16 +6,21 @@ body * {
 	position: relative;
 	.pkg-tmp-preview {
 		position: relative;
-		float: left;
+		padding: 0 10px;
+		float: right;
 		width: 60%;
 	}
 	.pkg-tmp-control {
-		float: right;
-		padding-left: 10px;
+		position: fixed;
+		padding-right: 10px;
 		width: 40%;
+	    height: 100%;
+	    overflow-y: auto;
+	    left: 0;
+	    top: 0;
 	}
 	.pkg-tmp-block {
-		margin: 10px;
+		margin: 10px 0;
 		padding: 5px;
 		border: 1px dotted #f99;
 		&.pkg-tmp-block_header {
@@ -67,6 +72,14 @@ body * {
 .ui-oneline {
 	display: block;
 	white-space: nowrap;
+}
+
+.ui-bigtitle {
+	font-size: 15px;
+	margin: 10px 0;
+	padding: 5px;
+	text-align: center;
+	background-color: #60E8CF;
 }
 
 .ui-title {

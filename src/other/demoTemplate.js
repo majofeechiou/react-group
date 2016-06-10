@@ -675,6 +675,7 @@ export default class demoTemplate extends React.Component {
         return (
             <div className="pkg-tmp">
                 <div className="pkg-tmp-preview">
+                    <h4 className="ui-bigtitle">資料格式設定 與 外觀預覽</h4>
                     <div className="pkg-tmp-block pkg-tmp-block_header">
                         <h5 className="ui-title">
                             <span>可選選項</span>
@@ -725,7 +726,7 @@ export default class demoTemplate extends React.Component {
                         </div>
                         <div className="pkg-tmp-subblock">
                             <h5 className="ui-title">
-                                <span>輸出選項</span>
+                                <span>輸出結果〔格式：String〕</span>
                             </h5>
                             <div>
                                 {JSON.stringify(_scope.state.preview.stringValue)}
@@ -774,7 +775,7 @@ export default class demoTemplate extends React.Component {
                         </div>
                         <div className="pkg-tmp-subblock">
                             <h5 className="ui-title">
-                                <span>輸出選項</span>
+                                <span>輸出結果〔格式：Json〕</span>
                             </h5>
                             <div>
                                 {JSON.stringify(_scope.state.preview.jsonValue)}
@@ -823,7 +824,7 @@ export default class demoTemplate extends React.Component {
                         </div>
                         <div className="pkg-tmp-subblock">
                             <h5 className="ui-title">
-                                <span>輸出選項</span>
+                                <span>輸出結果〔格式：Array〕</span>
                             </h5>
                             <div>
                                 {JSON.stringify(_scope.state.preview.arrayValue)}
@@ -872,7 +873,7 @@ export default class demoTemplate extends React.Component {
                         </div>
                         <div className="pkg-tmp-subblock">
                             <h5 className="ui-title">
-                                <span>輸出選項</span>
+                                <span>輸出結果〔格式：Serialize Array〕</span>
                             </h5>
                             <div>
                                 {JSON.stringify(_scope.state.preview.sarrayValue)}
@@ -882,6 +883,7 @@ export default class demoTemplate extends React.Component {
 
                 </div>
                 <div className="pkg-tmp-control">
+                    <h4 className="ui-bigtitle">外觀設定</h4>
                     <table className="pkg-table">
                         <tr>
                             <th>
@@ -898,6 +900,35 @@ export default class demoTemplate extends React.Component {
                                     selectKey={_scope.getSelectKey()}
                                     inputOption={_scope.getOptionDisplay()}
                                     outputResult={_scope.state.style.display}
+                                    showKey={_scope.getShowKey()}
+                                    display={Setting.DISPLAY_INBLOCK}
+                                    padding={Setting.PADDING_TINY}
+                                    fillet={Setting.FILLET_TINY}
+                                    listPosition={Setting.ICON_POSITION_INNER}
+                                    styleName={Setting.STYLE_NAME_RESURGENCE}
+                                    composition={Setting.COMPOSITION_TINYEM}
+                                    iconShow={[Setting.ICON_SHOW_EMPTY_SQUARE, Setting.ICON_SHOW_CHECKED]}
+                                    styleIcon={true} 
+                                    styleBorder={true} />
+                            </td>
+                        </tr>
+                    </table>
+                    <table className="pkg-table">
+                        <tr>
+                            <th>
+                                <span className="ui-oneline pkg-table-name">styleName<span className="pkg-table-name-note">〔色彩風格〕</span></span>
+                                <span className="ui-oneline pkg-table-result">"{_scope.state.style.styleName}"</span>
+                            </th>
+                        </tr>
+                        <tr>
+                            <td>
+                                <RadioGroup 
+                                    onChange={_scope.handleChangeStyleName}
+                                    outputFormat="string"
+                                    name="styleName"
+                                    selectKey={_scope.getSelectKey()}
+                                    inputOption={_scope.getOptionStyleName()}
+                                    outputResult={_scope.state.style.styleName}
                                     showKey={_scope.getShowKey()}
                                     display={Setting.DISPLAY_INBLOCK}
                                     padding={Setting.PADDING_TINY}
@@ -1115,35 +1146,6 @@ export default class demoTemplate extends React.Component {
                     <table className="pkg-table">
                         <tr>
                             <th>
-                                <span className="ui-oneline pkg-table-name">styleName<span className="pkg-table-name-note">〔色彩風格〕</span></span>
-                                <span className="ui-oneline pkg-table-result">"{_scope.state.style.styleName}"</span>
-                            </th>
-                        </tr>
-                        <tr>
-                            <td>
-                                <RadioGroup 
-                                    onChange={_scope.handleChangeStyleName}
-                                    outputFormat="string"
-                                    name="styleName"
-                                    selectKey={_scope.getSelectKey()}
-                                    inputOption={_scope.getOptionStyleName()}
-                                    outputResult={_scope.state.style.styleName}
-                                    showKey={_scope.getShowKey()}
-                                    display={Setting.DISPLAY_INBLOCK}
-                                    padding={Setting.PADDING_TINY}
-                                    fillet={Setting.FILLET_TINY}
-                                    listPosition={Setting.ICON_POSITION_INNER}
-                                    styleName={Setting.STYLE_NAME_RESURGENCE}
-                                    composition={Setting.COMPOSITION_TINYEM}
-                                    iconShow={[Setting.ICON_SHOW_EMPTY_SQUARE, Setting.ICON_SHOW_CHECKED]}
-                                    styleIcon={true} 
-                                    styleBorder={true} />
-                            </td>
-                        </tr>
-                    </table>
-                    <table className="pkg-table">
-                        <tr>
-                            <th>
                                 <span className="ui-oneline pkg-table-name">composition<span className="pkg-table-name-note">〔佈局〕</span></span>
                                 <span className="ui-oneline pkg-table-result">"{_scope.state.style.composition}"</span>
                             </th>
@@ -1175,7 +1177,7 @@ export default class demoTemplate extends React.Component {
                             <th>
                                 <span className="ui-oneline pkg-table-name">disabled<span className="pkg-table-name-note">〔能不能作用〕</span></span>
                                 <span className="ui-oneline pkg-table-result">
-                                    <If condition={!_scope.judgeTF(_scope.state.style.disabled)}>
+                                    <If condition={_scope.judgeTF(_scope.state.style.disabled)}>
                                         true
                                     </If>
                                     <If condition={!_scope.judgeTF(_scope.state.style.disabled)}>

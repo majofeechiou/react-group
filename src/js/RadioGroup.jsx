@@ -75,7 +75,7 @@ export default class RadioGroup extends React.Component {
 		// });
 		this.state = {
 			format: _str_format ,
-			disabled: false ,
+			disabled: ( props.disabled!==undefined && typeof props.disabled === 'boolean' )? props.disabled : false ,
 			outputResult: _data_result
 		};
 	}
@@ -301,6 +301,7 @@ RadioGroup.propTypes = {
     styleIcon: React.PropTypes.bool,
     styleIconBack: React.PropTypes.bool,
     styleList: React.PropTypes.bool,
+    disabled: React.PropTypes.bool,
 },
 RadioGroup.defaultProps = {
 	className: '',
@@ -323,4 +324,5 @@ RadioGroup.defaultProps = {
     styleIcon: false,
     styleIconBack: false,
     styleList: false,
+    disabled: false,
 };
