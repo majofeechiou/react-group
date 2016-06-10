@@ -1,8 +1,37 @@
-.pkg-table {
-	.pkg-table-oneline {
-		display: block;
-		white-space: nowrap;
+body * {
+	box-sizing: border-box;
+}
+
+.pkg-tmp {
+	position: relative;
+	.pkg-tmp-preview {
+		position: fixed;
+		float: left;
+		width: 60%;
 	}
+	.pkg-tmp-control {
+		float: right;
+		padding-left: 10px;
+		width: 40%;
+	}
+	.pkg-tmp-block {
+		margin: 10px;
+		padding: 5px;
+		border: 1px dotted #f99;
+	}
+	.pkg-tmp-subblock {
+		margin-bottom: 10px;
+	}
+	&:after{
+		display: block;
+		content: '';
+		clear: both;
+	}
+}
+
+.pkg-table {
+	margin-bottom: 1em;
+	width: 100%;
 	.pkg-table-name {
 		margin-bottom: 0.5em;
 		font-size: 14px;
@@ -30,4 +59,44 @@
 	th {
 		text-align: left;
 	}
+}
+
+.ui-oneline {
+	display: block;
+	white-space: nowrap;
+}
+
+.ui-title {
+	font-size: 1rem;
+	margin-top: 0;
+	margin-bottom: 0.5em;
+	text-align: center;
+	span {
+		display: inline-block;
+		padding: 0 15px 5px;
+		border-bottom: 1px solid #E64731;
+	}
+}
+
+.ui-seperate {
+	display: block;
+	margin: 10px auto 15px;
+	width: 75%;
+	height: 1px;
+	overflow: hidden;
+	background-color: #E64731;
+	opacity: 0.2;
+}
+
+.ui-description {
+	line-height: 135%;
+}
+
+.ui-note {
+	margin-left: 1em;
+	padding: 0.2em 0.5em;
+	background-color: #ccc;
+	color: #862711;
+	font-size: 9px;
+	border-radius: 2px;
 }

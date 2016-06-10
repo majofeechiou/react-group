@@ -33,6 +33,8 @@ export default class demoTemplate extends React.Component {
         _scope.handleChangeStyleIcon = _scope.handleChangeStyleIcon.bind(_scope);
         _scope.handleChangeStyleIconBack = _scope.handleChangeStyleIconBack.bind(_scope);
         _scope.handleChangeStyleList = _scope.handleChangeStyleList.bind(_scope);
+
+        _scope.handleChangeArrayValue = _scope.handleChangeArrayValue.bind(_scope);
     }
 
     getSelectKey(){
@@ -55,6 +57,9 @@ export default class demoTemplate extends React.Component {
 
     getOptionPadding(){
         return [{
+            name: ' 〔不使用〕',
+            value: ''
+        }, {
             name: Setting.PADDING_TINY + ' 〔0.2em〕',
             value: Setting.PADDING_TINY
         }, {
@@ -171,6 +176,9 @@ export default class demoTemplate extends React.Component {
 
     getOptionListStyle(){
         return [{
+            name: ' 〔不使用〕',
+            value: ''
+        }, {
             name: Setting.LIST_STYLE_DISC + ' 〔實心圓〕',
             value: Setting.LIST_STYLE_DISC
         }, {
@@ -205,38 +213,50 @@ export default class demoTemplate extends React.Component {
 
     getOptionStyleName(){
         return [{
-            name: Setting.STYLE_NAME_RESURGENCE + ' 〔死灰復燃〕',
+            name: ' 〔不使用〕',
+            value: ''
+        }, {
+            // name: Setting.STYLE_NAME_RESURGENCE + ' 〔死灰復燃〕',
+            name: Setting.STYLE_NAME_RESURGENCE,
             value: Setting.STYLE_NAME_RESURGENCE
         }, {
-            name: Setting.STYLE_NAME_SPRING + ' 〔春天〕',
+            // name: Setting.STYLE_NAME_SPRING + ' 〔春天〕',
+            name: Setting.STYLE_NAME_SPRING,
             value: Setting.STYLE_NAME_SPRING
         }, {
-            name: Setting.STYLE_NAME_WINE + ' 〔紅酒〕',
+            // name: Setting.STYLE_NAME_WINE + ' 〔紅酒〕',
+            name: Setting.STYLE_NAME_WINE,
             value: Setting.STYLE_NAME_WINE
         }, {
-            name: Setting.STYLE_NAME_BLUESKY + ' 〔藍天〕',
+            // name: Setting.STYLE_NAME_BLUESKY + ' 〔藍天〕',
+            name: Setting.STYLE_NAME_BLUESKY,
             value: Setting.STYLE_NAME_BLUESKY
         }, {
-            name: Setting.STYLE_NAME_LOVELY + ' 〔可愛〕',
+            // name: Setting.STYLE_NAME_LOVELY + ' 〔可愛〕',
+            name: Setting.STYLE_NAME_LOVELY,
             value: Setting.STYLE_NAME_LOVELY
         }, {
-            name: Setting.STYLE_NAME_LUXURY + ' 〔華貴〕',
+            // name: Setting.STYLE_NAME_LUXURY + ' 〔華貴〕',
+            name: Setting.STYLE_NAME_LUXURY,
             value: Setting.STYLE_NAME_LUXURY
         }, {
-            name: Setting.STYLE_NAME_FANTASY + ' 〔奇幻〕',
+            // name: Setting.STYLE_NAME_FANTASY + ' 〔奇幻〕',
+            name: Setting.STYLE_NAME_FANTASY,
             value: Setting.STYLE_NAME_FANTASY
         }, {
-            name: Setting.STYLE_NAME_RIGID + ' 〔鋼硬〕',
+            // name: Setting.STYLE_NAME_RIGID + ' 〔鋼硬〕',
+            name: Setting.STYLE_NAME_RIGID,
             value: Setting.STYLE_NAME_RIGID
         }, {
-            name: Setting.STYLE_NAME_WATERSIDE + ' 〔水畔〕',
+            // name: Setting.STYLE_NAME_WATERSIDE + ' 〔水畔〕',
+            name: Setting.STYLE_NAME_WATERSIDE,
             value: Setting.STYLE_NAME_WATERSIDE
         }];
     }
 
     getOptionComposition(){
         return [{
-            name: ' 〔隨本身內容長度變化〕',
+            name: ' 〔不設定，隨本身內容長度變化〕',
             value: ''
         }, {
             name: Setting.COMPOSITION_WHOLE + ' 〔百分百〕',
@@ -335,6 +355,49 @@ export default class demoTemplate extends React.Component {
         return [{
             name: 'true',
             value: 'true'
+        }];
+    }
+
+    getOptions(){
+        return [{
+            name: 'A',
+            value: 'a'
+        }, {
+            name: 'B',
+            value: 'b'
+        }, {
+            name: 'C',
+            value: 'c'
+        }, {
+            name: 'D',
+            value: 'd'
+        }, {
+            name: 'E',
+            value: 'e'
+        }, {
+            name: 'F',
+            value: 'f'
+        }, {
+            name: 'G',
+            value: 'g'
+        }, {
+            name: 'H',
+            value: 'h'
+        }, {
+            name: 'I',
+            value: 'i'
+        }, {
+            name: 'J',
+            value: 'j'
+        }, {
+            name: 'K',
+            value: 'k'
+        }, {
+            name: 'L',
+            value: 'l'
+        }, {
+            name: 'M',
+            value: 'm'
         }];
     }
 
@@ -470,16 +533,26 @@ export default class demoTemplate extends React.Component {
         }
     }
 
+    handleChangeArrayValue( bln_change, json_return ){
+        let _scope = this ;
+        if( bln_change===true ){
+            let _json_new = _scope.arrangeState( {preview: {arrayValue: json_return.result}} );
+            _scope.setState( _json_new );
+        }
+    }
+
     arrangeProps(json_next, callback){
 
         let _json_next = {...json_next} || {} ;
+
         _json_next.style = _json_next.style || {} ;
+
         _json_next.style.display = _json_next.style.display || Setting.DISPLAY_INBLOCK ;
         _json_next.style.padding = _json_next.style.padding || Setting.PADDING_TINY ;
         _json_next.style.fillet = _json_next.style.fillet || Setting.FILLET_TINY ;
         _json_next.style.iconPosition = _json_next.style.iconPosition || Setting.ICON_POSITION_LEFT ;
         _json_next.style.iconShow01 = _json_next.style.iconShow01 || Setting.ICON_SHOW_EMPTY_SQUARE ;
-        _json_next.style.iconShow02 = _json_next.style.iconShow02 || '' ;
+        _json_next.style.iconShow02 = _json_next.style.iconShow02 || Setting.ICON_SHOW_CHECKED ;
         _json_next.style.listPosition = _json_next.style.listPosition || Setting.LIST_POSITION_INNER ;
         _json_next.style.listStyle = _json_next.style.listStyle || Setting.LIST_STYLE_LOWER_ROMAN ;
         _json_next.style.styleName = _json_next.style.styleName || Setting.STYLE_NAME_RESURGENCE ;
@@ -491,13 +564,18 @@ export default class demoTemplate extends React.Component {
         _json_next.style.styleIconBack = ( _json_next.style.styleIconBack===undefined )? ['true'] : _json_next.style.styleIconBack ;
         _json_next.style.styleList = ( _json_next.style.styleList===undefined )? ['true'] : _json_next.style.styleList ;
 
+        _json_next.preview = _json_next.preview || {} ;
+        _json_next.preview.arrayValue = ( _json_next.preview.arrayValue===undefined )? [] : _json_next.preview.arrayValue ;
+
         if( this.state ){
             this.setState( {
-                style: _json_next.style
+                style: _json_next.style,
+                preview: _json_next.preview
             } );
         }else{
             this.state = {
-                style: _json_next.style
+                style: _json_next.style,
+                preview: _json_next.preview
             };
         }
         if( callback ){
@@ -515,421 +593,589 @@ export default class demoTemplate extends React.Component {
         return DeepExtend( _json_output, json );
     }
 
+    judgeTF( ary ){
+        if( (ary instanceof Array === true) && (ary.length>0) ){
+            if( ary[0]==='true' ){
+                return true;
+            }
+        }
+        return false;
+    }
+
     render() {
         let _scope = this;
-        let _sary_iconshow02 = ([{
-                name: ' 〔不使用〕',
+        let _sary_iconshow02 = (_scope.getOptionIconShow()).concat([{
+                name: ' 〔不設定〕',
                 value: ''
-            }]).concat(_scope.getOptionIconShow());
+            }]),
+            _ary_showkey = ['name'],
+            _ary_selectkey = ['value'];
         return (
-            <table className="pkg-table">
-                <tr>
-                    <th>
-                        <span className="pkg-table-oneline pkg-table-name">display<span className="pkg-table-name-note">〔display排版方式〕</span></span>
-                        <span className="pkg-table-oneline pkg-table-result">"{_scope.state.style.display}"</span>
-                    </th>
-                    <td>
+            <div className="pkg-tmp">
+                <div className="pkg-tmp-preview">
+                    <div>
+                        <h5 className="ui-title">
+                            <span>可選選項</span>
+                        </h5>
+                        <div>
+                            {JSON.stringify(_scope.getOptions())}
+                        </div>
+                    </div>
+                    <div className="pkg-tmp-block">
                         <RadioGroup 
-                            onChange={_scope.handleChangeDisplay}
-                            outputFormat="string"
-                            name="display"
-                            selectKey={_scope.getSelectKey()}
-                            inputOption={_scope.getOptionDisplay()}
-                            outputResult={_scope.state.style.display}
-                            showKey={_scope.getShowKey()}
-                            display={Setting.DISPLAY_INBLOCK}
-                            padding={Setting.PADDING_TINY}
-                            fillet={Setting.FILLET_TINY}
-                            listPosition={Setting.ICON_POSITION_INNER}
-                            styleName={Setting.STYLE_NAME_RESURGENCE}
-                            composition={Setting.COMPOSITION_SMALLEM}
-                            iconShow={[Setting.ICON_SHOW_EMPTY_SQUARE, Setting.ICON_SHOW_CHECKED]}
-                            styleIcon={true} 
-                            styleBorder={true} />
-                    </td>
-                </tr>
-                <tr>
-                    <th>
-                        <span className="pkg-table-oneline pkg-table-name">padding<span className="pkg-table-name-note">〔padding的大小〕</span></span>
-                        <span className="pkg-table-oneline pkg-table-result">"{_scope.state.style.padding}"</span>
-                    </th>
-                    <td>
-                        <RadioGroup 
-                            onChange={_scope.handleChangePadding}
-                            outputFormat="string"
-                            name="padding"
-                            selectKey={_scope.getSelectKey()}
-                            inputOption={_scope.getOptionPadding()}
-                            outputResult={_scope.state.style.padding}
-                            showKey={_scope.getShowKey()}
-                            display={Setting.DISPLAY_INBLOCK}
-                            padding={Setting.PADDING_TINY}
-                            fillet={Setting.FILLET_TINY}
-                            listPosition={Setting.ICON_POSITION_INNER}
-                            styleName={Setting.STYLE_NAME_RESURGENCE}
-                            composition={Setting.COMPOSITION_SMALLEM}
-                            iconShow={[Setting.ICON_SHOW_EMPTY_SQUARE, Setting.ICON_SHOW_CHECKED]}
-                            styleIcon={true} 
-                            styleBorder={true} />
-                    </td>
-                </tr>  
-                <tr>
-                    <th>
-                        <span className="pkg-table-oneline pkg-table-name">fillet<span className="pkg-table-name-note">〔圓角〕</span></span>
-                        <span className="pkg-table-oneline pkg-table-result">"{_scope.state.style.fillet}"</span>
-                    </th>
-                    <td>
-                        <RadioGroup 
-                            onChange={_scope.handleChangeFillet}
-                            outputFormat="string"
-                            name="fillet"
-                            selectKey={_scope.getSelectKey()}
-                            inputOption={_scope.getOptionFillet()}
-                            outputResult={_scope.state.style.fillet}
-                            showKey={_scope.getShowKey()}
-                            display={Setting.DISPLAY_INBLOCK}
-                            padding={Setting.PADDING_TINY}
-                            fillet={Setting.FILLET_TINY}
-                            listPosition={Setting.ICON_POSITION_INNER}
-                            styleName={Setting.STYLE_NAME_RESURGENCE}
-                            composition={Setting.COMPOSITION_SMALLEM}
-                            iconShow={[Setting.ICON_SHOW_EMPTY_SQUARE, Setting.ICON_SHOW_CHECKED]}
-                            styleIcon={true} 
-                            styleBorder={true} />
-                    </td>
-                </tr>   
-                <tr>
-                    <th>
-                        <span className="pkg-table-oneline pkg-table-name">iconPostion<span className="pkg-table-name-note">〔ICON位置或不顯示〕</span></span>
-                        <span className="pkg-table-oneline pkg-table-result">"{_scope.state.style.iconPosition}"</span>
-                    </th>
-                    <td>
-                        <RadioGroup 
-                            onChange={_scope.handleChangeIconPosition}
-                            outputFormat="string"
-                            name="iconPosition"
-                            selectKey={_scope.getSelectKey()}
-                            inputOption={_scope.getOptionIconPosition()}
-                            outputResult={_scope.state.style.iconPosition}
-                            showKey={_scope.getShowKey()}
-                            display={Setting.DISPLAY_INBLOCK}
-                            padding={Setting.PADDING_TINY}
-                            fillet={Setting.FILLET_TINY}
-                            listPosition={Setting.ICON_POSITION_INNER}
-                            styleName={Setting.STYLE_NAME_RESURGENCE}
-                            composition={Setting.COMPOSITION_SMALLEM}
-                            iconShow={[Setting.ICON_SHOW_EMPTY_SQUARE, Setting.ICON_SHOW_CHECKED]}
-                            styleIcon={true} 
-                            styleBorder={true} />
-                    </td>
-                </tr>    
-                <tr>
-                    <th>
-                        <span className="pkg-table-oneline pkg-table-name">iconShow<span className="pkg-table-name-note">〔ICON類型〕</span></span>
-                        <span className="pkg-table-oneline pkg-table-result">["{_scope.state.style.iconShow01}","{_scope.state.style.iconShow02}"]</span>
-                    </th>
-                    <td>
-                        <RadioGroup 
-                            onChange={_scope.handleChangeIconShow01}
-                            outputFormat="string"
-                            name="iconShow01"
-                            selectKey={_scope.getSelectKey()}
-                            inputOption={_scope.getOptionIconShow()}
-                            outputResult={_scope.state.style.iconShow01}
-                            showKey={_scope.getShowKey()}
-                            display={Setting.DISPLAY_INBLOCK}
-                            padding={Setting.PADDING_TINY}
-                            fillet={Setting.FILLET_TINY}
-                            listPosition={Setting.ICON_POSITION_INNER}
-                            styleName={Setting.STYLE_NAME_RESURGENCE}
-                            composition={Setting.COMPOSITION_SMALLEM}
-                            iconShow={[Setting.ICON_SHOW_EMPTY_SQUARE, Setting.ICON_SHOW_CHECKED]}
-                            styleIcon={true} 
-                            styleBorder={true} />
-                        <RadioGroup 
-                            onChange={_scope.handleChangeIconShow02}
-                            outputFormat="string"
-                            name="iconShow02"
-                            selectKey={_scope.getSelectKey()}
-                            inputOption={_sary_iconshow02}
-                            outputResult={_scope.state.style.iconShow02}
-                            showKey={_scope.getShowKey()}
-                            display={Setting.DISPLAY_INBLOCK}
-                            padding={Setting.PADDING_TINY}
-                            fillet={Setting.FILLET_TINY}
-                            listPosition={Setting.ICON_POSITION_INNER}
-                            styleName={Setting.STYLE_NAME_RESURGENCE}
-                            composition={Setting.COMPOSITION_SMALLEM}
-                            iconShow={[Setting.ICON_SHOW_EMPTY_SQUARE, Setting.ICON_SHOW_CHECKED]}
-                            styleIcon={true} 
-                            styleBorder={true} />
-                    </td>
-                </tr>
-                <tr>
-                    <th>
-                        <span className="pkg-table-oneline pkg-table-name">listPosition<span className="pkg-table-name-note">〔清單位置〕</span></span>
-                        <span className="pkg-table-oneline pkg-table-result">"{_scope.state.style.listPosition}"</span>
-                    </th>
-                    <td>
-                        <RadioGroup 
-                            onChange={_scope.handleChangeListPosition}
-                            outputFormat="string"
-                            name="listPosition"
-                            selectKey={_scope.getSelectKey()}
-                            inputOption={_scope.getOptionListPosition()}
-                            outputResult={_scope.state.style.listPosition}
-                            showKey={_scope.getShowKey()}
-                            display={Setting.DISPLAY_INBLOCK}
-                            padding={Setting.PADDING_TINY}
-                            fillet={Setting.FILLET_TINY}
-                            listPosition={Setting.ICON_POSITION_INNER}
-                            styleName={Setting.STYLE_NAME_RESURGENCE}
-                            composition={Setting.COMPOSITION_SMALLEM}
-                            iconShow={[Setting.ICON_SHOW_EMPTY_SQUARE, Setting.ICON_SHOW_CHECKED]}
-                            styleIcon={true} 
-                            styleBorder={true} />
-                    </td>
-                </tr>
-                <tr>
-                    <th>
-                        <span className="pkg-table-oneline pkg-table-name">listStyle<span className="pkg-table-name-note">〔清單類型〕</span></span>
-                        <span className="pkg-table-oneline pkg-table-result">"{_scope.state.style.listStyle}"</span>
-                    </th>
-                    <td>
-                        <RadioGroup 
-                            onChange={_scope.handleChangeListStyle}
-                            outputFormat="string"
-                            name="listStyle"
-                            selectKey={_scope.getSelectKey()}
-                            inputOption={_scope.getOptionListStyle()}
-                            outputResult={_scope.state.style.listStyle}
-                            showKey={_scope.getShowKey()}
-                            display={Setting.DISPLAY_INBLOCK}
-                            padding={Setting.PADDING_TINY}
-                            fillet={Setting.FILLET_TINY}
-                            listPosition={Setting.ICON_POSITION_INNER}
-                            styleName={Setting.STYLE_NAME_RESURGENCE}
-                            composition={Setting.COMPOSITION_SMALLEM}
-                            iconShow={[Setting.ICON_SHOW_EMPTY_SQUARE, Setting.ICON_SHOW_CHECKED]}
-                            styleIcon={true} 
-                            styleBorder={true} />
-                    </td>
-                </tr>
-                <tr>
-                    <th>
-                        <span className="pkg-table-oneline pkg-table-name">styleName<span className="pkg-table-name-note">〔色彩風格〕</span></span>
-                        <span className="pkg-table-oneline pkg-table-result">"{_scope.state.style.styleName}"</span>
-                    </th>
-                    <td>
-                        <RadioGroup 
-                            onChange={_scope.handleChangeStyleName}
-                            outputFormat="string"
-                            name="styleName"
-                            selectKey={_scope.getSelectKey()}
-                            inputOption={_scope.getOptionStyleName()}
-                            outputResult={_scope.state.style.styleName}
-                            showKey={_scope.getShowKey()}
-                            display={Setting.DISPLAY_INBLOCK}
-                            padding={Setting.PADDING_TINY}
-                            fillet={Setting.FILLET_TINY}
-                            listPosition={Setting.ICON_POSITION_INNER}
-                            styleName={Setting.STYLE_NAME_RESURGENCE}
-                            composition={Setting.COMPOSITION_SMALLEM}
-                            iconShow={[Setting.ICON_SHOW_EMPTY_SQUARE, Setting.ICON_SHOW_CHECKED]}
-                            styleIcon={true} 
-                            styleBorder={true} />
-                    </td>
-                </tr>
-                <tr>
-                    <th>
-                        <span className="pkg-table-oneline pkg-table-name">composition<span className="pkg-table-name-note">〔佈局〕</span></span>
-                        <span className="pkg-table-oneline pkg-table-result">"{_scope.state.style.composition}"</span>
-                    </th>
-                    <td>
-                        <RadioGroup 
-                            onChange={_scope.handleChangeComposition}
-                            outputFormat="string"
-                            name="composition"
-                            selectKey={_scope.getSelectKey()}
-                            inputOption={_scope.getOptionComposition()}
-                            outputResult={_scope.state.style.composition}
-                            showKey={_scope.getShowKey()}
-                            display={Setting.DISPLAY_INBLOCK}
-                            padding={Setting.PADDING_TINY}
-                            fillet={Setting.FILLET_TINY}
-                            listPosition={Setting.ICON_POSITION_INNER}
-                            styleName={Setting.STYLE_NAME_RESURGENCE}
-                            composition={Setting.COMPOSITION_SMALLEM}
-                            iconShow={[Setting.ICON_SHOW_EMPTY_SQUARE, Setting.ICON_SHOW_CHECKED]}
-                            styleIcon={true} 
-                            styleBorder={true} />
-                    </td>
-                </tr>
-                <tr>
-                    <th>
-                        <span className="pkg-table-oneline pkg-table-name">disabled<span className="pkg-table-name-note">〔能不能作用〕</span></span>
-                        <span className="pkg-table-oneline pkg-table-result">
-                            <If condition={ (_scope.state.style.disabled instanceof Array === true) && (_scope.state.style.disabled.length>0) && (_scope.state.style.disabled[0]==='true') }>
-                              <span>true</span>
-                            </If>
-                            <If condition={ !( (_scope.state.style.disabled instanceof Array === true) && (_scope.state.style.disabled.length>0) && (_scope.state.style.disabled[0]==='true') ) }>
-                              <span>false</span>
-                            </If>
-                        </span>
-                    </th>
-                    <td>
-                        <RadioGroup 
-                            onChange={_scope.handleChangeDisabled}
+                            onChange={_scope.handleChangeArrayValue}
                             outputFormat="array"
-                            name="disabled"
-                            selectKey={_scope.getSelectKey()}
-                            inputOption={_scope.getOptionBoolean()}
-                            outputResult={_scope.state.style.disabled}
-                            showKey={_scope.getShowKey()}
-                            display={Setting.DISPLAY_INBLOCK}
-                            padding={Setting.PADDING_TINY}
-                            fillet={Setting.FILLET_TINY}
-                            listPosition={Setting.ICON_POSITION_INNER}
-                            styleName={Setting.STYLE_NAME_RESURGENCE}
-                            composition={Setting.COMPOSITION_SMALLEM}
-                            iconShow={[Setting.ICON_SHOW_EMPTY_SQUARE, Setting.ICON_SHOW_CHECKED]}
-                            styleIcon={true} 
-                            styleBorder={true} />
-                    </td>
-                </tr>
-                <tr>
-                    <th>
-                        <span className="pkg-table-oneline pkg-table-name">offBack<span className="pkg-table-name-note">〔不加底色〕</span></span>
-                        <span className="pkg-table-oneline pkg-table-result">
-                            <If condition={ (_scope.state.style.offBack instanceof Array === true) && (_scope.state.style.offBack.length>0) && (_scope.state.style.offBack[0]==='true') }>
-                              <span>true</span>
-                            </If>
-                            <If condition={ !( (_scope.state.style.offBack instanceof Array === true) && (_scope.state.style.offBack.length>0) && (_scope.state.style.offBack[0]==='true') ) }>
-                              <span>false</span>
-                            </If>
-                        </span>
-                    </th>
-                    <td>
-                        <RadioGroup 
-                            onChange={_scope.handleChangeOffBack}
-                            outputFormat="array"
-                            name="offBack"
-                            selectKey={_scope.getSelectKey()}
-                            inputOption={_scope.getOptionBoolean()}
-                            outputResult={_scope.state.style.offBack}
-                            showKey={_scope.getShowKey()}
-                            display={Setting.DISPLAY_INBLOCK}
-                            padding={Setting.PADDING_TINY}
-                            fillet={Setting.FILLET_TINY}
-                            listPosition={Setting.ICON_POSITION_INNER}
-                            styleName={Setting.STYLE_NAME_RESURGENCE}
-                            composition={Setting.COMPOSITION_SMALLEM}
-                            iconShow={[Setting.ICON_SHOW_EMPTY_SQUARE, Setting.ICON_SHOW_CHECKED]}
-                            styleIcon={true} 
-                            styleBorder={true} />
-                    </td>
-                </tr>
-                <tr>
-                    <th>
-                        <span className="pkg-table-oneline pkg-table-name">styleBorder<span className="pkg-table-name-note">〔加邊框〕</span></span>
-                        <span className="pkg-table-oneline pkg-table-result">styleBorder<span className="pkg-table-name-note">〔加邊框〕</span></span>
-                    </th>
-                    <td>
-                        <RadioGroup 
-                            onChange={_scope.handleChangeStyleBorder}
-                            outputFormat="array"
-                            name="styleBorder"
-                            selectKey={_scope.getSelectKey()}
-                            inputOption={_scope.getOptionBoolean()}
-                            outputResult={_scope.state.style.styleBorder}
-                            showKey={_scope.getShowKey()}
-                            display={Setting.DISPLAY_INBLOCK}
-                            padding={Setting.PADDING_TINY}
-                            fillet={Setting.FILLET_TINY}
-                            listPosition={Setting.ICON_POSITION_INNER}
-                            styleName={Setting.STYLE_NAME_RESURGENCE}
-                            composition={Setting.COMPOSITION_SMALLEM}
-                            iconShow={[Setting.ICON_SHOW_EMPTY_SQUARE, Setting.ICON_SHOW_CHECKED]}
-                            styleIcon={true} 
-                            styleBorder={true} />
-                    </td>
-                </tr>
-                <tr>
-                    <th>
-                        <span className="pkg-table-oneline pkg-table-name">styleIcon<span className="pkg-table-name-note">〔變icon的顏色〕</span></span>
-                        <span className="pkg-table-oneline pkg-table-result">styleIcon<span className="pkg-table-name-note">〔變icon的顏色〕</span></span>
-                    </th>
-                    <td>
-                        <RadioGroup 
-                            onChange={_scope.handleChangeStyleIcon}
-                            outputFormat="array"
-                            name="styleIcon"
-                            selectKey={_scope.getSelectKey()}
-                            inputOption={_scope.getOptionBoolean()}
-                            outputResult={_scope.state.style.styleIcon}
-                            showKey={_scope.getShowKey()}
-                            display={Setting.DISPLAY_INBLOCK}
-                            padding={Setting.PADDING_TINY}
-                            fillet={Setting.FILLET_TINY}
-                            listPosition={Setting.ICON_POSITION_INNER}
-                            styleName={Setting.STYLE_NAME_RESURGENCE}
-                            composition={Setting.COMPOSITION_SMALLEM}
-                            iconShow={[Setting.ICON_SHOW_EMPTY_SQUARE, Setting.ICON_SHOW_CHECKED]}
-                            styleIcon={true} 
-                            styleBorder={true} />
-                    </td>
-                </tr>
-                <tr>
-                    <th>
-                        <span className="pkg-table-oneline pkg-table-name">styleIconBack<span className="pkg-table-name-note">〔變icon的底色〕</span></span>
-                        <span className="pkg-table-oneline pkg-table-result">styleIconBack<span className="pkg-table-name-note">〔變icon的底色〕</span></span>
-                    </th>
-                    <td>
-                        <RadioGroup 
-                            onChange={_scope.handleChangeStyleIconBack}
-                            outputFormat="array"
-                            name="styleIconBack"
-                            selectKey={_scope.getSelectKey()}
-                            inputOption={_scope.getOptionBoolean()}
-                            outputResult={_scope.state.style.styleIconBack}
-                            showKey={_scope.getShowKey()}
-                            display={Setting.DISPLAY_INBLOCK}
-                            padding={Setting.PADDING_TINY}
-                            fillet={Setting.FILLET_TINY}
-                            listPosition={Setting.ICON_POSITION_INNER}
-                            styleName={Setting.STYLE_NAME_RESURGENCE}
-                            composition={Setting.COMPOSITION_SMALLEM}
-                            iconShow={[Setting.ICON_SHOW_EMPTY_SQUARE, Setting.ICON_SHOW_CHECKED]}
-                            styleIcon={true} 
-                            styleBorder={true} />
-                    </td>
-                </tr>
-                <tr>
-                    <th>
-                        <span className="pkg-table-oneline pkg-table-name">styleList<span className="pkg-table-name-note">〔變列點文字的顏色〕</span></span>
-                        <span className="pkg-table-oneline pkg-table-result">styleList<span className="pkg-table-name-note">〔變列點文字的顏色〕</span></span>
-                    </th>
-                    <td>
-                        <RadioGroup 
-                            onChange={_scope.handleChangeStyleList}
-                            outputFormat="array"
-                            name="styleList"
-                            selectKey={_scope.getSelectKey()}
-                            inputOption={_scope.getOptionBoolean()}
-                            outputResult={_scope.state.style.styleList}
-                            showKey={_scope.getShowKey()}
-                            display={Setting.DISPLAY_INBLOCK}
-                            padding={Setting.PADDING_TINY}
-                            fillet={Setting.FILLET_TINY}
-                            listPosition={Setting.ICON_POSITION_INNER}
-                            styleName={Setting.STYLE_NAME_RESURGENCE}
-                            composition={Setting.COMPOSITION_SMALLEM}
-                            iconShow={[Setting.ICON_SHOW_EMPTY_SQUARE, Setting.ICON_SHOW_CHECKED]}
-                            styleIcon={true} 
-                            styleBorder={true} />
-                    </td>
-                </tr>
-            </table>
+                            name="previewStyleArray"
+                            selectKey={_ary_selectkey}
+                            inputOption={_scope.getOptions()}
+                            outputResult={_scope.state.preview.arrayValue}
+                            showKey={_ary_showkey}
+                            between="~"
+                            display={_scope.state.style.display}
+                            padding={_scope.state.style.padding}
+                            fillet={_scope.state.style.fillet}
+                            listStyle={_scope.state.style.listStyle}
+                            listPosition={_scope.state.style.listPosition}
+                            iconPosition={_scope.state.style.iconPosition}
+                            iconShow={[_scope.state.style.iconShow01, _scope.state.style.iconShow02]}
+                            styleName={_scope.state.style.styleName}
+                            composition={_scope.state.style.composition}
+                            disabled={_scope.judgeTF(_scope.state.style.disabled)}
+                            offBack={_scope.judgeTF(_scope.state.style.offBack)}
+                            styleBorder={_scope.judgeTF(_scope.state.style.styleBorder)}
+                            styleIcon={_scope.judgeTF(_scope.state.style.styleIcon)}
+                            styleIconBack={_scope.judgeTF(_scope.state.style.styleIconBack)}
+                            styleList={_scope.judgeTF(_scope.state.style.styleList)} />
+                        <div className="pkg-tmp-subblock">
+                            <h5 className="ui-title">
+                                <span>設定選項</span>
+                            </h5>
+                            <div className="ui-description">
+                                var _ary_selectkey = ["value"];<br />
+                                var _ary_showkey = ["name"];<br />
+                                outputFormat="array"<span className="ui-note">// 決定輸出的格式</span><br />
+                                name="previewStyleArray"<span className="ui-note">// 自訂，會成為input中name="previewStyleArray"</span><br />
+                                selectKey=｛_ary_selectkey｝<span className="ui-note">// 輸出會用到的選項key</span><br />
+                                showKey=｛_ary_showkey｝<span className="ui-note">// 顯示於頁面上的選項key</span>
+                            </div>
+                        </div>
+                        <div className="pkg-tmp-subblock">
+                            <h5 className="ui-title">
+                                <span>輸出選項</span>
+                            </h5>
+                            <div>
+                                {JSON.stringify(_scope.state.preview.arrayValue)}
+                            </div>
+                        </div>
+                    </div>  
+                </div>
+                <div className="pkg-tmp-control">
+                    <table className="pkg-table">
+                        <tr>
+                            <th>
+                                <span className="ui-oneline pkg-table-name">display<span className="pkg-table-name-note">〔display排版方式〕</span></span>
+                                <span className="ui-oneline pkg-table-result">"{_scope.state.style.display}"</span>
+                            </th>
+                        </tr>
+                        <tr>
+                            <td>
+                                <RadioGroup 
+                                    onChange={_scope.handleChangeDisplay}
+                                    outputFormat="string"
+                                    name="display"
+                                    selectKey={_scope.getSelectKey()}
+                                    inputOption={_scope.getOptionDisplay()}
+                                    outputResult={_scope.state.style.display}
+                                    showKey={_scope.getShowKey()}
+                                    display={Setting.DISPLAY_INBLOCK}
+                                    padding={Setting.PADDING_TINY}
+                                    fillet={Setting.FILLET_TINY}
+                                    listPosition={Setting.ICON_POSITION_INNER}
+                                    styleName={Setting.STYLE_NAME_RESURGENCE}
+                                    composition={Setting.COMPOSITION_TINYEM}
+                                    iconShow={[Setting.ICON_SHOW_EMPTY_SQUARE, Setting.ICON_SHOW_CHECKED]}
+                                    styleIcon={true} 
+                                    styleBorder={true} />
+                            </td>
+                        </tr>
+                    </table>
+                    <table className="pkg-table">
+                        <tr>
+                            <th>
+                                <span className="ui-oneline pkg-table-name">padding<span className="pkg-table-name-note">〔padding的大小〕</span></span>
+                                <span className="ui-oneline pkg-table-result">"{_scope.state.style.padding}"</span>
+                            </th>
+                        </tr>
+                        <tr>
+                            <td>
+                                <RadioGroup 
+                                    onChange={_scope.handleChangePadding}
+                                    outputFormat="string"
+                                    name="padding"
+                                    selectKey={_scope.getSelectKey()}
+                                    inputOption={_scope.getOptionPadding()}
+                                    outputResult={_scope.state.style.padding}
+                                    showKey={_scope.getShowKey()}
+                                    display={Setting.DISPLAY_INBLOCK}
+                                    padding={Setting.PADDING_TINY}
+                                    fillet={Setting.FILLET_TINY}
+                                    listPosition={Setting.ICON_POSITION_INNER}
+                                    styleName={Setting.STYLE_NAME_RESURGENCE}
+                                    composition={Setting.COMPOSITION_TINYEM}
+                                    iconShow={[Setting.ICON_SHOW_EMPTY_SQUARE, Setting.ICON_SHOW_CHECKED]}
+                                    styleIcon={true} 
+                                    styleBorder={true} />
+                            </td>
+                        </tr>  
+                    </table>
+                    <table className="pkg-table">
+                        <tr>
+                            <th>
+                                <span className="ui-oneline pkg-table-name">fillet<span className="pkg-table-name-note">〔圓角〕</span></span>
+                                <span className="ui-oneline pkg-table-result">"{_scope.state.style.fillet}"</span>
+                            </th>
+                        </tr>
+                        <tr>
+                            <td>
+                                <RadioGroup 
+                                    onChange={_scope.handleChangeFillet}
+                                    outputFormat="string"
+                                    name="fillet"
+                                    selectKey={_scope.getSelectKey()}
+                                    inputOption={_scope.getOptionFillet()}
+                                    outputResult={_scope.state.style.fillet}
+                                    showKey={_scope.getShowKey()}
+                                    display={Setting.DISPLAY_INBLOCK}
+                                    padding={Setting.PADDING_TINY}
+                                    fillet={Setting.FILLET_TINY}
+                                    listPosition={Setting.ICON_POSITION_INNER}
+                                    styleName={Setting.STYLE_NAME_RESURGENCE}
+                                    composition={Setting.COMPOSITION_TINYEM}
+                                    iconShow={[Setting.ICON_SHOW_EMPTY_SQUARE, Setting.ICON_SHOW_CHECKED]}
+                                    styleIcon={true} 
+                                    styleBorder={true} />
+                            </td>
+                        </tr>   
+                    </table>
+                    <table className="pkg-table">
+                        <tr>
+                            <th>
+                                <span className="ui-oneline pkg-table-name">iconPostion<span className="pkg-table-name-note">〔ICON位置或不顯示〕</span></span>
+                                <span className="ui-oneline pkg-table-result">"{_scope.state.style.iconPosition}"</span>
+                            </th>
+                        </tr>
+                        <tr>
+                            <td>
+                                <RadioGroup 
+                                    onChange={_scope.handleChangeIconPosition}
+                                    outputFormat="string"
+                                    name="iconPosition"
+                                    selectKey={_scope.getSelectKey()}
+                                    inputOption={_scope.getOptionIconPosition()}
+                                    outputResult={_scope.state.style.iconPosition}
+                                    showKey={_scope.getShowKey()}
+                                    display={Setting.DISPLAY_INBLOCK}
+                                    padding={Setting.PADDING_TINY}
+                                    fillet={Setting.FILLET_TINY}
+                                    listPosition={Setting.ICON_POSITION_INNER}
+                                    styleName={Setting.STYLE_NAME_RESURGENCE}
+                                    composition={Setting.COMPOSITION_TINYEM}
+                                    iconShow={[Setting.ICON_SHOW_EMPTY_SQUARE, Setting.ICON_SHOW_CHECKED]}
+                                    styleIcon={true} 
+                                    styleBorder={true} />
+                            </td>
+                        </tr>    
+                    </table>
+                    <table className="pkg-table">
+                        <tr>
+                            <th>
+                                <span className="ui-oneline pkg-table-name">iconShow<span className="pkg-table-name-note">〔ICON類型〕</span></span>
+                                <span className="ui-oneline pkg-table-result">
+                                    <If condition={ (_scope.state.style.iconShow02 !== undefined) && (_scope.state.style.iconShow02 !== '') }>
+                                        ["{_scope.state.style.iconShow01}","{_scope.state.style.iconShow02}"]
+                                    </If>
+                                    <If condition={ !( (_scope.state.style.iconShow02 !== undefined) && (_scope.state.style.iconShow02 !== '') ) }>
+                                        ["{_scope.state.style.iconShow01}"]
+                                    </If>
+                                </span>
+                            </th>
+                        </tr>
+                        <tr>
+                            <td>
+                                <h5 className="ui-title"><span>原始icon圖</span></h5>
+                                <RadioGroup 
+                                    onChange={_scope.handleChangeIconShow01}
+                                    outputFormat="string"
+                                    name="iconShow01"
+                                    selectKey={_scope.getSelectKey()}
+                                    inputOption={_scope.getOptionIconShow()}
+                                    outputResult={_scope.state.style.iconShow01}
+                                    showKey={_scope.getShowKey()}
+                                    display={Setting.DISPLAY_INBLOCK}
+                                    padding={Setting.PADDING_TINY}
+                                    fillet={Setting.FILLET_TINY}
+                                    listPosition={Setting.ICON_POSITION_INNER}
+                                    styleName={Setting.STYLE_NAME_RESURGENCE}
+                                    composition={Setting.COMPOSITION_TINYEM}
+                                    iconShow={[Setting.ICON_SHOW_EMPTY_SQUARE, Setting.ICON_SHOW_CHECKED]}
+                                    styleIcon={true} 
+                                    styleBorder={true} />
+                                <div className="ui-seperate"></div>
+                                <h5 className="ui-title"><span>項目被選後的icon圖</span></h5>
+                                <RadioGroup 
+                                    onChange={_scope.handleChangeIconShow02}
+                                    outputFormat="string"
+                                    name="iconShow02"
+                                    selectKey={_scope.getSelectKey()}
+                                    inputOption={_sary_iconshow02}
+                                    outputResult={_scope.state.style.iconShow02}
+                                    showKey={_scope.getShowKey()}
+                                    display={Setting.DISPLAY_INBLOCK}
+                                    padding={Setting.PADDING_TINY}
+                                    fillet={Setting.FILLET_TINY}
+                                    listPosition={Setting.ICON_POSITION_INNER}
+                                    styleName={Setting.STYLE_NAME_RESURGENCE}
+                                    composition={Setting.COMPOSITION_TINYEM}
+                                    iconShow={[Setting.ICON_SHOW_EMPTY_SQUARE, Setting.ICON_SHOW_CHECKED]}
+                                    styleIcon={true} 
+                                    styleBorder={true} />
+                            </td>
+                        </tr>
+                    </table>
+                    <table className="pkg-table">
+                        <tr>
+                            <th>
+                                <span className="ui-oneline pkg-table-name">listPosition<span className="pkg-table-name-note">〔清單位置〕</span></span>
+                                <span className="ui-oneline pkg-table-result">"{_scope.state.style.listPosition}"</span>
+                            </th>
+                        </tr>
+                        <tr>
+                            <td>
+                                <RadioGroup 
+                                    onChange={_scope.handleChangeListPosition}
+                                    outputFormat="string"
+                                    name="listPosition"
+                                    selectKey={_scope.getSelectKey()}
+                                    inputOption={_scope.getOptionListPosition()}
+                                    outputResult={_scope.state.style.listPosition}
+                                    showKey={_scope.getShowKey()}
+                                    display={Setting.DISPLAY_INBLOCK}
+                                    padding={Setting.PADDING_TINY}
+                                    fillet={Setting.FILLET_TINY}
+                                    listPosition={Setting.ICON_POSITION_INNER}
+                                    styleName={Setting.STYLE_NAME_RESURGENCE}
+                                    composition={Setting.COMPOSITION_TINYEM}
+                                    iconShow={[Setting.ICON_SHOW_EMPTY_SQUARE, Setting.ICON_SHOW_CHECKED]}
+                                    styleIcon={true} 
+                                    styleBorder={true} />
+                            </td>
+                        </tr>
+                    </table>
+                    <table className="pkg-table">
+                        <tr>
+                            <th>
+                                <span className="ui-oneline pkg-table-name">listStyle<span className="pkg-table-name-note">〔清單類型〕</span></span>
+                                <span className="ui-oneline pkg-table-result">"{_scope.state.style.listStyle}"</span>
+                            </th>
+                        </tr>
+                        <tr>
+                            <td>
+                                <RadioGroup 
+                                    onChange={_scope.handleChangeListStyle}
+                                    outputFormat="string"
+                                    name="listStyle"
+                                    selectKey={_scope.getSelectKey()}
+                                    inputOption={_scope.getOptionListStyle()}
+                                    outputResult={_scope.state.style.listStyle}
+                                    showKey={_scope.getShowKey()}
+                                    display={Setting.DISPLAY_INBLOCK}
+                                    padding={Setting.PADDING_TINY}
+                                    fillet={Setting.FILLET_TINY}
+                                    listPosition={Setting.ICON_POSITION_INNER}
+                                    styleName={Setting.STYLE_NAME_RESURGENCE}
+                                    composition={Setting.COMPOSITION_TINYEM}
+                                    iconShow={[Setting.ICON_SHOW_EMPTY_SQUARE, Setting.ICON_SHOW_CHECKED]}
+                                    styleIcon={true} 
+                                    styleBorder={true} />
+                            </td>
+                        </tr>
+                    </table>
+                    <table className="pkg-table">
+                        <tr>
+                            <th>
+                                <span className="ui-oneline pkg-table-name">styleName<span className="pkg-table-name-note">〔色彩風格〕</span></span>
+                                <span className="ui-oneline pkg-table-result">"{_scope.state.style.styleName}"</span>
+                            </th>
+                        </tr>
+                        <tr>
+                            <td>
+                                <RadioGroup 
+                                    onChange={_scope.handleChangeStyleName}
+                                    outputFormat="string"
+                                    name="styleName"
+                                    selectKey={_scope.getSelectKey()}
+                                    inputOption={_scope.getOptionStyleName()}
+                                    outputResult={_scope.state.style.styleName}
+                                    showKey={_scope.getShowKey()}
+                                    display={Setting.DISPLAY_INBLOCK}
+                                    padding={Setting.PADDING_TINY}
+                                    fillet={Setting.FILLET_TINY}
+                                    listPosition={Setting.ICON_POSITION_INNER}
+                                    styleName={Setting.STYLE_NAME_RESURGENCE}
+                                    composition={Setting.COMPOSITION_TINYEM}
+                                    iconShow={[Setting.ICON_SHOW_EMPTY_SQUARE, Setting.ICON_SHOW_CHECKED]}
+                                    styleIcon={true} 
+                                    styleBorder={true} />
+                            </td>
+                        </tr>
+                    </table>
+                    <table className="pkg-table">
+                        <tr>
+                            <th>
+                                <span className="ui-oneline pkg-table-name">composition<span className="pkg-table-name-note">〔佈局〕</span></span>
+                                <span className="ui-oneline pkg-table-result">"{_scope.state.style.composition}"</span>
+                            </th>
+                        </tr>
+                        <tr>
+                            <td>
+                                <RadioGroup 
+                                    onChange={_scope.handleChangeComposition}
+                                    outputFormat="string"
+                                    name="composition"
+                                    selectKey={_scope.getSelectKey()}
+                                    inputOption={_scope.getOptionComposition()}
+                                    outputResult={_scope.state.style.composition}
+                                    showKey={_scope.getShowKey()}
+                                    display={Setting.DISPLAY_INBLOCK}
+                                    padding={Setting.PADDING_TINY}
+                                    fillet={Setting.FILLET_TINY}
+                                    listPosition={Setting.ICON_POSITION_INNER}
+                                    styleName={Setting.STYLE_NAME_RESURGENCE}
+                                    composition={Setting.COMPOSITION_TINYEM}
+                                    iconShow={[Setting.ICON_SHOW_EMPTY_SQUARE, Setting.ICON_SHOW_CHECKED]}
+                                    styleIcon={true} 
+                                    styleBorder={true} />
+                            </td>
+                        </tr>
+                    </table>
+                    <table className="pkg-table">
+                        <tr>
+                            <th>
+                                <span className="ui-oneline pkg-table-name">disabled<span className="pkg-table-name-note">〔能不能作用〕</span></span>
+                                <span className="ui-oneline pkg-table-result">
+                                    <If condition={!_scope.judgeTF(_scope.state.style.disabled)}>
+                                        true
+                                    </If>
+                                    <If condition={!_scope.judgeTF(_scope.state.style.disabled)}>
+                                        false
+                                    </If>
+                                </span>
+                            </th>
+                        </tr>
+                        <tr>
+                            <td>
+                                <RadioGroup 
+                                    onChange={_scope.handleChangeDisabled}
+                                    outputFormat="array"
+                                    name="disabled"
+                                    selectKey={_scope.getSelectKey()}
+                                    inputOption={_scope.getOptionBoolean()}
+                                    outputResult={_scope.state.style.disabled}
+                                    showKey={_scope.getShowKey()}
+                                    display={Setting.DISPLAY_INBLOCK}
+                                    padding={Setting.PADDING_TINY}
+                                    fillet={Setting.FILLET_TINY}
+                                    listPosition={Setting.ICON_POSITION_INNER}
+                                    styleName={Setting.STYLE_NAME_RESURGENCE}
+                                    composition={Setting.COMPOSITION_TINYEM}
+                                    iconShow={[Setting.ICON_SHOW_EMPTY_SQUARE, Setting.ICON_SHOW_CHECKED]}
+                                    styleIcon={true} 
+                                    styleBorder={true} />
+                            </td>
+                        </tr>
+                    </table>
+                    <table className="pkg-table">
+                        <tr>
+                            <th>
+                                <span className="ui-oneline pkg-table-name">offBack<span className="pkg-table-name-note">〔不加底色〕</span></span>
+                                <span className="ui-oneline pkg-table-result">
+                                    <If condition={_scope.judgeTF(_scope.state.style.offBack)}>
+                                        true
+                                    </If>
+                                    <If condition={!_scope.judgeTF(_scope.state.style.offBack)}>
+                                        false
+                                    </If>
+                                </span>
+                            </th>
+                        </tr>
+                        <tr>
+                            <td>
+                                <RadioGroup 
+                                    onChange={_scope.handleChangeOffBack}
+                                    outputFormat="array"
+                                    name="offBack"
+                                    selectKey={_scope.getSelectKey()}
+                                    inputOption={_scope.getOptionBoolean()}
+                                    outputResult={_scope.state.style.offBack}
+                                    showKey={_scope.getShowKey()}
+                                    display={Setting.DISPLAY_INBLOCK}
+                                    padding={Setting.PADDING_TINY}
+                                    fillet={Setting.FILLET_TINY}
+                                    listPosition={Setting.ICON_POSITION_INNER}
+                                    styleName={Setting.STYLE_NAME_RESURGENCE}
+                                    composition={Setting.COMPOSITION_TINYEM}
+                                    iconShow={[Setting.ICON_SHOW_EMPTY_SQUARE, Setting.ICON_SHOW_CHECKED]}
+                                    styleIcon={true} 
+                                    styleBorder={true} />
+                            </td>
+                        </tr>
+                    </table>
+                    <table className="pkg-table">
+                        <tr>
+                            <th>
+                                <span className="ui-oneline pkg-table-name">styleBorder<span className="pkg-table-name-note">〔加邊框〕</span></span>
+                                <span className="ui-oneline pkg-table-result">
+                                    <If condition={_scope.judgeTF(_scope.state.style.styleBorder)}>
+                                        true
+                                    </If>
+                                    <If condition={!_scope.judgeTF(_scope.state.style.styleBorder)}>
+                                        false
+                                    </If>
+                                </span>
+                            </th>
+                        </tr>
+                        <tr>
+                            <td>
+                                <RadioGroup 
+                                    onChange={_scope.handleChangeStyleBorder}
+                                    outputFormat="array"
+                                    name="styleBorder"
+                                    selectKey={_scope.getSelectKey()}
+                                    inputOption={_scope.getOptionBoolean()}
+                                    outputResult={_scope.state.style.styleBorder}
+                                    showKey={_scope.getShowKey()}
+                                    display={Setting.DISPLAY_INBLOCK}
+                                    padding={Setting.PADDING_TINY}
+                                    fillet={Setting.FILLET_TINY}
+                                    listPosition={Setting.ICON_POSITION_INNER}
+                                    styleName={Setting.STYLE_NAME_RESURGENCE}
+                                    composition={Setting.COMPOSITION_TINYEM}
+                                    iconShow={[Setting.ICON_SHOW_EMPTY_SQUARE, Setting.ICON_SHOW_CHECKED]}
+                                    styleIcon={true} 
+                                    styleBorder={true} />
+                            </td>
+                        </tr>
+                    </table>
+                    <table className="pkg-table">
+                        <tr>
+                            <th>
+                                <span className="ui-oneline pkg-table-name">styleIcon<span className="pkg-table-name-note">〔變icon的顏色〕</span></span>
+                                <span className="ui-oneline pkg-table-result">
+                                    <If condition={_scope.judgeTF(_scope.state.style.styleIcon)}>
+                                        true
+                                    </If>
+                                    <If condition={!_scope.judgeTF(_scope.state.style.styleIcon)}>
+                                        false
+                                    </If>
+                                </span>
+                            </th>
+                        </tr>
+                        <tr>
+                            <td>
+                                <RadioGroup 
+                                    onChange={_scope.handleChangeStyleIcon}
+                                    outputFormat="array"
+                                    name="styleIcon"
+                                    selectKey={_scope.getSelectKey()}
+                                    inputOption={_scope.getOptionBoolean()}
+                                    outputResult={_scope.state.style.styleIcon}
+                                    showKey={_scope.getShowKey()}
+                                    display={Setting.DISPLAY_INBLOCK}
+                                    padding={Setting.PADDING_TINY}
+                                    fillet={Setting.FILLET_TINY}
+                                    listPosition={Setting.ICON_POSITION_INNER}
+                                    styleName={Setting.STYLE_NAME_RESURGENCE}
+                                    composition={Setting.COMPOSITION_TINYEM}
+                                    iconShow={[Setting.ICON_SHOW_EMPTY_SQUARE, Setting.ICON_SHOW_CHECKED]}
+                                    styleIcon={true} 
+                                    styleBorder={true} />
+                            </td>
+                        </tr>
+                    </table>
+                    <table className="pkg-table">
+                        <tr>
+                            <th>
+                                <span className="ui-oneline pkg-table-name">styleIconBack<span className="pkg-table-name-note">〔變icon的底色〕</span></span>
+                                <span className="ui-oneline pkg-table-result">
+                                    <If condition={_scope.judgeTF(_scope.state.style.styleIconBack)}>
+                                        true
+                                    </If>
+                                    <If condition={!_scope.judgeTF(_scope.state.style.styleIconBack)}>
+                                        false
+                                    </If>
+                                </span>
+                            </th>
+                        </tr>
+                        <tr>
+                            <td>
+                                <RadioGroup 
+                                    onChange={_scope.handleChangeStyleIconBack}
+                                    outputFormat="array"
+                                    name="styleIconBack"
+                                    selectKey={_scope.getSelectKey()}
+                                    inputOption={_scope.getOptionBoolean()}
+                                    outputResult={_scope.state.style.styleIconBack}
+                                    showKey={_scope.getShowKey()}
+                                    display={Setting.DISPLAY_INBLOCK}
+                                    padding={Setting.PADDING_TINY}
+                                    fillet={Setting.FILLET_TINY}
+                                    listPosition={Setting.ICON_POSITION_INNER}
+                                    styleName={Setting.STYLE_NAME_RESURGENCE}
+                                    composition={Setting.COMPOSITION_TINYEM}
+                                    iconShow={[Setting.ICON_SHOW_EMPTY_SQUARE, Setting.ICON_SHOW_CHECKED]}
+                                    styleIcon={true} 
+                                    styleBorder={true} />
+                            </td>
+                        </tr>
+                    </table>
+                    <table className="pkg-table">
+                        <tr>
+                            <th>
+                                <span className="ui-oneline pkg-table-name">styleList<span className="pkg-table-name-note">〔變列點文字的顏色〕</span></span>
+                                <span className="ui-oneline pkg-table-result">
+                                    <If condition={_scope.judgeTF(_scope.state.style.styleList)}>
+                                        true
+                                    </If>
+                                    <If condition={!_scope.judgeTF(_scope.state.style.styleList)}>
+                                        false
+                                    </If>
+                                </span>
+                            </th>
+                        </tr>
+                        <tr>
+                            <td>
+                                <RadioGroup 
+                                    onChange={_scope.handleChangeStyleList}
+                                    outputFormat="array"
+                                    name="styleList"
+                                    selectKey={_scope.getSelectKey()}
+                                    inputOption={_scope.getOptionBoolean()}
+                                    outputResult={_scope.state.style.styleList}
+                                    showKey={_scope.getShowKey()}
+                                    display={Setting.DISPLAY_INBLOCK}
+                                    padding={Setting.PADDING_TINY}
+                                    fillet={Setting.FILLET_TINY}
+                                    listPosition={Setting.ICON_POSITION_INNER}
+                                    styleName={Setting.STYLE_NAME_RESURGENCE}
+                                    composition={Setting.COMPOSITION_TINYEM}
+                                    iconShow={[Setting.ICON_SHOW_EMPTY_SQUARE, Setting.ICON_SHOW_CHECKED]}
+                                    styleIcon={true} 
+                                    styleBorder={true} />
+                            </td>
+                        </tr>
+                    </table>
+                </div>
+            </div>
         );
     }
 
