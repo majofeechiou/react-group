@@ -5,7 +5,7 @@ body * {
 .pkg-tmp {
 	position: relative;
 	.pkg-tmp-preview {
-		position: fixed;
+		position: relative;
 		float: left;
 		width: 60%;
 	}
@@ -95,7 +95,7 @@ body * {
 .ui-note {
 	margin-left: 1em;
 	padding: 0.2em 0.5em;
-	background-color: #ccc;
+	background-color: #e4e4e4;
 	color: #862711;
 	font-size: 9px;
 	border-radius: 2px;

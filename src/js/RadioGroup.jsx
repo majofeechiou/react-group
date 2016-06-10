@@ -36,6 +36,10 @@ export default class RadioGroup extends React.Component {
 		return this.props.selectKey[0];
 	}
 
+	getAllSelectKey(){
+		return this.props.selectKey;
+	}
+
 	arrangeProps(props){
 		let _str_format = 'string' ; 
 		if( typeof props.outputFormat === 'string' && (props.outputFormat).match(/^((string)|(json)|(array)|(sarray))$/i)!==null ){
@@ -76,11 +80,23 @@ export default class RadioGroup extends React.Component {
 		};
 	}
 
+	filterKey( json_item ){
+		let _scope = this;
+		let _str_selectkey_all = _scope.getAllSelectKey(),
+			_str_key = '',
+			_json_ouput = {};
+		for( let i=0; i<_str_selectkey_all.length; i++ ){
+			_str_key = _str_selectkey_all[i];
+			_json_ouput[ _str_key ] = json_item[_str_key];
+		}
+		return _json_ouput;
+	}
+
 	handleChange(e) {
 		let _scope = this;
-		let _bln_changed = false;
-		let _str_value = e.target.value;
-		let _str_selectkey = _scope.getMainSelectKey();
+		let _bln_changed = false,
+			_str_value = e.target.value,
+			_str_selectkey = _scope.getMainSelectKey();
 		(this.props.inputOption).find(function(json){
 
 			if( json[_str_selectkey]===_str_value ){
@@ -90,14 +106,16 @@ export default class RadioGroup extends React.Component {
 				if( _str_format==='string' ){
 					_json_args.outputResult = _str_value ;	
 				}else if( _str_format==='json' ){
-					_json_args.outputResult = json ;	
+					// _json_args.outputResult = json ;	
+					_json_args.outputResult = _scope.filterKey(json) ;	
 				}else if( _str_format==='array' || _str_format==='sarray' ){
 					let _data_old_result = ( _scope.state.outputResult instanceof Array )? JSON.parse(JSON.stringify(_scope.state.outputResult)) : [];
 					let _data_item;
 					if( _str_format==='array' ){
 						_data_item = _str_value ;
 					}else{
-						_data_item = json ;
+						// _data_item = json ;
+						_data_item = _scope.filterKey(json) ;
 					}
 					if( !!e.target.checked ){
 						if( _data_old_result.length>=1 ){

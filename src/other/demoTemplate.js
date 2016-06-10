@@ -34,7 +34,10 @@ export default class demoTemplate extends React.Component {
         _scope.handleChangeStyleIconBack = _scope.handleChangeStyleIconBack.bind(_scope);
         _scope.handleChangeStyleList = _scope.handleChangeStyleList.bind(_scope);
 
+        _scope.handleChangeStringValue = _scope.handleChangeStringValue.bind(_scope);
+        _scope.handleChangeJsonValue = _scope.handleChangeJsonValue.bind(_scope);
         _scope.handleChangeArrayValue = _scope.handleChangeArrayValue.bind(_scope);
+        _scope.handleChangeSarrayValue = _scope.handleChangeSarrayValue.bind(_scope);
     }
 
     getSelectKey(){
@@ -533,10 +536,34 @@ export default class demoTemplate extends React.Component {
         }
     }
 
+    handleChangeStringValue( bln_change, json_return ){
+        let _scope = this ;
+        if( bln_change===true ){
+            let _json_new = _scope.arrangeState( {preview: {stringValue: json_return.result}} );
+            _scope.setState( _json_new );
+        }
+    }
+
+    handleChangeJsonValue( bln_change, json_return ){
+        let _scope = this ;
+        if( bln_change===true ){
+            let _json_new = _scope.arrangeState( {preview: {jsonValue: json_return.result}} );
+            _scope.setState( _json_new );
+        }
+    }
+
     handleChangeArrayValue( bln_change, json_return ){
         let _scope = this ;
         if( bln_change===true ){
             let _json_new = _scope.arrangeState( {preview: {arrayValue: json_return.result}} );
+            _scope.setState( _json_new );
+        }
+    }
+
+    handleChangeSarrayValue( bln_change, json_return ){
+        let _scope = this ;
+        if( bln_change===true ){
+            let _json_new = _scope.arrangeState( {preview: {sarrayValue: json_return.result}} );
             _scope.setState( _json_new );
         }
     }
@@ -565,7 +592,10 @@ export default class demoTemplate extends React.Component {
         _json_next.style.styleList = ( _json_next.style.styleList===undefined )? ['true'] : _json_next.style.styleList ;
 
         _json_next.preview = _json_next.preview || {} ;
+        _json_next.preview.stringValue = ( _json_next.preview.stringValue===undefined )? '' : _json_next.preview.stringValue ;
+        _json_next.preview.jsonValue = ( _json_next.preview.jsonValue===undefined )? {} : _json_next.preview.jsonValue ;
         _json_next.preview.arrayValue = ( _json_next.preview.arrayValue===undefined )? [] : _json_next.preview.arrayValue ;
+        _json_next.preview.sarrayValue = ( _json_next.preview.sarrayValue===undefined )? [] : _json_next.preview.sarrayValue ;
 
         if( this.state ){
             this.setState( {
@@ -621,6 +651,103 @@ export default class demoTemplate extends React.Component {
                             {JSON.stringify(_scope.getOptions())}
                         </div>
                     </div>
+                    
+                    <div className="pkg-tmp-block">
+                        <RadioGroup 
+                            onChange={_scope.handleChangeStringValue}
+                            outputFormat="string"
+                            name="previewStyleString"
+                            selectKey={_ary_selectkey}
+                            inputOption={_scope.getOptions()}
+                            outputResult={_scope.state.preview.stringValue}
+                            showKey={_ary_showkey}
+                            between="~"
+                            display={_scope.state.style.display}
+                            padding={_scope.state.style.padding}
+                            fillet={_scope.state.style.fillet}
+                            listStyle={_scope.state.style.listStyle}
+                            listPosition={_scope.state.style.listPosition}
+                            iconPosition={_scope.state.style.iconPosition}
+                            iconShow={[_scope.state.style.iconShow01, _scope.state.style.iconShow02]}
+                            styleName={_scope.state.style.styleName}
+                            composition={_scope.state.style.composition}
+                            disabled={_scope.judgeTF(_scope.state.style.disabled)}
+                            offBack={_scope.judgeTF(_scope.state.style.offBack)}
+                            styleBorder={_scope.judgeTF(_scope.state.style.styleBorder)}
+                            styleIcon={_scope.judgeTF(_scope.state.style.styleIcon)}
+                            styleIconBack={_scope.judgeTF(_scope.state.style.styleIconBack)}
+                            styleList={_scope.judgeTF(_scope.state.style.styleList)} />
+                        <div className="pkg-tmp-subblock">
+                            <h5 className="ui-title">
+                                <span>設定選項</span>
+                            </h5>
+                            <div className="ui-description">
+                                var _ary_selectkey = ["value"];<br />
+                                var _ary_showkey = ["name"];<br />
+                                outputFormat="string"<span className="ui-note">// 決定輸出的格式</span><br />
+                                name="previewStyleString"<span className="ui-note">// 自訂，會成為input中name="previewStyleString"</span><br />
+                                selectKey=｛_ary_selectkey｝<span className="ui-note">// 輸出會用到的選項key</span><br />
+                                showKey=｛_ary_showkey｝<span className="ui-note">// 顯示於頁面上的選項key</span>
+                            </div>
+                        </div>
+                        <div className="pkg-tmp-subblock">
+                            <h5 className="ui-title">
+                                <span>輸出選項</span>
+                            </h5>
+                            <div>
+                                {JSON.stringify(_scope.state.preview.stringValue)}
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div className="pkg-tmp-block">
+                        <RadioGroup 
+                            onChange={_scope.handleChangeJsonValue}
+                            outputFormat="json"
+                            name="previewStyleJson"
+                            selectKey={_ary_selectkey}
+                            inputOption={_scope.getOptions()}
+                            outputResult={_scope.state.preview.jsonValue}
+                            showKey={_ary_showkey}
+                            between="~"
+                            display={_scope.state.style.display}
+                            padding={_scope.state.style.padding}
+                            fillet={_scope.state.style.fillet}
+                            listStyle={_scope.state.style.listStyle}
+                            listPosition={_scope.state.style.listPosition}
+                            iconPosition={_scope.state.style.iconPosition}
+                            iconShow={[_scope.state.style.iconShow01, _scope.state.style.iconShow02]}
+                            styleName={_scope.state.style.styleName}
+                            composition={_scope.state.style.composition}
+                            disabled={_scope.judgeTF(_scope.state.style.disabled)}
+                            offBack={_scope.judgeTF(_scope.state.style.offBack)}
+                            styleBorder={_scope.judgeTF(_scope.state.style.styleBorder)}
+                            styleIcon={_scope.judgeTF(_scope.state.style.styleIcon)}
+                            styleIconBack={_scope.judgeTF(_scope.state.style.styleIconBack)}
+                            styleList={_scope.judgeTF(_scope.state.style.styleList)} />
+                        <div className="pkg-tmp-subblock">
+                            <h5 className="ui-title">
+                                <span>設定選項</span>
+                            </h5>
+                            <div className="ui-description">
+                                var _ary_selectkey = ["value"];<br />
+                                var _ary_showkey = ["name"];<br />
+                                outputFormat="json"<span className="ui-note">// 決定輸出的格式</span><br />
+                                name="previewStyleJson"<span className="ui-note">// 自訂，會成為input中name="previewStyleJson"</span><br />
+                                selectKey=｛_ary_selectkey｝<span className="ui-note">// 輸出會用到的選項key</span><br />
+                                showKey=｛_ary_showkey｝<span className="ui-note">// 顯示於頁面上的選項key</span>
+                            </div>
+                        </div>
+                        <div className="pkg-tmp-subblock">
+                            <h5 className="ui-title">
+                                <span>輸出選項</span>
+                            </h5>
+                            <div>
+                                {JSON.stringify(_scope.state.preview.jsonValue)}
+                            </div>
+                        </div>
+                    </div>
+                    
                     <div className="pkg-tmp-block">
                         <RadioGroup 
                             onChange={_scope.handleChangeArrayValue}
@@ -667,7 +794,56 @@ export default class demoTemplate extends React.Component {
                                 {JSON.stringify(_scope.state.preview.arrayValue)}
                             </div>
                         </div>
-                    </div>  
+                    </div>
+
+                    <div className="pkg-tmp-block">
+                        <RadioGroup 
+                            onChange={_scope.handleChangeSarrayValue}
+                            outputFormat="sarray"
+                            name="previewStyleSarray"
+                            selectKey={_ary_selectkey}
+                            inputOption={_scope.getOptions()}
+                            outputResult={_scope.state.preview.sarrayValue}
+                            showKey={_ary_showkey}
+                            between="~"
+                            display={_scope.state.style.display}
+                            padding={_scope.state.style.padding}
+                            fillet={_scope.state.style.fillet}
+                            listStyle={_scope.state.style.listStyle}
+                            listPosition={_scope.state.style.listPosition}
+                            iconPosition={_scope.state.style.iconPosition}
+                            iconShow={[_scope.state.style.iconShow01, _scope.state.style.iconShow02]}
+                            styleName={_scope.state.style.styleName}
+                            composition={_scope.state.style.composition}
+                            disabled={_scope.judgeTF(_scope.state.style.disabled)}
+                            offBack={_scope.judgeTF(_scope.state.style.offBack)}
+                            styleBorder={_scope.judgeTF(_scope.state.style.styleBorder)}
+                            styleIcon={_scope.judgeTF(_scope.state.style.styleIcon)}
+                            styleIconBack={_scope.judgeTF(_scope.state.style.styleIconBack)}
+                            styleList={_scope.judgeTF(_scope.state.style.styleList)} />
+                        <div className="pkg-tmp-subblock">
+                            <h5 className="ui-title">
+                                <span>設定選項</span>
+                            </h5>
+                            <div className="ui-description">
+                                var _ary_selectkey = ["value"];<br />
+                                var _ary_showkey = ["name"];<br />
+                                outputFormat="sarray"<span className="ui-note">// 決定輸出的格式</span><br />
+                                name="previewStyleSarray"<span className="ui-note">// 自訂，會成為input中name="previewStyleSarray"</span><br />
+                                selectKey=｛_ary_selectkey｝<span className="ui-note">// 輸出會用到的選項key</span><br />
+                                showKey=｛_ary_showkey｝<span className="ui-note">// 顯示於頁面上的選項key</span>
+                            </div>
+                        </div>
+                        <div className="pkg-tmp-subblock">
+                            <h5 className="ui-title">
+                                <span>輸出選項</span>
+                            </h5>
+                            <div>
+                                {JSON.stringify(_scope.state.preview.sarrayValue)}
+                            </div>
+                        </div>
+                    </div>
+
                 </div>
                 <div className="pkg-tmp-control">
                     <table className="pkg-table">
