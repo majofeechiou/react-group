@@ -675,10 +675,22 @@ export default class demoTemplate extends React.Component {
         return (
             <div className="pkg-tmp">
                 <div className="pkg-tmp-preview">
+                    <div className="pkg-tmp-outlink">
+                        <a href="//github.com/majofeechiou/drawing-board" target="_blank">GITHUB</a>
+                    </div>
                     <h4 className="ui-bigtitle">資料格式設定 與 外觀預覽</h4>
                     <div className="pkg-tmp-block pkg-tmp-block_header">
                         <h5 className="ui-title">
-                            <span>可選選項</span>
+                            <span>已選項目的資料設定</span>
+                        </h5>
+                        <div>
+                            onChange=｛function｝<span className="ui-note">// 自訂function做後續動作，可得的回傳值有是否變更判斷的boolean值，與value、result、item</span><br />
+                            outputResult=｛this.state.ooxx｝<span className="ui-note">// 已選項目的輸出結果</span>
+                        </div>
+                    </div>
+                    <div className="pkg-tmp-block pkg-tmp-block_header">
+                        <h5 className="ui-title">
+                            <span>可選選項範例</span>
                         </h5>
                         <div>
                             {JSON.stringify(_scope.getOptions())}
@@ -726,7 +738,7 @@ export default class demoTemplate extends React.Component {
                         </div>
                         <div className="pkg-tmp-subblock">
                             <h5 className="ui-title">
-                                <span>輸出結果〔格式：String〕</span>
+                                <span>outputResult輸出結果〔格式：String〕</span>
                             </h5>
                             <div>
                                 {JSON.stringify(_scope.state.preview.stringValue)}
@@ -775,7 +787,7 @@ export default class demoTemplate extends React.Component {
                         </div>
                         <div className="pkg-tmp-subblock">
                             <h5 className="ui-title">
-                                <span>輸出結果〔格式：Json〕</span>
+                                <span>outputResult輸出結果〔格式：Json〕</span>
                             </h5>
                             <div>
                                 {JSON.stringify(_scope.state.preview.jsonValue)}
@@ -824,7 +836,7 @@ export default class demoTemplate extends React.Component {
                         </div>
                         <div className="pkg-tmp-subblock">
                             <h5 className="ui-title">
-                                <span>輸出結果〔格式：Array〕</span>
+                                <span>outputResult輸出結果〔格式：Array〕</span>
                             </h5>
                             <div>
                                 {JSON.stringify(_scope.state.preview.arrayValue)}
@@ -873,7 +885,7 @@ export default class demoTemplate extends React.Component {
                         </div>
                         <div className="pkg-tmp-subblock">
                             <h5 className="ui-title">
-                                <span>輸出結果〔格式：Serialize Array〕</span>
+                                <span>outputResult輸出結果〔格式：Serialize Array〕</span>
                             </h5>
                             <div>
                                 {JSON.stringify(_scope.state.preview.sarrayValue)}

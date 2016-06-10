@@ -30,6 +30,16 @@ body * {
 	.pkg-tmp-subblock {
 		margin-bottom: 10px;
 	}
+	.pkg-tmp-outlink {
+		padding: 5px;
+		text-align: right;
+		a {
+			color: #369;
+			&:hover {
+				color: #69C;
+			}
+		}
+	}
 	&:after{
 		display: block;
 		content: '';
